@@ -1,0 +1,566 @@
+module Glib.GUI.Font;
+
+import derelict.opengl3.gl3;
+import derelict.freetype.ft;
+import std.c.string;
+import std.file;
+import std.stdio;
+import std.process;
+
+enum Alignment{
+	ALIGN_LEFT = -1,
+	ALIGN_CENTER = 0,
+	ALIGN_RIGHT = 1
+}
+struct FontData
+{
+	float height;
+	GLuint* textures;
+	GLuint listBase;
+
+	void init(const string fname, uint h)
+	{
+
+	}
+}
+
+struct GlyphData
+{
+	char c;
+	int size; //font size
+
+	int bitmap_width;   // texture width
+    int bitmap_rows;    // texture height
+	char[] bitmap_buffer;   // texture data
+    FT_Vector advance;  // this variable contains the information of how much we need to move to the right from the last character
+    int bitmap_left;    // width of the glyph in pixels
+    int bitmap_top;     // height of the glyph in pixels
+	int pitch;
+}
+
+class Font
+{
+	FT_Library library;
+	FT_Face face;
+	FT_GlyphSlot g;// the glyph
+
+	int currentSize;
+
+	GLuint shaderProgram;
+	GLuint vao; // vertex array object for the text
+    GLuint vbo; // vertex buffer object for the text
+	GLint fontCoords; // shader attribute for text coordinates
+    GLuint textTex; // texture object for the text
+
+	//need to replace with global varible or set with global
+	float screenWidth = 720;
+	float screenHeight = 445;
+
+	GlyphData currentG;
+	GlyphData[] glyphs;
+
+	this(GLint progID, int fSize, string fontPath)
+	{
+		//string fontPath = "font path";
+		FT_Error error;
+		
+		error = FT_Init_FreeType(&library);
+		if(error)
+		{
+			//throw error
+		}
+		if(FT_New_Face(library, std.string.toStringz(fontPath), 0, &face))
+		{
+			//throw error
+		}
+
+		FT_Set_Pixel_Sizes(face, 0, fSize);
+
+		//FT_Glyph g;
+		//if(FT_Get_Glyph(face.glyph, &g))
+		//{
+			//throw error
+		//}
+		
+		g = face.glyph;
+
+		shaderProgram = progID;
+
+		glGenVertexArrays(1, &vao);
+		glBindVertexArray(vao);
+
+		// do the same thing to vertex buffer object
+		glGenBuffers(1, &vbo);
+		
+
+		// link out vertex data with the shader attribute
+		fontCoords = glGetAttribLocation(shaderProgram, "fontCoords");
+		
+		//initVAO(); 
+		//initUniforms(); 
+		//initTex(); 
+
+	}
+	void createFontAtlas(int atlasDimension)
+	{
+		auto f = File("testText.raw", "w");
+		/*
+		int atlas_dimension_px = 1024; // atlas size in pixels
+		int atlas_columns = 16; // number of glyphs across atlas
+		int padding_px = 6; // total space in glyph size for outlines
+		int slot_glyph_size = 64; // glyph maximum size in pixels
+		int atlas_glyph_px = 64 - padding_px; // leave some padding for outlines
+		*/
+		int atlas_columns = 16; // number of glyphs across atlas
+		int padding_px = 6; // total space in glyph size for outlines
+		int slot_glyph_size = atlasDimension / atlas_columns; // glyph maximum size in pixels
+		int atlas_glyph_px = 64 - padding_px; // leave some padding for outlines
+		//all graphical characters in ascii table from 33 to 255, 32 is space will crash on space
+		for (ulong i = 33; i < 126; i++)
+		{
+			getGlyph(cast(char) i);
+
+		}
+		
+		for (int y = 0; y < atlasDimension; y++)
+		{
+			for (int x = 0; x < atlasDimension; x++)
+			{
+				int col = x/slot_glyph_size;
+				int row = y/slot_glyph_size;
+				int order = row * atlas_columns + col;
+				int glyph_index = order;
+
+				if(glyph_index >= 0 && glyph_index < 93)
+				{
+					int xLoc = x % slot_glyph_size - padding_px / 2;
+					int yLoc = y % slot_glyph_size - padding_px / 2;
+
+					if(xLoc < 0 || yLoc < 0 || xLoc >= glyphs[glyph_index].bitmap_width || yLoc >= glyphs[glyph_index].bitmap_rows)
+					{
+						auto output = [cast(char) 0, cast(char) 0, cast(char) 0, cast(char) 0];
+						f.rawWrite(output);						
+					}
+					else
+					{
+						//int bytes_per_pixel = glyphs[glyph_index].bitmap_width / glyphs[glyph_index].pitch;
+						//int bytes_in_glyph = glyphs[glyph_index].bitmap_rows * glyphs[glyph_index].pitch;
+						int byte_order_in_glyph = yLoc * glyphs[glyph_index].bitmap_width + xLoc;
+						// print byte from glyph
+						auto output = [glyphs[glyph_index].bitmap_buffer[byte_order_in_glyph],
+						glyphs[glyph_index].bitmap_buffer[byte_order_in_glyph], 
+						glyphs[glyph_index].bitmap_buffer[byte_order_in_glyph], 
+						glyphs[glyph_index].bitmap_buffer[byte_order_in_glyph]];
+						f.rawWrite(output);
+						
+					}
+				}
+				else
+				{
+					auto output = [cast(char) 0, cast(char) 0, cast(char) 0, cast(char) 0];
+					f.rawWrite(output);
+				}
+			}
+		}
+		//string fpath = f.filepath;
+		f.close();
+		//system("convertImg -depth 8 -size 1024x1024 rgba:testText.raw atlas.png");
+
+
+		//auto pipe = pipeProcess("convert -depth 8 -size 1024x1024 rgba:testTex.raw atlas.png");
+		//auto testprocess = spawnProcess(["convert", "-depth 8", "-size 1024x1024", "rgba:testText.raw atlas.png"]);
+		//if(wait(testprocess) !=0)
+		//	writeln("failed");
+		//auto conv = execute("convert", " -depth 8 -size 1024x1024 rgba:testTex.raw atlas.png");
+		//if(conv.status == 0) writeln("failed");
+		//else writeln(conv.output);
+		//auto pid = spawnShell("convert -depth 8 -size 1024x1024 rgba:testTex.raw atlas.png");
+		//wait(pid);
+
+	}
+	void textToVBO(string txt, float atX, float atY, float scalepx, GLuint * vboPtr, GLuint* texcordsPtr)
+	{
+		const int ATLAS_COLS = 16;
+		const int ATLAS_ROWS = 16;
+		const int g_viewport_height = 445;
+		const int g_viewport_width = 720;
+		int len = txt.length;
+
+		float[] points_tmp = new float[  len * 12];
+		float[] texcoords_tmp = new float[  len * 12];
+		for (int i = 0; i < len; i++) {
+			// get ascii code as integer
+			int ascii_code = txt[i];
+
+			// work out row and column in atlas
+			int atlas_col = (ascii_code - ' ') % ATLAS_COLS;
+			int atlas_row = (ascii_code - ' ') / ATLAS_COLS;
+
+			// work out texture coordinates in atlas
+			float s = atlas_col * (1.0 / ATLAS_COLS);
+			float t = (atlas_row + 1) * (1.0 / ATLAS_ROWS);
+
+			// work out position
+			float x_pos = atX;
+			float y_pos = atY - scalepx / g_viewport_height *
+				glyphs[ascii_code].pitch;
+
+			// move next glyph along to the end of this one
+			if (i + 1 < len) {
+				// upper-case letters move twice as far
+				atX += glyphs[ascii_code].bitmap_width * scalepx / g_viewport_width;
+			}
+
+			// add 6 points and texture coordinates to buffers for each glyph
+			points_tmp[i * 12] = x_pos;
+			points_tmp[i * 12 + 1] = y_pos;
+			points_tmp[i * 12 + 2] = x_pos;
+			points_tmp[i * 12 + 3] = y_pos - scalepx / g_viewport_height;
+			points_tmp[i * 12 + 4] = x_pos + scalepx / g_viewport_width;
+			points_tmp[i * 12 + 5] = y_pos - scalepx / g_viewport_height;
+
+			points_tmp[i * 12 + 6] = x_pos + scalepx / g_viewport_width;
+			points_tmp[i * 12 + 7] = y_pos - scalepx / g_viewport_height;
+			points_tmp[i * 12 + 8] = x_pos + scalepx / g_viewport_width;
+			points_tmp[i * 12 + 9] = y_pos;
+			points_tmp[i * 12 + 10] = x_pos;
+			points_tmp[i * 12 + 11] = y_pos;
+
+			texcoords_tmp[i * 12] = s;
+			texcoords_tmp[i * 12 + 1] = 1.0 - t + 1.0 / ATLAS_ROWS;
+			texcoords_tmp[i * 12 + 2] = s;
+			texcoords_tmp[i * 12 + 3] = 1.0 - t;
+			texcoords_tmp[i * 12 + 4] = s + 1.0 / ATLAS_COLS;
+			texcoords_tmp[i * 12 + 5] = 1.0 - t;
+
+			texcoords_tmp[i * 12 + 6] = s + 1.0 / ATLAS_COLS;
+			texcoords_tmp[i * 12 + 7] = 1.0 - t;
+			texcoords_tmp[i * 12 + 8] = s + 1.0 / ATLAS_COLS;
+			texcoords_tmp[i * 12 + 9] = 1.0 - t + 1.0 / ATLAS_ROWS;
+			texcoords_tmp[i * 12 + 10] = s;
+			texcoords_tmp[i * 12 + 11] = 1.0 - t + 1.0 / ATLAS_ROWS;
+
+			glBindBuffer (GL_ARRAY_BUFFER, *vboPtr);
+			glBufferData (
+						  GL_ARRAY_BUFFER,
+						  points_tmp.sizeof,
+						  cast(void*)points_tmp,
+						  GL_DYNAMIC_DRAW
+						  );
+			glBindBuffer (GL_ARRAY_BUFFER, *texcordsPtr);
+			glBufferData (
+						  GL_ARRAY_BUFFER,
+						  texcoords_tmp.sizeof,
+						  cast(void*)texcoords_tmp,
+						  GL_DYNAMIC_DRAW
+						  );
+		} // endfor
+	}
+	void write(string text, float x, float y, int alignment)
+	{
+		// bind the correct vao, vbo and texture object
+		glBindVertexArray(vao);
+		glBindBuffer(GL_ARRAY_BUFFER, vbo);
+		glActiveTexture(GL_TEXTURE0);
+		glGenTextures(1, &textTex);
+		glBindTexture(GL_TEXTURE_2D, textTex);
+
+		// use the shaderProgram
+		glUseProgram(shaderProgram);
+
+		// we use these variables to convert pixels into screen coordinates
+		float screenx = 2.0f / screenWidth, screeny = 2.0f / screenHeight;
+
+		// totalWidth is used for aligning text
+		float totalWidth = 0.0f;
+
+		// get total width
+		int index = 0;
+		for (char p = text[index++]; index < text.length; p = text[index++]) { // run through every character
+			getGlyph(p); // the glyph data is now loaded into currentG
+			float test = currentG.advance.x >> 6;
+			totalWidth += test * screenx; // add the horizontal advance value to the totalWidth
+		}
+
+		// create the OpenGL texture for this glyph
+		/*
+		glActiveTexture(GL_TEXTURE0);
+		glGenTextures(1, &textTex);
+		glBindTexture(GL_TEXTURE_2D, textTex);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+
+		glEnableVertexAttribArray(fontCoords);
+		glBindBuffer(GL_ARRAY_BUFFER, vbo);
+		glVertexAttribPointer(fontCoords, 4, GL_FLOAT, GL_FALSE, 0,  cast(void*)0 );
+		*/
+		// render
+		index = 0;
+		for (char p = text[index++]; index < text.length; p = text[index++]) { // run through every character
+			getGlyph(p); // again, get the glyph and store the data into currentG
+
+			glTexImage2D(GL_TEXTURE_2D, 0, GL_ALPHA, currentG.bitmap_width, currentG.bitmap_rows, 0,
+						 GL_ALPHA, GL_UNSIGNED_BYTE, cast(void*)currentG.bitmap_buffer);
+
+			// calculate the coordninates and width and height for the glyph
+			float x2 = x + currentG.bitmap_left * screenx;
+			float y2 = -y - currentG.bitmap_top * screeny;
+			float w = currentG.bitmap_width * screenx;
+			float h = currentG.bitmap_rows * screeny;
+
+			/*
+			// if align is center move the text to left by half of it's lengh
+			if (alignment == Alignment.ALIGN_CENTER)
+				x2 -= totalWidth / 2;
+			// if align is right move the text to left by it's whole length
+			else if (alignment == Alignment.ALIGN_RIGHT)
+				x2 -= totalWidth;
+			*/
+			// create array of our screen coordninates
+			GLfloat box[4][4] = [
+				[x2,    -y2,    0,  0],
+				[x2+w,  -y2,    1,  0],
+					[x2,    -y2-h,  0,  1],
+							[x2+w,  -y2-h,  1,  1]
+			];
+
+			// buffer the data into vbo and draw it to the screen
+			glBufferData(GL_ARRAY_BUFFER, box.sizeof, cast(void*)box, GL_DYNAMIC_DRAW);
+			glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+
+			// increase x and y variables by the glyph's advance values so that next glyph won't be drawn on top of this one
+			x += (currentG.advance.x >> 6) * screenx;
+			y += (currentG.advance.y >> 6) * screeny;
+
+			// delete the texture object, which will be created again in the next run fo the loop
+			glDisableVertexAttribArray(fontCoords);
+			glDeleteTextures(1, &textTex);
+		}
+	}
+
+	void getGlyph(char c)
+	{
+		foreach(GlyphData glyphd; glyphs)
+		{
+			if(glyphd.c == c && glyphd.size == currentSize)
+			{
+				currentG = glyphd;
+				return;
+			}
+		}
+		
+		/*
+		Ok, we didn't find pre loaded glyphs matching the requested glyph,
+		we need to load it with freetype function: FT_Load_Char
+		*/
+
+		// load the char into the face object
+		if (FT_Load_Char(face, c, FT_LOAD_RENDER))
+		{
+			return;
+			//printf("freetype is unable to load char: %c\n", c); // this runs if error was occured
+		}
+
+		//FT_GlyphSlot g;
+		GlyphData gd; // create new GlyphData object
+		// init the gd.bitmap_buffer array to be the size needed
+		//g = face.glyph;
+		
+		
+	
+		FT_Pixel_Mode pm = cast(FT_Pixel_Mode)g.bitmap.pixel_mode;
+		if(pm == FT_PIXEL_MODE_GRAY)
+		{
+			//uint size =  g.bitmap.rows * g.bitmap.width;
+			//gd.bitmap_buffer = char[g.bitmap.rows * g.bitmap.width * 4];
+			// copy the texture data from 'g' to 'gd'
+			//gd.bitmap_buffer = new ubyte[size];
+			//memcpy(cast(void*)gd.bitmap_buffer, cast(void*)g.bitmap.buffer, size);
+			//gd.bitmap_buffer[0..size] = g.bitmap.buffer[0..size];
+			for(int i = 0; i < g.bitmap.rows * g.bitmap.width; i++)
+			{
+				//ubyte testb = g.bitmap.buffer >> 1;
+				//gd.bitmap_buffer ~= testb;
+				gd.bitmap_buffer ~= g.bitmap.buffer[i];
+			}
+		}
+		gd.bitmap_width = g.bitmap.width; // copy texture width
+		gd.bitmap_rows = g.bitmap.rows; // copy texture height
+		gd.bitmap_left = g.bitmap_left; // copy glyph width (pixels)
+		gd.bitmap_top = g.bitmap_top; // copy glyph height (pixels)
+		gd.advance = g.advance; // copy the advance vector (note this isn't c++ vector, this is real vector)
+		gd.c = c; // set the character
+		gd.size = currentSize; // set the size
+		gd.pitch = g.bitmap.pitch;
+		currentG = gd; // and finally set currentG equal to gd
+
+		glyphs ~= gd; // put gd into 'glyphs' vector for later reuse
+	}
+
+	void fontOpt(int opt, int value)
+	{
+		FT_Set_Pixel_Sizes(face, 0, value);
+		currentSize = value;
+	}
+	void print(const FontData font, float x, float y, string fmt)
+	{
+
+	}
+
+	void makeDisplayList(FT_Face face, char ch, GLuint listBase, GLuint* texBase)
+	{
+		if(FT_Load_Glyph( face, FT_Get_Char_Index(face, ch), FT_LOAD_DEFAULT))
+		{
+			//throw error
+		}
+
+		FT_Glyph glyph;
+		if(FT_Get_Glyph(face.glyph, &glyph))
+		{
+			//throw error
+		}
+
+		FT_Vector origin;
+		origin.x = 0;
+		origin.y = 0;
+		FT_Glyph_To_Bitmap(&glyph, FT_RENDER_MODE_NORMAL, &origin, 1);
+		FT_BitmapGlyph bitmapGlyph = cast(FT_BitmapGlyph)glyph;
+
+		FT_Bitmap bitmap = bitmapGlyph.bitmap;
+
+		int width = nextPowerOfTwo(bitmap.width);
+		int height = nextPowerOfTwo(bitmap.rows);
+
+		GLubyte[] expandedData = new GLubyte[2*width*height];
+
+		for(int i = 0; i < height; i++)
+		{
+			for(int j = 0; j < width; j++)
+			{
+				expandedData[2*(i+j*width)] = expandedData[2*(i+j*width)+1] =
+						(i>=bitmap.width || j>= bitmap.rows) ?
+						0 : bitmap.buffer[i + bitmap.width * j];
+			}
+		}
+
+		glBindTexture(GL_TEXTURE_2D, texBase[ch]);
+		glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
+
+		//glTexImage2D( GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0,
+		//			  GL_LUMINANCE_ALPHA, GL_UNSIGNED_BYTE, expandedData );
+
+		
+	}
+
+	int nextPowerOfTwo(int a)
+	{
+		int rval = 1;
+		while(rval < a)
+		{
+			rval *= 2;
+		}
+		return rval;
+	}
+/*
+	bool initVAO(){ 
+		uint vbov, vboc; 
+		const float[] v = [   -1f, -1f, 0.0f, 
+		1f, 1f, 0.0f, 
+		-1f, 1f, 0.0f,
+		-1f, -1f, 0.0f,
+		1f, 1f, 0.0f,
+		1f, -1f, 0.0f]; 
+		const float[] c = [   0.0f, 0.0f, 
+		1.0f, 1.0f, 
+		0.0f, 1.0f,
+		0.0f, 0.0f,
+		1.0f, 1.0f,
+		1.0f, 0.0f]; 
+		glGenVertexArrays(1, &vao); 
+		assert(vao > 0); 
+
+		glBindVertexArray(vao); 
+
+		glGenBuffers(1, &vbov); 
+		assert(vbov > 0); 
+		glBindBuffer(GL_ARRAY_BUFFER, vbov); 
+		glBufferData(GL_ARRAY_BUFFER, v.length * GL_FLOAT.sizeof, v.ptr, GL_STATIC_DRAW); 
+		glEnableVertexAttribArray(0); 
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, null);          
+		glBindBuffer(GL_ARRAY_BUFFER, 0); 
+
+		glGenBuffers(1, &vboc); 
+		assert(vboc > 0); 
+		glBindBuffer(GL_ARRAY_BUFFER, vboc); 
+		glBufferData(GL_ARRAY_BUFFER, c.length * GL_FLOAT.sizeof, c.ptr, GL_STATIC_DRAW); 
+		glEnableVertexAttribArray(1); 
+		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, null);          
+		glBindBuffer(GL_ARRAY_BUFFER, 0); 
+
+		glBindVertexArray(0);    
+
+		return true; 
+	} 
+
+	bool initUniforms(){ 
+		uint test = shader;
+		glUseProgram(shader); 
+		colLoc=glGetUniformLocation(shader, "colMap"); 
+		//if(colLoc == -1){writeln("Error: main shader did not assign id to sampler2D colMap"); return false;} 
+
+		glUseProgram(shader); 
+		glUniform1i(colLoc, 0); 
+		glUseProgram(0); 
+
+		return true; 
+	} 
+
+	bool initTex(){ 
+		SDL_Surface *s=IMG_Load("atlas.png"); 
+		assert(s); 
+
+		glPixelStorei(GL_UNPACK_ALIGNMENT, 4); 
+		glGenTextures(1, &tid); 
+		assert(tid > 0); 
+		glBindTexture(GL_TEXTURE_2D, tid); 
+
+		int mode = GL_RGB; 
+		if(s.format.BytesPerPixel == 4) mode=GL_RGBA; 
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); 
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);    
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE); 
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE); 
+
+		glTexImage2D(GL_TEXTURE_2D, 0, mode, s.w, s.h, 0, mode, GL_UNSIGNED_BYTE, flip(s).pixels); 
+
+		SDL_FreeSurface(s); 
+		return true; 
+	} 
+
+	//thanks to tito http://stackoverflow.com/questions/5862097/sdl-opengl-screenshot-is-black 
+	/*SDL_Surface* flip(SDL_Surface* sfc) 
+	{ 
+		SDL_Surface* result = SDL_CreateRGBSurface(sfc.flags, sfc.w, sfc.h, 
+												   sfc.format.BytesPerPixel * 8, sfc.format.Rmask, sfc.format.Gmask, 
+												   sfc.format.Bmask, sfc.format.Amask); 
+		ubyte* pixels = cast(ubyte*) sfc.pixels; 
+		ubyte* rpixels = cast(ubyte*) result.pixels; 
+		uint pitch = sfc.pitch; 
+		uint pxlength = pitch*sfc.h; 
+		assert(result != null); 
+
+		for(uint line = 0; line < sfc.h; ++line) { 
+			uint pos = line * pitch; 
+			rpixels[pos..pos+pitch] = 
+				pixels[(pxlength-pos)-pitch..pxlength-pos]; 
+		} 
+
+		return result; 
+	} 
+	*/
+}
