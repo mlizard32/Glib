@@ -1,4 +1,4 @@
-module Glib.Transform;
+module Glib.Scene.Transform;
 
 /*
 import gl3n.linalg;

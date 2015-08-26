@@ -1,4 +1,4 @@
-module Glib.System;
+module Glib.System.System;
 
 import derelict.sdl2.sdl;
 import derelict.sdl2.image;
@@ -6,14 +6,16 @@ import derelict.sdl2.image;
 import derelict.util.loader;
 import derelict.util.exception;
 import derelict.freeimage.freeimage;
+import derelict.assimp3.assimp;
 
-import Glib.window;
-import Glib.Scene;
+import Glib.System.Window;
+import Glib.Scene.Scene;
 
 pragma(lib, "DerelictSDL2.lib");
 pragma(lib, "DerelictFI.lib");
 //pragma(lib, "DerelictALURE.lib");
 pragma(lib, "DerelictUtil.lib");
+pragma(lib, "DerelictASSIMP3.lib");
 
 abstract class System
 {
@@ -40,11 +42,13 @@ abstract class System
 				FreeImage_Initialise();
 				DerelictSDL2.load();
 				DerelictSDL2Image.load();
+				DerelictASSIMP3.load();
+				
 			}
 			catch(DerelictException de)
 			{
 				string test = de.msg;
-
+				throw de;
 			}
 	//Breaking ?
 	//		DerelictALURE.load();
@@ -63,6 +67,8 @@ abstract class System
 	{
 		SDL_Quit();
 		DerelictSDL2.unload();
+		DerelictSDL2Image.unload();
+		DerelictASSIMP3.unload();
 		FreeImage_DeInitialise();
 		DerelictFI.unload();
 	}

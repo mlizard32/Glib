@@ -1,7 +1,8 @@
-module Glib.Shader;
+module Glib.Scene.Shader;
 
 import derelict.opengl3.gl3;
-import Glib.Log;
+import Glib.System.Log;
+import Glib.Scene.Material;
 import std.conv;
 
 class Shader
@@ -52,6 +53,7 @@ class Shader
 	{
 		glDeleteProgram(programID);
 	}
+
 	GLuint LoadShader()
 	{
 		GLuint vertexShaderID = glCreateShader(GL_VERTEX_SHADER);
@@ -124,5 +126,23 @@ class Shader
 
 		GLuint returnval = programID;
 		return returnval;
+	}
+
+	void BindMaterial(Material material)
+	{
+		GLuint diffuseId  = glGetUniformLocation(programID, "myTextureSampler");
+		glUniform1i(diffuseId, 0);
+        glActiveTexture( GL_TEXTURE0 );
+        glBindTexture( GL_TEXTURE_2D, material.diffuse.glID );
+
+		/*
+        glUniform1i( NormalTexture, 1 );
+        glActiveTexture( GL_TEXTURE1 );
+        glBindTexture( GL_TEXTURE_2D, material.normal.glID );
+
+        glUniform1i( SpecularTexture, 2 );
+        glActiveTexture( GL_TEXTURE2 );
+        glBindTexture( GL_TEXTURE_2D, material.specular.glID );
+		*/
 	}
 }

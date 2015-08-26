@@ -1,14 +1,15 @@
-module Glib.Node;
+module Glib.Scene.Node;
 
 import std.algorithm;
 import gl3n.linalg;
-import Glib.Scene;
+import Glib.Scene.Scene;
+import Glib.System.System;
 import std.math;
 
 class Node:Tree!(Node)
 {
 	Transform transform;
-	Scene scene;
+	//Scene scene;
 
 	invariant()
 	{	assert(parent !is this);
@@ -16,7 +17,11 @@ class Node:Tree!(Node)
 	this()
 	{
 		transform.thisNode = this;
-		this(null);
+		if(System.currentScene !is null)
+		{
+			if(System.currentScene.root !is null)
+				System.currentScene.root.addChild(this);
+		}
 	}
 
 	this(Node parent) /// ditto
@@ -140,9 +145,10 @@ public:
 		SetWorldDirty();
 	}
 
+	/*
 	vec3 world_Rotation() const @property
 	{
-		if(thisNode.parent && thisNode.parent !is thisNode.scene) 
+		if(thisNode.parent !is null) 
 			return vec3(RadToDeg(worldRotation.yaw), RadToDeg(worldRotation.pitch), RadToDeg(worldRotation.roll));
 		else return  vec3(localRotation.yaw, localRotation.pitch, localRotation.roll);
 	}
@@ -153,10 +159,10 @@ public:
 		localRotation = worldRotation * thisNode.parent.transform.worldRotation;
 		SetWorldDirty();
 	}
-
+*/
 	vec3 world_Position() const @property
 	{
-		if(thisNode.parent && thisNode.parent !is thisNode.scene) 
+		if(thisNode.parent !is null) 
 			return this.localPosition + thisNode.parent.transform.world_Position;
 		else return this.localPosition;
 	}
@@ -170,7 +176,7 @@ public:
 
 	vec3 world_Scale() const @property
 	{
-		if(thisNode.parent && thisNode.parent !is thisNode.scene) 
+		if(thisNode.parent !is null) 
 			return this.localScale + thisNode.parent.transform.world_Scale;
 		else return this.localScale;
 	}

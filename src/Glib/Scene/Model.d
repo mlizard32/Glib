@@ -1,11 +1,13 @@
-module Glib.Model;
+module Glib.Scene.Model;
 
-import Glib.Log;
-import Glib.Mesh;
-import Glib.Transform;
+import Glib.System.Log;
+import Glib.Scene.Mesh;
+import Glib.Scene.Transform;
+import Glib.Scene.Render;
+import Glib.Scene.GObject;
 import derelict.assimp3.assimp;
 
-class Model
+class Model:IDrawable, IComponent
 {
 	Mesh[] meshes;
 	//toDo:
@@ -14,6 +16,7 @@ class Model
 
 	this(string path)
 	{
+		
 		const char* pathC = std.string.toStringz(path);
 
 		const aiScene* loadScene = aiImportFile(pathC, aiProcess_CalcTangentSpace | aiProcess_Triangulate | aiProcess_JoinIdenticalVertices);
@@ -36,5 +39,14 @@ class Model
 
 		aiReleaseImport(loadScene);
 	}
+
+	void Draw()
+	{
+		foreach(Mesh m; meshes)
+		{
+			m.Draw();
+		}
+	}
+	
 }
 

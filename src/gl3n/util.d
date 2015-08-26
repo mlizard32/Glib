@@ -10,6 +10,8 @@ module gl3n.util;
 private {
     import gl3n.linalg : Vector, Matrix, Quaternion;
     import gl3n.plane : PlaneT;
+
+    import std.typecons : TypeTuple;
 }
 
 private void is_vector_impl(T, int d)(Vector!(T, d) vec) {}
@@ -74,4 +76,12 @@ unittest {
     assert(!is_plane!quat);
     assert(!is_plane!mat4);
     assert(!is_plane!float);
+}
+
+template TupleRange(int from, int to) if (from <= to) {
+    static if (from >= to) {
+        alias TupleRange = TypeTuple!();
+    } else {
+        alias TupleRange = TypeTuple!(from, TupleRange!(from + 1, to));
+    }
 }

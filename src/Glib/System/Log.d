@@ -1,4 +1,4 @@
-module Glib.Log;
+module Glib.System.Log;
 
 import std.stdio;
 import std.file;

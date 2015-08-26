@@ -1,23 +1,22 @@
-module Glib.Scene;
+module Glib.Scene.Scene;
 
-import Glib.System;
-import Glib.Camera;
-import Glib.GObject;
+import Glib.System.System;
+import Glib.Scene.Camera;
+import Glib.Scene.GObject;
 import gl3n.linalg;
-import Glib.Node;
+import Glib.Scene.Node;
 
-class Scene : Node
+class Scene
 {
 	Camera mainCamera;
 	Camera[] cameras;
 
-	GObject world;
+	GObject root;
 
 	this()
 	{
-		scene = this;
-		world = new GObject();
-		//world.transform.curMatrix = mat4.identity();
+		
+		root = new GObject();
 
 		mainCamera = new Camera();
 		//world.addChild(mainCamera.transform);
@@ -26,8 +25,7 @@ class Scene : Node
 			System.currentScene = this;
 		System.scenes ~= this;
 	}
-	
-	
+
 	void Update()
 	{
 

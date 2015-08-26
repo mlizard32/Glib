@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "Glib", "Glib.visualdproj", "{2405B645-D2B9-4C06-BA31-9BEA7BBE5D04}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3A46AA5E-D1D6-47F5-8F93-4A592A4E89EB} = {3A46AA5E-D1D6-47F5-8F93-4A592A4E89EB}
+	EndProjectSection
+EndProject
+Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "gl3n", "..\gl3n\gl3n.visualdproj", "{3A46AA5E-D1D6-47F5-8F93-4A592A4E89EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2405B645-D2B9-4C06-BA31-9BEA7BBE5D04}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2405B645-D2B9-4C06-BA31-9BEA7BBE5D04}.Debug|Win32.Build.0 = Debug|Win32
+		{2405B645-D2B9-4C06-BA31-9BEA7BBE5D04}.Release|Win32.ActiveCfg = Release|Win32
+		{2405B645-D2B9-4C06-BA31-9BEA7BBE5D04}.Release|Win32.Build.0 = Release|Win32
+		{3A46AA5E-D1D6-47F5-8F93-4A592A4E89EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3A46AA5E-D1D6-47F5-8F93-4A592A4E89EB}.Debug|Win32.Build.0 = Debug|Win32
+		{3A46AA5E-D1D6-47F5-8F93-4A592A4E89EB}.Release|Win32.ActiveCfg = Release|Win32
+		{3A46AA5E-D1D6-47F5-8F93-4A592A4E89EB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,10 +1,10 @@
-module Glib.window;
+module Glib.System.Window;
 
 import derelict.opengl3.gl3;
 import derelict.sdl2.sdl;
 import gl3n.linalg;
 import std.conv;
-import Glib.System;
+import Glib.System.System;
 
 pragma(lib, "DerelictGL3.lib");
 pragma(lib, "DerelictSDL2.lib");
@@ -168,5 +168,16 @@ class window
 
 		if(glver < GLVersion.GL33)
 			throw new Exception("OpenGL version too low.");
+	}
+
+	void MakeCurrentGLContext()
+	{
+		// returns error if i need
+		SDL_GL_MakeCurrent(sdlWindow, glcontext);
+	}
+
+	void SwapWindow()
+	{
+		SDL_GL_SwapWindow(sdlWindow);
 	}
 }

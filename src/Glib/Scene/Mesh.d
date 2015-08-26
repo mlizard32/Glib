@@ -1,9 +1,12 @@
-module Glib.Mesh;
+module Glib.Scene.Mesh;
 
 import derelict.assimp3.assimp;
 import derelict.opengl3.gl3;
 import gl3n.linalg;
-import Glib.Shader;
+import Glib.Scene.Shader;
+import Glib.Scene.Material;
+
+import Glib.System.System;
 
 class Mesh
 {
@@ -19,6 +22,7 @@ class Mesh
 	GLuint VertexArrayID;
 
 	Shader shader;
+	Material material;
 
 	this(const aiMesh* mesh)
 	{
@@ -51,6 +55,13 @@ class Mesh
 		
 		
 		shader = new Shader();
+
+		//temporary
+		Texture tex = new Texture("..\\..\\resources\\Gray.png");
+		material = new Material();
+		material.diffuse = tex;
+
+		BindMesh();
 	}
 	~this()
 	{
@@ -100,6 +111,30 @@ class Mesh
 
 	void Draw()
 	{
+		glUseProgram(shader.programID);
+
+		this.shader.BindMaterial(material);
+
+		GLuint lightID = glGetUniformLocation(shader.programID, "LightPosition_worldspace");
+		vec3 lightPos = vec3(4,4,4);
+		glUniform3f(lightID, lightPos.x, lightPos.y, lightPos.z);
+
+		GLuint MatrixID = glGetUniformLocation(shader.programID, "MVP");
+		GLuint ViewMatrixID = glGetUniformLocation(shader.programID, "V");
+		GLuint ModelMatrixID = glGetUniformLocation(shader.programID, "M");
+
+		mat4 projection = System.currentScene.mainCamera.getPerspeciveMatrix();
+
+		mat4 view = System.currentScene.mainCamera.getViewMatrix();
+
+		mat4 model = mat4.identity();
+
+		mat4 MVP = projection * view * model;
+
+		glUniformMatrix4fv(MatrixID, 1, GL_TRUE, MVP.value_ptr);
+		glUniformMatrix4fv(ModelMatrixID, 1, GL_TRUE, model.value_ptr);
+		glUniformMatrix4fv(ViewMatrixID, 1, GL_TRUE, view.value_ptr);
+
 		// 1rst attribute buffer : vertices
 		glEnableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, vbo);

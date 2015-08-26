@@ -1,15 +1,15 @@
-module Glib.Input;
+module Glib.System.Input;
 
 import derelict.sdl2.sdl;
 import gl3n.linalg;
-import Glib.window;
-import Glib.System;
+import Glib.System.Window;
+import Glib.System.System;
 
-class Input
+abstract class Input
 {
-	Mouse mouse;
+	static Mouse mouse;
 
-	public void pollInput()
+	static void pollInput()
 	{
 		SDL_Event event;
 		while(SDL_PollEvent(&event))

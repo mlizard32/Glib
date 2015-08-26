@@ -1,7 +1,7 @@
-module Glib.Camera;
+module Glib.Scene.Camera;
 
-import Glib.Transform;
-import Glib.GObject;
+import Glib.Scene.Transform;
+import Glib.Scene.GObject;
 import gl3n.linalg;
 
 class Camera : GObject

@@ -1,14 +1,14 @@
-module Glib.GObject;
+module Glib.Scene.GObject;
 
-import Glib.Transform;
+import Glib.Scene.Transform;
 import gl3n.linalg;
-import Glib.Node;
+import Glib.Scene.Node;
 
 class GObject:Node
 {
 	uint id;
 	string name;
-	GObjectCompenent[] components;
+	IComponent[] components;
 	
 	this()
 	{
@@ -21,12 +21,12 @@ class GObject:Node
 
 	
 }
-class GObjectCompenent
+interface IComponent
 {
-	GObject owner;
+	//GObject owner;
 
-	this(GObject owner)
-	{
-		this.owner = owner;
-	}
+	//this(GObject owner)
+	//{
+	//	this.owner = owner;
+	//}
 }

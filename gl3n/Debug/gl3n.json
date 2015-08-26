@@ -1,0 +1,5723 @@
+[
+ {
+  "name" : "gl3n.ext.hsv",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\ext\\hsv.d",
+  "members" : [
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "to"
+    ]
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "vec3",
+     "vec4"
+    ]
+   },
+   {
+    "name" : "gl3n.math",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "min",
+     "max",
+     "floor"
+    ]
+   },
+   {
+    "name" : "rgb2hsv",
+    "kind" : "function",
+    "line" : 16,
+    "char" : 25,
+    "deco" : "FNaNbNfS4gl3n6linalg17__T6VectorTfVii3Z6VectorZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+    "originalType" : "pure nothrow @safe vec3(vec3 inp)",
+    "parameters" : [
+     {
+      "name" : "inp",
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+     }
+    ],
+    "endline" : 51,
+    "endchar" : 1
+   },
+   {
+    "name" : "rgb2hsv",
+    "kind" : "function",
+    "line" : 55,
+    "char" : 25,
+    "deco" : "FNaNbNfS4gl3n6linalg17__T6VectorTfVii4Z6VectorZS4gl3n6linalg17__T6VectorTfVii4Z6Vector",
+    "originalType" : "pure nothrow @safe vec4(vec4 inp)",
+    "parameters" : [
+     {
+      "name" : "inp",
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii4Z6Vector"
+     }
+    ],
+    "endline" : 57,
+    "endchar" : 1
+   },
+   {
+    "name" : "__unittestL59_1",
+    "kind" : "function",
+    "line" : 59,
+    "char" : 1,
+    "endline" : 73,
+    "endchar" : 1
+   },
+   {
+    "name" : "hsv2rgb",
+    "kind" : "function",
+    "line" : 73,
+    "char" : 20,
+    "deco" : "FNbNfS4gl3n6linalg17__T6VectorTfVii3Z6VectorZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+    "originalType" : "nothrow @safe vec3(vec3 inp)",
+    "parameters" : [
+     {
+      "name" : "inp",
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+     }
+    ],
+    "endline" : 90,
+    "endchar" : 1
+   },
+   {
+    "name" : "hsv2rgb",
+    "kind" : "function",
+    "line" : 94,
+    "char" : 20,
+    "deco" : "FNbNfS4gl3n6linalg17__T6VectorTfVii4Z6VectorZS4gl3n6linalg17__T6VectorTfVii4Z6Vector",
+    "originalType" : "nothrow @safe vec4(vec4 inp)",
+    "parameters" : [
+     {
+      "name" : "inp",
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii4Z6Vector"
+     }
+    ],
+    "endline" : 96,
+    "endchar" : 1
+   },
+   {
+    "name" : "__unittestL98_2",
+    "kind" : "function",
+    "line" : 98,
+    "char" : 1,
+    "endline" : 106,
+    "endchar" : 2
+   }
+  ]
+ },
+ {
+  "name" : "gl3n.ext.matrixstack",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\ext\\matrixstack.d",
+  "members" : [
+   {
+    "name" : "gl3n.util",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "is_matrix"
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 9,
+    "char" : 1,
+    "name" : "MatrixStack",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "MatrixStack",
+      "kind" : "struct",
+      "line" : 9,
+      "char" : 1,
+      "members" : [
+       {
+        "name" : "Matrix",
+        "kind" : "alias",
+        "line" : 10,
+        "char" : 13,
+        "type" : "T"
+       },
+       {
+        "name" : "top",
+        "kind" : "variable",
+        "line" : 12,
+        "char" : 12,
+        "type" : "Matrix",
+        "init" : "Matrix.identity"
+       },
+       {
+        "name" : "stack",
+        "kind" : "variable",
+        "line" : 13,
+        "char" : 22,
+        "type" : "Matrix[]"
+       },
+       {
+        "name" : "_top_pos",
+        "kind" : "variable",
+        "line" : 14,
+        "char" : 20,
+        "type" : "size_t",
+        "init" : "0"
+       },
+       {
+        "name" : "realloc_interval",
+        "kind" : "variable",
+        "line" : 20,
+        "char" : 12,
+        "type" : "size_t",
+        "init" : "8"
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 23,
+        "char" : 5,
+        "type" : "pure nothrow (size_t depth = 16)",
+        "parameters" : [
+         {
+          "name" : "depth",
+          "type" : "size_t",
+          "default" : "16"
+         }
+        ],
+        "endline" : 25,
+        "endchar" : 5
+       },
+       {
+        "name" : "set",
+        "kind" : "function",
+        "line" : 28,
+        "char" : 10,
+        "type" : "pure nothrow void(Matrix matrix)",
+        "parameters" : [
+         {
+          "name" : "matrix",
+          "type" : "Matrix"
+         }
+        ],
+        "endline" : 30,
+        "endchar" : 5
+       },
+       {
+        "name" : "push",
+        "kind" : "function",
+        "line" : 33,
+        "char" : 10,
+        "type" : "pure nothrow void()",
+        "endline" : 39,
+        "endchar" : 5
+       },
+       {
+        "name" : "push",
+        "kind" : "function",
+        "line" : 42,
+        "char" : 10,
+        "type" : "pure nothrow void(Matrix matrix)",
+        "parameters" : [
+         {
+          "name" : "matrix",
+          "type" : "Matrix"
+         }
+        ],
+        "endline" : 45,
+        "endchar" : 5
+       },
+       {
+        "name" : "pop",
+        "kind" : "function",
+        "line" : 49,
+        "char" : 16,
+        "type" : "pure nothrow ref Matrix()",
+        "endline" : 54,
+        "endchar" : 9
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL57_3",
+    "kind" : "function",
+    "line" : 57,
+    "char" : 1,
+    "endline" : 101,
+    "endchar" : 2
+   }
+  ]
+ },
+ {
+  "name" : "gl3n.aabb",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\aabb.d",
+  "members" : [
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "Vector",
+     "vec3"
+    ]
+   },
+   {
+    "name" : "gl3n.math",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "almost_equal"
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 12,
+    "char" : 1,
+    "name" : "AABBT",
+    "parameters" : [
+     {
+      "name" : "type",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "AABBT",
+      "kind" : "struct",
+      "line" : 12,
+      "char" : 1,
+      "members" : [
+       {
+        "name" : "at",
+        "kind" : "alias",
+        "line" : 13,
+        "char" : 16,
+        "type" : "type"
+       },
+       {
+        "name" : "vec3",
+        "kind" : "alias",
+        "line" : 14,
+        "char" : 26,
+        "type" : "Vector!(at, 3)"
+       },
+       {
+        "name" : "min",
+        "kind" : "variable",
+        "line" : 16,
+        "char" : 10,
+        "type" : "vec3",
+        "init" : "vec3(0.000000F, 0.000000F, 0.000000F)"
+       },
+       {
+        "name" : "max",
+        "kind" : "variable",
+        "line" : 17,
+        "char" : 10,
+        "type" : "vec3",
+        "init" : "vec3(0.000000F, 0.000000F, 0.000000F)"
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 25,
+        "char" : 5,
+        "type" : "(vec3 min, vec3 max)",
+        "parameters" : [
+         {
+          "name" : "min",
+          "type" : "vec3"
+         },
+         {
+          "name" : "max",
+          "type" : "vec3"
+         }
+        ],
+        "endline" : 28,
+        "endchar" : 5
+       },
+       {
+        "name" : "from_points",
+        "kind" : "function",
+        "line" : 31,
+        "char" : 18,
+        "storageClass" : [
+         "static"
+        ],
+        "type" : "AABBT(vec3[] points)",
+        "parameters" : [
+         {
+          "name" : "points",
+          "type" : "vec3[]"
+         }
+        ],
+        "endline" : 45,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL47_4",
+        "kind" : "function",
+        "line" : 47,
+        "char" : 5,
+        "endline" : 62,
+        "endchar" : 5
+       },
+       {
+        "name" : "expand",
+        "kind" : "function",
+        "line" : 62,
+        "char" : 10,
+        "type" : "void(AABBT b)",
+        "parameters" : [
+         {
+          "name" : "b",
+          "type" : "AABBT"
+         }
+        ],
+        "endline" : 69,
+        "endchar" : 5
+       },
+       {
+        "name" : "expand",
+        "kind" : "function",
+        "line" : 72,
+        "char" : 10,
+        "type" : "void(vec3 v)",
+        "parameters" : [
+         {
+          "name" : "v",
+          "type" : "vec3"
+         }
+        ],
+        "endline" : 79,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL81_5",
+        "kind" : "function",
+        "line" : 81,
+        "char" : 5,
+        "endline" : 98,
+        "endchar" : 5
+       },
+       {
+        "name" : "intersects",
+        "kind" : "function",
+        "line" : 98,
+        "char" : 10,
+        "type" : "const bool(AABBT box)",
+        "parameters" : [
+         {
+          "name" : "box",
+          "type" : "AABBT"
+         }
+        ],
+        "endline" : 102,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL104_6",
+        "kind" : "function",
+        "line" : 104,
+        "char" : 5,
+        "endline" : 116,
+        "endchar" : 5
+       },
+       {
+        "name" : "extent",
+        "kind" : "function",
+        "line" : 116,
+        "char" : 20,
+        "type" : "const @property vec3()",
+        "endline" : 118,
+        "endchar" : 5
+       },
+       {
+        "name" : "half_extent",
+        "kind" : "function",
+        "line" : 121,
+        "char" : 20,
+        "type" : "const @property vec3()",
+        "endline" : 123,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL125_7",
+        "kind" : "function",
+        "line" : 125,
+        "char" : 5,
+        "endline" : 137,
+        "endchar" : 5
+       },
+       {
+        "name" : "area",
+        "kind" : "function",
+        "line" : 137,
+        "char" : 18,
+        "type" : "const @property at()",
+        "endline" : 140,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL142_8",
+        "kind" : "function",
+        "line" : 142,
+        "char" : 5,
+        "endline" : 154,
+        "endchar" : 5
+       },
+       {
+        "name" : "center",
+        "kind" : "function",
+        "line" : 154,
+        "char" : 20,
+        "type" : "const @property vec3()",
+        "endline" : 156,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL158_9",
+        "kind" : "function",
+        "line" : 158,
+        "char" : 5,
+        "endline" : 164,
+        "endchar" : 5
+       },
+       {
+        "name" : "vertices",
+        "kind" : "function",
+        "line" : 164,
+        "char" : 22,
+        "type" : "const @property vec3[]()",
+        "endline" : 175,
+        "endchar" : 5
+       },
+       {
+        "name" : "opEquals",
+        "kind" : "function",
+        "line" : 177,
+        "char" : 10,
+        "type" : "const bool(AABBT other)",
+        "parameters" : [
+         {
+          "name" : "other",
+          "type" : "AABBT"
+         }
+        ],
+        "endline" : 179,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL181_10",
+        "kind" : "function",
+        "line" : 181,
+        "char" : 5,
+        "endline" : 185,
+        "endchar" : 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "AABB",
+    "kind" : "alias",
+    "line" : 187,
+    "char" : 21,
+    "deco" : "S4gl3n4aabb12__T5AABBTTfZ5AABBT"
+   }
+  ]
+ },
+ {
+  "name" : "gl3n.frustum",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\frustum.d",
+  "members" : [
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "vec3",
+     "mat4",
+     "dot"
+    ]
+   },
+   {
+    "name" : "gl3n.math",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "abs",
+     "cradians"
+    ]
+   },
+   {
+    "name" : "gl3n.aabb",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "AABB"
+    ]
+   },
+   {
+    "name" : "gl3n.plane",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "Plane"
+    ]
+   },
+   {
+    "name" : "OUTSIDE",
+    "kind" : "enum member",
+    "value" : "0",
+    "line" : 14,
+    "char" : 5
+   },
+   {
+    "name" : "INSIDE",
+    "kind" : "enum member",
+    "value" : "1",
+    "line" : 15,
+    "char" : 5
+   },
+   {
+    "name" : "INTERSECT",
+    "kind" : "enum member",
+    "value" : "2",
+    "line" : 16,
+    "char" : 5
+   },
+   {
+    "name" : "Frustum",
+    "kind" : "struct",
+    "line" : 20,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "LEFT",
+      "kind" : "enum member",
+      "value" : "0",
+      "line" : 22,
+      "char" : 9
+     },
+     {
+      "name" : "RIGHT",
+      "kind" : "enum member",
+      "value" : "1",
+      "line" : 23,
+      "char" : 9
+     },
+     {
+      "name" : "BOTTOM",
+      "kind" : "enum member",
+      "value" : "2",
+      "line" : 24,
+      "char" : 9
+     },
+     {
+      "name" : "TOP",
+      "kind" : "enum member",
+      "value" : "3",
+      "line" : 25,
+      "char" : 9
+     },
+     {
+      "name" : "NEAR",
+      "kind" : "enum member",
+      "value" : "4",
+      "line" : 26,
+      "char" : 9
+     },
+     {
+      "name" : "FAR",
+      "kind" : "enum member",
+      "value" : "5",
+      "line" : 27,
+      "char" : 9
+     },
+     {
+      "name" : "planes",
+      "kind" : "variable",
+      "line" : 30,
+      "char" : 14,
+      "deco" : "G6S4gl3n5plane13__T6PlaneTTfZ6PlaneT",
+      "originalType" : "Plane[6]",
+      "offset" : 0
+     },
+     {
+      "name" : "left",
+      "kind" : "function",
+      "line" : 34,
+      "char" : 25,
+      "deco" : "FNaNbNcNdNfZS4gl3n5plane13__T6PlaneTTfZ6PlaneT",
+      "originalType" : "pure nothrow @property ref @safe Plane()",
+      "endline" : 34,
+      "endchar" : 55
+     },
+     {
+      "name" : "right",
+      "kind" : "function",
+      "line" : 35,
+      "char" : 25,
+      "deco" : "FNaNbNcNdNfZS4gl3n5plane13__T6PlaneTTfZ6PlaneT",
+      "originalType" : "pure nothrow @property ref @safe Plane()",
+      "endline" : 35,
+      "endchar" : 57
+     },
+     {
+      "name" : "bottom",
+      "kind" : "function",
+      "line" : 36,
+      "char" : 25,
+      "deco" : "FNaNbNcNdNfZS4gl3n5plane13__T6PlaneTTfZ6PlaneT",
+      "originalType" : "pure nothrow @property ref @safe Plane()",
+      "endline" : 36,
+      "endchar" : 59
+     },
+     {
+      "name" : "top",
+      "kind" : "function",
+      "line" : 37,
+      "char" : 25,
+      "deco" : "FNaNbNcNdNfZS4gl3n5plane13__T6PlaneTTfZ6PlaneT",
+      "originalType" : "pure nothrow @property ref @safe Plane()",
+      "endline" : 37,
+      "endchar" : 53
+     },
+     {
+      "name" : "near",
+      "kind" : "function",
+      "line" : 38,
+      "char" : 25,
+      "deco" : "FNaNbNcNdNfZS4gl3n5plane13__T6PlaneTTfZ6PlaneT",
+      "originalType" : "pure nothrow @property ref @safe Plane()",
+      "endline" : 38,
+      "endchar" : 55
+     },
+     {
+      "name" : "far",
+      "kind" : "function",
+      "line" : 39,
+      "char" : 25,
+      "deco" : "FNaNbNcNdNfZS4gl3n5plane13__T6PlaneTTfZ6PlaneT",
+      "originalType" : "pure nothrow @property ref @safe Plane()",
+      "endline" : 39,
+      "endchar" : 53
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 44,
+      "char" : 5,
+      "deco" : "FNaNbNcNfS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6MatrixZS4gl3n7frustum7Frustum",
+      "originalType" : "pure nothrow ref @safe (mat4 mvp)",
+      "parameters" : [
+       {
+        "name" : "mvp",
+        "deco" : "S4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix"
+       }
+      ],
+      "endline" : 83,
+      "endchar" : 5
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 88,
+      "char" : 5,
+      "deco" : "FNaNbNcNfG6S4gl3n5plane13__T6PlaneTTfZ6PlaneTZS4gl3n7frustum7Frustum",
+      "originalType" : "pure nothrow ref @safe (Plane[6] planes)",
+      "parameters" : [
+       {
+        "name" : "planes",
+        "deco" : "G6S4gl3n5plane13__T6PlaneTTfZ6PlaneT"
+       }
+      ],
+      "endline" : 91,
+      "endchar" : 5
+     },
+     {
+      "name" : "normalize",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 93,
+      "char" : 18,
+      "deco" : "FNaNbNfZv",
+      "endline" : 97,
+      "endchar" : 5
+     },
+     {
+      "name" : "intersects",
+      "kind" : "function",
+      "line" : 101,
+      "char" : 9,
+      "deco" : "FNaNbNfS4gl3n4aabb12__T5AABBTTfZ5AABBTZi",
+      "originalType" : "pure nothrow @safe int(AABB aabb)",
+      "parameters" : [
+       {
+        "name" : "aabb",
+        "deco" : "S4gl3n4aabb12__T5AABBTTfZ5AABBT"
+       }
+      ],
+      "endline" : 120,
+      "endchar" : 5
+     },
+     {
+      "kind" : "template",
+      "line" : 123,
+      "char" : 10,
+      "name" : "opBinaryRight",
+      "parameters" : [
+       {
+        "name" : "s",
+        "kind" : "value",
+        "deco" : "Aya",
+        "specValue" : "\"in\""
+       }
+      ],
+      "members" : [
+       {
+        "name" : "opBinaryRight",
+        "kind" : "function",
+        "line" : 123,
+        "char" : 10,
+        "type" : "bool(AABB aabb)",
+        "parameters" : [
+         {
+          "name" : "aabb",
+          "type" : "AABB"
+         }
+        ],
+        "endline" : 125,
+        "endchar" : 5
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "gl3n.interpolate",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\interpolate.d",
+  "members" : [
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "Vector",
+     "dot",
+     "vec2",
+     "vec3",
+     "vec4",
+     "quat"
+    ]
+   },
+   {
+    "name" : "gl3n.util",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "is_vector",
+     "is_quaternion"
+    ]
+   },
+   {
+    "name" : "gl3n.math",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "almost_equal",
+     "acos",
+     "sin",
+     "sqrt",
+     "clamp",
+     "PI"
+    ]
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 15,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "to"
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 21,
+    "char" : 3,
+    "name" : "interp",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "interp",
+      "kind" : "function",
+      "line" : 21,
+      "char" : 3,
+      "type" : "T(T a, T b, float t)",
+      "parameters" : [
+       {
+        "name" : "a",
+        "type" : "T"
+       },
+       {
+        "name" : "b",
+        "type" : "T"
+       },
+       {
+        "name" : "t",
+        "deco" : "f"
+       }
+      ],
+      "endline" : 23,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "interp_linear",
+    "kind" : "alias",
+    "line" : 24,
+    "char" : 14
+   },
+   {
+    "name" : "lerp",
+    "kind" : "alias",
+    "line" : 25,
+    "char" : 14
+   },
+   {
+    "name" : "mix",
+    "kind" : "alias",
+    "line" : 26,
+    "char" : 14
+   },
+   {
+    "kind" : "template",
+    "line" : 30,
+    "char" : 3,
+    "name" : "interp_spherical",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "interp_spherical",
+      "kind" : "function",
+      "line" : 30,
+      "char" : 3,
+      "type" : "T(T a, T b, float t)",
+      "parameters" : [
+       {
+        "name" : "a",
+        "type" : "T"
+       },
+       {
+        "name" : "b",
+        "type" : "T"
+       },
+       {
+        "name" : "t",
+        "deco" : "f"
+       }
+      ],
+      "endline" : 48,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "slerp",
+    "kind" : "alias",
+    "line" : 49,
+    "char" : 24
+   },
+   {
+    "name" : "nlerp",
+    "kind" : "function",
+    "line" : 53,
+    "char" : 6,
+    "deco" : "FNaNbNfS4gl3n6linalg18__T10QuaternionTfZ10QuaternionS4gl3n6linalg18__T10QuaternionTfZ10QuaternionfZS4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
+    "originalType" : "pure nothrow @safe quat(quat a, quat b, float t)",
+    "parameters" : [
+     {
+      "name" : "a",
+      "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion"
+     },
+     {
+      "name" : "b",
+      "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion"
+     },
+     {
+      "name" : "t",
+      "deco" : "f"
+     }
+    ],
+    "endline" : 66,
+    "endchar" : 1
+   },
+   {
+    "name" : "__unittestL68_11",
+    "kind" : "function",
+    "line" : 68,
+    "char" : 1,
+    "endline" : 119,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 119,
+    "char" : 3,
+    "name" : "interp_nearest",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "interp_nearest",
+      "kind" : "function",
+      "line" : 119,
+      "char" : 3,
+      "type" : "T(T x, T y, float t)",
+      "parameters" : [
+       {
+        "name" : "x",
+        "type" : "T"
+       },
+       {
+        "name" : "y",
+        "type" : "T"
+       },
+       {
+        "name" : "t",
+        "deco" : "f"
+       }
+      ],
+      "endline" : 122,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL124_12",
+    "kind" : "function",
+    "line" : 124,
+    "char" : 1,
+    "endline" : 131,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 131,
+    "char" : 3,
+    "name" : "interp_catmullrom",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "interp_catmullrom",
+      "kind" : "function",
+      "line" : 131,
+      "char" : 3,
+      "type" : "T(T p0, T p1, T p2, T p3, float t)",
+      "parameters" : [
+       {
+        "name" : "p0",
+        "type" : "T"
+       },
+       {
+        "name" : "p1",
+        "type" : "T"
+       },
+       {
+        "name" : "p2",
+        "type" : "T"
+       },
+       {
+        "name" : "p3",
+        "type" : "T"
+       },
+       {
+        "name" : "t",
+        "deco" : "f"
+       }
+      ],
+      "endline" : 136,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 139,
+    "char" : 3,
+    "name" : "catmullrom_derivative",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "catmullrom_derivative",
+      "kind" : "function",
+      "line" : 139,
+      "char" : 3,
+      "type" : "T(T p0, T p1, T p2, T p3, float t)",
+      "parameters" : [
+       {
+        "name" : "p0",
+        "type" : "T"
+       },
+       {
+        "name" : "p1",
+        "type" : "T"
+       },
+       {
+        "name" : "p2",
+        "type" : "T"
+       },
+       {
+        "name" : "p3",
+        "type" : "T"
+       },
+       {
+        "name" : "t",
+        "deco" : "f"
+       }
+      ],
+      "endline" : 144,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 147,
+    "char" : 3,
+    "name" : "interp_hermite",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "interp_hermite",
+      "kind" : "function",
+      "line" : 147,
+      "char" : 3,
+      "type" : "T(T x, T tx, T y, T ty, float t)",
+      "parameters" : [
+       {
+        "name" : "x",
+        "type" : "T"
+       },
+       {
+        "name" : "tx",
+        "type" : "T"
+       },
+       {
+        "name" : "y",
+        "type" : "T"
+       },
+       {
+        "name" : "ty",
+        "type" : "T"
+       },
+       {
+        "name" : "t",
+        "deco" : "f"
+       }
+      ],
+      "endline" : 153,
+      "endchar" : 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "gl3n.linalg",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\linalg.d",
+  "members" : [
+   {
+    "name" : "std.math",
+    "kind" : "import",
+    "line" : 23,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "isNaN",
+     "isInfinity"
+    ]
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 24,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "to"
+    ]
+   },
+   {
+    "name" : "std.traits",
+    "kind" : "import",
+    "line" : 25,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "isIntegral",
+     "isFloatingPoint",
+     "isStaticArray",
+     "isDynamicArray",
+     "isImplicitlyConvertible",
+     "isArray"
+    ]
+   },
+   {
+    "name" : "std.string",
+    "kind" : "import",
+    "line" : 26,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "format",
+     "rightJustify"
+    ]
+   },
+   {
+    "name" : "std.array",
+    "kind" : "import",
+    "line" : 27,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "join"
+    ]
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 28,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "max",
+     "min",
+     "reduce"
+    ]
+   },
+   {
+    "name" : "gl3n.math",
+    "kind" : "import",
+    "line" : 29,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "clamp",
+     "PI",
+     "sqrt",
+     "sin",
+     "cos",
+     "acos",
+     "tan",
+     "asin",
+     "atan2",
+     "almost_equal"
+    ]
+   },
+   {
+    "name" : "gl3n.util",
+    "kind" : "import",
+    "line" : 30,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "is_vector",
+     "is_matrix",
+     "is_quaternion",
+     "TupleRange"
+    ]
+   },
+   {
+    "name" : "rmul",
+    "kind" : "variable",
+    "protection" : "private",
+    "line" : 36,
+    "char" : 18,
+    "storageClass" : [
+     "enum"
+    ],
+    "deco" : "b",
+    "init" : "true"
+   },
+   {
+    "kind" : "template",
+    "line" : 49,
+    "char" : 1,
+    "name" : "Vector",
+    "parameters" : [
+     {
+      "name" : "type",
+      "kind" : "type"
+     },
+     {
+      "name" : "dimension_",
+      "kind" : "value",
+      "deco" : "i"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "Vector",
+      "kind" : "struct",
+      "line" : 49,
+      "char" : 1,
+      "members" : [
+       {
+        "name" : "vt",
+        "kind" : "alias",
+        "line" : 52,
+        "char" : 16,
+        "type" : "type"
+       },
+       {
+        "name" : "dimension",
+        "kind" : "variable",
+        "line" : 53,
+        "char" : 22,
+        "deco" : "i",
+        "init" : "dimension_"
+       },
+       {
+        "name" : "vector",
+        "kind" : "variable",
+        "line" : 55,
+        "char" : 19,
+        "type" : "vt[dimension]"
+       },
+       {
+        "name" : "value_ptr",
+        "kind" : "function",
+        "line" : 58,
+        "char" : 20,
+        "storageClass" : [
+         "auto"
+        ],
+        "type" : "const @property ()",
+        "endline" : 58,
+        "endchar" : 59
+       },
+       {
+        "name" : "as_string",
+        "kind" : "function",
+        "line" : 61,
+        "char" : 22,
+        "type" : "@property string()",
+        "endline" : 63,
+        "endchar" : 5
+       },
+       {
+        "name" : "toString",
+        "kind" : "alias",
+        "line" : 64,
+        "char" : 21,
+        "type" : "as_string"
+       },
+       {
+        "kind" : "template",
+        "line" : 68,
+        "char" : 37,
+        "name" : "get_",
+        "parameters" : [
+         {
+          "name" : "coord",
+          "kind" : "value",
+          "deco" : "a"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "get_",
+          "kind" : "function",
+          "line" : 68,
+          "char" : 37,
+          "type" : "inout @property ref inout(vt)()",
+          "endline" : 70,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "x",
+        "kind" : "alias",
+        "line" : 72,
+        "char" : 20,
+        "type" : "get_!'x'"
+       },
+       {
+        "name" : "u",
+        "kind" : "alias",
+        "line" : 73,
+        "char" : 13,
+        "type" : "x"
+       },
+       {
+        "name" : "s",
+        "kind" : "alias",
+        "line" : 74,
+        "char" : 13,
+        "type" : "x"
+       },
+       {
+        "name" : "r",
+        "kind" : "alias",
+        "line" : 75,
+        "char" : 13,
+        "type" : "x"
+       },
+       {
+        "name" : "__unittestL107_13",
+        "kind" : "function",
+        "line" : 107,
+        "char" : 5,
+        "endline" : 121,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 121,
+        "char" : 17,
+        "name" : "isCompatibleVectorImpl",
+        "parameters" : [
+         {
+          "name" : "d",
+          "kind" : "value",
+          "deco" : "i"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "isCompatibleVectorImpl",
+          "kind" : "function",
+          "line" : 121,
+          "char" : 17,
+          "type" : "void(Vector!(vt, d) vec)",
+          "parameters" : [
+           {
+            "name" : "vec",
+            "type" : "Vector!(vt, d)"
+           }
+          ],
+          "endline" : 122,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 124,
+        "char" : 5,
+        "name" : "isCompatibleVector",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "isCompatibleVector",
+          "kind" : "variable",
+          "line" : 125,
+          "char" : 14,
+          "storageClass" : [
+           "enum"
+          ],
+          "init" : "is(typeof(isCompatibleVectorImpl(T.init)))"
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 128,
+        "char" : 17,
+        "name" : "isCompatibleMatrixImpl",
+        "parameters" : [
+         {
+          "name" : "r",
+          "kind" : "value",
+          "deco" : "i"
+         },
+         {
+          "name" : "c",
+          "kind" : "value",
+          "deco" : "i"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "isCompatibleMatrixImpl",
+          "kind" : "function",
+          "line" : 128,
+          "char" : 17,
+          "type" : "void(Matrix!(vt, r, c) m)",
+          "parameters" : [
+           {
+            "name" : "m",
+            "type" : "Matrix!(vt, r, c)"
+           }
+          ],
+          "endline" : 129,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 131,
+        "char" : 5,
+        "name" : "isCompatibleMatrix",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "isCompatibleMatrix",
+          "kind" : "variable",
+          "line" : 132,
+          "char" : 14,
+          "storageClass" : [
+           "enum"
+          ],
+          "init" : "is(typeof(isCompatibleMatrixImpl(T.init)))"
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 135,
+        "char" : 18,
+        "name" : "construct",
+        "parameters" : [
+         {
+          "name" : "i",
+          "kind" : "value",
+          "deco" : "i"
+         },
+         {
+          "name" : "T",
+          "kind" : "type"
+         },
+         {
+          "name" : "Tail",
+          "kind" : "tuple"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "construct",
+          "kind" : "function",
+          "line" : 135,
+          "char" : 18,
+          "type" : "void(T head, Tail tail)",
+          "parameters" : [
+           {
+            "name" : "head",
+            "type" : "T"
+           },
+           {
+            "name" : "tail",
+            "type" : "Tail"
+           }
+          ],
+          "endline" : 153,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 155,
+        "char" : 18,
+        "name" : "construct",
+        "parameters" : [
+         {
+          "name" : "i",
+          "kind" : "value",
+          "deco" : "i"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "construct",
+          "kind" : "function",
+          "line" : 155,
+          "char" : 18,
+          "type" : "void()",
+          "endline" : 157,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 170,
+        "char" : 5,
+        "name" : "this",
+        "parameters" : [
+         {
+          "name" : "Args",
+          "kind" : "tuple"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "this",
+          "kind" : "constructor",
+          "line" : 170,
+          "char" : 5,
+          "type" : "(Args args)",
+          "parameters" : [
+           {
+            "name" : "args",
+            "type" : "Args"
+           }
+          ],
+          "endline" : 172,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 175,
+        "char" : 5,
+        "name" : "this",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "this",
+          "kind" : "constructor",
+          "line" : 175,
+          "char" : 5,
+          "type" : "(T vec)",
+          "parameters" : [
+           {
+            "name" : "vec",
+            "type" : "T"
+           }
+          ],
+          "endline" : 179,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 182,
+        "char" : 5,
+        "name" : "this",
+        "parameters" : [],
+        "members" : [
+         {
+          "name" : "this",
+          "kind" : "constructor",
+          "line" : 182,
+          "char" : 5,
+          "type" : "(vt value)",
+          "parameters" : [
+           {
+            "name" : "value",
+            "type" : "vt"
+           }
+          ],
+          "endline" : 184,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "isFinite",
+        "kind" : "function",
+        "line" : 187,
+        "char" : 20,
+        "type" : "const @property bool()",
+        "endline" : 199,
+        "endchar" : 5
+       },
+       {
+        "name" : "ok",
+        "kind" : "alias",
+        "line" : 200,
+        "char" : 46,
+        "type" : "isFinite"
+       },
+       {
+        "name" : "clear",
+        "kind" : "function",
+        "line" : 203,
+        "char" : 10,
+        "type" : "void(vt value)",
+        "parameters" : [
+         {
+          "name" : "value",
+          "type" : "vt"
+         }
+        ],
+        "endline" : 207,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL209_14",
+        "kind" : "function",
+        "line" : 209,
+        "char" : 5,
+        "endline" : 271,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 271,
+        "char" : 5,
+        "name" : "coord_to_index",
+        "parameters" : [
+         {
+          "name" : "c",
+          "kind" : "value",
+          "deco" : "a"
+         }
+        ],
+        "members" : []
+       },
+       {
+        "name" : "update",
+        "kind" : "function",
+        "line" : 292,
+        "char" : 10,
+        "type" : "void(Vector!(vt, dimension) other)",
+        "parameters" : [
+         {
+          "name" : "other",
+          "type" : "Vector!(vt, dimension)"
+         }
+        ],
+        "endline" : 294,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL296_15",
+        "kind" : "function",
+        "line" : 296,
+        "char" : 5,
+        "endline" : 371,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 371,
+        "char" : 18,
+        "name" : "dispatchImpl",
+        "parameters" : [
+         {
+          "name" : "i",
+          "kind" : "value",
+          "deco" : "i"
+         },
+         {
+          "name" : "s",
+          "kind" : "value",
+          "type" : "string"
+         },
+         {
+          "name" : "size",
+          "kind" : "value",
+          "deco" : "i"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "dispatchImpl",
+          "kind" : "function",
+          "line" : 371,
+          "char" : 18,
+          "type" : "const void(ref vt[size] result)",
+          "parameters" : [
+           {
+            "name" : "result",
+            "type" : "vt[size]",
+            "storageClass" : [
+             "ref"
+            ]
+           }
+          ],
+          "endline" : 376,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 380,
+        "char" : 37,
+        "name" : "opDispatch",
+        "parameters" : [
+         {
+          "name" : "s",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opDispatch",
+          "kind" : "function",
+          "line" : 380,
+          "char" : 37,
+          "type" : "const @property Vector!(vt, s.length)()",
+          "endline" : 386,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL388_16",
+        "kind" : "function",
+        "line" : 388,
+        "char" : 5,
+        "endline" : 401,
+        "endchar" : 5
+       },
+       {
+        "name" : "magnitude_squared",
+        "kind" : "function",
+        "line" : 401,
+        "char" : 20,
+        "type" : "const @property real()",
+        "endline" : 409,
+        "endchar" : 5
+       },
+       {
+        "name" : "magnitude",
+        "kind" : "function",
+        "line" : 412,
+        "char" : 20,
+        "type" : "const @property real()",
+        "endline" : 414,
+        "endchar" : 5
+       },
+       {
+        "name" : "length_squared",
+        "kind" : "alias",
+        "line" : 416,
+        "char" : 29,
+        "type" : "magnitude_squared"
+       },
+       {
+        "name" : "length",
+        "kind" : "alias",
+        "line" : 417,
+        "char" : 21,
+        "type" : "magnitude"
+       },
+       {
+        "name" : "normalize",
+        "kind" : "function",
+        "line" : 420,
+        "char" : 10,
+        "type" : "void()",
+        "endline" : 428,
+        "endchar" : 5
+       },
+       {
+        "name" : "normalized",
+        "kind" : "function",
+        "line" : 431,
+        "char" : 22,
+        "type" : "const @property Vector()",
+        "endline" : 436,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 438,
+        "char" : 12,
+        "name" : "opUnary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"-\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opUnary",
+          "kind" : "function",
+          "line" : 438,
+          "char" : 12,
+          "type" : "const Vector()",
+          "endline" : 446,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL448_17",
+        "kind" : "function",
+        "line" : 448,
+        "char" : 5,
+        "endline" : 460,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 460,
+        "char" : 12,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 460,
+          "char" : 12,
+          "type" : "const Vector(vt r)",
+          "parameters" : [
+           {
+            "name" : "r",
+            "type" : "vt"
+           }
+          ],
+          "endline" : 468,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 470,
+        "char" : 12,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"/\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 470,
+          "char" : 12,
+          "type" : "const Vector(vt r)",
+          "parameters" : [
+           {
+            "name" : "r",
+            "type" : "vt"
+           }
+          ],
+          "endline" : 478,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 480,
+        "char" : 12,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 480,
+          "char" : 12,
+          "type" : "const Vector(Vector r)",
+          "parameters" : [
+           {
+            "name" : "r",
+            "type" : "Vector"
+           }
+          ],
+          "endline" : 488,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 490,
+        "char" : 8,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 490,
+          "char" : 8,
+          "type" : "const vt(Vector r)",
+          "parameters" : [
+           {
+            "name" : "r",
+            "type" : "Vector"
+           }
+          ],
+          "endline" : 492,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 495,
+        "char" : 25,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         },
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 495,
+          "char" : 25,
+          "type" : "const Vector!(vt, T.cols)(T inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "T"
+           }
+          ],
+          "endline" : 506,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 508,
+        "char" : 10,
+        "name" : "opBinaryRight",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         },
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinaryRight",
+          "kind" : "function",
+          "line" : 508,
+          "char" : 10,
+          "storageClass" : [
+           "auto"
+          ],
+          "type" : "const (T inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "T"
+           }
+          ],
+          "endline" : 510,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL512_18",
+        "kind" : "function",
+        "line" : 512,
+        "char" : 5,
+        "endline" : 541,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 541,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 541,
+          "char" : 10,
+          "type" : "void(vt r)",
+          "parameters" : [
+           {
+            "name" : "r",
+            "type" : "vt"
+           }
+          ],
+          "endline" : 545,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 547,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"/\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 547,
+          "char" : 10,
+          "type" : "void(vt r)",
+          "parameters" : [
+           {
+            "name" : "r",
+            "type" : "vt"
+           }
+          ],
+          "endline" : 551,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 553,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 553,
+          "char" : 10,
+          "type" : "void(Vector r)",
+          "parameters" : [
+           {
+            "name" : "r",
+            "type" : "Vector"
+           }
+          ],
+          "endline" : 557,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL559_19",
+        "kind" : "function",
+        "line" : 559,
+        "char" : 5,
+        "endline" : 603,
+        "endchar" : 5
+       },
+       {
+        "name" : "opCmp",
+        "kind" : "function",
+        "line" : 603,
+        "char" : 9,
+        "type" : "const int(ref const Vector vec)",
+        "parameters" : [
+         {
+          "name" : "vec",
+          "type" : "Vector",
+          "storageClass" : [
+           "const",
+           "ref"
+          ]
+         }
+        ],
+        "endline" : 614,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 616,
+        "char" : 10,
+        "name" : "opEquals",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opEquals",
+          "kind" : "function",
+          "line" : 616,
+          "char" : 10,
+          "type" : "const bool(const T vec)",
+          "parameters" : [
+           {
+            "name" : "vec",
+            "type" : "T",
+            "storageClass" : [
+             "const"
+            ]
+           }
+          ],
+          "endline" : 618,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 620,
+        "char" : 10,
+        "name" : "opEquals",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opEquals",
+          "kind" : "function",
+          "line" : 620,
+          "char" : 10,
+          "type" : "const bool(const(T)[] array)",
+          "parameters" : [
+           {
+            "name" : "array",
+            "type" : "const(T)[]"
+           }
+          ],
+          "endline" : 632,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 634,
+        "char" : 10,
+        "name" : "opCast",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type",
+          "deco" : "b"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opCast",
+          "kind" : "function",
+          "line" : 634,
+          "char" : 10,
+          "type" : "const bool()",
+          "endline" : 636,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL638_20",
+        "kind" : "function",
+        "line" : 638,
+        "char" : 5,
+        "endline" : 671,
+        "endchar" : 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 674,
+    "char" : 6,
+    "name" : "dot",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "dot",
+      "kind" : "function",
+      "line" : 674,
+      "char" : 6,
+      "type" : "pure nothrow @safe T.vt(const T veca, const T vecb)",
+      "parameters" : [
+       {
+        "name" : "veca",
+        "type" : "T",
+        "storageClass" : [
+         "const"
+        ]
+       },
+       {
+        "name" : "vecb",
+        "type" : "T",
+        "storageClass" : [
+         "const"
+        ]
+       }
+      ],
+      "endline" : 682,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 685,
+    "char" : 3,
+    "name" : "cross",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "cross",
+      "kind" : "function",
+      "line" : 685,
+      "char" : 3,
+      "type" : "pure nothrow @safe T(const T veca, const T vecb)",
+      "parameters" : [
+       {
+        "name" : "veca",
+        "type" : "T",
+        "storageClass" : [
+         "const"
+        ]
+       },
+       {
+        "name" : "vecb",
+        "type" : "T",
+        "storageClass" : [
+         "const"
+        ]
+       }
+      ],
+      "endline" : 689,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 692,
+    "char" : 6,
+    "name" : "distance",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "distance",
+      "kind" : "function",
+      "line" : 692,
+      "char" : 6,
+      "type" : "pure nothrow @safe T.vt(const T veca, const T vecb)",
+      "parameters" : [
+       {
+        "name" : "veca",
+        "type" : "T",
+        "storageClass" : [
+         "const"
+        ]
+       },
+       {
+        "name" : "vecb",
+        "type" : "T",
+        "storageClass" : [
+         "const"
+        ]
+       }
+      ],
+      "endline" : 694,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL696_21",
+    "kind" : "function",
+    "line" : 696,
+    "char" : 1,
+    "endline" : 713,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 713,
+    "char" : 3,
+    "name" : "reflect",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "reflect",
+      "kind" : "function",
+      "line" : 713,
+      "char" : 3,
+      "type" : "pure nothrow @safe T(const T vec, const T norm)",
+      "parameters" : [
+       {
+        "name" : "vec",
+        "type" : "T",
+        "storageClass" : [
+         "const"
+        ]
+       },
+       {
+        "name" : "norm",
+        "type" : "T",
+        "storageClass" : [
+         "const"
+        ]
+       }
+      ],
+      "endline" : 715,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL717_22",
+    "kind" : "function",
+    "line" : 717,
+    "char" : 1,
+    "endline" : 727,
+    "endchar" : 1
+   },
+   {
+    "name" : "vec2",
+    "kind" : "alias",
+    "line" : 727,
+    "char" : 25,
+    "deco" : "S4gl3n6linalg17__T6VectorTfVii2Z6Vector"
+   },
+   {
+    "name" : "vec3",
+    "kind" : "alias",
+    "line" : 728,
+    "char" : 25
+   },
+   {
+    "name" : "vec4",
+    "kind" : "alias",
+    "line" : 729,
+    "char" : 25,
+    "deco" : "S4gl3n6linalg17__T6VectorTfVii4Z6Vector"
+   },
+   {
+    "name" : "vec2d",
+    "kind" : "alias",
+    "line" : 731,
+    "char" : 26,
+    "deco" : "S4gl3n6linalg17__T6VectorTdVii2Z6Vector"
+   },
+   {
+    "name" : "vec3d",
+    "kind" : "alias",
+    "line" : 732,
+    "char" : 26,
+    "deco" : "S4gl3n6linalg17__T6VectorTdVii3Z6Vector"
+   },
+   {
+    "name" : "vec4d",
+    "kind" : "alias",
+    "line" : 733,
+    "char" : 26,
+    "deco" : "S4gl3n6linalg17__T6VectorTdVii4Z6Vector"
+   },
+   {
+    "name" : "vec2i",
+    "kind" : "alias",
+    "line" : 735,
+    "char" : 23,
+    "deco" : "S4gl3n6linalg17__T6VectorTiVii2Z6Vector"
+   },
+   {
+    "name" : "vec3i",
+    "kind" : "alias",
+    "line" : 736,
+    "char" : 23,
+    "deco" : "S4gl3n6linalg17__T6VectorTiVii3Z6Vector"
+   },
+   {
+    "name" : "vec4i",
+    "kind" : "alias",
+    "line" : 737,
+    "char" : 23,
+    "deco" : "S4gl3n6linalg17__T6VectorTiVii4Z6Vector"
+   },
+   {
+    "kind" : "template",
+    "line" : 755,
+    "char" : 1,
+    "name" : "Matrix",
+    "parameters" : [
+     {
+      "name" : "type",
+      "kind" : "type"
+     },
+     {
+      "name" : "rows_",
+      "kind" : "value",
+      "deco" : "i"
+     },
+     {
+      "name" : "cols_",
+      "kind" : "value",
+      "deco" : "i"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "Matrix",
+      "kind" : "struct",
+      "line" : 755,
+      "char" : 1,
+      "members" : [
+       {
+        "name" : "mt",
+        "kind" : "alias",
+        "line" : 756,
+        "char" : 16,
+        "type" : "type"
+       },
+       {
+        "name" : "rows",
+        "kind" : "variable",
+        "line" : 757,
+        "char" : 22,
+        "deco" : "i",
+        "init" : "rows_"
+       },
+       {
+        "name" : "cols",
+        "kind" : "variable",
+        "line" : 758,
+        "char" : 22,
+        "deco" : "i",
+        "init" : "cols_"
+       },
+       {
+        "name" : "matrix",
+        "kind" : "variable",
+        "line" : 761,
+        "char" : 20,
+        "type" : "mt[cols][rows]"
+       },
+       {
+        "name" : "__unittestL764_23",
+        "kind" : "function",
+        "line" : 764,
+        "char" : 5,
+        "endline" : 806,
+        "endchar" : 5
+       },
+       {
+        "name" : "value_ptr",
+        "kind" : "function",
+        "line" : 806,
+        "char" : 20,
+        "storageClass" : [
+         "auto"
+        ],
+        "type" : "const @property ()",
+        "endline" : 806,
+        "endchar" : 62
+       },
+       {
+        "name" : "as_string",
+        "kind" : "function",
+        "line" : 809,
+        "char" : 22,
+        "type" : "@property string()",
+        "endline" : 811,
+        "endchar" : 5
+       },
+       {
+        "name" : "toString",
+        "kind" : "alias",
+        "line" : 812,
+        "char" : 21,
+        "type" : "as_string"
+       },
+       {
+        "name" : "as_pretty_string",
+        "kind" : "function",
+        "line" : 815,
+        "char" : 22,
+        "type" : "@property string()",
+        "endline" : 831,
+        "endchar" : 5
+       },
+       {
+        "name" : "toPrettyString",
+        "kind" : "alias",
+        "line" : 832,
+        "char" : 28,
+        "type" : "as_pretty_string"
+       },
+       {
+        "kind" : "template",
+        "line" : 835,
+        "char" : 17,
+        "name" : "isCompatibleMatrixImpl",
+        "parameters" : [
+         {
+          "name" : "r",
+          "kind" : "value",
+          "deco" : "i"
+         },
+         {
+          "name" : "c",
+          "kind" : "value",
+          "deco" : "i"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "isCompatibleMatrixImpl",
+          "kind" : "function",
+          "line" : 835,
+          "char" : 17,
+          "type" : "void(Matrix!(mt, r, c) m)",
+          "parameters" : [
+           {
+            "name" : "m",
+            "type" : "Matrix!(mt, r, c)"
+           }
+          ],
+          "endline" : 836,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 838,
+        "char" : 5,
+        "name" : "isCompatibleMatrix",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "isCompatibleMatrix",
+          "kind" : "variable",
+          "line" : 839,
+          "char" : 14,
+          "storageClass" : [
+           "enum"
+          ],
+          "init" : "is(typeof(isCompatibleMatrixImpl(T.init)))"
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 842,
+        "char" : 17,
+        "name" : "isCompatibleVectorImpl",
+        "parameters" : [
+         {
+          "name" : "d",
+          "kind" : "value",
+          "deco" : "i"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "isCompatibleVectorImpl",
+          "kind" : "function",
+          "line" : 842,
+          "char" : 17,
+          "type" : "void(Vector!(mt, d) vec)",
+          "parameters" : [
+           {
+            "name" : "vec",
+            "type" : "Vector!(mt, d)"
+           }
+          ],
+          "endline" : 843,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 845,
+        "char" : 5,
+        "name" : "isCompatibleVector",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "isCompatibleVector",
+          "kind" : "variable",
+          "line" : 846,
+          "char" : 14,
+          "storageClass" : [
+           "enum"
+          ],
+          "init" : "is(typeof(isCompatibleVectorImpl(T.init)))"
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 849,
+        "char" : 18,
+        "name" : "construct",
+        "parameters" : [
+         {
+          "name" : "i",
+          "kind" : "value",
+          "deco" : "i"
+         },
+         {
+          "name" : "T",
+          "kind" : "type"
+         },
+         {
+          "name" : "Tail",
+          "kind" : "tuple"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "construct",
+          "kind" : "function",
+          "line" : 849,
+          "char" : 18,
+          "type" : "void(T head, Tail tail)",
+          "parameters" : [
+           {
+            "name" : "head",
+            "type" : "T"
+           },
+           {
+            "name" : "tail",
+            "type" : "Tail"
+           }
+          ],
+          "endline" : 868,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 870,
+        "char" : 18,
+        "name" : "construct",
+        "parameters" : [
+         {
+          "name" : "i",
+          "kind" : "value",
+          "deco" : "i"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "construct",
+          "kind" : "function",
+          "line" : 870,
+          "char" : 18,
+          "type" : "void()",
+          "endline" : 872,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 887,
+        "char" : 5,
+        "name" : "this",
+        "parameters" : [
+         {
+          "name" : "Args",
+          "kind" : "tuple"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "this",
+          "kind" : "constructor",
+          "line" : 887,
+          "char" : 5,
+          "type" : "(Args args)",
+          "parameters" : [
+           {
+            "name" : "args",
+            "type" : "Args"
+           }
+          ],
+          "endline" : 889,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 892,
+        "char" : 5,
+        "name" : "this",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "this",
+          "kind" : "constructor",
+          "line" : 892,
+          "char" : 5,
+          "type" : "(T mat)",
+          "parameters" : [
+           {
+            "name" : "mat",
+            "type" : "T"
+           }
+          ],
+          "endline" : 898,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 901,
+        "char" : 5,
+        "name" : "this",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "this",
+          "kind" : "constructor",
+          "line" : 901,
+          "char" : 5,
+          "type" : "(T mat)",
+          "parameters" : [
+           {
+            "name" : "mat",
+            "type" : "T"
+           }
+          ],
+          "endline" : 909,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 912,
+        "char" : 5,
+        "name" : "this",
+        "parameters" : [],
+        "members" : [
+         {
+          "name" : "this",
+          "kind" : "constructor",
+          "line" : 912,
+          "char" : 5,
+          "type" : "(mt value)",
+          "parameters" : [
+           {
+            "name" : "value",
+            "type" : "mt"
+           }
+          ],
+          "endline" : 914,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "isFinite",
+        "kind" : "function",
+        "line" : 917,
+        "char" : 20,
+        "type" : "const @property bool()",
+        "endline" : 932,
+        "endchar" : 5
+       },
+       {
+        "name" : "ok",
+        "kind" : "alias",
+        "line" : 933,
+        "char" : 46,
+        "type" : "isFinite"
+       },
+       {
+        "name" : "clear",
+        "kind" : "function",
+        "line" : 936,
+        "char" : 10,
+        "type" : "void(mt value)",
+        "parameters" : [
+         {
+          "name" : "value",
+          "type" : "mt"
+         }
+        ],
+        "endline" : 942,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL944_24",
+        "kind" : "function",
+        "line" : 944,
+        "char" : 5,
+        "endline" : 997,
+        "endchar" : 5
+       },
+       {
+        "name" : "transposed",
+        "kind" : "function",
+        "line" : 1057,
+        "char" : 39,
+        "type" : "const @property Matrix!(mt, cols, rows)()",
+        "endline" : 1067,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL1792_33",
+        "kind" : "function",
+        "line" : 1792,
+        "char" : 5,
+        "endline" : 1816,
+        "endchar" : 5
+       },
+       {
+        "name" : "mms",
+        "kind" : "function",
+        "line" : 1816,
+        "char" : 18,
+        "type" : "const void(mt inp, ref Matrix mat)",
+        "parameters" : [
+         {
+          "name" : "inp",
+          "type" : "mt"
+         },
+         {
+          "name" : "mat",
+          "type" : "Matrix",
+          "storageClass" : [
+           "ref"
+          ]
+         }
+        ],
+        "endline" : 1822,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 1824,
+        "char" : 18,
+        "name" : "masm",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "masm",
+          "kind" : "function",
+          "line" : 1824,
+          "char" : 18,
+          "type" : "const void(Matrix inp, ref Matrix mat)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Matrix"
+           },
+           {
+            "name" : "mat",
+            "type" : "Matrix",
+            "storageClass" : [
+             "ref"
+            ]
+           }
+          ],
+          "endline" : 1830,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1832,
+        "char" : 31,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         },
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 1832,
+          "char" : 31,
+          "type" : "const Matrix!(mt, rows, T.cols)(T inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "T"
+           }
+          ],
+          "endline" : 1846,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1848,
+        "char" : 23,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         },
+         {
+          "name" : "T",
+          "kind" : "type",
+          "type" : "Vector!(mt, cols)"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 1848,
+          "char" : 23,
+          "type" : "const Vector!(mt, rows)(T inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "T"
+           }
+          ],
+          "endline" : 1859,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1861,
+        "char" : 12,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 1861,
+          "char" : 12,
+          "type" : "const Matrix(mt inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "mt"
+           }
+          ],
+          "endline" : 1865,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1867,
+        "char" : 12,
+        "name" : "opBinaryRight",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinaryRight",
+          "kind" : "function",
+          "line" : 1867,
+          "char" : 12,
+          "type" : "const Matrix(mt inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "mt"
+           }
+          ],
+          "endline" : 1869,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1871,
+        "char" : 12,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 1871,
+          "char" : 12,
+          "type" : "const Matrix(Matrix inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Matrix"
+           }
+          ],
+          "endline" : 1875,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1877,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 1877,
+          "char" : 10,
+          "type" : "void(mt inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "mt"
+           }
+          ],
+          "endline" : 1879,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1881,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 1881,
+          "char" : 10,
+          "type" : "void(Matrix inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Matrix"
+           }
+          ],
+          "endline" : 1883,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1885,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 1885,
+          "char" : 10,
+          "type" : "void(Matrix inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Matrix"
+           }
+          ],
+          "endline" : 1887,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL1889_34",
+        "kind" : "function",
+        "line" : 1889,
+        "char" : 5,
+        "endline" : 1932,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 1932,
+        "char" : 10,
+        "name" : "opCast",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type",
+          "deco" : "b"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opCast",
+          "kind" : "function",
+          "line" : 1932,
+          "char" : 10,
+          "type" : "const bool()",
+          "endline" : 1934,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL1936_35",
+        "kind" : "function",
+        "line" : 1936,
+        "char" : 5,
+        "endline" : 1951,
+        "endchar" : 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "mat2",
+    "kind" : "alias",
+    "line" : 1956,
+    "char" : 28,
+    "deco" : "S4gl3n6linalg21__T6MatrixTfVii2Vii2Z6Matrix"
+   },
+   {
+    "name" : "mat3",
+    "kind" : "alias",
+    "line" : 1957,
+    "char" : 28,
+    "deco" : "S4gl3n6linalg21__T6MatrixTfVii3Vii3Z6Matrix"
+   },
+   {
+    "name" : "mat34",
+    "kind" : "alias",
+    "line" : 1958,
+    "char" : 28,
+    "deco" : "S4gl3n6linalg21__T6MatrixTfVii3Vii4Z6Matrix"
+   },
+   {
+    "name" : "mat4",
+    "kind" : "alias",
+    "line" : 1959,
+    "char" : 28,
+    "deco" : "S4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix"
+   },
+   {
+    "name" : "__unittestL1961_36",
+    "kind" : "function",
+    "protection" : "private",
+    "line" : 1961,
+    "char" : 9,
+    "endline" : 1979,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 1979,
+    "char" : 1,
+    "name" : "Quaternion",
+    "parameters" : [
+     {
+      "name" : "type",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "Quaternion",
+      "kind" : "struct",
+      "line" : 1979,
+      "char" : 1,
+      "members" : [
+       {
+        "name" : "qt",
+        "kind" : "alias",
+        "line" : 1980,
+        "char" : 16,
+        "type" : "type"
+       },
+       {
+        "name" : "quaternion",
+        "kind" : "variable",
+        "line" : 1982,
+        "char" : 11,
+        "type" : "qt[4]"
+       },
+       {
+        "name" : "value_ptr",
+        "kind" : "function",
+        "line" : 1985,
+        "char" : 20,
+        "storageClass" : [
+         "auto"
+        ],
+        "type" : "const @property ()",
+        "endline" : 1985,
+        "endchar" : 63
+       },
+       {
+        "name" : "as_string",
+        "kind" : "function",
+        "line" : 1988,
+        "char" : 22,
+        "type" : "@property string()",
+        "endline" : 1990,
+        "endchar" : 5
+       },
+       {
+        "name" : "toString",
+        "kind" : "alias",
+        "line" : 1991,
+        "char" : 21,
+        "type" : "as_string"
+       },
+       {
+        "kind" : "template",
+        "line" : 1994,
+        "char" : 26,
+        "name" : "get_",
+        "parameters" : [
+         {
+          "name" : "coord",
+          "kind" : "value",
+          "deco" : "a"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "get_",
+          "kind" : "function",
+          "line" : 1994,
+          "char" : 26,
+          "type" : "const @property qt()",
+          "endline" : 1996,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 1997,
+        "char" : 28,
+        "name" : "set_",
+        "parameters" : [
+         {
+          "name" : "coord",
+          "kind" : "value",
+          "deco" : "a"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "set_",
+          "kind" : "function",
+          "line" : 1997,
+          "char" : 28,
+          "type" : "@property void(qt value)",
+          "parameters" : [
+           {
+            "name" : "value",
+            "type" : "qt"
+           }
+          ],
+          "endline" : 1999,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "w",
+        "kind" : "alias",
+        "line" : 2001,
+        "char" : 20,
+        "type" : "get_!'w'"
+       },
+       {
+        "name" : "w",
+        "kind" : "alias",
+        "line" : 2002,
+        "char" : 20,
+        "type" : "set_!'w'"
+       },
+       {
+        "name" : "x",
+        "kind" : "alias",
+        "line" : 2003,
+        "char" : 20,
+        "type" : "get_!'x'"
+       },
+       {
+        "name" : "x",
+        "kind" : "alias",
+        "line" : 2004,
+        "char" : 20,
+        "type" : "set_!'x'"
+       },
+       {
+        "name" : "y",
+        "kind" : "alias",
+        "line" : 2005,
+        "char" : 20,
+        "type" : "get_!'y'"
+       },
+       {
+        "name" : "y",
+        "kind" : "alias",
+        "line" : 2006,
+        "char" : 20,
+        "type" : "set_!'y'"
+       },
+       {
+        "name" : "z",
+        "kind" : "alias",
+        "line" : 2007,
+        "char" : 20,
+        "type" : "get_!'z'"
+       },
+       {
+        "name" : "z",
+        "kind" : "alias",
+        "line" : 2008,
+        "char" : 20,
+        "type" : "set_!'z'"
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 2014,
+        "char" : 5,
+        "type" : "(qt w_, qt x_, qt y_, qt z_)",
+        "parameters" : [
+         {
+          "name" : "w_",
+          "type" : "qt"
+         },
+         {
+          "name" : "x_",
+          "type" : "qt"
+         },
+         {
+          "name" : "y_",
+          "type" : "qt"
+         },
+         {
+          "name" : "z_",
+          "type" : "qt"
+         }
+        ],
+        "endline" : 2019,
+        "endchar" : 5
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 2022,
+        "char" : 5,
+        "type" : "(qt w_, Vector!(qt, 3) vec)",
+        "parameters" : [
+         {
+          "name" : "w_",
+          "type" : "qt"
+         },
+         {
+          "name" : "vec",
+          "type" : "Vector!(qt, 3)"
+         }
+        ],
+        "endline" : 2025,
+        "endchar" : 5
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 2028,
+        "char" : 5,
+        "type" : "(Vector!(qt, 4) vec)",
+        "parameters" : [
+         {
+          "name" : "vec",
+          "type" : "Vector!(qt, 4)"
+         }
+        ],
+        "endline" : 2030,
+        "endchar" : 5
+       },
+       {
+        "name" : "isFinite",
+        "kind" : "function",
+        "line" : 2033,
+        "char" : 20,
+        "type" : "const @property bool()",
+        "endline" : 2040,
+        "endchar" : 5
+       },
+       {
+        "name" : "ok",
+        "kind" : "alias",
+        "line" : 2041,
+        "char" : 46,
+        "type" : "isFinite"
+       },
+       {
+        "name" : "__unittestL2043_37",
+        "kind" : "function",
+        "line" : 2043,
+        "char" : 5,
+        "endline" : 2059,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 2059,
+        "char" : 5,
+        "name" : "coord_to_index",
+        "parameters" : [
+         {
+          "name" : "c",
+          "kind" : "value",
+          "deco" : "a"
+         }
+        ],
+        "members" : []
+       },
+       {
+        "name" : "magnitude_squared",
+        "kind" : "function",
+        "line" : 2074,
+        "char" : 20,
+        "type" : "const @property real()",
+        "endline" : 2076,
+        "endchar" : 5
+       },
+       {
+        "name" : "magnitude",
+        "kind" : "function",
+        "line" : 2079,
+        "char" : 20,
+        "type" : "const @property real()",
+        "endline" : 2081,
+        "endchar" : 5
+       },
+       {
+        "name" : "identity",
+        "kind" : "function",
+        "line" : 2084,
+        "char" : 33,
+        "storageClass" : [
+         "static"
+        ],
+        "type" : "@property Quaternion()",
+        "endline" : 2086,
+        "endchar" : 5
+       },
+       {
+        "name" : "make_identity",
+        "kind" : "function",
+        "line" : 2089,
+        "char" : 10,
+        "type" : "void()",
+        "endline" : 2094,
+        "endchar" : 5
+       },
+       {
+        "name" : "invert",
+        "kind" : "function",
+        "line" : 2097,
+        "char" : 10,
+        "type" : "void()",
+        "endline" : 2101,
+        "endchar" : 5
+       },
+       {
+        "name" : "conjugate",
+        "kind" : "alias",
+        "line" : 2102,
+        "char" : 18,
+        "type" : "invert"
+       },
+       {
+        "name" : "inverse",
+        "kind" : "function",
+        "line" : 2105,
+        "char" : 26,
+        "type" : "const @property Quaternion()",
+        "endline" : 2107,
+        "endchar" : 5
+       },
+       {
+        "name" : "conjugated",
+        "kind" : "alias",
+        "line" : 2108,
+        "char" : 19,
+        "type" : "inverse"
+       },
+       {
+        "name" : "__unittestL2110_38",
+        "kind" : "function",
+        "line" : 2110,
+        "char" : 5,
+        "endline" : 2137,
+        "endchar" : 5
+       },
+       {
+        "name" : "from_matrix",
+        "kind" : "function",
+        "line" : 2137,
+        "char" : 23,
+        "storageClass" : [
+         "static"
+        ],
+        "type" : "Quaternion(Matrix!(qt, 3, 3) matrix)",
+        "parameters" : [
+         {
+          "name" : "matrix",
+          "type" : "Matrix!(qt, 3, 3)"
+         }
+        ],
+        "endline" : 2174,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 2180,
+        "char" : 29,
+        "name" : "to_matrix",
+        "parameters" : [
+         {
+          "name" : "rows",
+          "kind" : "value",
+          "deco" : "i"
+         },
+         {
+          "name" : "cols",
+          "kind" : "value",
+          "deco" : "i"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "to_matrix",
+          "kind" : "function",
+          "line" : 2180,
+          "char" : 29,
+          "type" : "const Matrix!(qt, rows, cols)()",
+          "endline" : 2210,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL2212_39",
+        "kind" : "function",
+        "line" : 2212,
+        "char" : 5,
+        "endline" : 2233,
+        "endchar" : 5
+       },
+       {
+        "name" : "normalize",
+        "kind" : "function",
+        "line" : 2233,
+        "char" : 10,
+        "type" : "void()",
+        "endline" : 2242,
+        "endchar" : 5
+       },
+       {
+        "name" : "normalized",
+        "kind" : "function",
+        "line" : 2245,
+        "char" : 16,
+        "type" : "const Quaternion()",
+        "endline" : 2259,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL2261_40",
+        "kind" : "function",
+        "line" : 2261,
+        "char" : 5,
+        "endline" : 2272,
+        "endchar" : 5
+       },
+       {
+        "name" : "yaw",
+        "kind" : "function",
+        "line" : 2272,
+        "char" : 20,
+        "type" : "const @property real()",
+        "endline" : 2274,
+        "endchar" : 5
+       },
+       {
+        "name" : "pitch",
+        "kind" : "function",
+        "line" : 2277,
+        "char" : 20,
+        "type" : "const @property real()",
+        "endline" : 2279,
+        "endchar" : 5
+       },
+       {
+        "name" : "roll",
+        "kind" : "function",
+        "line" : 2282,
+        "char" : 20,
+        "type" : "const @property real()",
+        "endline" : 2284,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL2286_41",
+        "kind" : "function",
+        "line" : 2286,
+        "char" : 5,
+        "endline" : 2304,
+        "endchar" : 5
+       },
+       {
+        "name" : "xrotation",
+        "kind" : "function",
+        "line" : 2304,
+        "char" : 23,
+        "storageClass" : [
+         "static"
+        ],
+        "type" : "Quaternion(real alpha)",
+        "parameters" : [
+         {
+          "name" : "alpha",
+          "deco" : "e"
+         }
+        ],
+        "endline" : 2314,
+        "endchar" : 5
+       },
+       {
+        "name" : "yrotation",
+        "kind" : "function",
+        "line" : 2317,
+        "char" : 23,
+        "storageClass" : [
+         "static"
+        ],
+        "type" : "Quaternion(real alpha)",
+        "parameters" : [
+         {
+          "name" : "alpha",
+          "deco" : "e"
+         }
+        ],
+        "endline" : 2327,
+        "endchar" : 5
+       },
+       {
+        "name" : "zrotation",
+        "kind" : "function",
+        "line" : 2330,
+        "char" : 23,
+        "storageClass" : [
+         "static"
+        ],
+        "type" : "Quaternion(real alpha)",
+        "parameters" : [
+         {
+          "name" : "alpha",
+          "deco" : "e"
+         }
+        ],
+        "endline" : 2340,
+        "endchar" : 5
+       },
+       {
+        "name" : "axis_rotation",
+        "kind" : "function",
+        "line" : 2343,
+        "char" : 23,
+        "storageClass" : [
+         "static"
+        ],
+        "type" : "Quaternion(real alpha, Vector!(qt, 3) axis)",
+        "parameters" : [
+         {
+          "name" : "alpha",
+          "deco" : "e"
+         },
+         {
+          "name" : "axis",
+          "type" : "Vector!(qt, 3)"
+         }
+        ],
+        "endline" : 2358,
+        "endchar" : 5
+       },
+       {
+        "name" : "euler_rotation",
+        "kind" : "function",
+        "line" : 2361,
+        "char" : 23,
+        "storageClass" : [
+         "static"
+        ],
+        "type" : "Quaternion(real roll, real pitch, real yaw)",
+        "parameters" : [
+         {
+          "name" : "roll",
+          "deco" : "e"
+         },
+         {
+          "name" : "pitch",
+          "deco" : "e"
+         },
+         {
+          "name" : "yaw",
+          "deco" : "e"
+         }
+        ],
+        "endline" : 2377,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL2379_42",
+        "kind" : "function",
+        "line" : 2379,
+        "char" : 5,
+        "endline" : 2392,
+        "endchar" : 5
+       },
+       {
+        "name" : "rotatex",
+        "kind" : "function",
+        "line" : 2392,
+        "char" : 16,
+        "type" : "Quaternion(real alpha)",
+        "parameters" : [
+         {
+          "name" : "alpha",
+          "deco" : "e"
+         }
+        ],
+        "endline" : 2395,
+        "endchar" : 5
+       },
+       {
+        "name" : "rotatey",
+        "kind" : "function",
+        "line" : 2398,
+        "char" : 16,
+        "type" : "Quaternion(real alpha)",
+        "parameters" : [
+         {
+          "name" : "alpha",
+          "deco" : "e"
+         }
+        ],
+        "endline" : 2401,
+        "endchar" : 5
+       },
+       {
+        "name" : "rotatez",
+        "kind" : "function",
+        "line" : 2404,
+        "char" : 16,
+        "type" : "Quaternion(real alpha)",
+        "parameters" : [
+         {
+          "name" : "alpha",
+          "deco" : "e"
+         }
+        ],
+        "endline" : 2407,
+        "endchar" : 5
+       },
+       {
+        "name" : "rotate_axis",
+        "kind" : "function",
+        "line" : 2410,
+        "char" : 16,
+        "type" : "Quaternion(real alpha, Vector!(qt, 3) axis)",
+        "parameters" : [
+         {
+          "name" : "alpha",
+          "deco" : "e"
+         },
+         {
+          "name" : "axis",
+          "type" : "Vector!(qt, 3)"
+         }
+        ],
+        "endline" : 2413,
+        "endchar" : 5
+       },
+       {
+        "name" : "rotate_euler",
+        "kind" : "function",
+        "line" : 2416,
+        "char" : 16,
+        "type" : "Quaternion(real heading, real attitude, real bank)",
+        "parameters" : [
+         {
+          "name" : "heading",
+          "deco" : "e"
+         },
+         {
+          "name" : "attitude",
+          "deco" : "e"
+         },
+         {
+          "name" : "bank",
+          "deco" : "e"
+         }
+        ],
+        "endline" : 2419,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL2421_43",
+        "kind" : "function",
+        "line" : 2421,
+        "char" : 5,
+        "endline" : 2444,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 2444,
+        "char" : 16,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 2444,
+          "char" : 16,
+          "type" : "const Quaternion(Quaternion inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Quaternion"
+           }
+          ],
+          "endline" : 2453,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 2455,
+        "char" : 10,
+        "name" : "opBinaryRight",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         },
+         {
+          "name" : "T",
+          "kind" : "type"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinaryRight",
+          "kind" : "function",
+          "line" : 2455,
+          "char" : 10,
+          "storageClass" : [
+           "auto"
+          ],
+          "type" : "const (T inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "T"
+           }
+          ],
+          "endline" : 2457,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 2459,
+        "char" : 16,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 2459,
+          "char" : 16,
+          "type" : "const Quaternion(Quaternion inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Quaternion"
+           }
+          ],
+          "endline" : 2468,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 2470,
+        "char" : 20,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 2470,
+          "char" : 20,
+          "type" : "const Vector!(qt, 3)(Vector!(qt, 3) inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Vector!(qt, 3)"
+           }
+          ],
+          "endline" : 2494,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 2496,
+        "char" : 16,
+        "name" : "opBinary",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opBinary",
+          "kind" : "function",
+          "line" : 2496,
+          "char" : 16,
+          "type" : "const Quaternion(qt inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "qt"
+           }
+          ],
+          "endline" : 2498,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 2500,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 2500,
+          "char" : 10,
+          "type" : "void(Quaternion inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Quaternion"
+           }
+          ],
+          "endline" : 2506,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 2508,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 2508,
+          "char" : 10,
+          "type" : "void(Quaternion inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "Quaternion"
+           }
+          ],
+          "endline" : 2513,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 2515,
+        "char" : 10,
+        "name" : "opOpAssign",
+        "parameters" : [
+         {
+          "name" : "op",
+          "kind" : "value",
+          "type" : "string",
+          "specValue" : "\"*\""
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opOpAssign",
+          "kind" : "function",
+          "line" : 2515,
+          "char" : 10,
+          "type" : "void(qt inp)",
+          "parameters" : [
+           {
+            "name" : "inp",
+            "type" : "qt"
+           }
+          ],
+          "endline" : 2520,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL2522_44",
+        "kind" : "function",
+        "line" : 2522,
+        "char" : 5,
+        "endline" : 2563,
+        "endchar" : 5
+       },
+       {
+        "name" : "opCmp",
+        "kind" : "function",
+        "line" : 2563,
+        "char" : 9,
+        "type" : "const int(ref const Quaternion qua)",
+        "parameters" : [
+         {
+          "name" : "qua",
+          "type" : "Quaternion",
+          "storageClass" : [
+           "const",
+           "ref"
+          ]
+         }
+        ],
+        "endline" : 2574,
+        "endchar" : 5
+       },
+       {
+        "name" : "opEquals",
+        "kind" : "function",
+        "line" : 2576,
+        "char" : 10,
+        "type" : "const bool(const Quaternion qu)",
+        "parameters" : [
+         {
+          "name" : "qu",
+          "type" : "Quaternion",
+          "storageClass" : [
+           "const"
+          ]
+         }
+        ],
+        "endline" : 2578,
+        "endchar" : 5
+       },
+       {
+        "kind" : "template",
+        "line" : 2580,
+        "char" : 10,
+        "name" : "opCast",
+        "parameters" : [
+         {
+          "name" : "T",
+          "kind" : "type",
+          "deco" : "b"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "opCast",
+          "kind" : "function",
+          "line" : 2580,
+          "char" : 10,
+          "type" : "const bool()",
+          "endline" : 2582,
+          "endchar" : 5
+         }
+        ]
+       },
+       {
+        "name" : "__unittestL2584_45",
+        "kind" : "function",
+        "line" : 2584,
+        "char" : 5,
+        "endline" : 2593,
+        "endchar" : 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "quat",
+    "kind" : "alias",
+    "line" : 2596,
+    "char" : 26,
+    "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion"
+   }
+  ]
+ },
+ {
+  "name" : "gl3n.math",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\math.d",
+  "members" : [
+   {
+    "name" : "std.math",
+    "kind" : "import",
+    "line" : 19,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "PI",
+     "sin",
+     "cos",
+     "tan",
+     "asin",
+     "acos",
+     "atan",
+     "atan2",
+     "sinh",
+     "cosh",
+     "tanh",
+     "asinh",
+     "acosh",
+     "atanh",
+     "pow",
+     "exp",
+     "log",
+     "exp2",
+     "log2",
+     "sqrt",
+     "floor",
+     "trunc",
+     "round",
+     "ceil",
+     "modf"
+    ]
+   },
+   {
+    "name" : "roundEven",
+    "kind" : "alias",
+    "line" : 23,
+    "char" : 17
+   },
+   {
+    "name" : "fract",
+    "kind" : "alias",
+    "line" : 24,
+    "char" : 17
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 26,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "min",
+     "max"
+    ]
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 30,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "to"
+    ]
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 31,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "all"
+    ]
+   },
+   {
+    "name" : "std.range",
+    "kind" : "import",
+    "line" : 32,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "zip"
+    ]
+   },
+   {
+    "name" : "std.traits",
+    "kind" : "import",
+    "line" : 33,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "CommonType"
+    ]
+   },
+   {
+    "name" : "std.range",
+    "kind" : "import",
+    "line" : 34,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "ElementType"
+    ]
+   },
+   {
+    "name" : "std.math",
+    "kind" : "import",
+    "line" : 35,
+    "char" : 20,
+    "protection" : "private",
+    "alias" : "smath"
+   },
+   {
+    "name" : "gl3n.util",
+    "kind" : "import",
+    "line" : 37,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "is_vector",
+     "is_quaternion",
+     "is_matrix"
+    ]
+   },
+   {
+    "name" : "PI_180",
+    "kind" : "variable",
+    "line" : 45,
+    "char" : 18,
+    "storageClass" : [
+     "enum"
+    ],
+    "deco" : "e",
+    "init" : "0x1.1df46a2529d3915cp-6L"
+   },
+   {
+    "name" : "_180_PI",
+    "kind" : "variable",
+    "line" : 47,
+    "char" : 18,
+    "storageClass" : [
+     "enum"
+    ],
+    "deco" : "e",
+    "init" : "0x1.ca5dc1a63c1f7b86p+5L"
+   },
+   {
+    "kind" : "template",
+    "line" : 50,
+    "char" : 3,
+    "name" : "mod",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "mod",
+      "kind" : "function",
+      "line" : 50,
+      "char" : 3,
+      "type" : "T(T x, T y)",
+      "parameters" : [
+       {
+        "name" : "x",
+        "type" : "T"
+       },
+       {
+        "name" : "y",
+        "type" : "T"
+       }
+      ],
+      "endline" : 52,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "fmodf",
+    "kind" : "function",
+    "line" : 56,
+    "char" : 20,
+    "deco" : "UNaNbNfffZf",
+    "parameters" : [
+     {
+      "name" : "x",
+      "deco" : "f"
+     },
+     {
+      "name" : "y",
+      "deco" : "f"
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 59,
+    "char" : 3,
+    "name" : "abs",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "abs",
+      "kind" : "function",
+      "line" : 59,
+      "char" : 3,
+      "type" : "T(T t)",
+      "parameters" : [
+       {
+        "name" : "t",
+        "type" : "T"
+       }
+      ],
+      "endline" : 61,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 64,
+    "char" : 3,
+    "name" : "abs",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "abs",
+      "kind" : "function",
+      "line" : 64,
+      "char" : 3,
+      "type" : "T(T vec)",
+      "parameters" : [
+       {
+        "name" : "vec",
+        "type" : "T"
+       }
+      ],
+      "endline" : 72,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 75,
+    "char" : 3,
+    "name" : "abs",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "abs",
+      "kind" : "function",
+      "line" : 75,
+      "char" : 3,
+      "type" : "T(T quat)",
+      "parameters" : [
+       {
+        "name" : "quat",
+        "type" : "T"
+       }
+      ],
+      "endline" : 84,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL86_46",
+    "kind" : "function",
+    "line" : 86,
+    "char" : 1,
+    "endline" : 102,
+    "endchar" : 1
+   },
+   {
+    "name" : "inversesqrt",
+    "kind" : "function",
+    "line" : 102,
+    "char" : 6,
+    "deco" : "FNaNbNfeZe",
+    "parameters" : [
+     {
+      "name" : "x",
+      "deco" : "e"
+     }
+    ],
+    "endline" : 104,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 107,
+    "char" : 7,
+    "name" : "sign",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "sign",
+      "kind" : "function",
+      "line" : 107,
+      "char" : 7,
+      "type" : "float(T x)",
+      "parameters" : [
+       {
+        "name" : "x",
+        "type" : "T"
+       }
+      ],
+      "endline" : 115,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL117_47",
+    "kind" : "function",
+    "line" : 117,
+    "char" : 1,
+    "endline" : 134,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 134,
+    "char" : 6,
+    "name" : "almost_equal",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "S",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "almost_equal",
+      "kind" : "function",
+      "line" : 134,
+      "char" : 6,
+      "type" : "bool(T a, S b, float epsilon = 1e-06F)",
+      "parameters" : [
+       {
+        "name" : "a",
+        "type" : "T"
+       },
+       {
+        "name" : "b",
+        "type" : "S"
+       },
+       {
+        "name" : "epsilon",
+        "deco" : "f",
+        "default" : "1e-06"
+       }
+      ],
+      "endline" : 139,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 142,
+    "char" : 6,
+    "name" : "almost_equal",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "S",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "almost_equal",
+      "kind" : "function",
+      "line" : 142,
+      "char" : 6,
+      "type" : "bool(T a, S b, float epsilon = 1e-06F)",
+      "parameters" : [
+       {
+        "name" : "a",
+        "type" : "T"
+       },
+       {
+        "name" : "b",
+        "type" : "S"
+       },
+       {
+        "name" : "epsilon",
+        "deco" : "f",
+        "default" : "1e-06"
+       }
+      ],
+      "endline" : 149,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 151,
+    "char" : 6,
+    "name" : "almost_equal",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "almost_equal",
+      "kind" : "function",
+      "line" : 151,
+      "char" : 6,
+      "type" : "bool(T a, T b, float epsilon = 1e-06F)",
+      "parameters" : [
+       {
+        "name" : "a",
+        "type" : "T"
+       },
+       {
+        "name" : "b",
+        "type" : "T"
+       },
+       {
+        "name" : "epsilon",
+        "deco" : "f",
+        "default" : "1e-06"
+       }
+      ],
+      "endline" : 158,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL160_48",
+    "kind" : "function",
+    "line" : 160,
+    "char" : 1,
+    "endline" : 177,
+    "endchar" : 1
+   },
+   {
+    "name" : "radians",
+    "kind" : "function",
+    "line" : 177,
+    "char" : 6,
+    "deco" : "FNaNbNfeZe",
+    "parameters" : [
+     {
+      "name" : "degrees",
+      "deco" : "e"
+     }
+    ],
+    "endline" : 179,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 182,
+    "char" : 6,
+    "name" : "cradians",
+    "parameters" : [
+     {
+      "name" : "degrees",
+      "kind" : "value",
+      "deco" : "e"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "cradians",
+      "kind" : "function",
+      "line" : 182,
+      "char" : 6,
+      "type" : "real()",
+      "endline" : 184,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "degrees",
+    "kind" : "function",
+    "line" : 187,
+    "char" : 6,
+    "deco" : "FNaNbNfeZe",
+    "parameters" : [
+     {
+      "name" : "radians",
+      "deco" : "e"
+     }
+    ],
+    "endline" : 189,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 192,
+    "char" : 6,
+    "name" : "cdegrees",
+    "parameters" : [
+     {
+      "name" : "radians",
+      "kind" : "value",
+      "deco" : "e"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "cdegrees",
+      "kind" : "function",
+      "line" : 192,
+      "char" : 6,
+      "type" : "real()",
+      "endline" : 194,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL196_49",
+    "kind" : "function",
+    "line" : 196,
+    "char" : 1,
+    "endline" : 217,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 217,
+    "char" : 25,
+    "name" : "clamp",
+    "parameters" : [
+     {
+      "name" : "T1",
+      "kind" : "type"
+     },
+     {
+      "name" : "T2",
+      "kind" : "type"
+     },
+     {
+      "name" : "T3",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "clamp",
+      "kind" : "function",
+      "line" : 217,
+      "char" : 25,
+      "type" : "CommonType!(T1, T2, T3)(T1 x, T2 min_val, T3 max_val)",
+      "parameters" : [
+       {
+        "name" : "x",
+        "type" : "T1"
+       },
+       {
+        "name" : "min_val",
+        "type" : "T2"
+       },
+       {
+        "name" : "max_val",
+        "type" : "T3"
+       }
+      ],
+      "endline" : 219,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL221_50",
+    "kind" : "function",
+    "line" : 221,
+    "char" : 1,
+    "endline" : 230,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 230,
+    "char" : 7,
+    "name" : "step",
+    "parameters" : [
+     {
+      "name" : "T1",
+      "kind" : "type"
+     },
+     {
+      "name" : "T2",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "step",
+      "kind" : "function",
+      "line" : 230,
+      "char" : 7,
+      "type" : "float(T1 edge, T2 x)",
+      "parameters" : [
+       {
+        "name" : "edge",
+        "type" : "T1"
+       },
+       {
+        "name" : "x",
+        "type" : "T2"
+       }
+      ],
+      "endline" : 232,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 237,
+    "char" : 25,
+    "name" : "smoothstep",
+    "parameters" : [
+     {
+      "name" : "T1",
+      "kind" : "type"
+     },
+     {
+      "name" : "T2",
+      "kind" : "type"
+     },
+     {
+      "name" : "T3",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "smoothstep",
+      "kind" : "function",
+      "line" : 237,
+      "char" : 25,
+      "type" : "CommonType!(T1, T2, T3)(T1 edge0, T2 edge1, T3 x)",
+      "parameters" : [
+       {
+        "name" : "edge0",
+        "type" : "T1"
+       },
+       {
+        "name" : "edge1",
+        "type" : "T2"
+       },
+       {
+        "name" : "x",
+        "type" : "T3"
+       }
+      ],
+      "endline" : 240,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL242_51",
+    "kind" : "function",
+    "line" : 242,
+    "char" : 1,
+    "endline" : 254,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "gl3n.plane",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\plane.d",
+  "members" : [
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "Vector",
+     "dot",
+     "vec3"
+    ]
+   },
+   {
+    "name" : "gl3n.math",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "almost_equal"
+    ]
+   },
+   {
+    "name" : "std.traits",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "isFloatingPoint"
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 14,
+    "char" : 1,
+    "name" : "PlaneT",
+    "parameters" : [
+     {
+      "name" : "type",
+      "kind" : "type",
+      "defaultDeco" : "f"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "PlaneT",
+      "kind" : "struct",
+      "line" : 14,
+      "char" : 1,
+      "members" : [
+       {
+        "name" : "pt",
+        "kind" : "alias",
+        "line" : 15,
+        "char" : 16,
+        "type" : "type"
+       },
+       {
+        "name" : "vec3",
+        "kind" : "alias",
+        "line" : 16,
+        "char" : 26,
+        "type" : "Vector!(pt, 3)"
+       },
+       {
+        "name" : "a",
+        "kind" : "variable",
+        "line" : 20,
+        "char" : 16,
+        "type" : "pt"
+       },
+       {
+        "name" : "b",
+        "kind" : "variable",
+        "line" : 21,
+        "char" : 16,
+        "type" : "pt"
+       },
+       {
+        "name" : "c",
+        "kind" : "variable",
+        "line" : 22,
+        "char" : 16,
+        "type" : "pt"
+       },
+       {
+        "name" : "normal",
+        "kind" : "variable",
+        "line" : 25,
+        "char" : 14,
+        "type" : "vec3"
+       },
+       {
+        "name" : "d",
+        "kind" : "variable",
+        "line" : 28,
+        "char" : 8,
+        "type" : "pt"
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 34,
+        "char" : 5,
+        "type" : "(pt a, pt b, pt c, pt d)",
+        "parameters" : [
+         {
+          "name" : "a",
+          "type" : "pt"
+         },
+         {
+          "name" : "b",
+          "type" : "pt"
+         },
+         {
+          "name" : "c",
+          "type" : "pt"
+         },
+         {
+          "name" : "d",
+          "type" : "pt"
+         }
+        ],
+        "endline" : 39,
+        "endchar" : 5
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 42,
+        "char" : 5,
+        "type" : "(vec3 normal, pt d)",
+        "parameters" : [
+         {
+          "name" : "normal",
+          "type" : "vec3"
+         },
+         {
+          "name" : "d",
+          "type" : "pt"
+         }
+        ],
+        "endline" : 45,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL47_52",
+        "kind" : "function",
+        "line" : 47,
+        "char" : 5,
+        "endline" : 61,
+        "endchar" : 5
+       },
+       {
+        "name" : "normalize",
+        "kind" : "function",
+        "line" : 61,
+        "char" : 10,
+        "type" : "void()",
+        "endline" : 65,
+        "endchar" : 5
+       },
+       {
+        "name" : "normalized",
+        "kind" : "function",
+        "line" : 68,
+        "char" : 22,
+        "type" : "const @property PlaneT()",
+        "endline" : 72,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL74_53",
+        "kind" : "function",
+        "line" : 74,
+        "char" : 5,
+        "endline" : 85,
+        "endchar" : 5
+       },
+       {
+        "name" : "distance",
+        "kind" : "function",
+        "line" : 85,
+        "char" : 8,
+        "type" : "const pt(vec3 point)",
+        "parameters" : [
+         {
+          "name" : "point",
+          "type" : "vec3"
+         }
+        ],
+        "endline" : 87,
+        "endchar" : 5
+       },
+       {
+        "name" : "ndistance",
+        "kind" : "function",
+        "line" : 91,
+        "char" : 8,
+        "type" : "const pt(vec3 point)",
+        "parameters" : [
+         {
+          "name" : "point",
+          "type" : "vec3"
+         }
+        ],
+        "endline" : 93,
+        "endchar" : 5
+       },
+       {
+        "name" : "__unittestL95_54",
+        "kind" : "function",
+        "line" : 95,
+        "char" : 5,
+        "endline" : 102,
+        "endchar" : 5
+       },
+       {
+        "name" : "opEquals",
+        "kind" : "function",
+        "line" : 102,
+        "char" : 10,
+        "type" : "const bool(PlaneT other)",
+        "parameters" : [
+         {
+          "name" : "other",
+          "type" : "PlaneT"
+         }
+        ],
+        "endline" : 104,
+        "endchar" : 5
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "Plane",
+    "kind" : "alias",
+    "line" : 108,
+    "char" : 22,
+    "deco" : "S4gl3n5plane13__T6PlaneTTfZ6PlaneT"
+   }
+  ]
+ },
+ {
+  "name" : "gl3n.util",
+  "kind" : "module",
+  "file" : "..\\src\\gl3n\\util.d",
+  "members" : [
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "Vector",
+     "Matrix",
+     "Quaternion"
+    ]
+   },
+   {
+    "name" : "gl3n.plane",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "PlaneT"
+    ]
+   },
+   {
+    "name" : "std.typecons",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 12,
+    "protection" : "private",
+    "selective" : [
+     "TypeTuple"
+    ]
+   },
+   {
+    "kind" : "template",
+    "protection" : "private",
+    "line" : 17,
+    "char" : 14,
+    "name" : "is_vector_impl",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "d",
+      "kind" : "value",
+      "deco" : "i"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "is_vector_impl",
+      "kind" : "function",
+      "line" : 17,
+      "char" : 14,
+      "type" : "void(Vector!(T, d) vec)",
+      "parameters" : [
+       {
+        "name" : "vec",
+        "type" : "Vector!(T, d)"
+       }
+      ],
+      "endline" : 17,
+      "endchar" : 59
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 20,
+    "char" : 1,
+    "name" : "is_vector",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "is_vector",
+      "kind" : "variable",
+      "line" : 21,
+      "char" : 10,
+      "storageClass" : [
+       "enum"
+      ],
+      "init" : "is(typeof(is_vector_impl(T.init)))"
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "protection" : "private",
+    "line" : 24,
+    "char" : 14,
+    "name" : "is_matrix_impl",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "r",
+      "kind" : "value",
+      "deco" : "i"
+     },
+     {
+      "name" : "c",
+      "kind" : "value",
+      "deco" : "i"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "is_matrix_impl",
+      "kind" : "function",
+      "line" : 24,
+      "char" : 14,
+      "type" : "void(Matrix!(T, r, c) mat)",
+      "parameters" : [
+       {
+        "name" : "mat",
+        "type" : "Matrix!(T, r, c)"
+       }
+      ],
+      "endline" : 24,
+      "endchar" : 69
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 27,
+    "char" : 1,
+    "name" : "is_matrix",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "is_matrix",
+      "kind" : "variable",
+      "line" : 28,
+      "char" : 10,
+      "storageClass" : [
+       "enum"
+      ],
+      "init" : "is(typeof(is_matrix_impl(T.init)))"
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "protection" : "private",
+    "line" : 31,
+    "char" : 14,
+    "name" : "is_quaternion_impl",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "is_quaternion_impl",
+      "kind" : "function",
+      "line" : 31,
+      "char" : 14,
+      "type" : "void(Quaternion!T qu)",
+      "parameters" : [
+       {
+        "name" : "qu",
+        "type" : "Quaternion!T"
+       }
+      ],
+      "endline" : 31,
+      "endchar" : 56
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 34,
+    "char" : 1,
+    "name" : "is_quaternion",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "is_quaternion",
+      "kind" : "variable",
+      "line" : 35,
+      "char" : 10,
+      "storageClass" : [
+       "enum"
+      ],
+      "init" : "is(typeof(is_quaternion_impl(T.init)))"
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "protection" : "private",
+    "line" : 38,
+    "char" : 14,
+    "name" : "is_plane_impl",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "is_plane_impl",
+      "kind" : "function",
+      "line" : 38,
+      "char" : 14,
+      "type" : "void(PlaneT!T p)",
+      "parameters" : [
+       {
+        "name" : "p",
+        "type" : "PlaneT!T"
+       }
+      ],
+      "endline" : 38,
+      "endchar" : 46
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 41,
+    "char" : 1,
+    "name" : "is_plane",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "is_plane",
+      "kind" : "variable",
+      "line" : 42,
+      "char" : 10,
+      "storageClass" : [
+       "enum"
+      ],
+      "init" : "is(typeof(is_plane_impl(T.init)))"
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL46_55",
+    "kind" : "function",
+    "line" : 46,
+    "char" : 1,
+    "endline" : 81,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 81,
+    "char" : 1,
+    "name" : "TupleRange",
+    "parameters" : [
+     {
+      "name" : "from",
+      "kind" : "value",
+      "deco" : "i"
+     },
+     {
+      "name" : "to",
+      "kind" : "value",
+      "deco" : "i"
+     }
+    ],
+    "members" : []
+   }
+  ]
+ }
+]
