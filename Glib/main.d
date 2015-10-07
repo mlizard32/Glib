@@ -5,6 +5,7 @@ import derelict.opengl3.gl3;
 
 import derelict.sdl2.image;
 import derelict.sdl2.sdl;
+import imgui;
 
 int sW = 720;
 int sH = 480;
@@ -16,7 +17,8 @@ int main(string[] argv)
 
 	window w = new window();
 	w.SetResolution(sW, sH);
-
+	string fontPath = "..\\..\\resources\\DroidSans.ttf";
+	imguiInit(fontPath);
 	Scene s = new Scene();
 	
 	//"..\\..\\resources\\suzanne.obj"
@@ -27,6 +29,12 @@ int main(string[] argv)
 	monkey.components ~= model;
 
 	Render renderer;
+
+	const( char )* verstr = glGetString( GL_VERSION );
+	char major = *verstr;
+	char minor = *( verstr + 2 );
+
+	renderer.initializeFrameBuffer(w.size.x, w.size.y);
 
 	GLenum error = glGetError();
 	if(error != GL_NO_ERROR)
@@ -39,12 +47,13 @@ int main(string[] argv)
 
 		w.SwapWindow();
 
+		error = glGetError();
 		if(error != GL_NO_ERROR)
 			System.active = false;
 	}
 
 	System.deInit();
-	
+	imguiDestroy();
     writeln("Hello D-World!");
     return 0;
 }

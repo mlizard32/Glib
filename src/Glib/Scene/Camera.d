@@ -62,6 +62,13 @@ class Camera : GObject
 		float far = 100.0f;
 		return mat4.perspective(720.0, 440.0, fov, near, far);
 	}
+
+	mat4 getInversePerspectiveMatrix()
+	{
+		float near = 0.1f;
+		float far = 100.0f;
+		return mat4.perspective_inverse(720.0, 440.0, fov, near, far);
+	}
 	void updateCameraControls(double xpos, double ypos)
 	{
 		xpos = xpos - 720/2;

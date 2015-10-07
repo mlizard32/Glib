@@ -14,10 +14,14 @@ class Mesh
 	uint[] indices;
 	vec2[] uvs;
 	vec3[] normals;
+	vec3[] tangents;
+	vec3[] bitTangents;
 
 	GLuint vbo;
 	GLuint uvbo;
 	GLuint nbo;
+	GLuint tanbo;
+	GLuint bitTanbo;
 	GLuint elementbo;
 	GLuint VertexArrayID;
 
@@ -36,6 +40,14 @@ class Mesh
 		
 			aiVector3D n = mesh.mNormals[i];
 			normals ~= vec3(n.x, n.y, n.z);
+
+			aiVector3D t = mesh.mTangents[i];
+			tangents ~= vec3(t.x, t.y, t.z);
+
+			aiVector3D bt = mesh.mBitangents[i];
+			bitTangents ~= vec3(bt.x, bt.y, bt.z);
+			
+
 		}
 
 		
@@ -55,11 +67,14 @@ class Mesh
 		
 		
 		shader = new Shader();
+		shader.vertSource = geometryVS;
+		shader.fragSource = geometryFS;
 
 		//temporary
-		Texture tex = new Texture("..\\..\\resources\\Gray.png");
 		material = new Material();
-		material.diffuse = tex;
+		material.diffuse = new Texture("..\\..\\resources\\Gray.png");;
+		material.normal = new Texture( vec4i(128, 128, 128, 255));
+		material.specular = new Texture( vec4i(0, 0, 0, 255));
 
 		BindMesh();
 	}
@@ -85,23 +100,76 @@ class Mesh
 		glGenBuffers(1, &vbo);
 		glBindBuffer(GL_ARRAY_BUFFER, vbo);
 		glBufferData(GL_ARRAY_BUFFER, verts.length * vec3.sizeof, cast(void*)verts.ptr, GL_STATIC_DRAW);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glVertexAttribPointer(
+							  0,                  // attribute
+							  3,                  // size
+							  GL_FLOAT,           // type
+							  GL_FALSE,           // normalized?
+							  0,                  // stride
+							  cast(void*)0        // array buffer offset
+								  );
+		glEnableVertexAttribArray(0);
+
 
 		glGenBuffers(1, &uvbo);
 		glBindBuffer(GL_ARRAY_BUFFER, uvbo);
 		glBufferData(GL_ARRAY_BUFFER, uvs.length * vec2.sizeof, cast(void*)uvs.ptr, GL_STATIC_DRAW);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glVertexAttribPointer(
+							  1,                                // attribute
+							  2,                                // size
+							  GL_FLOAT,                         // type
+							  GL_FALSE,                         // normalized?
+							  0,                                // stride
+							  cast(void*)0                     // array buffer offset
+								  );
+		glEnableVertexAttribArray(1);
+
 
 		glGenBuffers(1, &nbo);
 		glBindBuffer(GL_ARRAY_BUFFER, nbo);
 		glBufferData(GL_ARRAY_BUFFER, normals.length * vec3.sizeof, cast(void*)normals.ptr, GL_STATIC_DRAW);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glVertexAttribPointer(
+							  2,                                // attribute
+							  3,                                // size
+							  GL_FLOAT,                         // type
+							  GL_FALSE,                         // normalized?
+							  0,                                // stride
+							  cast(void*)0                      // array buffer offset
+								  );
+		glEnableVertexAttribArray(2);
+
+		glGenBuffers(1, &tanbo);
+		glBindBuffer(GL_ARRAY_BUFFER, tanbo);
+		glBufferData(GL_ARRAY_BUFFER, tangents.length * vec3.sizeof, cast(void*)tangents.ptr, GL_STATIC_DRAW);
+		glVertexAttribPointer(
+							  3,                                // attribute
+							  3,                                // size
+							  GL_FLOAT,                         // type
+							  GL_FALSE,                         // normalized?
+							  0,                                // stride
+							  cast(void*)0                      // array buffer offset
+								  );
+		glEnableVertexAttribArray(3);
+
+		glGenBuffers(1, &bitTanbo);
+		glBindBuffer(GL_ARRAY_BUFFER, bitTanbo);
+		glBufferData(GL_ARRAY_BUFFER, bitTangents.length * vec3.sizeof, cast(void*)bitTangents.ptr, GL_STATIC_DRAW);
+		glVertexAttribPointer(
+							  4,                                // attribute
+							  3,                                // size
+							  GL_FLOAT,                         // type
+							  GL_FALSE,                         // normalized?
+							  0,                                // stride
+							  cast(void*)0                      // array buffer offset
+								  );
+		glEnableVertexAttribArray(4);
 
 		glGenBuffers(1, &elementbo);
-		glBindBuffer(GL_ARRAY_BUFFER, elementbo);
-		glBufferData(GL_ARRAY_BUFFER, indices.length * uint.sizeof, cast(void*)indices.ptr, GL_STATIC_DRAW);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbo);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.length * uint.sizeof, cast(void*)indices.ptr, GL_STATIC_DRAW);
 
+
+		glBindVertexArray(0);
 		GLenum error = glGetError();
 		if(error != GL_NO_ERROR)
 			return false;
@@ -109,16 +177,18 @@ class Mesh
 			return true;
 	}
 
+
 	void Draw()
 	{
 		glUseProgram(shader.programID);
+		glBindVertexArray(VertexArrayID);
+		
 
-		this.shader.BindMaterial(material);
+		//GLuint lightID = glGetUniformLocation(shader.programID, "LightPosition_worldspace");
+		//vec3 lightPos = vec3(4,4,4);
+		//glUniform3f(lightID, lightPos.x, lightPos.y, lightPos.z);
 
-		GLuint lightID = glGetUniformLocation(shader.programID, "LightPosition_worldspace");
-		vec3 lightPos = vec3(4,4,4);
-		glUniform3f(lightID, lightPos.x, lightPos.y, lightPos.z);
-
+		/*
 		GLuint MatrixID = glGetUniformLocation(shader.programID, "MVP");
 		GLuint ViewMatrixID = glGetUniformLocation(shader.programID, "V");
 		GLuint ModelMatrixID = glGetUniformLocation(shader.programID, "M");
@@ -130,65 +200,49 @@ class Mesh
 		mat4 model = mat4.identity();
 
 		mat4 MVP = projection * view * model;
+*/
 
-		glUniformMatrix4fv(MatrixID, 1, GL_TRUE, MVP.value_ptr);
-		glUniformMatrix4fv(ModelMatrixID, 1, GL_TRUE, model.value_ptr);
-		glUniformMatrix4fv(ViewMatrixID, 1, GL_TRUE, view.value_ptr);
+		GLuint ViewMatrixID = glGetUniformLocation(shader.programID, "worldView");
+		GLuint ProjMatrixID = glGetUniformLocation(shader.programID, "worldViewProj");
+		GLuint objID = glGetUniformLocation(shader.programID, "objectId");
 
-		// 1rst attribute buffer : vertices
-		glEnableVertexAttribArray(0);
-		glBindBuffer(GL_ARRAY_BUFFER, vbo);
-		glVertexAttribPointer(
-							  0,                  // attribute
-							  3,                  // size
-							  GL_FLOAT,           // type
-							  GL_FALSE,           // normalized?
-							  0,                  // stride
-							  cast(void*)0        // array buffer offset
-								  );
+		mat4 worldView = System.currentScene.mainCamera.getViewMatrix() * mat4.identity();
+		mat4 projection = System.currentScene.mainCamera.getPerspeciveMatrix();
+		mat4 worldviewProj = projection * worldView;
 
-		// 2nd attribute buffer : UVs
-		glEnableVertexAttribArray(1);
-		glBindBuffer(GL_ARRAY_BUFFER, uvbo);
-		glVertexAttribPointer(
-							  1,                                // attribute
-							  2,                                // size
-							  GL_FLOAT,                         // type
-							  GL_FALSE,                         // normalized?
-							  0,                                // stride
-							   cast(void*)0                     // array buffer offset
-							  );
+		glUniformMatrix4fv(ViewMatrixID, 1, GL_TRUE, worldView.value_ptr);
+		glUniformMatrix4fv(ProjMatrixID, 1, GL_TRUE, worldviewProj.value_ptr);
+		glUniform1ui(objID, 1);
 
-		// 3rd attribute buffer : normals
+		this.shader.BindMaterial(material);
+
 		
-		glEnableVertexAttribArray(2);
-		glBindBuffer(GL_ARRAY_BUFFER, nbo);
-		glVertexAttribPointer(
-							  2,                                // attribute
-							  3,                                // size
-							  GL_FLOAT,                         // type
-							  GL_FALSE,                         // normalized?
-							  0,                                // stride
-							  cast(void*)0                      // array buffer offset
-							  );
-
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbo);
-
-
-		// Draw the triangles !
-		glDrawElements(
-					   GL_TRIANGLES,      // mode
-					   indices.length,    // count
-					   GL_UNSIGNED_INT,   // type
-					   null           // element array buffer offset
-					   );
+		//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbo);
+		glDrawElements(GL_TRIANGLES, indices.length, GL_UNSIGNED_INT, null);
+		GLenum error = glGetError();
+		if(error != GL_NO_ERROR)
+			string test = "error";
 		
-		//glDrawArrays(GL_TRIANGLES, 0, verts.length );
-		//glDrawArrays(GL_TRIANGLES, 0, 12*3 );
-
-		glDisableVertexAttribArray(0);
-		glDisableVertexAttribArray(1);
-		glDisableVertexAttribArray(2);
+		glBindVertexArray(0);
 
 	}
+
 }
+
+/// Obj for a 1x1 square billboard mesh
+immutable string unitSquareMesh = q{
+	v -1.0 1.0 0.0
+		v -1.0 -1.0 0.0
+		v 1.0 1.0 0.0
+		v 1.0 -1.0 0.0
+
+		vt 0.0 0.0
+		vt 0.0 1.0
+		vt 1.0 0.0
+		vt 1.0 1.0
+
+		vn 0.0 0.0 1.0
+
+		f 4/3/1 3/4/1 1/2/1
+		f 2/1/1 4/3/1 1/2/1
+};

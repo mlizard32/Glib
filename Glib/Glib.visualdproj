@@ -83,7 +83,7 @@
   <cv2pdbOptions />
   <objfiles />
   <linkswitches />
-  <libfiles>DerelictFT.lib DerelictASSIMP3.lib</libfiles>
+  <libfiles>DerelictFT.lib DerelictASSIMP3.lib imgui.lib</libfiles>
   <libpaths>&quot;..\Libs&quot; </libpaths>
   <deffile />
   <resfile />
@@ -202,6 +202,7 @@
   <Folder name="Scene">
    <File path="..\src\Glib\Scene\Camera.d" />
    <File path="..\src\Glib\Scene\GObject.d" />
+   <File path="..\src\Glib\Scene\Light.d" />
    <File path="..\src\Glib\Scene\Material.d" />
    <File path="..\src\Glib\Scene\Mesh.d" />
    <File path="..\src\Glib\Scene\Model.d" />
@@ -219,8 +220,8 @@
    <File path="..\src\Glib\System\System.d" />
    <File path="..\src\Glib\System\window.d" />
   </Folder>
-  <File path="..\src\Glib\package.d" />
   <File path="..\src\Glib\allDerelcit.d" />
   <File path="main.d" />
+  <File path="..\src\Glib\package.d" />
  </Folder>
 </DProject>

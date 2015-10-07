@@ -161,7 +161,7 @@ class window
 		glcontext = SDL_GL_CreateContext(sdlWindow);
 		string test = to!string(glGetString(GL_VERSION));
 		SDL_GL_SetSwapInterval(1);
-		glClearColor(0.0f, 0.0f, 0.3f, 0.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 		glViewport(0,0, cast(GLsizei)size.x, cast(GLsizei)size.y);
 		//maybe move
 		GLVersion glver = DerelictGL3.reload();

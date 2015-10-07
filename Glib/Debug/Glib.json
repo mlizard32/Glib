@@ -1,0 +1,4274 @@
+[
+ {
+  "name" : "Glib.GUI.controls",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\GUI\\controls.d",
+  "members" : [
+   {
+    "name" : "Glib.GUI.Font",
+    "kind" : "import",
+    "line" : 2,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.GUI.Widget",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.GUI.UITexture",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.opengl3.gl",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Label",
+    "kind" : "class",
+    "line" : 9,
+    "char" : 1,
+    "base" : "Widget",
+    "members" : [
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 9,
+      "char" : 1,
+      "deco" : "FZC4Glib3GUI8controls5Label",
+      "originalType" : "()"
+     }
+    ]
+   },
+   {
+    "name" : "TextBox",
+    "kind" : "class",
+    "line" : 14,
+    "char" : 1,
+    "base" : "Widget",
+    "members" : [
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 14,
+      "char" : 1,
+      "deco" : "FZC4Glib3GUI8controls7TextBox",
+      "originalType" : "()"
+     }
+    ]
+   },
+   {
+    "name" : "CheckBox",
+    "kind" : "class",
+    "line" : 19,
+    "char" : 1,
+    "base" : "Widget",
+    "members" : [
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 19,
+      "char" : 1,
+      "deco" : "FZC4Glib3GUI8controls8CheckBox",
+      "originalType" : "()"
+     }
+    ]
+   },
+   {
+    "name" : "Button",
+    "kind" : "class",
+    "line" : 24,
+    "char" : 1,
+    "base" : "Widget",
+    "members" : [
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 24,
+      "char" : 1,
+      "deco" : "FZC4Glib3GUI8controls6Button",
+      "originalType" : "()"
+     }
+    ]
+   },
+   {
+    "name" : "ScrollView",
+    "kind" : "class",
+    "line" : 29,
+    "char" : 1,
+    "base" : "Widget",
+    "members" : [
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 29,
+      "char" : 1,
+      "deco" : "FZC4Glib3GUI8controls10ScrollView",
+      "originalType" : "()"
+     }
+    ]
+   },
+   {
+    "name" : "Surface",
+    "kind" : "class",
+    "line" : 34,
+    "char" : 1,
+    "base" : "Widget",
+    "members" : [
+     {
+      "name" : "texture",
+      "kind" : "variable",
+      "line" : 36,
+      "char" : 12,
+      "deco" : "C4Glib3GUI9UITexture9UITexture",
+      "originalType" : "UITexture",
+      "offset" : 40
+     },
+     {
+      "name" : "vbo",
+      "kind" : "variable",
+      "line" : 37,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 44
+     },
+     {
+      "name" : "ibo",
+      "kind" : "variable",
+      "line" : 38,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 48
+     },
+     {
+      "name" : "attribute_coord",
+      "kind" : "variable",
+      "line" : 39,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 52
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 41,
+      "char" : 2,
+      "deco" : "FS4gl3n6linalg17__T6VectorTiVii2Z6VectoriiC4Glib3GUI9UITexture9UITexturekZC4Glib3GUI8controls7Surface",
+      "originalType" : "(vec2i topLeftCorner, int width, int height, UITexture _texture, GLuint progID)",
+      "parameters" : [
+       {
+        "name" : "topLeftCorner",
+        "deco" : "S4gl3n6linalg17__T6VectorTiVii2Z6Vector"
+       },
+       {
+        "name" : "width",
+        "deco" : "i"
+       },
+       {
+        "name" : "height",
+        "deco" : "i"
+       },
+       {
+        "name" : "_texture",
+        "deco" : "C4Glib3GUI9UITexture9UITexture"
+       },
+       {
+        "name" : "progID",
+        "deco" : "k"
+       }
+      ],
+      "endline" : 74,
+      "endchar" : 2
+     },
+     {
+      "name" : "RectToPoints",
+      "kind" : "function",
+      "line" : 76,
+      "char" : 9,
+      "deco" : "FS4Glib3GUI6Widget4RectZAS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3[](Rect r)",
+      "parameters" : [
+       {
+        "name" : "r",
+        "deco" : "S4Glib3GUI6Widget4Rect"
+       }
+      ],
+      "endline" : 94,
+      "endchar" : 2
+     },
+     {
+      "name" : "Draw",
+      "kind" : "function",
+      "line" : 95,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 118,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.GUI.Font",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\GUI\\Font.d",
+  "members" : [
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.freetype.ft",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.c.string",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.file",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "atlas",
+    "kind" : "class",
+    "line" : 10,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "texture",
+      "kind" : "variable",
+      "line" : 12,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 8
+     },
+     {
+      "name" : "width",
+      "kind" : "variable",
+      "line" : 14,
+      "char" : 6,
+      "deco" : "i",
+      "offset" : 12
+     },
+     {
+      "name" : "height",
+      "kind" : "variable",
+      "line" : 15,
+      "char" : 6,
+      "deco" : "i",
+      "offset" : 16
+     },
+     {
+      "name" : "MAXWIDTH",
+      "kind" : "variable",
+      "line" : 16,
+      "char" : 19,
+      "storageClass" : [
+       "static",
+       "const"
+      ],
+      "deco" : "xi",
+      "originalType" : "int",
+      "init" : "512"
+     },
+     {
+      "name" : "chars",
+      "kind" : "variable",
+      "line" : 18,
+      "char" : 15,
+      "deco" : "AS4Glib3GUI4Font10characters",
+      "init" : "[characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF), characters(nanF, nanF, nanF, nanF, nanF, nanF, nanF, nanF)]",
+      "offset" : 20
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 20,
+      "char" : 2,
+      "deco" : "FPS8derelict8freetype5types10FT_FaceRecikZC4Glib3GUI4Font5atlas",
+      "originalType" : "(FT_Face face, int fontHeight, GLuint uniform_tex)",
+      "parameters" : [
+       {
+        "name" : "face",
+        "deco" : "PS8derelict8freetype5types10FT_FaceRec"
+       },
+       {
+        "name" : "fontHeight",
+        "deco" : "i"
+       },
+       {
+        "name" : "uniform_tex",
+        "deco" : "k"
+       }
+      ],
+      "endline" : 105,
+      "endchar" : 2
+     },
+     {
+      "name" : "~this",
+      "kind" : "destructor",
+      "line" : 106,
+      "char" : 2,
+      "deco" : "FZv",
+      "endline" : 108,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "characters",
+    "kind" : "struct",
+    "line" : 110,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "advanceX",
+      "kind" : "variable",
+      "line" : 112,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 0
+     },
+     {
+      "name" : "advanceY",
+      "kind" : "variable",
+      "line" : 113,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 4
+     },
+     {
+      "name" : "bitmapWidth",
+      "kind" : "variable",
+      "line" : 115,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 8
+     },
+     {
+      "name" : "bitmapHeight",
+      "kind" : "variable",
+      "line" : 116,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 12
+     },
+     {
+      "name" : "bitmapLeft",
+      "kind" : "variable",
+      "line" : 118,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 16
+     },
+     {
+      "name" : "bitmapTop",
+      "kind" : "variable",
+      "line" : 119,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 20
+     },
+     {
+      "name" : "textureX",
+      "kind" : "variable",
+      "line" : 121,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 24
+     },
+     {
+      "name" : "textureY",
+      "kind" : "variable",
+      "line" : 122,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 28
+     }
+    ]
+   },
+   {
+    "name" : "point",
+    "kind" : "struct",
+    "line" : 124,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "x",
+      "kind" : "variable",
+      "line" : 125,
+      "char" : 10,
+      "deco" : "f",
+      "originalType" : "GLfloat",
+      "offset" : 0
+     },
+     {
+      "name" : "y",
+      "kind" : "variable",
+      "line" : 126,
+      "char" : 10,
+      "deco" : "f",
+      "originalType" : "GLfloat",
+      "offset" : 4
+     },
+     {
+      "name" : "s",
+      "kind" : "variable",
+      "line" : 127,
+      "char" : 10,
+      "deco" : "f",
+      "originalType" : "GLfloat",
+      "offset" : 8
+     },
+     {
+      "name" : "t",
+      "kind" : "variable",
+      "line" : 128,
+      "char" : 10,
+      "deco" : "f",
+      "originalType" : "GLfloat",
+      "offset" : 12
+     }
+    ]
+   },
+   {
+    "name" : "Font",
+    "kind" : "class",
+    "line" : 130,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "face",
+      "kind" : "variable",
+      "line" : 132,
+      "char" : 10,
+      "deco" : "PS8derelict8freetype5types10FT_FaceRec",
+      "originalType" : "FT_Face",
+      "offset" : 8
+     },
+     {
+      "name" : "library",
+      "kind" : "variable",
+      "line" : 133,
+      "char" : 13,
+      "deco" : "PS8derelict8freetype5types13FT_LibraryRec",
+      "originalType" : "FT_Library",
+      "offset" : 12
+     },
+     {
+      "name" : "vbo",
+      "kind" : "variable",
+      "line" : 134,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 16
+     },
+     {
+      "name" : "attribute_coord",
+      "kind" : "variable",
+      "line" : 136,
+      "char" : 8,
+      "deco" : "i",
+      "originalType" : "GLint",
+      "offset" : 20
+     },
+     {
+      "name" : "uniform_tex",
+      "kind" : "variable",
+      "line" : 137,
+      "char" : 8,
+      "deco" : "i",
+      "originalType" : "GLint",
+      "offset" : 24
+     },
+     {
+      "name" : "uniform_color",
+      "kind" : "variable",
+      "line" : 138,
+      "char" : 8,
+      "deco" : "i",
+      "originalType" : "GLint",
+      "offset" : 28
+     },
+     {
+      "name" : "fontAtlas",
+      "kind" : "variable",
+      "line" : 140,
+      "char" : 8,
+      "deco" : "C4Glib3GUI4Font5atlas",
+      "originalType" : "atlas",
+      "offset" : 32
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 142,
+      "char" : 2,
+      "deco" : "FiiAyaZC4Glib3GUI4Font4Font",
+      "originalType" : "(GLint progID, int fSize, string fontPath)",
+      "parameters" : [
+       {
+        "name" : "progID",
+        "deco" : "i"
+       },
+       {
+        "name" : "fSize",
+        "deco" : "i"
+       },
+       {
+        "name" : "fontPath",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 165,
+      "endchar" : 2
+     },
+     {
+      "name" : "render_text",
+      "kind" : "function",
+      "line" : 167,
+      "char" : 7,
+      "deco" : "FAyaffffZv",
+      "parameters" : [
+       {
+        "name" : "text",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "x",
+        "deco" : "f"
+       },
+       {
+        "name" : "y",
+        "deco" : "f"
+       },
+       {
+        "name" : "sx",
+        "deco" : "f"
+       },
+       {
+        "name" : "sy",
+        "deco" : "f"
+       }
+      ],
+      "endline" : 216,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.GUI",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\GUI\\package.d",
+  "members" : [
+   {
+    "name" : "Glib.GUI.controls",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.GUI.Font",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.GUI.UITexture",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.GUI.Widget",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8
+   }
+  ]
+ },
+ {
+  "name" : "Glib.GUI.UITexture",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\GUI\\UITexture.d",
+  "members" : [
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.freeimage.freeimage",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "UITexture",
+    "kind" : "class",
+    "line" : 6,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "texId",
+      "kind" : "variable",
+      "line" : 8,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 8
+     },
+     {
+      "name" : "width",
+      "kind" : "variable",
+      "line" : 9,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 12
+     },
+     {
+      "name" : "height",
+      "kind" : "variable",
+      "line" : 10,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 16
+     },
+     {
+      "name" : "depth",
+      "kind" : "variable",
+      "line" : 11,
+      "char" : 8,
+      "deco" : "h",
+      "offset" : 20
+     },
+     {
+      "name" : "format",
+      "kind" : "variable",
+      "line" : 13,
+      "char" : 9,
+      "deco" : "E4Glib3GUI9UITexture9UITexture6Format",
+      "offset" : 24
+     },
+     {
+      "name" : "Format",
+      "kind" : "enum",
+      "line" : 15,
+      "char" : 2,
+      "baseDeco" : "i",
+      "members" : [
+       {
+        "name" : "None",
+        "kind" : "enum member",
+        "value" : "0",
+        "line" : 16,
+        "char" : 3
+       },
+       {
+        "name" : "RGB",
+        "kind" : "enum member",
+        "value" : "6407",
+        "line" : 17,
+        "char" : 3
+       },
+       {
+        "name" : "RGBA",
+        "kind" : "enum member",
+        "value" : "6408",
+        "line" : 18,
+        "char" : 3
+       },
+       {
+        "name" : "BGR",
+        "kind" : "enum member",
+        "value" : "32992",
+        "line" : 19,
+        "char" : 3
+       },
+       {
+        "name" : "BGRA",
+        "kind" : "enum member",
+        "value" : "32993",
+        "line" : 20,
+        "char" : 3
+       },
+       {
+        "name" : "RGBA16",
+        "kind" : "enum member",
+        "value" : "32859",
+        "line" : 21,
+        "char" : 3
+       },
+       {
+        "name" : "RGBA8",
+        "kind" : "enum member",
+        "value" : "32856",
+        "line" : 22,
+        "char" : 3
+       },
+       {
+        "name" : "Alpha",
+        "kind" : "enum member",
+        "value" : "6406",
+        "line" : 23,
+        "char" : 3
+       },
+       {
+        "name" : "CompressedRGB",
+        "kind" : "enum member",
+        "value" : "34029",
+        "line" : 26,
+        "char" : 3
+       },
+       {
+        "name" : "CompressedRGBA",
+        "kind" : "enum member",
+        "value" : "34030",
+        "line" : 27,
+        "char" : 3
+       }
+      ]
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 30,
+      "char" : 2,
+      "deco" : "FAyaZC4Glib3GUI9UITexture9UITexture",
+      "originalType" : "(string filePath)",
+      "parameters" : [
+       {
+        "name" : "filePath",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 55,
+      "endchar" : 2
+     },
+     {
+      "name" : "~this",
+      "kind" : "destructor",
+      "line" : 57,
+      "char" : 2,
+      "deco" : "FZv",
+      "endline" : 59,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.GUI.Widget",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\GUI\\Widget.d",
+  "members" : [
+   {
+    "name" : "Glib.GUI.Font",
+    "kind" : "import",
+    "line" : 2,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Widget",
+    "kind" : "class",
+    "line" : 4,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "ID",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 6,
+      "char" : 19,
+      "deco" : "Aya",
+      "offset" : 8
+     },
+     {
+      "name" : "pos",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 7,
+      "char" : 17,
+      "deco" : "S4Glib3GUI6Widget4Rect",
+      "offset" : 16
+     },
+     {
+      "name" : "isVisible",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 8,
+      "char" : 17,
+      "deco" : "b",
+      "offset" : 32
+     },
+     {
+      "name" : "needDraw",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 9,
+      "char" : 17,
+      "deco" : "b",
+      "init" : "true",
+      "offset" : 33
+     },
+     {
+      "name" : "trackHover",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 10,
+      "char" : 17,
+      "deco" : "b",
+      "offset" : 34
+     },
+     {
+      "name" : "state",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 11,
+      "char" : 17,
+      "deco" : "k",
+      "offset" : 36
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 14,
+      "char" : 2,
+      "deco" : "FZC4Glib3GUI6Widget6Widget",
+      "originalType" : "()",
+      "endline" : 17,
+      "endchar" : 2
+     },
+     {
+      "name" : "~this",
+      "kind" : "destructor",
+      "line" : 19,
+      "char" : 2,
+      "deco" : "FZv",
+      "endline" : 22,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "Style",
+    "kind" : "class",
+    "line" : 26,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "ID",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 28,
+      "char" : 19,
+      "deco" : "Aya",
+      "offset" : 8
+     },
+     {
+      "name" : "fontStyle",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 29,
+      "char" : 18,
+      "deco" : "h",
+      "offset" : 16
+     },
+     {
+      "name" : "fontSize",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 30,
+      "char" : 19,
+      "deco" : "t",
+      "offset" : 18
+     },
+     {
+      "name" : "textcolor",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 31,
+      "char" : 17,
+      "deco" : "k",
+      "offset" : 20
+     },
+     {
+      "name" : "fontRef",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 32,
+      "char" : 17,
+      "deco" : "C4Glib3GUI4Font4Font",
+      "originalType" : "Font",
+      "offset" : 24
+     }
+    ]
+   },
+   {
+    "name" : "Rect",
+    "kind" : "struct",
+    "line" : 37,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "left",
+      "kind" : "variable",
+      "line" : 39,
+      "char" : 9,
+      "deco" : "i",
+      "offset" : 0
+     },
+     {
+      "name" : "top",
+      "kind" : "variable",
+      "line" : 41,
+      "char" : 9,
+      "deco" : "i",
+      "offset" : 4
+     },
+     {
+      "name" : "right",
+      "kind" : "variable",
+      "line" : 43,
+      "char" : 9,
+      "deco" : "i",
+      "offset" : 8
+     },
+     {
+      "name" : "bottom",
+      "kind" : "variable",
+      "line" : 45,
+      "char" : 9,
+      "deco" : "i",
+      "offset" : 12
+     },
+     {
+      "name" : "middlex",
+      "kind" : "function",
+      "line" : 47,
+      "char" : 19,
+      "deco" : "FNdZi",
+      "endline" : 47,
+      "endchar" : 58
+     },
+     {
+      "name" : "middley",
+      "kind" : "function",
+      "line" : 49,
+      "char" : 19,
+      "deco" : "FNdZi",
+      "endline" : 49,
+      "endchar" : 58
+     },
+     {
+      "name" : "middle",
+      "kind" : "function",
+      "line" : 51,
+      "char" : 21,
+      "deco" : "FNdZS4Glib3GUI4Font5point",
+      "endline" : 51,
+      "endchar" : 64
+     },
+     {
+      "name" : "offset",
+      "kind" : "function",
+      "line" : 53,
+      "char" : 10,
+      "deco" : "FiiZv",
+      "parameters" : [
+       {
+        "name" : "dx",
+        "deco" : "i"
+       },
+       {
+        "name" : "dy",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 58,
+      "endchar" : 5
+     },
+     {
+      "name" : "expand",
+      "kind" : "function",
+      "line" : 60,
+      "char" : 10,
+      "deco" : "FiiZv",
+      "parameters" : [
+       {
+        "name" : "dx",
+        "deco" : "i"
+       },
+       {
+        "name" : "dy",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 65,
+      "endchar" : 5
+     },
+     {
+      "name" : "shrink",
+      "kind" : "function",
+      "line" : 67,
+      "char" : 10,
+      "deco" : "FiiZv",
+      "parameters" : [
+       {
+        "name" : "dx",
+        "deco" : "i"
+       },
+       {
+        "name" : "dy",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 72,
+      "endchar" : 5
+     },
+     {
+      "name" : "setMax",
+      "kind" : "function",
+      "line" : 74,
+      "char" : 10,
+      "deco" : "FS4Glib3GUI6Widget4RectZv",
+      "parameters" : [
+       {
+        "name" : "rc",
+        "deco" : "S4Glib3GUI6Widget4Rect"
+       }
+      ],
+      "endline" : 83,
+      "endchar" : 5
+     },
+     {
+      "name" : "width",
+      "kind" : "function",
+      "line" : 85,
+      "char" : 19,
+      "deco" : "FNdZi",
+      "endline" : 85,
+      "endchar" : 50
+     },
+     {
+      "name" : "height",
+      "kind" : "function",
+      "line" : 87,
+      "char" : 19,
+      "deco" : "FNdZi",
+      "endline" : 87,
+      "endchar" : 51
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 89,
+      "char" : 5,
+      "deco" : "FNciiiiZS4Glib3GUI6Widget4Rect",
+      "originalType" : "ref (int x0, int y0, int x1, int y1)",
+      "parameters" : [
+       {
+        "name" : "x0",
+        "deco" : "i"
+       },
+       {
+        "name" : "y0",
+        "deco" : "i"
+       },
+       {
+        "name" : "x1",
+        "deco" : "i"
+       },
+       {
+        "name" : "y1",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 94,
+      "endchar" : 5
+     },
+     {
+      "name" : "empty",
+      "kind" : "function",
+      "line" : 96,
+      "char" : 20,
+      "deco" : "FNdZb",
+      "endline" : 98,
+      "endchar" : 5
+     },
+     {
+      "name" : "moveBy",
+      "kind" : "function",
+      "line" : 100,
+      "char" : 10,
+      "deco" : "FiiZv",
+      "parameters" : [
+       {
+        "name" : "deltax",
+        "deco" : "i"
+       },
+       {
+        "name" : "deltay",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 105,
+      "endchar" : 5
+     },
+     {
+      "name" : "moveToFit",
+      "kind" : "function",
+      "line" : 107,
+      "char" : 10,
+      "deco" : "FKS4Glib3GUI6Widget4RectZv",
+      "parameters" : [
+       {
+        "name" : "rc",
+        "deco" : "S4Glib3GUI6Widget4Rect",
+        "storageClass" : [
+         "ref"
+        ]
+       }
+      ],
+      "endline" : 117,
+      "endchar" : 5
+     },
+     {
+      "name" : "intersect",
+      "kind" : "function",
+      "line" : 119,
+      "char" : 10,
+      "deco" : "FS4Glib3GUI6Widget4RectZb",
+      "parameters" : [
+       {
+        "name" : "rc",
+        "deco" : "S4Glib3GUI6Widget4Rect"
+       }
+      ],
+      "endline" : 129,
+      "endchar" : 5
+     },
+     {
+      "name" : "intersects",
+      "kind" : "function",
+      "line" : 131,
+      "char" : 10,
+      "deco" : "FS4Glib3GUI6Widget4RectZb",
+      "parameters" : [
+       {
+        "name" : "rc",
+        "deco" : "S4Glib3GUI6Widget4Rect"
+       }
+      ],
+      "endline" : 135,
+      "endchar" : 5
+     },
+     {
+      "name" : "isPointInside",
+      "kind" : "function",
+      "line" : 137,
+      "char" : 10,
+      "deco" : "FS4Glib3GUI4Font5pointZb",
+      "parameters" : [
+       {
+        "name" : "pt",
+        "deco" : "S4Glib3GUI4Font5point"
+       }
+      ],
+      "endline" : 139,
+      "endchar" : 5
+     },
+     {
+      "name" : "isPointInside",
+      "kind" : "function",
+      "line" : 141,
+      "char" : 10,
+      "deco" : "FiiZb",
+      "parameters" : [
+       {
+        "name" : "x",
+        "deco" : "i"
+       },
+       {
+        "name" : "y",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 143,
+      "endchar" : 5
+     },
+     {
+      "name" : "isInsideOf",
+      "kind" : "function",
+      "line" : 145,
+      "char" : 10,
+      "deco" : "FS4Glib3GUI6Widget4RectZb",
+      "parameters" : [
+       {
+        "name" : "rc",
+        "deco" : "S4Glib3GUI6Widget4Rect"
+       }
+      ],
+      "endline" : 147,
+      "endchar" : 5
+     },
+     {
+      "name" : "opEquals",
+      "kind" : "function",
+      "line" : 149,
+      "char" : 10,
+      "deco" : "FS4Glib3GUI6Widget4RectZb",
+      "parameters" : [
+       {
+        "name" : "rc",
+        "deco" : "S4Glib3GUI6Widget4Rect"
+       }
+      ],
+      "endline" : 151,
+      "endchar" : 5
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Camera",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Camera.d",
+  "members" : [
+   {
+    "name" : "Glib.Scene.Transform",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.GObject",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Camera",
+    "kind" : "class",
+    "line" : 7,
+    "char" : 1,
+    "base" : "GObject",
+    "members" : [
+     {
+      "name" : "near",
+      "kind" : "variable",
+      "line" : 9,
+      "char" : 8,
+      "deco" : "f",
+      "init" : "0.1F",
+      "offset" : 132
+     },
+     {
+      "name" : "far",
+      "kind" : "variable",
+      "line" : 10,
+      "char" : 8,
+      "deco" : "f",
+      "init" : "1.00000e+06F",
+      "offset" : 136
+     },
+     {
+      "name" : "fov",
+      "kind" : "variable",
+      "line" : 11,
+      "char" : 8,
+      "deco" : "f",
+      "init" : "45.0000F",
+      "offset" : 140
+     },
+     {
+      "name" : "threshold",
+      "kind" : "variable",
+      "line" : 12,
+      "char" : 8,
+      "deco" : "f",
+      "init" : "1.00000F",
+      "offset" : 144
+     },
+     {
+      "name" : "aspectRation",
+      "kind" : "variable",
+      "line" : 13,
+      "char" : 8,
+      "deco" : "f",
+      "init" : "1.25F",
+      "offset" : 148
+     },
+     {
+      "name" : "right",
+      "kind" : "variable",
+      "line" : 15,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "offset" : 152
+     },
+     {
+      "name" : "direction",
+      "kind" : "variable",
+      "line" : 16,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "offset" : 164
+     },
+     {
+      "name" : "position",
+      "kind" : "variable",
+      "line" : 17,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "init" : "Vector([0.000000F, 0.000000F, 5.00000F])",
+      "offset" : 176
+     },
+     {
+      "name" : "horizontalAngle",
+      "kind" : "variable",
+      "line" : 20,
+      "char" : 11,
+      "deco" : "f",
+      "init" : "3.14F",
+      "offset" : 188
+     },
+     {
+      "name" : "verticalAngle",
+      "kind" : "variable",
+      "line" : 23,
+      "char" : 11,
+      "deco" : "f",
+      "init" : "0.000000F",
+      "offset" : 192
+     },
+     {
+      "name" : "initialFoV",
+      "kind" : "variable",
+      "line" : 26,
+      "char" : 11,
+      "deco" : "f",
+      "init" : "45.0000F",
+      "offset" : 196
+     },
+     {
+      "name" : "speed",
+      "kind" : "variable",
+      "line" : 28,
+      "char" : 11,
+      "deco" : "f",
+      "init" : "3.00000F",
+      "offset" : 200
+     },
+     {
+      "name" : "mouseSpeed",
+      "kind" : "variable",
+      "line" : 29,
+      "char" : 11,
+      "deco" : "f",
+      "init" : "0.0003F",
+      "offset" : 204
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 31,
+      "char" : 2,
+      "deco" : "FZC4Glib5Scene6Camera6Camera",
+      "originalType" : "()",
+      "endline" : 46,
+      "endchar" : 2
+     },
+     {
+      "name" : "getViewMatrix",
+      "kind" : "function",
+      "line" : 47,
+      "char" : 7,
+      "deco" : "FZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
+      "originalType" : "mat4()",
+      "endline" : 57,
+      "endchar" : 5
+     },
+     {
+      "name" : "getPerspeciveMatrix",
+      "kind" : "function",
+      "line" : 59,
+      "char" : 7,
+      "deco" : "FZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
+      "originalType" : "mat4()",
+      "endline" : 64,
+      "endchar" : 2
+     },
+     {
+      "name" : "getInversePerspectiveMatrix",
+      "kind" : "function",
+      "line" : 66,
+      "char" : 7,
+      "deco" : "FZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
+      "originalType" : "mat4()",
+      "endline" : 71,
+      "endchar" : 2
+     },
+     {
+      "name" : "updateCameraControls",
+      "kind" : "function",
+      "line" : 72,
+      "char" : 7,
+      "deco" : "FddZv",
+      "parameters" : [
+       {
+        "name" : "xpos",
+        "deco" : "d"
+       },
+       {
+        "name" : "ypos",
+        "deco" : "d"
+       }
+      ],
+      "endline" : 96,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.GObject",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\GObject.d",
+  "members" : [
+   {
+    "name" : "Glib.Scene.Transform",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Node",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "GObject",
+    "kind" : "class",
+    "line" : 7,
+    "char" : 1,
+    "base" : "Node",
+    "members" : [
+     {
+      "name" : "id",
+      "kind" : "variable",
+      "line" : 9,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 112
+     },
+     {
+      "name" : "name",
+      "kind" : "variable",
+      "line" : 10,
+      "char" : 9,
+      "deco" : "Aya",
+      "offset" : 116
+     },
+     {
+      "name" : "components",
+      "kind" : "variable",
+      "line" : 11,
+      "char" : 15,
+      "deco" : "AC4Glib5Scene7GObject10IComponent",
+      "offset" : 124
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 13,
+      "char" : 2,
+      "deco" : "FZC4Glib5Scene7GObject7GObject",
+      "originalType" : "()",
+      "endline" : 16,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 17,
+      "char" : 2,
+      "deco" : "FC4Glib5Scene4Node4NodeZC4Glib5Scene7GObject7GObject",
+      "originalType" : "(Node parent)",
+      "parameters" : [
+       {
+        "name" : "parent",
+        "deco" : "C4Glib5Scene4Node4Node"
+       }
+      ],
+      "endline" : 20,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "IComponent",
+    "kind" : "interface",
+    "line" : 24,
+    "char" : 1,
+    "members" : []
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Light",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Light.d",
+  "members" : [
+   {
+    "name" : "Glib.Scene.GObject",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Light",
+    "kind" : "class",
+    "line" : 6,
+    "char" : 1,
+    "interfaces" : [
+     "IComponent"
+    ],
+    "members" : [
+     {
+      "name" : "color",
+      "kind" : "variable",
+      "line" : 8,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "offset" : 8
+     },
+     {
+      "name" : "castShadows",
+      "kind" : "variable",
+      "line" : 9,
+      "char" : 7,
+      "deco" : "b",
+      "offset" : 20
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 11,
+      "char" : 2,
+      "deco" : "FS4gl3n6linalg17__T6VectorTfVii3Z6VectorZC4Glib5Scene5Light5Light",
+      "originalType" : "(vec3 color)",
+      "parameters" : [
+       {
+        "name" : "color",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 15,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "PointLight",
+    "kind" : "class",
+    "line" : 18,
+    "char" : 1,
+    "base" : "Light",
+    "members" : [
+     {
+      "name" : "radius",
+      "kind" : "variable",
+      "line" : 20,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 28
+     },
+     {
+      "name" : "fallOff",
+      "kind" : "variable",
+      "line" : 21,
+      "char" : 8,
+      "deco" : "f",
+      "offset" : 32
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 24,
+      "char" : 2,
+      "deco" : "FS4gl3n6linalg17__T6VectorTfVii3Z6VectorffZC4Glib5Scene5Light10PointLight",
+      "originalType" : "(vec3 color = vec3(1.00000F), float radius = 1.00000F, float fallOff = 1.00000F)",
+      "parameters" : [
+       {
+        "name" : "color",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "default" : "(Vector!(float, 3) __ctmp2479;\r\n , __ctmp2479).this(1.00000F)"
+       },
+       {
+        "name" : "radius",
+        "deco" : "f",
+        "default" : "1.00000"
+       },
+       {
+        "name" : "fallOff",
+        "deco" : "f",
+        "default" : "1.00000"
+       }
+      ],
+      "endline" : 29,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Material",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Material.d",
+  "members" : [
+   {
+    "name" : "derelict.freeimage.freeimage",
+    "kind" : "import",
+    "line" : 2,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Material",
+    "kind" : "class",
+    "line" : 5,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "diffuse",
+      "kind" : "variable",
+      "line" : 7,
+      "char" : 10,
+      "deco" : "C4Glib5Scene8Material7Texture",
+      "originalType" : "Texture",
+      "offset" : 8
+     },
+     {
+      "name" : "normal",
+      "kind" : "variable",
+      "line" : 8,
+      "char" : 10,
+      "deco" : "C4Glib5Scene8Material7Texture",
+      "originalType" : "Texture",
+      "offset" : 12
+     },
+     {
+      "name" : "specular",
+      "kind" : "variable",
+      "line" : 9,
+      "char" : 10,
+      "deco" : "C4Glib5Scene8Material7Texture",
+      "originalType" : "Texture",
+      "offset" : 16
+     }
+    ]
+   },
+   {
+    "name" : "Texture",
+    "kind" : "class",
+    "line" : 12,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "width",
+      "kind" : "variable",
+      "line" : 14,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 8
+     },
+     {
+      "name" : "height",
+      "kind" : "variable",
+      "line" : 15,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 12
+     },
+     {
+      "name" : "glID",
+      "kind" : "variable",
+      "line" : 16,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 16
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 18,
+      "char" : 2,
+      "deco" : "FAyaZC4Glib5Scene8Material7Texture",
+      "originalType" : "(string filePath)",
+      "parameters" : [
+       {
+        "name" : "filePath",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 37,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 39,
+      "char" : 2,
+      "deco" : "FS4gl3n6linalg17__T6VectorTiVii4Z6VectorZC4Glib5Scene8Material7Texture",
+      "originalType" : "(vec4i color)",
+      "parameters" : [
+       {
+        "name" : "color",
+        "deco" : "S4gl3n6linalg17__T6VectorTiVii4Z6Vector"
+       }
+      ],
+      "endline" : 51,
+      "endchar" : 2
+     },
+     {
+      "name" : "singleColorTexture",
+      "kind" : "function",
+      "line" : 53,
+      "char" : 8,
+      "storageClass" : [
+       "auto"
+      ],
+      "deco" : "FS4gl3n6linalg17__T6VectorTiVii4Z6VectorZG32h",
+      "originalType" : "(vec4i color)",
+      "parameters" : [
+       {
+        "name" : "color",
+        "deco" : "S4gl3n6linalg17__T6VectorTiVii4Z6Vector"
+       }
+      ],
+      "endline" : 65,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Mesh",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Mesh.d",
+  "members" : [
+   {
+    "name" : "derelict.assimp3.assimp",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Shader",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Material",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Mesh",
+    "kind" : "class",
+    "line" : 11,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "verts",
+      "kind" : "variable",
+      "line" : 13,
+      "char" : 9,
+      "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3[]",
+      "offset" : 8
+     },
+     {
+      "name" : "indices",
+      "kind" : "variable",
+      "line" : 14,
+      "char" : 9,
+      "deco" : "Ak",
+      "offset" : 16
+     },
+     {
+      "name" : "uvs",
+      "kind" : "variable",
+      "line" : 15,
+      "char" : 9,
+      "deco" : "AS4gl3n6linalg17__T6VectorTfVii2Z6Vector",
+      "originalType" : "vec2[]",
+      "offset" : 24
+     },
+     {
+      "name" : "normals",
+      "kind" : "variable",
+      "line" : 16,
+      "char" : 9,
+      "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3[]",
+      "offset" : 32
+     },
+     {
+      "name" : "tangents",
+      "kind" : "variable",
+      "line" : 17,
+      "char" : 9,
+      "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3[]",
+      "offset" : 40
+     },
+     {
+      "name" : "bitTangents",
+      "kind" : "variable",
+      "line" : 18,
+      "char" : 9,
+      "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3[]",
+      "offset" : 48
+     },
+     {
+      "name" : "vbo",
+      "kind" : "variable",
+      "line" : 20,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 56
+     },
+     {
+      "name" : "uvbo",
+      "kind" : "variable",
+      "line" : 21,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 60
+     },
+     {
+      "name" : "nbo",
+      "kind" : "variable",
+      "line" : 22,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 64
+     },
+     {
+      "name" : "tanbo",
+      "kind" : "variable",
+      "line" : 23,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 68
+     },
+     {
+      "name" : "bitTanbo",
+      "kind" : "variable",
+      "line" : 24,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 72
+     },
+     {
+      "name" : "elementbo",
+      "kind" : "variable",
+      "line" : 25,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 76
+     },
+     {
+      "name" : "VertexArrayID",
+      "kind" : "variable",
+      "line" : 26,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 80
+     },
+     {
+      "name" : "shader",
+      "kind" : "variable",
+      "line" : 28,
+      "char" : 9,
+      "deco" : "C4Glib5Scene6Shader6Shader",
+      "originalType" : "Shader",
+      "offset" : 84
+     },
+     {
+      "name" : "material",
+      "kind" : "variable",
+      "line" : 29,
+      "char" : 11,
+      "deco" : "C4Glib5Scene8Material8Material",
+      "originalType" : "Material",
+      "offset" : 88
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 31,
+      "char" : 2,
+      "deco" : "FxPS8derelict7assimp35types6aiMeshZC4Glib5Scene4Mesh4Mesh",
+      "originalType" : "(const aiMesh* mesh)",
+      "parameters" : [
+       {
+        "name" : "mesh",
+        "deco" : "xPS8derelict7assimp35types6aiMesh"
+       }
+      ],
+      "endline" : 80,
+      "endchar" : 2
+     },
+     {
+      "name" : "~this",
+      "kind" : "destructor",
+      "line" : 81,
+      "char" : 2,
+      "deco" : "FZv",
+      "endline" : 91,
+      "endchar" : 2
+     },
+     {
+      "name" : "BindMesh",
+      "kind" : "function",
+      "line" : 93,
+      "char" : 7,
+      "deco" : "FZb",
+      "endline" : 178,
+      "endchar" : 2
+     },
+     {
+      "name" : "Draw",
+      "kind" : "function",
+      "line" : 181,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 228,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "unitSquareMesh",
+    "kind" : "variable",
+    "line" : 233,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"\\x0d\\x0a\\x09v -1.0 1.0 0.0\\x0d\\x0a\\x09\\x09v -1.0 -1.0 0.0\\x0d\\x0a\\x09\\x09v 1.0 1.0 0.0\\x0d\\x0a\\x09\\x09v 1.0 -1.0 0.0\\x0d\\x0a\\x0d\\x0a\\x09\\x09vt 0.0 0.0\\x0d\\x0a\\x09\\x09vt 0.0 1.0\\x0d\\x0a\\x09\\x09vt 1.0 0.0\\x0d\\x0a\\x09\\x09vt 1.0 1.0\\x0d\\x0a\\x0d\\x0a\\x09\\x09vn 0.0 0.0 1.0\\x0d\\x0a\\x0d\\x0a\\x09\\x09f 4/3/1 3/4/1 1/2/1\\x0d\\x0a\\x09\\x09f 2/1/1 4/3/1 1/2/1\\x0d\\x0a\""
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Model",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Model.d",
+  "members" : [
+   {
+    "name" : "Glib.System.Log",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Mesh",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Transform",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Render",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.GObject",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.assimp3.assimp",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Model",
+    "kind" : "class",
+    "line" : 10,
+    "char" : 1,
+    "interfaces" : [
+     "IDrawable",
+     "IComponent"
+    ],
+    "members" : [
+     {
+      "name" : "meshes",
+      "kind" : "variable",
+      "line" : 12,
+      "char" : 9,
+      "deco" : "AC4Glib5Scene4Mesh4Mesh",
+      "offset" : 8
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 17,
+      "char" : 2,
+      "deco" : "FAyaZC4Glib5Scene5Model5Model",
+      "originalType" : "(string path)",
+      "parameters" : [
+       {
+        "name" : "path",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 41,
+      "endchar" : 2
+     },
+     {
+      "name" : "Draw",
+      "kind" : "function",
+      "line" : 43,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 49,
+      "endchar" : 2,
+      "overrides" : [
+       "Glib.Scene.Render.IDrawable.Draw"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Node",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Node.d",
+  "members" : [
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Scene",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.math",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Node",
+    "kind" : "class",
+    "line" : 9,
+    "char" : 1,
+    "base" : "Tree",
+    "members" : [
+     {
+      "name" : "transform",
+      "kind" : "variable",
+      "line" : 11,
+      "char" : 12,
+      "deco" : "S4Glib5Scene4Node9Transform",
+      "offset" : 24
+     },
+     {
+      "name" : "__invariant1",
+      "kind" : "function",
+      "line" : 14,
+      "char" : 2,
+      "deco" : "xFZv"
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 17,
+      "char" : 2,
+      "deco" : "FZC4Glib5Scene4Node4Node",
+      "originalType" : "()",
+      "endline" : 25,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 27,
+      "char" : 2,
+      "deco" : "FC4Glib5Scene4Node4NodeZC4Glib5Scene4Node4Node",
+      "originalType" : "(Node parent)",
+      "parameters" : [
+       {
+        "name" : "parent",
+        "deco" : "C4Glib5Scene4Node4Node"
+       }
+      ],
+      "endline" : 33,
+      "endchar" : 2
+     },
+     {
+      "name" : "__invariant",
+      "kind" : "function",
+      "line" : 9,
+      "char" : 1,
+      "deco" : "xFZv"
+     }
+    ]
+   },
+   {
+    "name" : "Transform",
+    "kind" : "struct",
+    "line" : 58,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "worldDirty",
+      "kind" : "variable",
+      "line" : 60,
+      "char" : 14,
+      "deco" : "b",
+      "offset" : 0
+     },
+     {
+      "name" : "localScale",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 62,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "init" : "Vector([1.00000F, 1.00000F, 1.00000F])",
+      "offset" : 4
+     },
+     {
+      "name" : "localPosition",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 63,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "init" : "Vector([0.000000F, 0.000000F, 0.000000F])",
+      "offset" : 16
+     },
+     {
+      "name" : "localRotation",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 64,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
+      "originalType" : "quat",
+      "init" : "Quaternion([1.00000F, 0.000000F, 0.000000F, 0.000000F])",
+      "offset" : 28
+     },
+     {
+      "name" : "worldScale",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 66,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "init" : "Vector([1.00000F, 1.00000F, 1.00000F])",
+      "offset" : 44
+     },
+     {
+      "name" : "worldPosition",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 67,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "init" : "Vector([0.000000F, 0.000000F, 0.000000F])",
+      "offset" : 56
+     },
+     {
+      "name" : "worldRotation",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 68,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
+      "originalType" : "quat",
+      "init" : "Quaternion([1.00000F, 0.000000F, 0.000000F, 0.000000F])",
+      "offset" : 68
+     },
+     {
+      "name" : "thisNode",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 70,
+      "char" : 7,
+      "deco" : "C4Glib5Scene4Node4Node",
+      "originalType" : "Node",
+      "offset" : 84
+     },
+     {
+      "name" : "SetWorldDirty",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 72,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 78,
+      "endchar" : 2
+     },
+     {
+      "name" : "DegToRad",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 79,
+      "char" : 8,
+      "deco" : "FxfZf",
+      "originalType" : "float(const float degree)",
+      "parameters" : [
+       {
+        "name" : "degree",
+        "deco" : "xf"
+       }
+      ],
+      "endline" : 84,
+      "endchar" : 2
+     },
+     {
+      "name" : "RadToDeg",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 85,
+      "char" : 8,
+      "deco" : "xFxfZf",
+      "originalType" : "const float(const float radian)",
+      "parameters" : [
+       {
+        "name" : "radian",
+        "deco" : "xf"
+       }
+      ],
+      "endline" : 90,
+      "endchar" : 2
+     },
+     {
+      "name" : "CalcWorld",
+      "kind" : "function",
+      "line" : 91,
+      "char" : 14,
+      "deco" : "FZv",
+      "endline" : 118,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Rotation",
+      "kind" : "function",
+      "line" : 120,
+      "char" : 7,
+      "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "const @property vec3()",
+      "endline" : 123,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Rotation",
+      "kind" : "function",
+      "line" : 124,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 rotation)",
+      "parameters" : [
+       {
+        "name" : "rotation",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 128,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Position",
+      "kind" : "function",
+      "line" : 129,
+      "char" : 7,
+      "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "const @property vec3()",
+      "endline" : 132,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Position",
+      "kind" : "function",
+      "line" : 133,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 position)",
+      "parameters" : [
+       {
+        "name" : "position",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 137,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Scale",
+      "kind" : "function",
+      "line" : 138,
+      "char" : 7,
+      "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "const @property vec3()",
+      "endline" : 141,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Scale",
+      "kind" : "function",
+      "line" : 142,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 newScale)",
+      "parameters" : [
+       {
+        "name" : "newScale",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 146,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Position",
+      "kind" : "function",
+      "line" : 163,
+      "char" : 7,
+      "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "const @property vec3()",
+      "endline" : 168,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Position",
+      "kind" : "function",
+      "line" : 169,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 position)",
+      "parameters" : [
+       {
+        "name" : "position",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 175,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Scale",
+      "kind" : "function",
+      "line" : 177,
+      "char" : 7,
+      "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "const @property vec3()",
+      "endline" : 182,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Scale",
+      "kind" : "function",
+      "line" : 183,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 scale)",
+      "parameters" : [
+       {
+        "name" : "scale",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 189,
+      "endchar" : 2
+     },
+     {
+      "name" : "worldTransformMatrix",
+      "kind" : "function",
+      "line" : 191,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
+      "originalType" : "@property mat4()",
+      "endline" : 199,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 202,
+    "char" : 1,
+    "name" : "Tree",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "Tree",
+      "kind" : "class",
+      "line" : 202,
+      "char" : 1,
+      "members" : [
+       {
+        "name" : "parent",
+        "kind" : "variable",
+        "line" : 204,
+        "char" : 14,
+        "type" : "T"
+       },
+       {
+        "name" : "children",
+        "kind" : "variable",
+        "line" : 205,
+        "char" : 16,
+        "type" : "T[]"
+       },
+       {
+        "name" : "index",
+        "kind" : "variable",
+        "line" : 206,
+        "char" : 16,
+        "deco" : "i",
+        "init" : "-1"
+       },
+       {
+        "kind" : "template",
+        "line" : 214,
+        "char" : 4,
+        "name" : "addChild",
+        "parameters" : [
+         {
+          "name" : "S",
+          "kind" : "type",
+          "type" : "T"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "addChild",
+          "kind" : "function",
+          "line" : 214,
+          "char" : 4,
+          "type" : "S(S child)",
+          "parameters" : [
+           {
+            "name" : "child",
+            "type" : "S"
+           }
+          ],
+          "endline" : 234,
+          "endchar" : 2
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 242,
+        "char" : 4,
+        "name" : "removeChild",
+        "parameters" : [
+         {
+          "name" : "S",
+          "kind" : "type",
+          "type" : "T"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "removeChild",
+          "kind" : "function",
+          "line" : 242,
+          "char" : 4,
+          "type" : "S(S child)",
+          "parameters" : [
+           {
+            "name" : "child",
+            "type" : "S"
+           }
+          ],
+          "endline" : 259,
+          "endchar" : 2
+         }
+        ]
+       },
+       {
+        "name" : "getChildren",
+        "kind" : "function",
+        "line" : 263,
+        "char" : 6,
+        "type" : "T[]()",
+        "endline" : 265,
+        "endchar" : 2
+       },
+       {
+        "name" : "getParent",
+        "kind" : "function",
+        "line" : 270,
+        "char" : 4,
+        "type" : "T()",
+        "endline" : 272,
+        "endchar" : 2
+       },
+       {
+        "name" : "isChild",
+        "kind" : "function",
+        "line" : 277,
+        "char" : 7,
+        "type" : "bool(T elem)",
+        "parameters" : [
+         {
+          "name" : "elem",
+          "type" : "T"
+         }
+        ],
+        "endline" : 281,
+        "endchar" : 2
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\package.d",
+  "members" : [
+   {
+    "name" : "Glib.Scene.Camera",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.GObject",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.Mesh",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.Model",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.Node",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.Render",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.Scene",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.Shader",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.Transform",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene.Material",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 8
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Render",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Render.d",
+  "members" : [
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.sdl",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Scene",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.GObject",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Node",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Shader",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Mesh",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.Window",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.Log",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "imgui",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.assimp3.assimp",
+    "kind" : "import",
+    "line" : 15,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.string",
+    "kind" : "import",
+    "line" : 16,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Render",
+    "kind" : "struct",
+    "line" : 18,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "_deferredFrameBuffer",
+      "kind" : "variable",
+      "line" : 20,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 0
+     },
+     {
+      "name" : "_diffuseRenderTexture",
+      "kind" : "variable",
+      "line" : 21,
+      "char" : 10,
+      "deco" : "k",
+      "offset" : 4
+     },
+     {
+      "name" : "_normalRenderTexture",
+      "kind" : "variable",
+      "line" : 22,
+      "char" : 10,
+      "deco" : "k",
+      "offset" : 8
+     },
+     {
+      "name" : "_depthRenderTexture",
+      "kind" : "variable",
+      "line" : 23,
+      "char" : 10,
+      "deco" : "k",
+      "offset" : 12
+     },
+     {
+      "name" : "Complete",
+      "kind" : "function",
+      "line" : 25,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 29,
+      "endchar" : 2
+     },
+     {
+      "name" : "initializeFrameBuffer",
+      "kind" : "function",
+      "line" : 30,
+      "char" : 7,
+      "deco" : "FkkZv",
+      "parameters" : [
+       {
+        "name" : "width",
+        "deco" : "k"
+       },
+       {
+        "name" : "height",
+        "deco" : "k"
+       }
+      ],
+      "endline" : 59,
+      "endchar" : 2
+     },
+     {
+      "name" : "resizeDefferedRenderBuffer",
+      "kind" : "function",
+      "line" : 61,
+      "char" : 13,
+      "storageClass" : [
+       "final"
+      ],
+      "deco" : "FkkZv",
+      "parameters" : [
+       {
+        "name" : "width",
+        "deco" : "k"
+       },
+       {
+        "name" : "height",
+        "deco" : "k"
+       }
+      ],
+      "endline" : 84,
+      "endchar" : 5
+     },
+     {
+      "name" : "rScene",
+      "kind" : "function",
+      "line" : 87,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene5Scene5SceneC4Glib6System6Window6windowZv",
+      "parameters" : [
+       {
+        "name" : "scene",
+        "deco" : "C4Glib5Scene5Scene5Scene"
+       },
+       {
+        "name" : "w",
+        "deco" : "C4Glib6System6Window6window"
+       }
+      ],
+      "endline" : 243,
+      "endchar" : 2
+     },
+     {
+      "name" : "TraverseDraw",
+      "kind" : "function",
+      "line" : 246,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene7GObject7GObjectZv",
+      "parameters" : [
+       {
+        "name" : "g",
+        "deco" : "C4Glib5Scene7GObject7GObject"
+       }
+      ],
+      "endline" : 262,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "IDrawable",
+    "kind" : "interface",
+    "line" : 265,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "Draw",
+      "kind" : "function",
+      "line" : 267,
+      "char" : 7,
+      "storageClass" : [
+       "abstract"
+      ],
+      "deco" : "FZv"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Scene",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Scene.d",
+  "members" : [
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Camera",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.GObject",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Node",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Scene",
+    "kind" : "class",
+    "line" : 9,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "mainCamera",
+      "kind" : "variable",
+      "line" : 11,
+      "char" : 9,
+      "deco" : "C4Glib5Scene6Camera6Camera",
+      "originalType" : "Camera",
+      "offset" : 8
+     },
+     {
+      "name" : "cameras",
+      "kind" : "variable",
+      "line" : 12,
+      "char" : 11,
+      "deco" : "AC4Glib5Scene6Camera6Camera",
+      "offset" : 12
+     },
+     {
+      "name" : "root",
+      "kind" : "variable",
+      "line" : 14,
+      "char" : 10,
+      "deco" : "C4Glib5Scene7GObject7GObject",
+      "originalType" : "GObject",
+      "offset" : 20
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 16,
+      "char" : 2,
+      "deco" : "FZC4Glib5Scene5Scene5Scene",
+      "originalType" : "()",
+      "endline" : 27,
+      "endchar" : 2
+     },
+     {
+      "name" : "Update",
+      "kind" : "function",
+      "line" : 29,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 32,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Shader",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Shader.d",
+  "members" : [
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.Log",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Material",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Shader",
+    "kind" : "class",
+    "line" : 8,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "defaultVertShader",
+      "kind" : "variable",
+      "line" : 10,
+      "char" : 15,
+      "storageClass" : [
+       "static",
+       "const"
+      ],
+      "deco" : "xAya",
+      "originalType" : "string",
+      "init" : "\"C:\\\\Users\\\\qtg843\\\\Documents\\\\Visual Studio 2012\\\\Projects\\\\Glib\\\\resources\\\\StandardShading.vertexshader\""
+     },
+     {
+      "name" : "defaultFragShader",
+      "kind" : "variable",
+      "line" : 11,
+      "char" : 15,
+      "storageClass" : [
+       "static",
+       "const"
+      ],
+      "deco" : "xAya",
+      "originalType" : "string",
+      "init" : "\"C:\\\\Users\\\\qtg843\\\\Documents\\\\Visual Studio 2012\\\\Projects\\\\Glib\\\\resources\\\\StandardShading.fragmentshader\""
+     },
+     {
+      "name" : "vertSource",
+      "kind" : "variable",
+      "line" : 12,
+      "char" : 9,
+      "deco" : "Aya",
+      "offset" : 8
+     },
+     {
+      "name" : "fragSource",
+      "kind" : "variable",
+      "line" : 13,
+      "char" : 9,
+      "deco" : "Aya",
+      "offset" : 16
+     },
+     {
+      "name" : "programID",
+      "kind" : "variable",
+      "line" : 15,
+      "char" : 9,
+      "deco" : "k",
+      "originalType" : "GLuint",
+      "offset" : 24
+     },
+     {
+      "name" : "cstr",
+      "kind" : "variable",
+      "line" : 17,
+      "char" : 9,
+      "deco" : "Aa",
+      "offset" : 28
+     },
+     {
+      "name" : "cfstr",
+      "kind" : "variable",
+      "line" : 18,
+      "char" : 9,
+      "deco" : "Aa",
+      "offset" : 36
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 19,
+      "char" : 2,
+      "deco" : "FAyaAyaZC4Glib5Scene6Shader6Shader",
+      "originalType" : "(string vertexSourcePath, string fragmentSourcePath)",
+      "parameters" : [
+       {
+        "name" : "vertexSourcePath",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "fragmentSourcePath",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 34,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 37,
+      "char" : 2,
+      "deco" : "FZC4Glib5Scene6Shader6Shader",
+      "originalType" : "()",
+      "endline" : 52,
+      "endchar" : 2
+     },
+     {
+      "name" : "~this",
+      "kind" : "destructor",
+      "line" : 53,
+      "char" : 2,
+      "deco" : "FZv",
+      "endline" : 56,
+      "endchar" : 2
+     },
+     {
+      "name" : "LoadShader",
+      "kind" : "function",
+      "line" : 58,
+      "char" : 9,
+      "deco" : "FZk",
+      "originalType" : "GLuint()",
+      "endline" : 130,
+      "endchar" : 2
+     },
+     {
+      "name" : "BindMaterial",
+      "kind" : "function",
+      "line" : 132,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8Material8MaterialZv",
+      "parameters" : [
+       {
+        "name" : "material",
+        "deco" : "C4Glib5Scene8Material8Material"
+       }
+      ],
+      "endline" : 148,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "glslVersion",
+    "kind" : "variable",
+    "line" : 151,
+    "char" : 6,
+    "storageClass" : [
+     "enum"
+    ],
+    "deco" : "Aya",
+    "init" : "\"#version 400\\x0a\""
+   },
+   {
+    "name" : "ambientlightVS",
+    "kind" : "variable",
+    "line" : 153,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"#version 400\\x0a\\x0d\\x0a    layout(location = 0) in vec3 vPosition_s;\\x0d\\x0a    layout(location = 1) in vec2 vUV;\\x0d\\x0a\\x0d\\x0a    out vec4 fPosition_s;\\x0d\\x0a    out vec2 fUV;\\x0d\\x0a\\x0d\\x0a    void main( void )\\x0d\\x0a    {\\x0d\\x0a        fPosition_s = vec4( vPosition_s, 1.0f );\\x0d\\x0a        gl_Position = fPosition_s;\\x0d\\x0a        fUV = vUV;\\x0d\\x0a    }\\x0d\\x0a\""
+   },
+   {
+    "name" : "ambientlightFS",
+    "kind" : "variable",
+    "line" : 169,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"#version 400\\x0a\\x0d\\x0a    struct AmbientLight\\x0d\\x0a    {\\x0d\\x0a        vec3 color;\\x0d\\x0a    };\\x0d\\x0a\\x0d\\x0a    in vec4 fPosition;\\x0d\\x0a    in vec2 fUV;\\x0d\\x0a\\x0d\\x0a    // this diffuse should be set to the geometry output\\x0d\\x0a    uniform sampler2D diffuseTexture;\\x0d\\x0a    uniform AmbientLight light;\\x0d\\x0a\\x0d\\x0a    // https://stackoverflow.com/questions/9222217/how-does-the-fragment-shader-know-what-variable-to-use-for-the-color-of-a-pixel\\x0d\\x0a    out vec4 color;\\x0d\\x0a\\x0d\\x0a    void main( void )\\x0d\\x0a    {\\x0d\\x0a        color = vec4( light.color * texture( diffuseTexture, fUV ).xyz, 1.0f );\\x0d\\x0a    }\\x0d\\x0a\""
+   },
+   {
+    "name" : "geometryVS",
+    "kind" : "variable",
+    "line" : 193,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"#version 400\\x0a\\x0d\\x0a    layout(location = 0) in vec3 vPosition_m;\\x0d\\x0a    layout(location = 1) in vec2 vUV;\\x0d\\x0a    layout(location = 2) in vec3 vNormal_m;\\x0d\\x0a    layout(location = 3) in vec3 vTangent_m;\\x0d\\x0a\\x0d\\x0a    out vec4 fPosition_s;\\x0d\\x0a    out vec3 fNormal_v;\\x0d\\x0a    out vec2 fUV;\\x0d\\x0a    out vec3 fTangent_v;\\x0d\\x0a    flat out uint fObjectId;\\x0d\\x0a\\x0d\\x0a    uniform mat4 worldView;\\x0d\\x0a    uniform mat4 worldViewProj;\\x0d\\x0a    uniform uint objectId;\\x0d\\x0a\\x0d\\x0a    void main( void )\\x0d\\x0a    {\\x0d\\x0a        // gl_Position is like SV_Position\\x0d\\x0a        fPosition_s = worldViewProj * vec4( vPosition_m, 1.0f );\\x0d\\x0a        gl_Position = fPosition_s;\\x0d\\x0a        fUV = vUV;\\x0d\\x0a\\x0d\\x0a        fNormal_v = ( worldView * vec4( vNormal_m, 0.0f ) ).xyz;\\x0d\\x0a        fTangent_v =  ( worldView * vec4( vTangent_m, 0.0f ) ).xyz;\\x0d\\x0a        fObjectId = objectId;\\x0d\\x0a    }\\x0d\\x0a\""
+   },
+   {
+    "name" : "geometryFS",
+    "kind" : "variable",
+    "line" : 223,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"#version 400\\x0a\\x0d\\x0a    in vec4 fPosition_s;\\x0d\\x0a    in vec3 fNormal_v;\\x0d\\x0a    in vec2 fUV;\\x0d\\x0a    in vec3 fTangent_v;\\x0d\\x0a    flat in uint fObjectId;\\x0d\\x0a\\x0d\\x0a    layout( location = 0 ) out vec4 color;\\x0d\\x0a    layout( location = 1 ) out vec4 normal_v;\\x0d\\x0a\\x0d\\x0a    uniform sampler2D diffuseTexture;\\x0d\\x0a    uniform sampler2D normalTexture;\\x0d\\x0a    uniform sampler2D specularTexture;\\x0d\\x0a\\x0d\\x0a    vec2 encode( vec3 normal )\\x0d\\x0a    {\\x0d\\x0a        float t = sqrt( 2 / ( 1 - normal.z ) );\\x0d\\x0a        return normal.xy * t;\\x0d\\x0a    }\\x0d\\x0a\\x0d\\x0a    vec3 calculateMappedNormal()\\x0d\\x0a    {\\x0d\\x0a        vec3 normal = normalize( fNormal_v );\\x0d\\x0a        vec3 tangent = normalize( fTangent_v );\\x0d\\x0a        //Use Gramm-Schmidt process to orthogonalize the two\\x0d\\x0a        tangent = normalize( tangent - dot( tangent, normal ) * normal );\\x0d\\x0a        vec3 bitangent = -cross( tangent, normal );\\x0d\\x0a        vec3 normalMap = ((texture( normalTexture, fUV ).xyz) * 2) - 1;\\x0d\\x0a        mat3 TBN = mat3( tangent, bitangent, normal );\\x0d\\x0a        return normalize( TBN * normalMap );\\x0d\\x0a    }\\x0d\\x0a\\x0d\\x0a    void main( void )\\x0d\\x0a    {\\x0d\\x0a        color = texture( diffuseTexture, fUV );\\x0d\\x0a        // specular intensity\\x0d\\x0a        vec3 specularSample = texture( specularTexture, fUV ).xyz;\\x0d\\x0a        color.w = ( specularSample.x + specularSample.y + specularSample.z ) / 3;\\x0d\\x0a        normal_v = vec4( calculateMappedNormal(), float(fObjectId) );\\x0d\\x0a    }\\x0d\\x0a\""
+   },
+   {
+    "name" : "directionallightVS",
+    "kind" : "variable",
+    "line" : 267,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"#version 400\\x0a\\x0d\\x0a    layout(location = 0) in vec3 vPosition_s;\\x0d\\x0a    layout(location = 1) in vec2 vUV;\\x0d\\x0a\\x0d\\x0a    uniform mat4 invProj;\\x0d\\x0a\\x0d\\x0a    out vec4 fPosition_s;\\x0d\\x0a    out vec2 fUV;\\x0d\\x0a    out vec3 fViewRay;\\x0d\\x0a\\x0d\\x0a    void main( void )\\x0d\\x0a    {\\x0d\\x0a        fPosition_s = vec4( vPosition_s, 1.0f );\\x0d\\x0a        gl_Position = fPosition_s;\\x0d\\x0a\\x0d\\x0a        vec3 position_v = ( invProj * vec4( vPosition_s, 1.0f ) ).xyz;\\x0d\\x0a        // This is the ray clamped to depth 1, and it'll just be moved & interpolated in the XY\\x0d\\x0a        fViewRay = vec3( position_v.xy / position_v.z, 1.0f );\\x0d\\x0a        fUV = vUV;\\x0d\\x0a    }\\x0d\\x0a\""
+   },
+   {
+    "name" : "directionallightFS",
+    "kind" : "variable",
+    "line" : 291,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"#version 400\\x0a\\x0d\\x0a    struct DirectionalLight\\x0d\\x0a    {\\x0d\\x0a        vec3 color;\\x0d\\x0a        vec3 direction;\\x0d\\x0a        float shadowless;\\x0d\\x0a    };\\x0d\\x0a\\x0d\\x0a    in vec4 fPosition_s;\\x0d\\x0a    in vec2 fUV;\\x0d\\x0a    in vec3 fViewRay;\\x0d\\x0a\\x0d\\x0a    // g-buffer outputs\\x0d\\x0a    uniform sampler2D diffuseTexture;\\x0d\\x0a    uniform sampler2D normalTexture;\\x0d\\x0a    uniform sampler2D depthTexture;\\x0d\\x0a\\x0d\\x0a    // shadow map values\\x0d\\x0a    uniform sampler2D shadowMap;\\x0d\\x0a    uniform mat4 lightProjView;\\x0d\\x0a    uniform mat4 cameraView;\\x0d\\x0a\\x0d\\x0a    uniform DirectionalLight light;\\x0d\\x0a\\x0d\\x0a    // A pair of constants for reconstructing the linear Z\\x0d\\x0a    // [ (-Far * Near ) / ( Far - Near ),  Far / ( Far - Near )  ]\\x0d\\x0a    uniform vec2 projectionConstants;\\x0d\\x0a\\x0d\\x0a    // https://stackoverflow.com/questions/9222217/how-does-the-fragment-shader-know-what-variable-to-use-for-the-color-of-a-pixel\\x0d\\x0a    layout( location = 0 ) out vec4 color;\\x0d\\x0a\\x0d\\x0a    // Function for decoding normals\\x0d\\x0a    vec3 decode( vec2 enc )\\x0d\\x0a    {\\x0d\\x0a        float t = ( ( enc.x * enc.x ) + ( enc.y * enc.y ) ) / 4;\\x0d\\x0a        float ti = sqrt( 1 - t );\\x0d\\x0a        return vec3( ti * enc.x, ti * enc.y, -1 + t * 2 );\\x0d\\x0a    }\\x0d\\x0a\\x0d\\x0a    float shadowValue(vec3 pos)\\x0d\\x0a    {\\x0d\\x0a        mat4 toShadowMap_s = lightProjView * inverse(cameraView);\\x0d\\x0a        vec4 lightSpacePos = toShadowMap_s * vec4( pos, 1 );\\x0d\\x0a        lightSpacePos = lightSpacePos / lightSpacePos.w;\\x0d\\x0a\\x0d\\x0a        vec2 shadowCoords = (lightSpacePos.xy * 0.5) + vec2( 0.5, 0.5 );\\x0d\\x0a\\x0d\\x0a        float depthValue = texture( shadowMap, shadowCoords ).x -  0.0001;\\x0d\\x0a\\x0d\\x0a        return float( (lightSpacePos.z * .5 + .5 ) < depthValue );\\x0d\\x0a    }\\x0d\\x0a\\x0d\\x0a    void main( void )\\x0d\\x0a    {\\x0d\\x0a        vec3 textureColor = texture( diffuseTexture, fUV ).xyz;\\x0d\\x0a        float specularIntensity = texture( diffuseTexture, fUV ).w;\\x0d\\x0a        vec3 normal_v = texture( normalTexture, fUV ).xyz;\\x0d\\x0a        vec3 lightDir_v = -normalize( light.direction );\\x0d\\x0a\\x0d\\x0a        // Reconstruct position from Depth\\x0d\\x0a        float depth = texture( depthTexture, fUV ).x;\\x0d\\x0a        float linearDepth = projectionConstants.x / ( projectionConstants.y - depth );\\x0d\\x0a        vec3 position_v = fViewRay * linearDepth;\\x0d\\x0a\\x0d\\x0a\\x0d\\x0a        // Diffuse lighting calculations\\x0d\\x0a        float diffuseScale = clamp( dot( normal_v, lightDir_v ), 0, 1 );\\x0d\\x0a\\x0d\\x0a        // Specular lighting calculations\\x0d\\x0a        // Usually in these you see an \\\"eyeDirection\\\" variable, but in view space that is our position\\x0d\\x0a        float specularScale = clamp( dot( normalize( position_v ), reflect( lightDir_v, normal_v ) ), 0, 1 );\\x0d\\x0a\\x0d\\x0a        vec3 diffuse = ( diffuseScale * light.color ) * textureColor;\\x0d\\x0a        // \\\"8\\\" is the reflectiveness\\x0d\\x0a        // textureColor.w is the shininess\\x0d\\x0a        // specularIntensity is the light's contribution\\x0d\\x0a        vec3 specular = ( pow( specularScale, 8 ) * light.color * specularIntensity);\\x0d\\x0a\\x0d\\x0a        color = vec4( ( diffuse + specular ), 1.0f );\\x0d\\x0a    }\\x0d\\x0a\""
+   },
+   {
+    "name" : "pointlightVS",
+    "kind" : "variable",
+    "line" : 375,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"#version 400\\x0a\\x0d\\x0a    layout(location = 0) in vec3 vPosition_m;\\x0d\\x0a    layout(location = 1) in vec2 vUV;\\x0d\\x0a    layout(location = 2) in vec3 vNormal_m;\\x0d\\x0a    layout(location = 3) in vec3 vTangent_m;\\x0d\\x0a\\x0d\\x0a    out vec4 fPosition_s;\\x0d\\x0a    out vec3 fViewRay;\\x0d\\x0a\\x0d\\x0a    //uniform mat4 world;\\x0d\\x0a    uniform mat4 worldView;\\x0d\\x0a    uniform mat4 worldViewProj;\\x0d\\x0a\\x0d\\x0a    void main( void )\\x0d\\x0a    {\\x0d\\x0a        // gl_Position is like SV_Position\\x0d\\x0a        fPosition_s = worldViewProj * vec4( vPosition_m, 1.0f );\\x0d\\x0a        gl_Position = fPosition_s;\\x0d\\x0a\\x0d\\x0a        fViewRay = ( worldView * vec4( vPosition_m, 1.0 ) ).xyz;\\x0d\\x0a\\x0d\\x0a    }\\x0d\\x0a\""
+   },
+   {
+    "name" : "pointlightFS",
+    "kind" : "variable",
+    "line" : 400,
+    "char" : 18,
+    "storageClass" : [
+     "immutable"
+    ],
+    "deco" : "yAa",
+    "originalType" : "string",
+    "init" : "\"#version 400\\x0a\\x0d\\x0a    struct PointLight{\\x0d\\x0a        vec3 pos_v;\\x0d\\x0a        vec3 color;\\x0d\\x0a        float radius;\\x0d\\x0a        float falloffRate;\\x0d\\x0a    };\\x0d\\x0a\\x0d\\x0a    in vec4 fPosition_s;\\x0d\\x0a    in vec3 fViewRay;\\x0d\\x0a\\x0d\\x0a    out vec4 color;\\x0d\\x0a\\x0d\\x0a    uniform sampler2D diffuseTexture;\\x0d\\x0a    uniform sampler2D normalTexture;\\x0d\\x0a    uniform sampler2D depthTexture;\\x0d\\x0a    uniform PointLight light;\\x0d\\x0a    // A pair of constants for reconstructing the linear Z\\x0d\\x0a    // [ (-Far * Near ) / ( Far - Near ),  Far / ( Far - Near )  ]\\x0d\\x0a    uniform vec2 projectionConstants;\\x0d\\x0a\\x0d\\x0a    // Function for decoding normals\\x0d\\x0a    vec3 decode( vec2 enc )\\x0d\\x0a    {\\x0d\\x0a        float t = ( ( enc.x * enc.x ) + ( enc.y * enc.y ) ) / 4;\\x0d\\x0a        float ti = sqrt( 1 - t );\\x0d\\x0a        return vec3( ti * enc.x, ti * enc.y, -1 + t * 2 );\\x0d\\x0a    }\\x0d\\x0a\\x0d\\x0a    void main( void )\\x0d\\x0a    {\\x0d\\x0a        // The viewray should have interpolated across the pixels covered by the light, so we should just be able to clamp it's depth to 1\\x0d\\x0a        vec3 viewRay = vec3( fViewRay.xy / fViewRay.z, 1.0f );\\x0d\\x0a        vec2 UV = ( ( fPosition_s.xy / fPosition_s.w ) + 1 ) / 2;\\x0d\\x0a        vec3 textureColor = texture( diffuseTexture, UV ).xyz;\\x0d\\x0a        float specularIntensity = texture( diffuseTexture, UV ).w;\\x0d\\x0a        vec3 normal_v = texture( normalTexture, UV ).xyz;\\x0d\\x0a\\x0d\\x0a        // Reconstruct position from depth\\x0d\\x0a        float depth = texture( depthTexture, UV ).x;\\x0d\\x0a        float linearDepth = projectionConstants.x / ( projectionConstants.y - depth );\\x0d\\x0a        vec3 position_v = viewRay * linearDepth;\\x0d\\x0a\\x0d\\x0a        // calculate normalized light direction, and distance\\x0d\\x0a        vec3 lightDir_v = light.pos_v - position_v;\\x0d\\x0a        float distance = sqrt( dot(lightDir_v,lightDir_v) );\\x0d\\x0a        lightDir_v = normalize( lightDir_v );\\x0d\\x0a\\x0d\\x0a        // calculate exponential attenuation\\x0d\\x0a        float attenuation = pow( max( 1-distance/light.radius, 0), light.falloffRate + 1.0f );\\x0d\\x0a\\x0d\\x0a        // Diffuse lighting calculations\\x0d\\x0a        float diffuseScale = clamp( dot( normal_v, lightDir_v ), 0, 1 );\\x0d\\x0a\\x0d\\x0a        // Specular lighting calculations\\x0d\\x0a        // Usually in these you see an \\\"eyeDirection\\\" variable, but in view space that is our position\\x0d\\x0a        float specularScale = clamp( dot( normalize( position_v ), reflect( lightDir_v, normal_v ) ), 0, 1 );\\x0d\\x0a\\x0d\\x0a        vec3 diffuse = ( diffuseScale * light.color ) * textureColor ;\\x0d\\x0a        // \\\"8\\\" is the reflectiveness\\x0d\\x0a        // textureColor.w is the shininess\\x0d\\x0a        // specularIntensity is the light's contribution\\x0d\\x0a        vec3 specular = ( pow( specularScale, 8 ) * light.color * specularIntensity);\\x0d\\x0a\\x0d\\x0a        color = vec4((diffuse + specular ) * attenuation, 1.0f ) ;\\x0d\\x0a        //color = vec4( vec3(1,0,0), 1.0f );\\x0d\\x0a\\x0d\\x0a    }\\x0d\\x0a\""
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.Transform",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\Transform.d",
+  "members" : []
+ },
+ {
+  "name" : "Glib.System.Input",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\System\\Input.d",
+  "members" : [
+   {
+    "name" : "derelict.sdl2.sdl",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.Window",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Input",
+    "kind" : "class",
+    "line" : 8,
+    "char" : 10,
+    "members" : [
+     {
+      "name" : "mouse",
+      "kind" : "variable",
+      "line" : 10,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "S4Glib6System5Input5Mouse"
+     },
+     {
+      "name" : "pollInput",
+      "kind" : "function",
+      "line" : 12,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FZv",
+      "endline" : 51,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "Mouse",
+    "kind" : "struct",
+    "line" : 55,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "Position",
+      "kind" : "variable",
+      "line" : 57,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii2Z6Vector",
+      "originalType" : "vec2",
+      "offset" : 0
+     },
+     {
+      "name" : "leftButton",
+      "kind" : "variable",
+      "line" : 58,
+      "char" : 7,
+      "deco" : "b",
+      "offset" : 8
+     },
+     {
+      "name" : "rightButton",
+      "kind" : "variable",
+      "line" : 59,
+      "char" : 7,
+      "deco" : "b",
+      "offset" : 9
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.System.Log",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\System\\Log.d",
+  "members" : [
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.file",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Log",
+    "kind" : "struct",
+    "line" : 6,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "Level",
+      "kind" : "enum",
+      "line" : 9,
+      "char" : 2,
+      "baseDeco" : "i",
+      "members" : [
+       {
+        "name" : "INFO",
+        "kind" : "enum member",
+        "value" : "0",
+        "line" : 10,
+        "char" : 4
+       },
+       {
+        "name" : "WARN",
+        "kind" : "enum member",
+        "value" : "1",
+        "line" : 11,
+        "char" : 2
+       },
+       {
+        "name" : "ERROR",
+        "kind" : "enum member",
+        "value" : "2",
+        "line" : 12,
+        "char" : 2
+       },
+       {
+        "name" : "TRACE",
+        "kind" : "enum member",
+        "value" : "3",
+        "line" : 13,
+        "char" : 2
+       }
+      ]
+     },
+     {
+      "name" : "Output",
+      "kind" : "enum",
+      "line" : 16,
+      "char" : 2,
+      "baseDeco" : "i",
+      "members" : [
+       {
+        "name" : "CONSOLE",
+        "kind" : "enum member",
+        "value" : "1",
+        "line" : 17,
+        "char" : 4
+       },
+       {
+        "name" : "FILE",
+        "kind" : "enum member",
+        "value" : "2",
+        "line" : 18,
+        "char" : 2
+       }
+      ]
+     },
+     {
+      "name" : "level",
+      "kind" : "variable",
+      "line" : 22,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "E4Glib6System3Log3Log5Level",
+      "init" : "cast(Level)0"
+     },
+     {
+      "name" : "output",
+      "kind" : "variable",
+      "line" : 23,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "k",
+      "init" : "3u"
+     },
+     {
+      "name" : "filePath",
+      "kind" : "variable",
+      "line" : 24,
+      "char" : 16,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "Aya",
+      "init" : "\"log.txt\""
+     },
+     {
+      "name" : "firstRun",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 25,
+      "char" : 22,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "b",
+      "init" : "true"
+     },
+     {
+      "name" : "info",
+      "kind" : "function",
+      "line" : 30,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FAyaZb",
+      "parameters" : [
+       {
+        "name" : "msg",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 32,
+      "endchar" : 2
+     },
+     {
+      "name" : "warn",
+      "kind" : "function",
+      "line" : 35,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FAyaZb",
+      "parameters" : [
+       {
+        "name" : "msg",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 37,
+      "endchar" : 2
+     },
+     {
+      "name" : "error",
+      "kind" : "function",
+      "line" : 40,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FAyaZb",
+      "parameters" : [
+       {
+        "name" : "msg",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 42,
+      "endchar" : 2
+     },
+     {
+      "name" : "write",
+      "kind" : "function",
+      "line" : 45,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FAyaZb",
+      "parameters" : [
+       {
+        "name" : "msg",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 47,
+      "endchar" : 2
+     },
+     {
+      "name" : "internalWrite",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 55,
+      "char" : 22,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FE4Glib6System3Log3Log5LevelAyaZb",
+      "parameters" : [
+       {
+        "name" : "level",
+        "deco" : "E4Glib6System3Log3Log5Level"
+       },
+       {
+        "name" : "msg",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 87,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.System",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\System\\package.d",
+  "members" : [
+   {
+    "name" : "Glib.System.Input",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.System.Log",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.System.Window",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8
+   }
+  ]
+ },
+ {
+  "name" : "Glib.System.System",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\System\\System.d",
+  "members" : [
+   {
+    "name" : "derelict.sdl2.sdl",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.image",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.util.loader",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.util.exception",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.freeimage.freeimage",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.assimp3.assimp",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.Window",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Scene",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "System",
+    "kind" : "class",
+    "line" : 20,
+    "char" : 10,
+    "members" : [
+     {
+      "name" : "active",
+      "kind" : "variable",
+      "line" : 22,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "b",
+      "init" : "false"
+     },
+     {
+      "name" : "initialized",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 23,
+      "char" : 24,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "b",
+      "init" : "false"
+     },
+     {
+      "name" : "aborted",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 24,
+      "char" : 24,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "b",
+      "init" : "false"
+     },
+     {
+      "name" : "windows",
+      "kind" : "variable",
+      "line" : 26,
+      "char" : 18,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "AC4Glib6System6Window6window"
+     },
+     {
+      "name" : "currentWindow",
+      "kind" : "variable",
+      "line" : 27,
+      "char" : 16,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "C4Glib6System6Window6window",
+      "originalType" : "window"
+     },
+     {
+      "name" : "scenes",
+      "kind" : "variable",
+      "line" : 29,
+      "char" : 17,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "AC4Glib5Scene5Scene5Scene"
+     },
+     {
+      "name" : "currentScene",
+      "kind" : "variable",
+      "line" : 30,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "C4Glib5Scene5Scene5Scene",
+      "originalType" : "Scene"
+     },
+     {
+      "name" : "init",
+      "kind" : "function",
+      "line" : 32,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FZv",
+      "endline" : 64,
+      "endchar" : 2
+     },
+     {
+      "name" : "deInit",
+      "kind" : "function",
+      "line" : 66,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FZv",
+      "endline" : 74,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.System.Window",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\System\\window.d",
+  "members" : [
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.sdl",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "window",
+    "kind" : "class",
+    "line" : 13,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "size",
+      "kind" : "variable",
+      "line" : 15,
+      "char" : 8,
+      "deco" : "S4gl3n6linalg17__T6VectorTiVii2Z6Vector",
+      "originalType" : "vec2i",
+      "offset" : 8
+     },
+     {
+      "name" : "fullscreen",
+      "kind" : "variable",
+      "line" : 16,
+      "char" : 7,
+      "deco" : "b",
+      "offset" : 16
+     },
+     {
+      "name" : "loaded",
+      "kind" : "variable",
+      "line" : 17,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "b"
+     },
+     {
+      "name" : "sdlWindow",
+      "kind" : "variable",
+      "line" : 18,
+      "char" : 14,
+      "deco" : "PS8derelict4sdl25types10SDL_Window",
+      "offset" : 20
+     },
+     {
+      "name" : "windowID",
+      "kind" : "variable",
+      "line" : 19,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 24
+     },
+     {
+      "name" : "glcontext",
+      "kind" : "variable",
+      "line" : 20,
+      "char" : 16,
+      "deco" : "Pv",
+      "originalType" : "SDL_GLContext",
+      "offset" : 28
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 22,
+      "char" : 2,
+      "deco" : "FZC4Glib6System6Window6window",
+      "originalType" : "()",
+      "endline" : 34,
+      "endchar" : 2
+     },
+     {
+      "name" : "~this",
+      "kind" : "destructor",
+      "line" : 35,
+      "char" : 2,
+      "deco" : "FZv",
+      "endline" : 38,
+      "endchar" : 2
+     },
+     {
+      "name" : "ResizeWindow",
+      "kind" : "function",
+      "line" : 40,
+      "char" : 7,
+      "deco" : "FS8derelict4sdl25types9SDL_EventZv",
+      "parameters" : [
+       {
+        "name" : "event",
+        "deco" : "S8derelict4sdl25types9SDL_Event"
+       }
+      ],
+      "endline" : 46,
+      "endchar" : 2
+     },
+     {
+      "name" : "UpdateWindow",
+      "kind" : "function",
+      "line" : 48,
+      "char" : 7,
+      "deco" : "FS8derelict4sdl25types9SDL_EventZv",
+      "parameters" : [
+       {
+        "name" : "event",
+        "deco" : "S8derelict4sdl25types9SDL_Event"
+       }
+      ],
+      "endline" : 125,
+      "endchar" : 2
+     },
+     {
+      "name" : "SetResolution",
+      "kind" : "function",
+      "line" : 126,
+      "char" : 7,
+      "deco" : "FiihbhZv",
+      "originalType" : "void(int width, int height, ubyte depth = 0, bool fullscreen = false, ubyte samples = 1)",
+      "parameters" : [
+       {
+        "name" : "width",
+        "deco" : "i"
+       },
+       {
+        "name" : "height",
+        "deco" : "i"
+       },
+       {
+        "name" : "depth",
+        "deco" : "h",
+        "default" : "cast(ubyte)0u"
+       },
+       {
+        "name" : "fullscreen",
+        "deco" : "b",
+        "default" : "false"
+       },
+       {
+        "name" : "samples",
+        "deco" : "h",
+        "default" : "cast(ubyte)1u"
+       }
+      ],
+      "endline" : 171,
+      "endchar" : 2
+     },
+     {
+      "name" : "MakeCurrentGLContext",
+      "kind" : "function",
+      "line" : 173,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 177,
+      "endchar" : 2
+     },
+     {
+      "name" : "SwapWindow",
+      "kind" : "function",
+      "line" : 179,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 182,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\allDerelcit.d",
+  "members" : []
+ },
+ {
+  "kind" : "module",
+  "file" : "main.d",
+  "members" : [
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 1,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System",
+    "kind" : "import",
+    "line" : 2,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.image",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.sdl",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "imgui",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "sW",
+    "kind" : "variable",
+    "line" : 10,
+    "char" : 5,
+    "deco" : "i",
+    "init" : "720"
+   },
+   {
+    "name" : "sH",
+    "kind" : "variable",
+    "line" : 11,
+    "char" : 5,
+    "deco" : "i",
+    "init" : "480"
+   },
+   {
+    "name" : "main",
+    "kind" : "function",
+    "line" : 13,
+    "char" : 5,
+    "deco" : "FAAyaZi",
+    "parameters" : [
+     {
+      "name" : "argv",
+      "deco" : "AAya"
+     }
+    ],
+    "endline" : 59,
+    "endchar" : 1
+   },
+   {
+    "name" : "initTex",
+    "kind" : "function",
+    "line" : 62,
+    "char" : 8,
+    "deco" : "FZk",
+    "originalType" : "GLuint()",
+    "endline" : 85,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "Glib",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\package.d",
+  "members" : [
+   {
+    "name" : "Glib.GUI",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.Scene",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8
+   },
+   {
+    "name" : "Glib.System",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8
+   }
+  ]
+ }
+]
