@@ -220,6 +220,7 @@ struct Render
 
 		//render UI
 
+		/*
 		const scrollAreaWidth = w.size.x / 4;
         const scrollAreaHeight =  w.size.y - 20;
 		int scrollArea2 = 0;
@@ -235,7 +236,7 @@ struct Render
 
 		imguiDrawText(0, 0, TextAlign.left, "Free text", RGBA(32, 192, 32, 192));
 		imguiRender( w.size.x, w.size.y);
-
+*/
 
 		glBindVertexArray(0);
         glUseProgram(0);

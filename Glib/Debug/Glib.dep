@@ -656,6 +656,10 @@ Glib.Scene.Render (..\\src\\Glib\\Scene\\Render.d) : private : std.string (C:\\D
 Glib.Scene.Model (..\\src\\Glib\\Scene\\Model.d) : private : Glib.Scene.Render (..\\src\\Glib\\Scene\\Render.d)
 Glib.Scene.Model (..\\src\\Glib\\Scene\\Model.d) : private : Glib.Scene.GObject (..\\src\\Glib\\Scene\\GObject.d)
 Glib.Scene.Model (..\\src\\Glib\\Scene\\Model.d) : private : derelict.assimp3.assimp (..\\..\\dub Derelict\\Import\\derelict\\assimp3\\assimp.d)
+Glib.Scene.Model (..\\src\\Glib\\Scene\\Model.d) : private : std.algorithm (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\algorithm.d)
+Glib.Scene.Model (..\\src\\Glib\\Scene\\Model.d) : private : std.math (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\math.d)
+Glib.Scene.Model (..\\src\\Glib\\Scene\\Model.d) : private : std.conv (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\conv.d)
+Glib.Scene.Model (..\\src\\Glib\\Scene\\Model.d) : private : gl3n.linalg (..\\src\\gl3n\\linalg.d)
 Glib.Scene (..\\src\\Glib\\Scene\\package.d) : private : object (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\druntime\\import\\object.di)
 Glib.Scene (..\\src\\Glib\\Scene\\package.d) : public : Glib.Scene.Camera (..\\src\\Glib\\Scene\\Camera.d)
 Glib.Scene (..\\src\\Glib\\Scene\\package.d) : public : Glib.Scene.GObject (..\\src\\Glib\\Scene\\GObject.d)
@@ -716,6 +720,7 @@ std.complex (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\complex.d) : p
 std.complex (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\complex.d) : private : std.string (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\string.d)
 std.complex (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\complex.d) : private : std.uni (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\uni.d):isGraphical
 std.complex (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\complex.d) : private : std.exception (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\exception.d):assumeUnique
+Glib.Scene.Model (..\\src\\Glib\\Scene\\Model.d) : private : std.format (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\format.d):FormatSpec,formatValue
 Glib.Scene.Node (..\\src\\Glib\\Scene\\Node.d) : private : std.exception (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\exception.d):enforce
 Glib.Scene.Node (..\\src\\Glib\\Scene\\Node.d) : private : core.stdc.string (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\druntime\\import\\core\\stdc\\string.d):memcpy
 Glib.Scene.Node (..\\src\\Glib\\Scene\\Node.d) : private : std.typecons (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\typecons.d):Rebindable

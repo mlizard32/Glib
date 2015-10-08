@@ -1692,7 +1692,7 @@
        {
         "name" : "color",
         "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
-        "default" : "(Vector!(float, 3) __ctmp2479;\r\n , __ctmp2479).this(1.00000F)"
+        "default" : "(Vector!(float, 3) __ctmp2480;\r\n , __ctmp2480).this(1.00000F)"
        },
        {
         "name" : "radius",
@@ -1908,13 +1908,13 @@
    {
     "name" : "Mesh",
     "kind" : "class",
-    "line" : 11,
+    "line" : 12,
     "char" : 1,
     "members" : [
      {
       "name" : "verts",
       "kind" : "variable",
-      "line" : 13,
+      "line" : 14,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3[]",
@@ -1923,7 +1923,7 @@
      {
       "name" : "indices",
       "kind" : "variable",
-      "line" : 14,
+      "line" : 15,
       "char" : 9,
       "deco" : "Ak",
       "offset" : 16
@@ -1931,7 +1931,7 @@
      {
       "name" : "uvs",
       "kind" : "variable",
-      "line" : 15,
+      "line" : 16,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii2Z6Vector",
       "originalType" : "vec2[]",
@@ -1940,7 +1940,7 @@
      {
       "name" : "normals",
       "kind" : "variable",
-      "line" : 16,
+      "line" : 17,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3[]",
@@ -1949,7 +1949,7 @@
      {
       "name" : "tangents",
       "kind" : "variable",
-      "line" : 17,
+      "line" : 18,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3[]",
@@ -1958,7 +1958,7 @@
      {
       "name" : "bitTangents",
       "kind" : "variable",
-      "line" : 18,
+      "line" : 19,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3[]",
@@ -1967,7 +1967,7 @@
      {
       "name" : "vbo",
       "kind" : "variable",
-      "line" : 20,
+      "line" : 21,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -1976,7 +1976,7 @@
      {
       "name" : "uvbo",
       "kind" : "variable",
-      "line" : 21,
+      "line" : 22,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -1985,7 +1985,7 @@
      {
       "name" : "nbo",
       "kind" : "variable",
-      "line" : 22,
+      "line" : 23,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -1994,7 +1994,7 @@
      {
       "name" : "tanbo",
       "kind" : "variable",
-      "line" : 23,
+      "line" : 24,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -2003,7 +2003,7 @@
      {
       "name" : "bitTanbo",
       "kind" : "variable",
-      "line" : 24,
+      "line" : 25,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -2012,7 +2012,7 @@
      {
       "name" : "elementbo",
       "kind" : "variable",
-      "line" : 25,
+      "line" : 26,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -2021,7 +2021,7 @@
      {
       "name" : "VertexArrayID",
       "kind" : "variable",
-      "line" : 26,
+      "line" : 27,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -2030,7 +2030,7 @@
      {
       "name" : "shader",
       "kind" : "variable",
-      "line" : 28,
+      "line" : 29,
       "char" : 9,
       "deco" : "C4Glib5Scene6Shader6Shader",
       "originalType" : "Shader",
@@ -2039,7 +2039,7 @@
      {
       "name" : "material",
       "kind" : "variable",
-      "line" : 29,
+      "line" : 30,
       "char" : 11,
       "deco" : "C4Glib5Scene8Material8Material",
       "originalType" : "Material",
@@ -2048,7 +2048,7 @@
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 31,
+      "line" : 32,
       "char" : 2,
       "deco" : "FxPS8derelict7assimp35types6aiMeshZC4Glib5Scene4Mesh4Mesh",
       "originalType" : "(const aiMesh* mesh)",
@@ -2058,34 +2058,70 @@
         "deco" : "xPS8derelict7assimp35types6aiMesh"
        }
       ],
-      "endline" : 80,
+      "endline" : 81,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 83,
+      "char" : 2,
+      "deco" : "FAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAkAS4gl3n6linalg17__T6VectorTfVii2Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorZC4Glib5Scene4Mesh4Mesh",
+      "originalType" : "(vec3[] _verts, uint[] _indices, vec2[] _uvs, vec3[] _normals, vec3[] _tangents, vec3[] _bitTangents)",
+      "parameters" : [
+       {
+        "name" : "_verts",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       },
+       {
+        "name" : "_indices",
+        "deco" : "Ak"
+       },
+       {
+        "name" : "_uvs",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii2Z6Vector"
+       },
+       {
+        "name" : "_normals",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       },
+       {
+        "name" : "_tangents",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       },
+       {
+        "name" : "_bitTangents",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 110,
       "endchar" : 2
      },
      {
       "name" : "~this",
       "kind" : "destructor",
-      "line" : 81,
+      "line" : 111,
       "char" : 2,
       "deco" : "FZv",
-      "endline" : 91,
+      "endline" : 121,
       "endchar" : 2
      },
      {
       "name" : "BindMesh",
       "kind" : "function",
-      "line" : 93,
+      "line" : 123,
       "char" : 7,
       "deco" : "FZb",
-      "endline" : 178,
+      "endline" : 208,
       "endchar" : 2
      },
      {
       "name" : "Draw",
       "kind" : "function",
-      "line" : 181,
+      "line" : 211,
       "char" : 7,
       "deco" : "FZv",
-      "endline" : 228,
+      "endline" : 256,
       "endchar" : 2
      }
     ]
@@ -2093,7 +2129,7 @@
    {
     "name" : "unitSquareMesh",
     "kind" : "variable",
-    "line" : 233,
+    "line" : 261,
     "char" : 18,
     "storageClass" : [
      "immutable"
@@ -2152,9 +2188,37 @@
     "protection" : "private"
    },
    {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.math",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
     "name" : "Model",
     "kind" : "class",
-    "line" : 10,
+    "line" : 16,
     "char" : 1,
     "interfaces" : [
      "IDrawable",
@@ -2164,7 +2228,7 @@
      {
       "name" : "meshes",
       "kind" : "variable",
-      "line" : 12,
+      "line" : 18,
       "char" : 9,
       "deco" : "AC4Glib5Scene4Mesh4Mesh",
       "offset" : 8
@@ -2172,7 +2236,7 @@
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 17,
+      "line" : 23,
       "char" : 2,
       "deco" : "FAyaZC4Glib5Scene5Model5Model",
       "originalType" : "(string path)",
@@ -2182,19 +2246,239 @@
         "deco" : "Aya"
        }
       ],
-      "endline" : 41,
+      "endline" : 47,
       "endchar" : 2
      },
      {
       "name" : "Draw",
       "kind" : "function",
-      "line" : 43,
+      "line" : 49,
       "char" : 7,
       "deco" : "FZv",
-      "endline" : 49,
+      "endline" : 55,
       "endchar" : 2,
       "overrides" : [
        "Glib.Scene.Render.IDrawable.Draw"
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "PrimitiveObject",
+    "kind" : "class",
+    "line" : 60,
+    "char" : 1,
+    "interfaces" : [
+     "IDrawable",
+     "IComponent"
+    ],
+    "members" : [
+     {
+      "name" : "mesh",
+      "kind" : "variable",
+      "line" : 62,
+      "char" : 7,
+      "deco" : "C4Glib5Scene4Mesh4Mesh",
+      "originalType" : "Mesh",
+      "offset" : 8
+     },
+     {
+      "name" : "type",
+      "kind" : "variable",
+      "line" : 63,
+      "char" : 17,
+      "deco" : "E4Glib5Scene5Model15PrimitiveObject14PrimitiveTypes",
+      "offset" : 12
+     },
+     {
+      "name" : "PrimitiveTypes",
+      "kind" : "enum",
+      "line" : 64,
+      "char" : 9,
+      "baseDeco" : "i",
+      "members" : [
+       {
+        "name" : "Sphere",
+        "kind" : "enum member",
+        "value" : "0",
+        "line" : 66,
+        "char" : 3
+       },
+       {
+        "name" : "Cube",
+        "kind" : "enum member",
+        "value" : "1",
+        "line" : 67,
+        "char" : 4
+       },
+       {
+        "name" : "Plane",
+        "kind" : "enum member",
+        "value" : "2",
+        "line" : 68,
+        "char" : 4
+       }
+      ]
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 70,
+      "char" : 2,
+      "deco" : "FE4Glib5Scene5Model15PrimitiveObject14PrimitiveTypesZC4Glib5Scene5Model15PrimitiveObject",
+      "originalType" : "(PrimitiveTypes type)",
+      "parameters" : [
+       {
+        "name" : "type",
+        "deco" : "E4Glib5Scene5Model15PrimitiveObject14PrimitiveTypes"
+       }
+      ],
+      "endline" : 83,
+      "endchar" : 2
+     },
+     {
+      "name" : "Draw",
+      "kind" : "function",
+      "line" : 84,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 87,
+      "endchar" : 2,
+      "overrides" : [
+       "Glib.Scene.Render.IDrawable.Draw"
+      ]
+     },
+     {
+      "name" : "CreateSphere",
+      "kind" : "function",
+      "line" : 89,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 213,
+      "endchar" : 2
+     },
+     {
+      "name" : "GetMidpointIndex",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 216,
+      "char" : 22,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FKHAyakKAS4gl3n6linalg17__T6VectorTfVii3Z6VectoriiZk",
+      "originalType" : "uint(ref uint[string] midpointIndices, ref vec3[] vertices, int i0, int i1)",
+      "parameters" : [
+       {
+        "name" : "midpointIndices",
+        "deco" : "HAyak",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "vertices",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "i0",
+        "deco" : "i"
+       },
+       {
+        "name" : "i1",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 246,
+      "endchar" : 2
+     },
+     {
+      "name" : "Subdivide",
+      "kind" : "function",
+      "line" : 257,
+      "char" : 21,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FKAS4gl3n6linalg17__T6VectorTfVii3Z6VectorKAkbZv",
+      "originalType" : "void(ref vec3[] vectors, ref uint[] indices, bool removeSourceTriangles)",
+      "parameters" : [
+       {
+        "name" : "vectors",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "indices",
+        "deco" : "Ak",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "removeSourceTriangles",
+        "deco" : "b"
+       }
+      ],
+      "endline" : 284,
+      "endchar" : 2
+     },
+     {
+      "name" : "Icosahedron",
+      "kind" : "struct",
+      "line" : 287,
+      "char" : 2,
+      "members" : [
+       {
+        "name" : "indices",
+        "kind" : "variable",
+        "line" : 289,
+        "char" : 10,
+        "deco" : "Ak",
+        "init" : "[0u, 4u, 1u, 0u, 9u, 4u, 9u, 5u, 4u, 4u, 5u, 8u, 4u, 8u, 1u, 8u, 10u, 1u, 8u, 3u, 10u, 5u, 3u, 8u, 5u, 2u, 3u, 2u, 7u, 3u, 7u, 10u, 3u, 7u, 6u, 10u, 7u, 11u, 6u, 11u, 0u, 6u, 0u, 1u, 6u, 6u, 1u, 10u, 9u, 0u, 11u, 9u, 11u, 2u, 9u, 2u, 5u, 7u, 2u, 11u]",
+        "offset" : 0
+       },
+       {
+        "name" : "X",
+        "kind" : "variable",
+        "line" : 311,
+        "char" : 22,
+        "storageClass" : [
+         "static",
+         "const"
+        ],
+        "deco" : "xf",
+        "originalType" : "float",
+        "init" : "0x1.0d2ca0da1530d1f8p-1F"
+       },
+       {
+        "name" : "Z",
+        "kind" : "variable",
+        "line" : 312,
+        "char" : 22,
+        "storageClass" : [
+         "static",
+         "const"
+        ],
+        "deco" : "xf",
+        "originalType" : "float",
+        "init" : "0x1.b38880b4603e47d2p-1F"
+       },
+       {
+        "name" : "vertices",
+        "kind" : "variable",
+        "line" : 314,
+        "char" : 10,
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "originalType" : "vec3[]",
+        "init" : "[Vector([-0x1.0d2ca0da1530d1f8p-1F, 0.000000F, 0x1.b38880b4603e47d2p-1F]), Vector([0x1.0d2ca0da1530d1f8p-1F, 0.000000F, 0x1.b38880b4603e47d2p-1F]), Vector([-0x1.0d2ca0da1530d1f8p-1F, 0.000000F, -0x1.b38880b4603e47d2p-1F]), Vector([0x1.0d2ca0da1530d1f8p-1F, 0.000000F, -0x1.b38880b4603e47d2p-1F]), Vector([0.000000F, 0x1.b38880b4603e47d2p-1F, 0x1.0d2ca0da1530d1f8p-1F]), Vector([0.000000F, 0x1.b38880b4603e47d2p-1F, -0x1.0d2ca0da1530d1f8p-1F]), Vector([0.000000F, -0x1.b38880b4603e47d2p-1F, 0x1.0d2ca0da1530d1f8p-1F]), Vector([0.000000F, -0x1.b38880b4603e47d2p-1F, -0x1.0d2ca0da1530d1f8p-1F]), Vector([0x1.b38880b4603e47d2p-1F, 0x1.0d2ca0da1530d1f8p-1F, 0.000000F]), Vector([-0x1.b38880b4603e47d2p-1F, 0x1.0d2ca0da1530d1f8p-1F, 0.000000F]), Vector([0x1.b38880b4603e47d2p-1F, -0x1.0d2ca0da1530d1f8p-1F, 0.000000F]), Vector([-0x1.b38880b4603e47d2p-1F, -0x1.0d2ca0da1530d1f8p-1F, 0.000000F])]",
+        "offset" : 8
+       }
       ]
      }
     ]
@@ -2989,13 +3273,13 @@
         "deco" : "C4Glib6System6Window6window"
        }
       ],
-      "endline" : 243,
+      "endline" : 244,
       "endchar" : 2
      },
      {
       "name" : "TraverseDraw",
       "kind" : "function",
-      "line" : 246,
+      "line" : 247,
       "char" : 7,
       "deco" : "FC4Glib5Scene7GObject7GObjectZv",
       "parameters" : [
@@ -3004,7 +3288,7 @@
         "deco" : "C4Glib5Scene7GObject7GObject"
        }
       ],
-      "endline" : 262,
+      "endline" : 263,
       "endchar" : 2
      }
     ]
@@ -3012,13 +3296,13 @@
    {
     "name" : "IDrawable",
     "kind" : "interface",
-    "line" : 265,
+    "line" : 266,
     "char" : 1,
     "members" : [
      {
       "name" : "Draw",
       "kind" : "function",
-      "line" : 267,
+      "line" : 268,
       "char" : 7,
       "storageClass" : [
        "abstract"

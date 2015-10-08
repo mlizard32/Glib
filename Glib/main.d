@@ -22,8 +22,8 @@ int main(string[] argv)
 	Scene s = new Scene();
 	
 	//"..\\..\\resources\\suzanne.obj"
-	Model model = new Model("..\\..\\resources\\suzanne.obj");
-	
+	//Model model = new Model("..\\..\\resources\\suzanne.obj");
+	PrimitiveObject model = new PrimitiveObject(PrimitiveObject.PrimitiveTypes.Sphere);
 
 	GObject monkey = new GObject();
 	monkey.components ~= model;

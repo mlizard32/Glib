@@ -8,6 +8,7 @@ import Glib.Scene.Material;
 
 import Glib.System.System;
 
+
 class Mesh
 {
 	vec3[] verts;
@@ -66,6 +67,35 @@ class Mesh
 		}
 		
 		
+		shader = new Shader();
+		shader.vertSource = geometryVS;
+		shader.fragSource = geometryFS;
+
+		//temporary
+		material = new Material();
+		material.diffuse = new Texture("..\\..\\resources\\Gray.png");;
+		material.normal = new Texture( vec4i(128, 128, 128, 255));
+		material.specular = new Texture( vec4i(0, 0, 0, 255));
+
+		BindMesh();
+	}
+
+	this(vec3[] _verts,
+		 uint[] _indices,
+		 vec2[] _uvs,
+		 vec3[] _normals,
+		 vec3[] _tangents,
+		 vec3[] _bitTangents,)
+	{
+		this.verts = _verts;
+		this.verts = _verts;
+		this.indices = _indices;
+		this.uvs = _uvs;
+		this.normals = _normals;
+		this.tangents = _tangents;
+		this.bitTangents = _bitTangents;
+
+
 		shader = new Shader();
 		shader.vertSource = geometryVS;
 		shader.fragSource = geometryFS;
@@ -216,8 +246,6 @@ class Mesh
 
 		this.shader.BindMaterial(material);
 
-		
-		//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbo);
 		glDrawElements(GL_TRIANGLES, indices.length, GL_UNSIGNED_INT, null);
 		GLenum error = glGetError();
 		if(error != GL_NO_ERROR)
@@ -246,3 +274,6 @@ immutable string unitSquareMesh = q{
 		f 4/3/1 3/4/1 1/2/1
 		f 2/1/1 4/3/1 1/2/1
 };
+
+
+
