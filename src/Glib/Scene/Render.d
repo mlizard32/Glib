@@ -151,7 +151,7 @@ struct Render
 		mesh = new Mesh(aiImportFileFromMemory(unitSquareMesh.toStringz(), unitSquareMesh.length, aiImportOptions, "obj").mMeshes[0]);
 
 
-		/*
+		
 		error = glGetError();
 		if(error != GL_NO_ERROR)
 			Log.error("glError");
@@ -169,18 +169,17 @@ struct Render
 		if(error != GL_NO_ERROR)
 			Log.error("glError");
 
-		glUniform3f(glGetUniformLocation(shader.programID, "light.color"), 1.0f, 1.0f, 1.0f);
+		glUniform3f(glGetUniformLocation(shader.programID, "light.color"), .3f, .3f, .3f);
 		
 		// bind the window mesh for ambient lights
 
-		mesh.drawTest();
-		//glBindVertexArray( mesh.VertexArrayID );
-		//glDrawElements( GL_TRIANGLES, 6, GL_UNSIGNED_INT, null );
+		glBindVertexArray( mesh.VertexArrayID );
+		glDrawElements( GL_TRIANGLES, mesh.indices.length, GL_UNSIGNED_INT, null );;
 
 		error = glGetError();
 		if(error != GL_NO_ERROR)
 			Log.error("glError");
-*/
+
 
 		//Directional light
 		shader = new Shader();

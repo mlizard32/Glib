@@ -19,11 +19,21 @@ class GObject:Node
 		super(parent);
 	}
 
+	void AttachComponent(IComponent comp)
+	{
+		comp.owner = this;
+		components ~= comp;
+	}
+
+	void DetachComponent(IComponent comp)
+	{
+		//not implemented
+	}
 	
 }
-interface IComponent
+abstract class IComponent
 {
-	//GObject owner;
+	GObject owner;
 
 	//this(GObject owner)
 	//{

@@ -55,6 +55,7 @@ class Node:Tree!(Node)
 
 }
 
+
 struct Transform
 {
 	public bool worldDirty;
@@ -63,17 +64,22 @@ private:
 	vec3 localPosition = vec3(0,0,0);
 	quat localRotation = quat.identity;
 
-	vec3 worldScale = vec3(1,1,1);	
-	vec3 worldPosition = vec3(0,0,0);
-	quat worldRotation = quat.identity;
+	//vec3 worldScale = vec3(1,1,1);	
+	//vec3 worldPosition = vec3(0,0,0);
+	//quat worldRotation = quat.identity;
+
+	mat4 matrix = mat4.identity;
 
 	Node thisNode;
 
+
+
 	void SetWorldDirty()
 	{
+		this.worldDirty = true;
 		foreach(child; thisNode.children)
 		{
-			child.transform.worldDirty = true;
+			child.transform.SetWorldDirty();
 		}
 	}
 	float DegToRad(const float degree)
@@ -90,42 +96,57 @@ private:
 	}
 	public void CalcWorld()
 	{
-		/*
+
 		if (this.worldDirty)
 		{		
-			if (thisNode.parent && thisNode.parent !is thisNode.scene)
-			{	thisNode.parent.transform.CalcWorld();
-
-				this.worldPosition = this.localPosition * thisNode.parent.transform.worldScale;
-				if (thisNode.parent.transform.worldRotation != quat.identity) // Because rotation is more expensive
-				{	this.worldPosition = this.worldPosition.rotate(thisNode.parent.transform.worldRotation);
-					this.worldRotation = thisNode.parent.transform.worldRotation * this.localRotation;
-				} else
-					this.worldRotation = this.localRotation;
-
-				this.worldPosition += thisNode.parent.transform.worldPosition;
-				this.worldScale =  thisNode.parent.transform.worldScale * transform.scale;
-
-			} else
+			if (thisNode.parent && thisNode.parent !is System.currentScene.root)
 			{	
-				this.worldPosition = this.localPosition;
-				this.worldRotation = this.localRotation;
-				this.worldScale = this.localScale;
+				thisNode.parent.transform.CalcWorld();
 			}
+			matrix = mat4.identity;
+			// Scale
+			matrix[ 0 ][ 0 ] = localScale.x;
+			matrix[ 1 ][ 1 ] = localScale.y;
+			matrix[ 2 ][ 2 ] = localScale.z;
+
+			// Rotate
+			matrix = matrix * localRotation.to_matrix!(4,4);
+
+			// Translate
+			matrix[ 0 ][ 3 ] = localPosition.x;
+			matrix[ 1 ][ 3 ] = localPosition.y;
+			matrix[ 2 ][ 3 ] = localPosition.z;
+
+			// include parent objects' transforms
+			if( thisNode.parent )
+				matrix = thisNode.parent.transform.worldTransformMatrix * matrix;
+			
 			this.worldDirty = false;
 		}
-		*/
+
 	}
 public:
 	vec3 local_Rotation() const @property
 	{
-		return vec3(localRotation.yaw, localRotation.pitch, localRotation.roll);
+		return vec3(RadToDeg(localRotation.roll), RadToDeg(localRotation.pitch), RadToDeg(localRotation.yaw));
 	}
 	void local_Rotation(vec3 rotation) @property 
 	{
-		localRotation = quat.euler_rotation(rotation.x, rotation.y, rotation.z);
+		localRotation = quat.euler_rotation(DegToRad(rotation.x), DegToRad(rotation.y), DegToRad(rotation.z));
 		SetWorldDirty();
 	}
+
+	quat local_Rotation_quat() const @property
+	{
+		return localRotation;
+	} 
+
+	void local_Rotation(quat rotation) @property 
+	{
+		localRotation = rotation;
+		SetWorldDirty();
+	}
+
 	vec3 local_Position() const @property 
 	{
 		return localPosition;
@@ -145,21 +166,39 @@ public:
 		SetWorldDirty();
 	}
 
-	/*
+	
 	vec3 world_Rotation() const @property
 	{
 		if(thisNode.parent !is null) 
-			return vec3(RadToDeg(worldRotation.yaw), RadToDeg(worldRotation.pitch), RadToDeg(worldRotation.roll));
-		else return  vec3(localRotation.yaw, localRotation.pitch, localRotation.roll);
+		{
+			quat worldRot = thisNode.parent.transform.world_Rotation_quat * localRotation;
+			return vec3(RadToDeg(worldRot.yaw), RadToDeg(worldRot.pitch), RadToDeg(worldRot.roll));
+		}
+		else 
+			return  vec3(localRotation.yaw, localRotation.pitch, localRotation.roll);
 	}
 	void world_Rotation(vec3 rotation) @property
 	{
-		worldRotation = quat.euler_rotation(DegToRad(rotation.x), DegToRad(rotation.y), DegToRad(rotation.z));
+		quat worldRot = quat.euler_rotation(DegToRad(rotation.x), DegToRad(rotation.y), DegToRad(rotation.z));
 		//set localrotation
-		localRotation = worldRotation * thisNode.parent.transform.worldRotation;
+		localRotation = worldRot * thisNode.parent.transform.world_Rotation_quat;
 		SetWorldDirty();
 	}
-*/
+	
+
+	quat world_Rotation_quat() const @property
+	{
+		if(thisNode.parent !is null) 
+			return thisNode.parent.transform.world_Rotation_quat * localRotation;
+		else 
+			return  localRotation;
+	}
+	void world_Rotation(quat rotation) @property
+	{
+		localRotation = rotation * thisNode.parent.transform.world_Rotation_quat;
+		SetWorldDirty();
+	}
+
 	vec3 world_Position() const @property
 	{
 		if(thisNode.parent !is null) 
@@ -168,8 +207,7 @@ public:
 	}
 	void world_Position(vec3 position) @property
 	{
-		this.worldPosition = position;
-		this.localPosition = this.worldPosition - thisNode.parent.transform.world_Position;
+		this.localPosition = position - thisNode.parent.transform.world_Position;
 
 		SetWorldDirty();
 	}
@@ -178,12 +216,12 @@ public:
 	{
 		if(thisNode.parent !is null) 
 			return this.localScale + thisNode.parent.transform.world_Scale;
-		else return this.localScale;
+		else 
+			return this.localScale;
 	}
 	void world_Scale(vec3 scale) @property
 	{
-		this.worldScale = scale;
-		this.localScale = this.worldScale - thisNode.parent.transform.world_Scale;
+		this.localScale = scale - thisNode.parent.transform.world_Scale;
 
 		SetWorldDirty();
 	}
@@ -191,13 +229,11 @@ public:
 	mat4 worldTransformMatrix() @property 
 	{
 		CalcWorld();
-		mat4 mS = mat4.identity();
-		mat4 mP = mat4.identity();
-
-		return mP.translation(worldPosition.x, worldPosition.y, worldPosition.z) * worldRotation.to_matrix!(4,4)
-			* mS.scale(worldScale.x, worldScale.y, worldScale.z);
+		return matrix;
 	}
 }
+
+
 
 class Tree(T)
 {

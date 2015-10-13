@@ -5,8 +5,10 @@ import derelict.opengl3.gl3;
 import gl3n.linalg;
 import Glib.Scene.Shader;
 import Glib.Scene.Material;
-
+import Glib.Scene.Model;
+import Glib.Scene.Node;
 import Glib.System.System;
+import Glib.Scene.GObject;
 
 
 class Mesh
@@ -208,7 +210,7 @@ class Mesh
 	}
 
 
-	void Draw()
+	void Draw(Transform transform)
 	{
 		glUseProgram(shader.programID);
 		glBindVertexArray(VertexArrayID);
@@ -236,7 +238,9 @@ class Mesh
 		GLuint ProjMatrixID = glGetUniformLocation(shader.programID, "worldViewProj");
 		GLuint objID = glGetUniformLocation(shader.programID, "objectId");
 
-		mat4 worldView = System.currentScene.mainCamera.getViewMatrix() * mat4.identity();
+		mat4 model = transform.worldTransformMatrix;
+
+		mat4 worldView = System.currentScene.mainCamera.getViewMatrix() * model;//mat4.identity();
 		mat4 projection = System.currentScene.mainCamera.getPerspeciveMatrix();
 		mat4 worldviewProj = projection * worldView;
 

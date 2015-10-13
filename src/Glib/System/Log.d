@@ -65,7 +65,7 @@ struct Log
 				}
 				if (output & Output.FILE)
 				{	try {
-					remove(filePath);
+					//remove(filePath);
 					auto f = File(filePath, "w");
 					if (firstRun)
 					{

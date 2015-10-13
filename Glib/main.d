@@ -6,6 +6,7 @@ import derelict.opengl3.gl3;
 import derelict.sdl2.image;
 import derelict.sdl2.sdl;
 import imgui;
+import gl3n.linalg;
 
 int sW = 720;
 int sH = 480;
@@ -21,12 +22,22 @@ int main(string[] argv)
 	imguiInit(fontPath);
 	Scene s = new Scene();
 	
+	Log.info("test");
 	//"..\\..\\resources\\suzanne.obj"
-	//Model model = new Model("..\\..\\resources\\suzanne.obj");
-	PrimitiveObject model = new PrimitiveObject(PrimitiveObject.PrimitiveTypes.Sphere);
+	Model model = new Model("..\\..\\resources\\suzanne.obj");
+	PrimitiveObject sphere = new PrimitiveObject(PrimitiveObject.PrimitiveTypes.Sphere);
 
 	GObject monkey = new GObject();
-	monkey.components ~= model;
+	//monkey.components ~= model;
+	monkey.AttachComponent(model);
+	
+
+	GObject gSphere = new GObject();
+	gSphere.AttachComponent(sphere);
+	gSphere.transform.local_Position(vec3(2, 0, 0));
+	gSphere.transform.local_Scale(vec3(.5f, .5f, .5f));
+
+	monkey.addChild(gSphere);
 
 	Render renderer;
 
@@ -42,6 +53,7 @@ int main(string[] argv)
 	while(System.active)
 	{
 		Input.pollInput();
+		monkey.transform.local_Rotation(monkey.transform.local_Rotation_quat.rotatey(.05f));
 
 		renderer.rScene(s, w);
 
@@ -57,29 +69,3 @@ int main(string[] argv)
     writeln("Hello D-World!");
     return 0;
 }
-
-//temporary
-GLuint initTex(){ 
-	SDL_Surface *s=IMG_Load("..\\..\\resources\\Gray.png"); 
-	assert(s); 
-
-	GLuint tid;
-
-	glGenTextures(1, &tid); 
-	assert(tid > 0); 
-	glBindTexture(GL_TEXTURE_2D, tid); 
-
-	glPixelStorei(GL_UNPACK_ALIGNMENT, 1); 
-
-	int mode = GL_RGB; 
-	if(s.format.BytesPerPixel == 4) mode=GL_RGBA; 
-
-	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
-	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
-
-	//glTexImage2D(GL_TEXTURE_2D, 0, s.format.BytesPerPixel, s.w, s.h, 0, mode, GL_UNSIGNED_BYTE, flip(s).pixels); 
-	glTexImage2D(GL_TEXTURE_2D, 0, s.format.BytesPerPixel, s.w, s.h, 0, mode, GL_UNSIGNED_BYTE, s.pixels); 
-
-	SDL_FreeSurface(s); 
-	return tid; 
-} 
