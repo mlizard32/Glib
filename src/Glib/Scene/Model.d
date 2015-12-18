@@ -4,7 +4,7 @@ import Glib.System.Log;
 import Glib.Scene.Mesh;
 import Glib.Scene.Transform;
 import Glib.Scene.Render;
-import Glib.Scene.GObject;
+import Glib.Scene.RMObject;
 
 import derelict.assimp3.assimp;
 

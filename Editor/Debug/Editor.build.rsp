@@ -1,0 +1,9 @@
+..\src\Editor\EditorEvents.d 
+..\src\Editor\GUITest.d 
+..\src\Editor\imgui_sdl.d 
+..\src\Editor\main.d 
+..\src\Editor\RMObjDetails.d 
+..\src\Editor\SceneGraph.d 
+..\src\Editor\TreeModelDragable.d 
+C:\Users\qtg843\Documents\Test\Glib\Glib\Debug\Glib.lib 
+C:\Users\qtg843\Documents\Test\Glib\gl3n\Debug\gl3n.lib 

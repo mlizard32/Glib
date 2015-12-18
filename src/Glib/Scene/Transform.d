@@ -2,12 +2,12 @@ module Glib.Scene.Transform;
 
 /*
 import gl3n.linalg;
-import Glib.GObject;
+import Glib.RMObject;
 
 class Transform
 {
-	GObject gObject;
-	GObject parent;
+	RMObject RMObject;
+	RMObject parent;
 	private:
 		mat4 translationMatrix;
 		mat3 rotationMatrix;

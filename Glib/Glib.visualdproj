@@ -3,7 +3,7 @@
  <Config name="Debug" platform="Win32">
   <obj>0</obj>
   <link>0</link>
-  <lib>0</lib>
+  <lib>1</lib>
   <subsystem>0</subsystem>
   <multiobj>0</multiobj>
   <singleFileCompilation>0</singleFileCompilation>
@@ -87,7 +87,7 @@
   <libpaths>&quot;..\Libs&quot; </libpaths>
   <deffile />
   <resfile />
-  <exefile>$(OutDir)\$(ProjectName).exe</exefile>
+  <exefile>$(OutDir)\$(ProjectName).lib</exefile>
   <useStdLibPath>1</useStdLibPath>
   <cRuntime>2</cRuntime>
   <additionalOptions />
@@ -201,7 +201,7 @@
   </Folder>
   <Folder name="Scene">
    <File path="..\src\Glib\Scene\Camera.d" />
-   <File path="..\src\Glib\Scene\GObject.d" />
+   <File path="..\src\Glib\Scene\RMObject.d" />
    <File path="..\src\Glib\Scene\Light.d" />
    <File path="..\src\Glib\Scene\Material.d" />
    <File path="..\src\Glib\Scene\Mesh.d" />
@@ -221,7 +221,6 @@
    <File path="..\src\Glib\System\window.d" />
   </Folder>
   <File path="..\src\Glib\allDerelcit.d" />
-  <File path="main.d" />
   <File path="..\src\Glib\package.d" />
  </Folder>
 </DProject>

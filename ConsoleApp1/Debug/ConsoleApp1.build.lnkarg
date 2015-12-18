@@ -1,0 +1,14 @@
+ 
+"Debug\ConsoleApp1.obj","Debug\ConsoleApp1.exe_cv","Debug\ConsoleApp1.map",dlib.lib+ 
+DerelictFT.lib+ 
+DerelictASSIMP3.lib+ 
+DerelictImgui.lib+ 
+Glib.lib+ 
+imgui.lib+ 
++ 
+gtkd.lib+ 
+dlangui.lib+ 
+user32.lib+ 
+kernel32.lib+ 
+..\Libs\+ 
+..\Glib\Debug\/NOMAP/CO/NOI 

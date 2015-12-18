@@ -8,7 +8,7 @@ import Glib.Scene.Material;
 import Glib.Scene.Model;
 import Glib.Scene.Node;
 import Glib.System.System;
-import Glib.Scene.GObject;
+import Glib.Scene.RMObject;
 
 
 class Mesh
@@ -212,15 +212,17 @@ class Mesh
 
 	void Draw(Transform transform)
 	{
+		BindMesh();
+
 		glUseProgram(shader.programID);
 		glBindVertexArray(VertexArrayID);
 		
+/*
+		GLuint lightID = glGetUniformLocation(shader.programID, "LightPosition_worldspace");
+		vec3 lightPos = vec3(4,4,4);
+		glUniform3f(lightID, lightPos.x, lightPos.y, lightPos.z);
 
-		//GLuint lightID = glGetUniformLocation(shader.programID, "LightPosition_worldspace");
-		//vec3 lightPos = vec3(4,4,4);
-		//glUniform3f(lightID, lightPos.x, lightPos.y, lightPos.z);
-
-		/*
+		
 		GLuint MatrixID = glGetUniformLocation(shader.programID, "MVP");
 		GLuint ViewMatrixID = glGetUniformLocation(shader.programID, "V");
 		GLuint ModelMatrixID = glGetUniformLocation(shader.programID, "M");
@@ -232,8 +234,12 @@ class Mesh
 		mat4 model = mat4.identity();
 
 		mat4 MVP = projection * view * model;
-*/
 
+		glUniformMatrix4fv(MatrixID, 1, GL_TRUE, MVP.value_ptr);
+				glUniformMatrix4fv(ModelMatrixID, 1, GL_TRUE, model.value_ptr);
+				glUniformMatrix4fv(ViewMatrixID, 1, GL_TRUE, view.value_ptr);
+
+*/
 		GLuint ViewMatrixID = glGetUniformLocation(shader.programID, "worldView");
 		GLuint ProjMatrixID = glGetUniformLocation(shader.programID, "worldViewProj");
 		GLuint objID = glGetUniformLocation(shader.programID, "objectId");

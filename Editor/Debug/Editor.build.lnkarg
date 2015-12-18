@@ -1,0 +1,14 @@
+ 
+"Debug\Editor.obj","Debug\Editor.exe_cv","Debug\Editor.map",C:\Users\qtg843\Documents\Test\Glib\Glib\Debug\Glib.lib+ 
+C:\Users\qtg843\Documents\Test\Glib\gl3n\Debug\gl3n.lib+ 
+DerelictFT.lib+ 
+DerelictASSIMP3.lib+ 
+DerelictImgui.lib+ 
+Glib.lib+ 
+imgui.lib+ 
++ 
+gtkd.lib+ 
+user32.lib+ 
+kernel32.lib+ 
+..\Libs\+ 
+..\Glib\Debug\/NOMAP/CO/NOI 

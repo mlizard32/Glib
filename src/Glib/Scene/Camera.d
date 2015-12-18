@@ -1,10 +1,10 @@
 module Glib.Scene.Camera;
 
 import Glib.Scene.Transform;
-import Glib.Scene.GObject;
+import Glib.Scene.RMObject;
 import gl3n.linalg;
 
-class Camera : GObject
+class Camera : RMObject
 {
 	float near = .1;
 	float far = 1000000;
@@ -28,8 +28,11 @@ class Camera : GObject
     float speed      = 3.0f; // 3 units / second
     float mouseSpeed = 0.0003f;
 	
+	
+
 	this()
 	{
+		super();
 		// Direction - Spherical coordinates to Cartesian coordinates conversion
         this.direction = vec3(
 							  cos(this.verticalAngle) * sin(this.horizontalAngle),
@@ -43,6 +46,8 @@ class Camera : GObject
 						  0,                                        // Y
 						  cos(this.horizontalAngle - 3.14f / 2.0f)  // Z
 						  );
+
+		name = "Camera";
 	}
 	mat4 getViewMatrix()
     {

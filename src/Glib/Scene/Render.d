@@ -4,7 +4,7 @@ import derelict.opengl3.gl3;
 import derelict.sdl2.sdl;
 import gl3n.linalg;
 import Glib.Scene.Scene;
-import Glib.Scene.GObject;
+import Glib.Scene.RMObject;
 import Glib.Scene.Node;
 import Glib.Scene.Shader;
 import Glib.Scene.Mesh;
@@ -15,6 +15,8 @@ import imgui;
 import derelict.assimp3.assimp;
 import std.string;
 
+import gtk.GLArea;
+
 struct Render
 {
 	uint _deferredFrameBuffer;
@@ -22,10 +24,22 @@ struct Render
     uint _normalRenderTexture; 
     uint _depthRenderTexture;
 
+	//unit square object
+	Mesh mesh;
+
 	void Complete()
 	{
 		//swap buffers
 		//SDL_GL_SwapWindow
+	}
+
+	void initialize(uint width, uint height)
+	{
+		
+		enum aiImportOptions = aiProcess_CalcTangentSpace | aiProcess_Triangulate | aiProcess_JoinIdenticalVertices | aiProcess_SortByPType;
+		mesh = new Mesh(aiImportFileFromMemory(unitSquareMesh.toStringz(), unitSquareMesh.length, aiImportOptions, "obj").mMeshes[0]);
+
+		initializeFrameBuffer(width, height);
 	}
 	void initializeFrameBuffer(uint width, uint height)
 	{
@@ -146,9 +160,7 @@ struct Render
 			glBindTexture( GL_TEXTURE_2D, _depthRenderTexture );
 		}
 		Shader shader;
-		Mesh mesh;
-		enum aiImportOptions = aiProcess_CalcTangentSpace | aiProcess_Triangulate | aiProcess_JoinIdenticalVertices | aiProcess_SortByPType;
-		mesh = new Mesh(aiImportFileFromMemory(unitSquareMesh.toStringz(), unitSquareMesh.length, aiImportOptions, "obj").mMeshes[0]);
+		
 
 
 		
@@ -242,8 +254,165 @@ struct Render
 		
 	}
 
+	void rScene(Scene scene, GLArea area)
+	{
+		if(!scene)
+			Log.error("no active scene to render");
+		if(!scene.mainCamera)
+			Log.error("no camera set in scene");
+
+		//need to make a check to see if obj is even visible
+
+
+		//render geometry 
+		glBindFramebuffer(GL_FRAMEBUFFER, _deferredFrameBuffer);
+		glDepthMask(GL_TRUE);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glEnable(GL_DEPTH_TEST);
+		glDisable(GL_BLEND);
+
+		//glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		TraverseDraw(scene.root);
+		void geometryPass()
+		{
+
+		}
+		glViewport(0,0, cast(GLsizei)720, cast(GLsizei)480);
+		//render shadow pass
+
+		GLenum error = glGetError();
+		if(error != GL_NO_ERROR)
+			Log.error("glError");
+		// settings for light pass
+        glDepthMask( GL_FALSE );
+        glDisable( GL_DEPTH_TEST );
+        glEnable( GL_BLEND );
+        glBlendFunc( GL_ONE, GL_ONE );
+
+		error = glGetError();
+		if(error != GL_NO_ERROR)
+			Log.error("glError");
+
+        //This line switches back to the default framebuffer
+       // glBindFramebuffer( GL_FRAMEBUFFER, 0 );
+		area.attachBuffers();
+        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+		//render light pass
+		void bindGeometryOutputs(uint programId)
+		{
+			// diffuse
+
+			glUniform1i( glGetUniformLocation(programId, "diffuseTexture"), 0 );
+			glActiveTexture( GL_TEXTURE0 );
+			glBindTexture( GL_TEXTURE_2D, _diffuseRenderTexture );
+
+			// normal
+			glUniform1i( glGetUniformLocation(programId, "normalTexture"), 1 );
+			glActiveTexture( GL_TEXTURE1 );
+			glBindTexture( GL_TEXTURE_2D, _normalRenderTexture );
+
+			// depth
+			glUniform1i( glGetUniformLocation(programId, "depthTexture") , 2 );
+			glActiveTexture( GL_TEXTURE2 );
+			glBindTexture( GL_TEXTURE_2D, _depthRenderTexture );
+		}
+		Shader shader;
+
+
+
+
+		error = glGetError();
+		if(error != GL_NO_ERROR)
+			Log.error("glError");
+
+		//Ambient Light
+		shader = new Shader();
+		shader.vertSource = ambientlightVS;
+		shader.fragSource = ambientlightFS;
+		shader.LoadShader();
+		glUseProgram( shader.programID );
+
+		bindGeometryOutputs(shader.programID);
+
+		error = glGetError();
+		if(error != GL_NO_ERROR)
+			Log.error("glError");
+
+		glUniform3f(glGetUniformLocation(shader.programID, "light.color"), .3f, .3f, .3f);
+
+		// bind the window mesh for ambient lights
+
+		glBindVertexArray( mesh.VertexArrayID );
+		glDrawElements( GL_TRIANGLES, mesh.indices.length, GL_UNSIGNED_INT, null );;
+
+		error = glGetError();
+		if(error != GL_NO_ERROR)
+			Log.error("glError");
+
+
+		//Directional light
+		shader = new Shader();
+		shader.vertSource = directionallightVS;
+		shader.fragSource = directionallightFS;
+		shader.LoadShader();
+		glUseProgram( shader.programID );
+
+		bindGeometryOutputs(shader.programID);
+		mat4 invProj = scene.mainCamera.getInversePerspectiveMatrix();
+		float near = 0.1f;
+		float far = 100.0f;
+		vec2 projectionConstants = vec2( ( -far * near ) / ( far - near ), far / ( far - near ) );
+
+		GLuint test = glGetUniformLocation(shader.programID, "invProj");
+
+		glUniformMatrix4fv( test,  1, GL_TRUE, invProj.value_ptr);
+
+		glUniform2f( glGetUniformLocation(shader.programID, "projectionConstants"), projectionConstants.x, projectionConstants.y );
+
+		//shader.bindUniformMatrix4fv( shader.LightProjectionView, light.projView );
+		glUniformMatrix4fv( glGetUniformLocation(shader.programID, "cameraView"), 1, GL_TRUE, scene.mainCamera.getViewMatrix().value_ptr);
+
+		vec3 origin = vec3(0f);
+		vec3 lightPos = vec3(4,4, 4);
+
+		vec3 dir = (lightPos - origin);
+
+		glUniform3f( glGetUniformLocation(shader.programID, "light.direction"), dir.x, dir.y, dir.z);
+		glUniform3f( glGetUniformLocation(shader.programID, "light.color"), 1f, 1f, 1f );
+
+		glBindVertexArray( mesh.VertexArrayID );
+		glDrawElements( GL_TRIANGLES, mesh.indices.length, GL_UNSIGNED_INT, null );
+
+
+		glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
+
+		//render UI
+
+		/*
+		const scrollAreaWidth = w.size.x / 4;
+        const scrollAreaHeight =  w.size.y - 20;
+		int scrollArea2 = 0;
+
+		imguiBeginScrollArea("Scroll area 2", 20 + (1 * scrollAreaWidth), 10, scrollAreaWidth, scrollAreaHeight, &scrollArea2);
+        imguiSeparatorLine();
+        imguiSeparator();
+
+        foreach (i; 0 .. 100)
+		imguiLabel("A wall of text");
+
+        imguiEndScrollArea();
+
+		imguiDrawText(0, 0, TextAlign.left, "Free text", RGBA(32, 192, 32, 192));
+		imguiRender( w.size.x, w.size.y);
+		*/
+
+		glBindVertexArray(0);
+        glUseProgram(0);
+
+	}
+
 	
-	void TraverseDraw(GObject g)
+	void TraverseDraw(RMObject g)
 	{
 		//Draw This object
 		foreach(IComponent component; g.components)
@@ -257,7 +426,7 @@ struct Render
 		foreach(Node gChild; g.getChildren())
 		{
 			
-			TraverseDraw(cast(GObject)gChild);
+			TraverseDraw(cast(RMObject)gChild);
 		}
 	}
 }

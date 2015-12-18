@@ -145,6 +145,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_matrix!T",
     "members" : [
      {
       "name" : "MatrixStack",
@@ -954,6 +955,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_vector!T || is_quaternion!T",
     "members" : [
      {
       "name" : "interp_spherical",
@@ -1353,6 +1355,10 @@
         "kind" : "variable",
         "line" : 53,
         "char" : 22,
+        "storageClass" : [
+         "static",
+         "const"
+        ],
         "deco" : "i",
         "init" : "dimension_"
        },
@@ -1463,6 +1469,7 @@
           "deco" : "i"
          }
         ],
+        "constraint" : "d <= dimension",
         "members" : [
          {
           "name" : "isCompatibleVectorImpl",
@@ -1670,6 +1677,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "is_vector!T && is(T.vt : vt) && T.dimension >= dimension",
         "members" : [
          {
           "name" : "this",
@@ -2020,6 +2028,7 @@
           "type" : "string"
          }
         ],
+        "constraint" : "op == \"+\" || op == \"-\"",
         "members" : [
          {
           "name" : "opBinary",
@@ -2086,6 +2095,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "isCompatibleMatrix!T && T.rows == dimension",
         "members" : [
          {
           "name" : "opBinary",
@@ -2120,6 +2130,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "!is_vector!T && !is_matrix!T && !is_quaternion!T",
         "members" : [
          {
           "name" : "opBinaryRight",
@@ -2223,6 +2234,7 @@
           "type" : "string"
          }
         ],
+        "constraint" : "op == \"+\" || op == \"-\"",
         "members" : [
          {
           "name" : "opOpAssign",
@@ -2279,6 +2291,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "!isArray!T && T.dimension == dimension",
         "members" : [
          {
           "name" : "opEquals",
@@ -2311,6 +2324,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "!isArray!T && !is_vector!T",
         "members" : [
          {
           "name" : "opEquals",
@@ -2376,6 +2390,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_vector!T",
     "members" : [
      {
       "name" : "dot",
@@ -2415,6 +2430,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_vector!T && T.dimension == 3",
     "members" : [
      {
       "name" : "cross",
@@ -2454,6 +2470,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_vector!T",
     "members" : [
      {
       "name" : "distance",
@@ -2501,6 +2518,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_vector!T",
     "members" : [
      {
       "name" : "reflect",
@@ -2620,6 +2638,7 @@
       "deco" : "i"
      }
     ],
+    "constraint" : "rows_ > 0 && cols_ > 0",
     "members" : [
      {
       "name" : "Matrix",
@@ -2639,6 +2658,10 @@
         "kind" : "variable",
         "line" : 757,
         "char" : 22,
+        "storageClass" : [
+         "static",
+         "const"
+        ],
         "deco" : "i",
         "init" : "rows_"
        },
@@ -2647,6 +2670,10 @@
         "kind" : "variable",
         "line" : 758,
         "char" : 22,
+        "storageClass" : [
+         "static",
+         "const"
+        ],
         "deco" : "i",
         "init" : "cols_"
        },
@@ -2928,6 +2955,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "is_matrix!T && T.cols >= cols && T.rows >= rows",
         "members" : [
          {
           "name" : "this",
@@ -2957,6 +2985,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "is_matrix!T && T.cols < cols && T.rows < rows",
         "members" : [
          {
           "name" : "this",
@@ -3131,6 +3160,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "isCompatibleMatrix!T && T.rows == cols",
         "members" : [
          {
           "name" : "opBinary",
@@ -3259,6 +3289,7 @@
           "type" : "string"
          }
         ],
+        "constraint" : "op == \"+\" || op == \"-\"",
         "members" : [
          {
           "name" : "opBinary",
@@ -3320,6 +3351,7 @@
           "type" : "string"
          }
         ],
+        "constraint" : "op == \"+\" || op == \"-\"",
         "members" : [
          {
           "name" : "opOpAssign",
@@ -3350,6 +3382,7 @@
           "type" : "string"
          }
         ],
+        "constraint" : "op == \"*\"",
         "members" : [
          {
           "name" : "opOpAssign",
@@ -3832,6 +3865,7 @@
           "deco" : "i"
          }
         ],
+        "constraint" : "rows >= 3 && cols >= 3",
         "members" : [
          {
           "name" : "to_matrix",
@@ -4165,6 +4199,7 @@
           "kind" : "type"
          }
         ],
+        "constraint" : "!is_quaternion!T",
         "members" : [
          {
           "name" : "opBinaryRight",
@@ -4198,6 +4233,7 @@
           "type" : "string"
          }
         ],
+        "constraint" : "op == \"+\" || op == \"-\"",
         "members" : [
          {
           "name" : "opBinary",
@@ -4321,6 +4357,7 @@
           "type" : "string"
          }
         ],
+        "constraint" : "op == \"+\" || op == \"-\"",
         "members" : [
          {
           "name" : "opOpAssign",
@@ -4601,7 +4638,7 @@
      "enum"
     ],
     "deco" : "e",
-    "init" : "0x1.1df46a2529d3915cp-6L"
+    "init" : "0.0174532L"
    },
    {
     "name" : "_180_PI",
@@ -4612,7 +4649,7 @@
      "enum"
     ],
     "deco" : "e",
-    "init" : "0x1.ca5dc1a63c1f7b86p+5L"
+    "init" : "57.2958L"
    },
    {
     "kind" : "template",
@@ -4675,6 +4712,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "!is_vector!T && !is_quaternion!T && !is_matrix!T",
     "members" : [
      {
       "name" : "abs",
@@ -4704,6 +4742,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_vector!T",
     "members" : [
      {
       "name" : "abs",
@@ -4733,6 +4772,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_quaternion!T",
     "members" : [
      {
       "name" : "abs",
@@ -4826,6 +4866,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "!is_vector!T && !is_quaternion!T",
     "members" : [
      {
       "name" : "almost_equal",
@@ -4845,7 +4886,7 @@
        {
         "name" : "epsilon",
         "deco" : "f",
-        "default" : "1e-06"
+        "default" : "1e-06F"
        }
       ],
       "endline" : 139,
@@ -4868,6 +4909,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_vector!T && is_vector!S && T.dimension == S.dimension",
     "members" : [
      {
       "name" : "almost_equal",
@@ -4887,7 +4929,7 @@
        {
         "name" : "epsilon",
         "deco" : "f",
-        "default" : "1e-06"
+        "default" : "1e-06F"
        }
       ],
       "endline" : 149,
@@ -4906,6 +4948,7 @@
       "kind" : "type"
      }
     ],
+    "constraint" : "is_quaternion!T",
     "members" : [
      {
       "name" : "almost_equal",
@@ -4925,7 +4968,7 @@
        {
         "name" : "epsilon",
         "deco" : "f",
-        "default" : "1e-06"
+        "default" : "1e-06F"
        }
       ],
       "endline" : 158,
@@ -5221,6 +5264,7 @@
       "defaultDeco" : "f"
      }
     ],
+    "constraint" : "isFloatingPoint!type",
     "members" : [
      {
       "name" : "PlaneT",
@@ -5716,6 +5760,7 @@
       "deco" : "i"
      }
     ],
+    "constraint" : "from <= to",
     "members" : []
    }
   ]

@@ -4,7 +4,7 @@
 	<font face=arial size=+3>Build Log</font>
 </table>
 <table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
-Building Debug\Glib.exe
+Building Debug\Glib.lib
 </font></table>
 <table width=100% bgcolor=#EFEFE5><tr><td><font face=arial size=+1>
 Command Line
@@ -18,7 +18,6 @@ echo ..\src\Glib\GUI\package.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\GUI\UITexture.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\GUI\Widget.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Camera.d &gt;&gt;Debug\Glib.build.rsp
-echo ..\src\Glib\Scene\GObject.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Light.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Material.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Mesh.d &gt;&gt;Debug\Glib.build.rsp
@@ -26,6 +25,7 @@ echo ..\src\Glib\Scene\Model.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Node.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\package.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Render.d &gt;&gt;Debug\Glib.build.rsp
+echo ..\src\Glib\Scene\RMObject.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Scene.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Shader.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\Scene\Transform.d &gt;&gt;Debug\Glib.build.rsp
@@ -35,39 +35,21 @@ echo ..\src\Glib\System\package.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\System\System.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\System\window.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\allDerelcit.d &gt;&gt;Debug\Glib.build.rsp
-echo main.d &gt;&gt;Debug\Glib.build.rsp
 echo ..\src\Glib\package.d &gt;&gt;Debug\Glib.build.rsp
 echo C:\Users\qtg843\Documents\Test\Glib\gl3n\Debug\gl3n.lib &gt;&gt;Debug\Glib.build.rsp
 
-dmd -g -debug -X -Xf&quot;Debug\Glib.json&quot; -I&quot;..\..\dub Derelict\Import&quot; -I&quot;..\src&quot; -deps=&quot;Debug\Glib.dep&quot; -c -of&quot;Debug\Glib.obj&quot; @Debug\Glib.build.rsp
+&quot;C:\Program Files (x86)\VisualD\pipedmd.exe&quot; dmd -lib -g -debug -X -Xf&quot;Debug\Glib.json&quot; -I&quot;..\..\dub Derelict\Import&quot; -I&quot;..\src&quot; -deps=&quot;Debug\Glib.dep&quot; -of&quot;Debug\Glib.lib&quot; -map &quot;Debug\Glib.map&quot; -L/NOMAP @Debug\Glib.build.rsp
 if errorlevel 1 goto reportError
-
-set LIB=&quot;C:\D\dmd2\windows\bin\..\lib&quot;
-echo. &gt; Debug\Glib.build.lnkarg
-echo &quot;Debug\Glib.obj&quot;,&quot;Debug\Glib.exe_cv&quot;,&quot;Debug\Glib.map&quot;,C:\Users\qtg843\Documents\Test\Glib\gl3n\Debug\gl3n.lib+ &gt;&gt; Debug\Glib.build.lnkarg
-echo DerelictFT.lib+ &gt;&gt; Debug\Glib.build.lnkarg
-echo DerelictASSIMP3.lib+ &gt;&gt; Debug\Glib.build.lnkarg
-echo imgui.lib+ &gt;&gt; Debug\Glib.build.lnkarg
-echo user32.lib+ &gt;&gt; Debug\Glib.build.lnkarg
-echo kernel32.lib+ &gt;&gt; Debug\Glib.build.lnkarg
-echo ..\Libs\/NOMAP/CO/NOI &gt;&gt; Debug\Glib.build.lnkarg
-
-&quot;C:\Program Files (x86)\VisualD\pipedmd.exe&quot; -deps Debug\Glib.lnkdep C:\D\dmd2\windows\bin\link.exe @Debug\Glib.build.lnkarg
-if errorlevel 1 goto reportError
-if not exist &quot;Debug\Glib.exe_cv&quot; (echo &quot;Debug\Glib.exe_cv&quot; not created! &amp;&amp; goto reportError)
-echo Converting debug information...
-&quot;C:\Program Files (x86)\VisualD\cv2pdb\cv2pdb.exe&quot; &quot;Debug\Glib.exe_cv&quot; &quot;Debug\Glib.exe&quot;
-if errorlevel 1 goto reportError
-if not exist &quot;Debug\Glib.exe&quot; (echo &quot;Debug\Glib.exe&quot; not created! &amp;&amp; goto reportError)
+if not exist &quot;Debug\Glib.lib&quot; (echo &quot;Debug\Glib.lib&quot; not created! &amp;&amp; goto reportError)
 
 goto noError
 
 :reportError
-echo Building Debug\Glib.exe failed!
+echo Building Debug\Glib.lib failed!
 
 :noError
 <table width=100% bgcolor=#EFEFE5><tr><td><font face=arial size=+1>
 Output
 </font></table>
-Converting debug information...
+
 </body></html>

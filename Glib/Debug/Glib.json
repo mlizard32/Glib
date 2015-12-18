@@ -44,7 +44,7 @@
     "kind" : "class",
     "line" : 9,
     "char" : 1,
-    "base" : "Widget",
+    "base" : "Glib.GUI.Widget.Widget",
     "members" : [
      {
       "name" : "this",
@@ -61,7 +61,7 @@
     "kind" : "class",
     "line" : 14,
     "char" : 1,
-    "base" : "Widget",
+    "base" : "Glib.GUI.Widget.Widget",
     "members" : [
      {
       "name" : "this",
@@ -78,7 +78,7 @@
     "kind" : "class",
     "line" : 19,
     "char" : 1,
-    "base" : "Widget",
+    "base" : "Glib.GUI.Widget.Widget",
     "members" : [
      {
       "name" : "this",
@@ -95,7 +95,7 @@
     "kind" : "class",
     "line" : 24,
     "char" : 1,
-    "base" : "Widget",
+    "base" : "Glib.GUI.Widget.Widget",
     "members" : [
      {
       "name" : "this",
@@ -112,7 +112,7 @@
     "kind" : "class",
     "line" : 29,
     "char" : 1,
-    "base" : "Widget",
+    "base" : "Glib.GUI.Widget.Widget",
     "members" : [
      {
       "name" : "this",
@@ -129,7 +129,7 @@
     "kind" : "class",
     "line" : 34,
     "char" : 1,
-    "base" : "Widget",
+    "base" : "Glib.GUI.Widget.Widget",
     "members" : [
      {
       "name" : "texture",
@@ -360,6 +360,10 @@
       "deco" : "FZv",
       "endline" : 108,
       "endchar" : 2
+     },
+     {
+      "name" : "__xdtor",
+      "kind" : "alias"
      }
     ]
    },
@@ -807,6 +811,10 @@
       "deco" : "FZv",
       "endline" : 59,
       "endchar" : 2
+     },
+     {
+      "name" : "__xdtor",
+      "kind" : "alias"
      }
     ]
    }
@@ -903,6 +911,10 @@
       "deco" : "FZv",
       "endline" : 22,
       "endchar" : 2
+     },
+     {
+      "name" : "__xdtor",
+      "kind" : "alias"
      }
     ]
    },
@@ -1300,7 +1312,7 @@
     "protection" : "private"
    },
    {
-    "name" : "Glib.Scene.GObject",
+    "name" : "Glib.Scene.RMObject",
     "kind" : "import",
     "line" : 4,
     "char" : 8,
@@ -1318,7 +1330,7 @@
     "kind" : "class",
     "line" : 7,
     "char" : 1,
-    "base" : "GObject",
+    "base" : "Glib.Scene.RMObject.RMObject",
     "members" : [
      {
       "name" : "near",
@@ -1327,7 +1339,7 @@
       "char" : 8,
       "deco" : "f",
       "init" : "0.1F",
-      "offset" : 132
+      "offset" : 188
      },
      {
       "name" : "far",
@@ -1336,7 +1348,7 @@
       "char" : 8,
       "deco" : "f",
       "init" : "1.00000e+06F",
-      "offset" : 136
+      "offset" : 192
      },
      {
       "name" : "fov",
@@ -1345,7 +1357,7 @@
       "char" : 8,
       "deco" : "f",
       "init" : "45.0000F",
-      "offset" : 140
+      "offset" : 196
      },
      {
       "name" : "threshold",
@@ -1354,7 +1366,7 @@
       "char" : 8,
       "deco" : "f",
       "init" : "1.00000F",
-      "offset" : 144
+      "offset" : 200
      },
      {
       "name" : "aspectRation",
@@ -1363,7 +1375,7 @@
       "char" : 8,
       "deco" : "f",
       "init" : "1.25F",
-      "offset" : 148
+      "offset" : 204
      },
      {
       "name" : "right",
@@ -1372,7 +1384,7 @@
       "char" : 7,
       "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3",
-      "offset" : 152
+      "offset" : 208
      },
      {
       "name" : "direction",
@@ -1381,7 +1393,7 @@
       "char" : 7,
       "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3",
-      "offset" : 164
+      "offset" : 220
      },
      {
       "name" : "position",
@@ -1391,7 +1403,7 @@
       "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3",
       "init" : "Vector([0.000000F, 0.000000F, 5.00000F])",
-      "offset" : 176
+      "offset" : 232
      },
      {
       "name" : "horizontalAngle",
@@ -1400,7 +1412,7 @@
       "char" : 11,
       "deco" : "f",
       "init" : "3.14F",
-      "offset" : 188
+      "offset" : 244
      },
      {
       "name" : "verticalAngle",
@@ -1409,7 +1421,7 @@
       "char" : 11,
       "deco" : "f",
       "init" : "0.000000F",
-      "offset" : 192
+      "offset" : 248
      },
      {
       "name" : "initialFoV",
@@ -1418,7 +1430,7 @@
       "char" : 11,
       "deco" : "f",
       "init" : "45.0000F",
-      "offset" : 196
+      "offset" : 252
      },
      {
       "name" : "speed",
@@ -1427,7 +1439,7 @@
       "char" : 11,
       "deco" : "f",
       "init" : "3.00000F",
-      "offset" : 200
+      "offset" : 256
      },
      {
       "name" : "mouseSpeed",
@@ -1436,52 +1448,52 @@
       "char" : 11,
       "deco" : "f",
       "init" : "0.0003F",
-      "offset" : 204
+      "offset" : 260
      },
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 31,
+      "line" : 33,
       "char" : 2,
       "deco" : "FZC4Glib5Scene6Camera6Camera",
       "originalType" : "()",
-      "endline" : 46,
+      "endline" : 51,
       "endchar" : 2
      },
      {
       "name" : "getViewMatrix",
       "kind" : "function",
-      "line" : 47,
+      "line" : 52,
       "char" : 7,
       "deco" : "FZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
       "originalType" : "mat4()",
-      "endline" : 57,
+      "endline" : 62,
       "endchar" : 5
      },
      {
       "name" : "getPerspeciveMatrix",
       "kind" : "function",
-      "line" : 59,
+      "line" : 64,
       "char" : 7,
       "deco" : "FZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
       "originalType" : "mat4()",
-      "endline" : 64,
+      "endline" : 69,
       "endchar" : 2
      },
      {
       "name" : "getInversePerspectiveMatrix",
       "kind" : "function",
-      "line" : 66,
+      "line" : 71,
       "char" : 7,
       "deco" : "FZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
       "originalType" : "mat4()",
-      "endline" : 71,
+      "endline" : 76,
       "endchar" : 2
      },
      {
       "name" : "updateCameraControls",
       "kind" : "function",
-      "line" : 72,
+      "line" : 77,
       "char" : 7,
       "deco" : "FddZv",
       "parameters" : [
@@ -1494,104 +1506,10 @@
         "deco" : "d"
        }
       ],
-      "endline" : 96,
+      "endline" : 101,
       "endchar" : 2
      }
     ]
-   }
-  ]
- },
- {
-  "name" : "Glib.Scene.GObject",
-  "kind" : "module",
-  "file" : "..\\src\\Glib\\Scene\\GObject.d",
-  "members" : [
-   {
-    "name" : "Glib.Scene.Transform",
-    "kind" : "import",
-    "line" : 3,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "gl3n.linalg",
-    "kind" : "import",
-    "line" : 4,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "Glib.Scene.Node",
-    "kind" : "import",
-    "line" : 5,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "GObject",
-    "kind" : "class",
-    "line" : 7,
-    "char" : 1,
-    "base" : "Node",
-    "members" : [
-     {
-      "name" : "id",
-      "kind" : "variable",
-      "line" : 9,
-      "char" : 7,
-      "deco" : "k",
-      "offset" : 112
-     },
-     {
-      "name" : "name",
-      "kind" : "variable",
-      "line" : 10,
-      "char" : 9,
-      "deco" : "Aya",
-      "offset" : 116
-     },
-     {
-      "name" : "components",
-      "kind" : "variable",
-      "line" : 11,
-      "char" : 15,
-      "deco" : "AC4Glib5Scene7GObject10IComponent",
-      "offset" : 124
-     },
-     {
-      "name" : "this",
-      "kind" : "constructor",
-      "line" : 13,
-      "char" : 2,
-      "deco" : "FZC4Glib5Scene7GObject7GObject",
-      "originalType" : "()",
-      "endline" : 16,
-      "endchar" : 2
-     },
-     {
-      "name" : "this",
-      "kind" : "constructor",
-      "line" : 17,
-      "char" : 2,
-      "deco" : "FC4Glib5Scene4Node4NodeZC4Glib5Scene7GObject7GObject",
-      "originalType" : "(Node parent)",
-      "parameters" : [
-       {
-        "name" : "parent",
-        "deco" : "C4Glib5Scene4Node4Node"
-       }
-      ],
-      "endline" : 20,
-      "endchar" : 2
-     }
-    ]
-   },
-   {
-    "name" : "IComponent",
-    "kind" : "interface",
-    "line" : 24,
-    "char" : 1,
-    "members" : []
    }
   ]
  },
@@ -1601,7 +1519,7 @@
   "file" : "..\\src\\Glib\\Scene\\Light.d",
   "members" : [
    {
-    "name" : "Glib.Scene.GObject",
+    "name" : "Glib.Scene.RMObject",
     "kind" : "import",
     "line" : 3,
     "char" : 8,
@@ -1619,9 +1537,7 @@
     "kind" : "class",
     "line" : 6,
     "char" : 1,
-    "interfaces" : [
-     "IComponent"
-    ],
+    "base" : "Glib.Scene.RMObject.IComponent",
     "members" : [
      {
       "name" : "color",
@@ -1630,7 +1546,7 @@
       "char" : 7,
       "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3",
-      "offset" : 8
+      "offset" : 36
      },
      {
       "name" : "castShadows",
@@ -1638,7 +1554,7 @@
       "line" : 9,
       "char" : 7,
       "deco" : "b",
-      "offset" : 20
+      "offset" : 48
      },
      {
       "name" : "this",
@@ -1663,7 +1579,7 @@
     "kind" : "class",
     "line" : 18,
     "char" : 1,
-    "base" : "Light",
+    "base" : "Glib.Scene.Light.Light",
     "members" : [
      {
       "name" : "radius",
@@ -1671,7 +1587,7 @@
       "line" : 20,
       "char" : 8,
       "deco" : "f",
-      "offset" : 28
+      "offset" : 52
      },
      {
       "name" : "fallOff",
@@ -1679,7 +1595,7 @@
       "line" : 21,
       "char" : 8,
       "deco" : "f",
-      "offset" : 32
+      "offset" : 56
      },
      {
       "name" : "this",
@@ -1692,17 +1608,17 @@
        {
         "name" : "color",
         "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
-        "default" : "(Vector!(float, 3) __ctmp2480;\r\n , __ctmp2480).this(1.00000F)"
+        "default" : "Vector(nanF).this(1.00000F)"
        },
        {
         "name" : "radius",
         "deco" : "f",
-        "default" : "1.00000"
+        "default" : "1.00000F"
        },
        {
         "name" : "fallOff",
         "deco" : "f",
-        "default" : "1.00000"
+        "default" : "1.00000F"
        }
       ],
       "endline" : 29,
@@ -1843,7 +1759,7 @@
       "storageClass" : [
        "auto"
       ],
-      "deco" : "FS4gl3n6linalg17__T6VectorTiVii4Z6VectorZG32h",
+      "deco" : "FNaNbNiNfS4gl3n6linalg17__T6VectorTiVii4Z6VectorZG32h",
       "originalType" : "(vec4i color)",
       "parameters" : [
        {
@@ -1899,22 +1815,43 @@
     "protection" : "private"
    },
    {
-    "name" : "Glib.System.System",
+    "name" : "Glib.Scene.Model",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Node",
     "kind" : "import",
     "line" : 9,
     "char" : 8,
     "protection" : "private"
    },
    {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.RMObject",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
     "name" : "Mesh",
     "kind" : "class",
-    "line" : 12,
+    "line" : 14,
     "char" : 1,
     "members" : [
      {
       "name" : "verts",
       "kind" : "variable",
-      "line" : 14,
+      "line" : 16,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3[]",
@@ -1923,7 +1860,7 @@
      {
       "name" : "indices",
       "kind" : "variable",
-      "line" : 15,
+      "line" : 17,
       "char" : 9,
       "deco" : "Ak",
       "offset" : 16
@@ -1931,7 +1868,7 @@
      {
       "name" : "uvs",
       "kind" : "variable",
-      "line" : 16,
+      "line" : 18,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii2Z6Vector",
       "originalType" : "vec2[]",
@@ -1940,7 +1877,7 @@
      {
       "name" : "normals",
       "kind" : "variable",
-      "line" : 17,
+      "line" : 19,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3[]",
@@ -1949,7 +1886,7 @@
      {
       "name" : "tangents",
       "kind" : "variable",
-      "line" : 18,
+      "line" : 20,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3[]",
@@ -1958,7 +1895,7 @@
      {
       "name" : "bitTangents",
       "kind" : "variable",
-      "line" : 19,
+      "line" : 21,
       "char" : 9,
       "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3[]",
@@ -1967,7 +1904,7 @@
      {
       "name" : "vbo",
       "kind" : "variable",
-      "line" : 21,
+      "line" : 23,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -1976,7 +1913,7 @@
      {
       "name" : "uvbo",
       "kind" : "variable",
-      "line" : 22,
+      "line" : 24,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -1985,7 +1922,7 @@
      {
       "name" : "nbo",
       "kind" : "variable",
-      "line" : 23,
+      "line" : 25,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -1994,7 +1931,7 @@
      {
       "name" : "tanbo",
       "kind" : "variable",
-      "line" : 24,
+      "line" : 26,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -2003,7 +1940,7 @@
      {
       "name" : "bitTanbo",
       "kind" : "variable",
-      "line" : 25,
+      "line" : 27,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -2012,7 +1949,7 @@
      {
       "name" : "elementbo",
       "kind" : "variable",
-      "line" : 26,
+      "line" : 28,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -2021,7 +1958,7 @@
      {
       "name" : "VertexArrayID",
       "kind" : "variable",
-      "line" : 27,
+      "line" : 29,
       "char" : 9,
       "deco" : "k",
       "originalType" : "GLuint",
@@ -2030,7 +1967,7 @@
      {
       "name" : "shader",
       "kind" : "variable",
-      "line" : 29,
+      "line" : 31,
       "char" : 9,
       "deco" : "C4Glib5Scene6Shader6Shader",
       "originalType" : "Shader",
@@ -2039,7 +1976,7 @@
      {
       "name" : "material",
       "kind" : "variable",
-      "line" : 30,
+      "line" : 32,
       "char" : 11,
       "deco" : "C4Glib5Scene8Material8Material",
       "originalType" : "Material",
@@ -2048,7 +1985,7 @@
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 32,
+      "line" : 34,
       "char" : 2,
       "deco" : "FxPS8derelict7assimp35types6aiMeshZC4Glib5Scene4Mesh4Mesh",
       "originalType" : "(const aiMesh* mesh)",
@@ -2058,13 +1995,13 @@
         "deco" : "xPS8derelict7assimp35types6aiMesh"
        }
       ],
-      "endline" : 81,
+      "endline" : 83,
       "endchar" : 2
      },
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 83,
+      "line" : 85,
       "char" : 2,
       "deco" : "FAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAkAS4gl3n6linalg17__T6VectorTfVii2Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorZC4Glib5Scene4Mesh4Mesh",
       "originalType" : "(vec3[] _verts, uint[] _indices, vec2[] _uvs, vec3[] _normals, vec3[] _tangents, vec3[] _bitTangents)",
@@ -2094,42 +2031,52 @@
         "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector"
        }
       ],
-      "endline" : 110,
+      "endline" : 112,
       "endchar" : 2
      },
      {
       "name" : "~this",
       "kind" : "destructor",
-      "line" : 111,
+      "line" : 113,
       "char" : 2,
       "deco" : "FZv",
-      "endline" : 121,
+      "endline" : 123,
       "endchar" : 2
      },
      {
       "name" : "BindMesh",
       "kind" : "function",
-      "line" : 123,
+      "line" : 125,
       "char" : 7,
       "deco" : "FZb",
-      "endline" : 208,
+      "endline" : 210,
       "endchar" : 2
      },
      {
       "name" : "Draw",
       "kind" : "function",
-      "line" : 211,
+      "line" : 213,
       "char" : 7,
-      "deco" : "FZv",
-      "endline" : 256,
+      "deco" : "FS4Glib5Scene4Node9TransformZv",
+      "parameters" : [
+       {
+        "name" : "transform",
+        "deco" : "S4Glib5Scene4Node9Transform"
+       }
+      ],
+      "endline" : 266,
       "endchar" : 2
+     },
+     {
+      "name" : "__xdtor",
+      "kind" : "alias"
      }
     ]
    },
    {
     "name" : "unitSquareMesh",
     "kind" : "variable",
-    "line" : 261,
+    "line" : 271,
     "char" : 18,
     "storageClass" : [
      "immutable"
@@ -2174,7 +2121,7 @@
     "protection" : "private"
    },
    {
-    "name" : "Glib.Scene.GObject",
+    "name" : "Glib.Scene.RMObject",
     "kind" : "import",
     "line" : 7,
     "char" : 8,
@@ -2183,60 +2130,60 @@
    {
     "name" : "derelict.assimp3.assimp",
     "kind" : "import",
-    "line" : 8,
+    "line" : 9,
     "char" : 8,
     "protection" : "private"
    },
    {
     "name" : "std.algorithm",
     "kind" : "import",
-    "line" : 10,
+    "line" : 11,
     "char" : 8,
     "protection" : "private"
    },
    {
     "name" : "std.math",
     "kind" : "import",
-    "line" : 11,
+    "line" : 12,
     "char" : 8,
     "protection" : "private"
    },
    {
     "name" : "std.conv",
     "kind" : "import",
-    "line" : 12,
+    "line" : 13,
     "char" : 8,
     "protection" : "private"
    },
    {
     "name" : "gl3n.linalg",
     "kind" : "import",
-    "line" : 14,
+    "line" : 15,
     "char" : 8,
     "protection" : "private"
    },
    {
     "name" : "Model",
     "kind" : "class",
-    "line" : 16,
+    "line" : 17,
     "char" : 1,
+    "base" : "Glib.Scene.RMObject.IComponent",
     "interfaces" : [
-     "IDrawable",
-     "IComponent"
+     "Glib.Scene.Render.IDrawable"
     ],
     "members" : [
      {
       "name" : "meshes",
       "kind" : "variable",
-      "line" : 18,
+      "line" : 19,
       "char" : 9,
       "deco" : "AC4Glib5Scene4Mesh4Mesh",
-      "offset" : 8
+      "offset" : 36
      },
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 23,
+      "line" : 25,
       "char" : 2,
       "deco" : "FAyaZC4Glib5Scene5Model5Model",
       "originalType" : "(string path)",
@@ -2246,16 +2193,16 @@
         "deco" : "Aya"
        }
       ],
-      "endline" : 47,
+      "endline" : 49,
       "endchar" : 2
      },
      {
       "name" : "Draw",
       "kind" : "function",
-      "line" : 49,
+      "line" : 51,
       "char" : 7,
       "deco" : "FZv",
-      "endline" : 55,
+      "endline" : 57,
       "endchar" : 2,
       "overrides" : [
        "Glib.Scene.Render.IDrawable.Draw"
@@ -2266,34 +2213,34 @@
    {
     "name" : "PrimitiveObject",
     "kind" : "class",
-    "line" : 60,
+    "line" : 62,
     "char" : 1,
+    "base" : "Glib.Scene.RMObject.IComponent",
     "interfaces" : [
-     "IDrawable",
-     "IComponent"
+     "Glib.Scene.Render.IDrawable"
     ],
     "members" : [
      {
       "name" : "mesh",
       "kind" : "variable",
-      "line" : 62,
+      "line" : 64,
       "char" : 7,
       "deco" : "C4Glib5Scene4Mesh4Mesh",
       "originalType" : "Mesh",
-      "offset" : 8
+      "offset" : 36
      },
      {
       "name" : "type",
       "kind" : "variable",
-      "line" : 63,
+      "line" : 65,
       "char" : 17,
       "deco" : "E4Glib5Scene5Model15PrimitiveObject14PrimitiveTypes",
-      "offset" : 12
+      "offset" : 40
      },
      {
       "name" : "PrimitiveTypes",
       "kind" : "enum",
-      "line" : 64,
+      "line" : 66,
       "char" : 9,
       "baseDeco" : "i",
       "members" : [
@@ -2301,29 +2248,29 @@
         "name" : "Sphere",
         "kind" : "enum member",
         "value" : "0",
-        "line" : 66,
+        "line" : 68,
         "char" : 3
        },
        {
         "name" : "Cube",
         "kind" : "enum member",
         "value" : "1",
-        "line" : 67,
-        "char" : 4
+        "line" : 69,
+        "char" : 3
        },
        {
         "name" : "Plane",
         "kind" : "enum member",
         "value" : "2",
-        "line" : 68,
-        "char" : 4
+        "line" : 70,
+        "char" : 3
        }
       ]
      },
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 70,
+      "line" : 73,
       "char" : 2,
       "deco" : "FE4Glib5Scene5Model15PrimitiveObject14PrimitiveTypesZC4Glib5Scene5Model15PrimitiveObject",
       "originalType" : "(PrimitiveTypes type)",
@@ -2333,16 +2280,16 @@
         "deco" : "E4Glib5Scene5Model15PrimitiveObject14PrimitiveTypes"
        }
       ],
-      "endline" : 83,
+      "endline" : 88,
       "endchar" : 2
      },
      {
       "name" : "Draw",
       "kind" : "function",
-      "line" : 84,
+      "line" : 89,
       "char" : 7,
       "deco" : "FZv",
-      "endline" : 87,
+      "endline" : 92,
       "endchar" : 2,
       "overrides" : [
        "Glib.Scene.Render.IDrawable.Draw"
@@ -2351,17 +2298,17 @@
      {
       "name" : "CreateSphere",
       "kind" : "function",
-      "line" : 89,
+      "line" : 94,
       "char" : 7,
       "deco" : "FZv",
-      "endline" : 213,
+      "endline" : 194,
       "endchar" : 2
      },
      {
       "name" : "GetMidpointIndex",
       "kind" : "function",
       "protection" : "private",
-      "line" : 216,
+      "line" : 197,
       "char" : 22,
       "storageClass" : [
        "static"
@@ -2392,13 +2339,13 @@
         "deco" : "i"
        }
       ],
-      "endline" : 246,
+      "endline" : 227,
       "endchar" : 2
      },
      {
       "name" : "Subdivide",
       "kind" : "function",
-      "line" : 257,
+      "line" : 238,
       "char" : 21,
       "storageClass" : [
        "static"
@@ -2425,19 +2372,147 @@
         "deco" : "b"
        }
       ],
-      "endline" : 284,
+      "endline" : 265,
       "endchar" : 2
+     },
+     {
+      "name" : "CreateCube",
+      "kind" : "function",
+      "line" : 267,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 280,
+      "endchar" : 2
+     },
+     {
+      "name" : "dirtyCalcTangents",
+      "kind" : "function",
+      "line" : 281,
+      "char" : 7,
+      "deco" : "FKAS4gl3n6linalg17__T6VectorTfVii3Z6VectorKAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "void(ref vec3[] tangents, ref vec3[] bitTangents, vec3[] normals)",
+      "parameters" : [
+       {
+        "name" : "tangents",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "bitTangents",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "normals",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 299,
+      "endchar" : 2
+     },
+     {
+      "name" : "calcTangents",
+      "kind" : "function",
+      "line" : 300,
+      "char" : 7,
+      "deco" : "FKAS4gl3n6linalg17__T6VectorTfVii3Z6VectorKAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorAkAS4gl3n6linalg17__T6VectorTfVii2Z6VectorAS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "void(ref vec3[] tangents, ref vec3[] bitTangents, vec3[] verts, uint[] indices, vec2[] uvs, vec3[] normals)",
+      "parameters" : [
+       {
+        "name" : "tangents",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "bitTangents",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "storageClass" : [
+         "ref"
+        ]
+       },
+       {
+        "name" : "verts",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       },
+       {
+        "name" : "indices",
+        "deco" : "Ak"
+       },
+       {
+        "name" : "uvs",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii2Z6Vector"
+       },
+       {
+        "name" : "normals",
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 365,
+      "endchar" : 2
+     },
+     {
+      "name" : "Cube",
+      "kind" : "struct",
+      "line" : 367,
+      "char" : 2,
+      "members" : [
+       {
+        "name" : "vertices",
+        "kind" : "variable",
+        "line" : 369,
+        "char" : 10,
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "originalType" : "vec3[]",
+        "init" : "[Vector([-1F, -1F, 1.00000F]), Vector([1.00000F, -1F, 1.00000F]), Vector([1.00000F, 1.00000F, 1.00000F]), Vector([-1F, 1.00000F, 1.00000F]), Vector([-1F, -1F, -1F]), Vector([1.00000F, -1F, -1F]), Vector([1.00000F, 1.00000F, -1F]), Vector([-1F, 1.00000F, -1F])]",
+        "offset" : 0
+       },
+       {
+        "name" : "indices",
+        "kind" : "variable",
+        "line" : 380,
+        "char" : 10,
+        "deco" : "Ak",
+        "init" : "[0u, 1u, 2u, 2u, 3u, 0u, 3u, 2u, 6u, 6u, 7u, 3u, 7u, 6u, 5u, 5u, 4u, 7u, 4u, 0u, 3u, 3u, 7u, 4u, 0u, 1u, 5u, 5u, 4u, 0u, 1u, 5u, 6u, 6u, 2u, 1u]",
+        "offset" : 8
+       },
+       {
+        "name" : "uvcoords",
+        "kind" : "variable",
+        "line" : 395,
+        "char" : 10,
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii2Z6Vector",
+        "originalType" : "vec2[]",
+        "init" : "[Vector([0.000000F, 0.000000F]), Vector([1.00000F, 0.000000F]), Vector([1.00000F, 1.00000F]), Vector([0.000000F, 1.00000F]), Vector([0.000000F, 0.000000F]), Vector([1.00000F, 0.000000F]), Vector([1.00000F, 1.00000F]), Vector([0.000000F, 1.00000F])]",
+        "offset" : 16
+       },
+       {
+        "name" : "normals",
+        "kind" : "variable",
+        "line" : 417,
+        "char" : 10,
+        "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+        "originalType" : "vec3[]",
+        "init" : "[Vector([-1F, -1F, 1.00000F]), Vector([1.00000F, -1F, 1.00000F]), Vector([1.00000F, 1.00000F, 1.00000F]), Vector([-1F, 1.00000F, 1.00000F]), Vector([-1F, -1F, -1F]), Vector([1.00000F, -1F, -1F]), Vector([1.00000F, 1.00000F, -1F]), Vector([-1F, 1.00000F, -1F])]",
+        "offset" : 24
+       }
+      ]
      },
      {
       "name" : "Icosahedron",
       "kind" : "struct",
-      "line" : 287,
+      "line" : 430,
       "char" : 2,
       "members" : [
        {
         "name" : "indices",
         "kind" : "variable",
-        "line" : 289,
+        "line" : 432,
         "char" : 10,
         "deco" : "Ak",
         "init" : "[0u, 4u, 1u, 0u, 9u, 4u, 9u, 5u, 4u, 4u, 5u, 8u, 4u, 8u, 1u, 8u, 10u, 1u, 8u, 3u, 10u, 5u, 3u, 8u, 5u, 2u, 3u, 2u, 7u, 3u, 7u, 10u, 3u, 7u, 6u, 10u, 7u, 11u, 6u, 11u, 0u, 6u, 0u, 1u, 6u, 6u, 1u, 10u, 9u, 0u, 11u, 9u, 11u, 2u, 9u, 2u, 5u, 7u, 2u, 11u]",
@@ -2446,7 +2521,7 @@
        {
         "name" : "X",
         "kind" : "variable",
-        "line" : 311,
+        "line" : 454,
         "char" : 22,
         "storageClass" : [
          "static",
@@ -2454,12 +2529,12 @@
         ],
         "deco" : "xf",
         "originalType" : "float",
-        "init" : "0x1.0d2ca0da1530d1f8p-1F"
+        "init" : "0.525731F"
        },
        {
         "name" : "Z",
         "kind" : "variable",
-        "line" : 312,
+        "line" : 455,
         "char" : 22,
         "storageClass" : [
          "static",
@@ -2467,16 +2542,16 @@
         ],
         "deco" : "xf",
         "originalType" : "float",
-        "init" : "0x1.b38880b4603e47d2p-1F"
+        "init" : "0.850651F"
        },
        {
         "name" : "vertices",
         "kind" : "variable",
-        "line" : 314,
+        "line" : 457,
         "char" : 10,
         "deco" : "AS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
         "originalType" : "vec3[]",
-        "init" : "[Vector([-0x1.0d2ca0da1530d1f8p-1F, 0.000000F, 0x1.b38880b4603e47d2p-1F]), Vector([0x1.0d2ca0da1530d1f8p-1F, 0.000000F, 0x1.b38880b4603e47d2p-1F]), Vector([-0x1.0d2ca0da1530d1f8p-1F, 0.000000F, -0x1.b38880b4603e47d2p-1F]), Vector([0x1.0d2ca0da1530d1f8p-1F, 0.000000F, -0x1.b38880b4603e47d2p-1F]), Vector([0.000000F, 0x1.b38880b4603e47d2p-1F, 0x1.0d2ca0da1530d1f8p-1F]), Vector([0.000000F, 0x1.b38880b4603e47d2p-1F, -0x1.0d2ca0da1530d1f8p-1F]), Vector([0.000000F, -0x1.b38880b4603e47d2p-1F, 0x1.0d2ca0da1530d1f8p-1F]), Vector([0.000000F, -0x1.b38880b4603e47d2p-1F, -0x1.0d2ca0da1530d1f8p-1F]), Vector([0x1.b38880b4603e47d2p-1F, 0x1.0d2ca0da1530d1f8p-1F, 0.000000F]), Vector([-0x1.b38880b4603e47d2p-1F, 0x1.0d2ca0da1530d1f8p-1F, 0.000000F]), Vector([0x1.b38880b4603e47d2p-1F, -0x1.0d2ca0da1530d1f8p-1F, 0.000000F]), Vector([-0x1.b38880b4603e47d2p-1F, -0x1.0d2ca0da1530d1f8p-1F, 0.000000F])]",
+        "init" : "[Vector([-0.525731F, 0.000000F, 0.850651F]), Vector([0.525731F, 0.000000F, 0.850651F]), Vector([-0.525731F, 0.000000F, -0.850651F]), Vector([0.525731F, 0.000000F, -0.850651F]), Vector([0.000000F, 0.850651F, 0.525731F]), Vector([0.000000F, 0.850651F, -0.525731F]), Vector([0.000000F, -0.850651F, 0.525731F]), Vector([0.000000F, -0.850651F, -0.525731F]), Vector([0.850651F, 0.525731F, 0.000000F]), Vector([-0.850651F, 0.525731F, 0.000000F]), Vector([0.850651F, -0.525731F, 0.000000F]), Vector([-0.850651F, -0.525731F, 0.000000F])]",
         "offset" : 8
        }
       ]
@@ -2526,41 +2601,62 @@
     "protection" : "private"
    },
    {
+    "name" : "std.array",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.signals",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
     "name" : "Node",
     "kind" : "class",
-    "line" : 9,
+    "line" : 12,
     "char" : 1,
-    "base" : "Tree",
+    "base" : "Glib.Scene.Node.Tree!(Glib.Scene.Node.Node).Tree",
     "members" : [
      {
       "name" : "transform",
       "kind" : "variable",
-      "line" : 11,
+      "line" : 15,
       "char" : 12,
       "deco" : "S4Glib5Scene4Node9Transform",
-      "offset" : 24
+      "offset" : 36
      },
      {
-      "name" : "__invariant1",
+      "name" : "__invariant2",
       "kind" : "function",
-      "line" : 14,
+      "line" : 18,
       "char" : 2,
       "deco" : "xFZv"
      },
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 17,
+      "line" : 21,
       "char" : 2,
       "deco" : "FZC4Glib5Scene4Node4Node",
       "originalType" : "()",
-      "endline" : 25,
+      "endline" : 29,
       "endchar" : 2
      },
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 27,
+      "line" : 31,
       "char" : 2,
       "deco" : "FC4Glib5Scene4Node4NodeZC4Glib5Scene4Node4Node",
       "originalType" : "(Node parent)",
@@ -2570,13 +2666,13 @@
         "deco" : "C4Glib5Scene4Node4Node"
        }
       ],
-      "endline" : 33,
+      "endline" : 37,
       "endchar" : 2
      },
      {
       "name" : "__invariant",
       "kind" : "function",
-      "line" : 9,
+      "line" : 12,
       "char" : 1,
       "deco" : "xFZv"
      }
@@ -2585,13 +2681,13 @@
    {
     "name" : "Transform",
     "kind" : "struct",
-    "line" : 58,
+    "line" : 63,
     "char" : 1,
     "members" : [
      {
       "name" : "worldDirty",
       "kind" : "variable",
-      "line" : 60,
+      "line" : 65,
       "char" : 14,
       "deco" : "b",
       "offset" : 0
@@ -2600,7 +2696,7 @@
       "name" : "localScale",
       "kind" : "variable",
       "protection" : "private",
-      "line" : 62,
+      "line" : 67,
       "char" : 7,
       "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3",
@@ -2611,7 +2707,7 @@
       "name" : "localPosition",
       "kind" : "variable",
       "protection" : "private",
-      "line" : 63,
+      "line" : 68,
       "char" : 7,
       "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "vec3",
@@ -2622,7 +2718,7 @@
       "name" : "localRotation",
       "kind" : "variable",
       "protection" : "private",
-      "line" : 64,
+      "line" : 69,
       "char" : 7,
       "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
       "originalType" : "quat",
@@ -2630,63 +2726,40 @@
       "offset" : 28
      },
      {
-      "name" : "worldScale",
+      "name" : "matrix",
       "kind" : "variable",
       "protection" : "private",
-      "line" : 66,
+      "line" : 75,
       "char" : 7,
-      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
-      "originalType" : "vec3",
-      "init" : "Vector([1.00000F, 1.00000F, 1.00000F])",
+      "deco" : "S4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
+      "originalType" : "mat4",
+      "init" : "Matrix([[1.00000F, 0.000000F, 0.000000F, 0.000000F], [0.000000F, 1.00000F, 0.000000F, 0.000000F], [0.000000F, 0.000000F, 1.00000F, 0.000000F], [0.000000F, 0.000000F, 0.000000F, 1.00000F]])",
       "offset" : 44
-     },
-     {
-      "name" : "worldPosition",
-      "kind" : "variable",
-      "protection" : "private",
-      "line" : 67,
-      "char" : 7,
-      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
-      "originalType" : "vec3",
-      "init" : "Vector([0.000000F, 0.000000F, 0.000000F])",
-      "offset" : 56
-     },
-     {
-      "name" : "worldRotation",
-      "kind" : "variable",
-      "protection" : "private",
-      "line" : 68,
-      "char" : 7,
-      "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
-      "originalType" : "quat",
-      "init" : "Quaternion([1.00000F, 0.000000F, 0.000000F, 0.000000F])",
-      "offset" : 68
      },
      {
       "name" : "thisNode",
       "kind" : "variable",
       "protection" : "private",
-      "line" : 70,
+      "line" : 77,
       "char" : 7,
       "deco" : "C4Glib5Scene4Node4Node",
       "originalType" : "Node",
-      "offset" : 84
+      "offset" : 108
      },
      {
       "name" : "SetWorldDirty",
       "kind" : "function",
-      "protection" : "private",
-      "line" : 72,
-      "char" : 7,
+      "line" : 81,
+      "char" : 14,
       "deco" : "FZv",
-      "endline" : 78,
+      "endline" : 88,
       "endchar" : 2
      },
      {
       "name" : "DegToRad",
       "kind" : "function",
       "protection" : "private",
-      "line" : 79,
+      "line" : 89,
       "char" : 8,
       "deco" : "FxfZf",
       "originalType" : "float(const float degree)",
@@ -2696,14 +2769,14 @@
         "deco" : "xf"
        }
       ],
-      "endline" : 84,
+      "endline" : 94,
       "endchar" : 2
      },
      {
       "name" : "RadToDeg",
       "kind" : "function",
       "protection" : "private",
-      "line" : 85,
+      "line" : 95,
       "char" : 8,
       "deco" : "xFxfZf",
       "originalType" : "const float(const float radian)",
@@ -2713,32 +2786,32 @@
         "deco" : "xf"
        }
       ],
-      "endline" : 90,
+      "endline" : 100,
       "endchar" : 2
      },
      {
       "name" : "CalcWorld",
       "kind" : "function",
-      "line" : 91,
+      "line" : 101,
       "char" : 14,
       "deco" : "FZv",
-      "endline" : 118,
+      "endline" : 131,
       "endchar" : 2
      },
      {
       "name" : "local_Rotation",
       "kind" : "function",
-      "line" : 120,
+      "line" : 133,
       "char" : 7,
       "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "const @property vec3()",
-      "endline" : 123,
+      "endline" : 136,
       "endchar" : 2
      },
      {
       "name" : "local_Rotation",
       "kind" : "function",
-      "line" : 124,
+      "line" : 137,
       "char" : 7,
       "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
       "originalType" : "@property void(vec3 rotation)",
@@ -2748,23 +2821,49 @@
         "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
        }
       ],
-      "endline" : 128,
+      "endline" : 141,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Rotation_quat",
+      "kind" : "function",
+      "line" : 143,
+      "char" : 7,
+      "deco" : "xFNdZS4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
+      "originalType" : "const @property quat()",
+      "endline" : 146,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Rotation",
+      "kind" : "function",
+      "line" : 148,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg18__T10QuaternionTfZ10QuaternionZv",
+      "originalType" : "@property void(quat rotation)",
+      "parameters" : [
+       {
+        "name" : "rotation",
+        "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion"
+       }
+      ],
+      "endline" : 152,
       "endchar" : 2
      },
      {
       "name" : "local_Position",
       "kind" : "function",
-      "line" : 129,
+      "line" : 154,
       "char" : 7,
       "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "const @property vec3()",
-      "endline" : 132,
+      "endline" : 157,
       "endchar" : 2
      },
      {
       "name" : "local_Position",
       "kind" : "function",
-      "line" : 133,
+      "line" : 158,
       "char" : 7,
       "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
       "originalType" : "@property void(vec3 position)",
@@ -2774,23 +2873,23 @@
         "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
        }
       ],
-      "endline" : 137,
+      "endline" : 162,
       "endchar" : 2
      },
      {
       "name" : "local_Scale",
       "kind" : "function",
-      "line" : 138,
+      "line" : 163,
       "char" : 7,
       "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "const @property vec3()",
-      "endline" : 141,
+      "endline" : 166,
       "endchar" : 2
      },
      {
       "name" : "local_Scale",
       "kind" : "function",
-      "line" : 142,
+      "line" : 167,
       "char" : 7,
       "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
       "originalType" : "@property void(vec3 newScale)",
@@ -2800,23 +2899,75 @@
         "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
        }
       ],
-      "endline" : 146,
+      "endline" : 171,
       "endchar" : 2
      },
      {
-      "name" : "world_Position",
+      "name" : "world_Rotation",
       "kind" : "function",
-      "line" : 163,
+      "line" : 174,
       "char" : 7,
       "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "const @property vec3()",
-      "endline" : 168,
+      "endline" : 183,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Rotation",
+      "kind" : "function",
+      "line" : 184,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 rotation)",
+      "parameters" : [
+       {
+        "name" : "rotation",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 190,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Rotation_quat",
+      "kind" : "function",
+      "line" : 193,
+      "char" : 7,
+      "deco" : "xFNdZS4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
+      "originalType" : "const @property quat()",
+      "endline" : 199,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Rotation",
+      "kind" : "function",
+      "line" : 200,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg18__T10QuaternionTfZ10QuaternionZv",
+      "originalType" : "@property void(quat rotation)",
+      "parameters" : [
+       {
+        "name" : "rotation",
+        "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion"
+       }
+      ],
+      "endline" : 204,
       "endchar" : 2
      },
      {
       "name" : "world_Position",
       "kind" : "function",
-      "line" : 169,
+      "line" : 206,
+      "char" : 7,
+      "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "const @property vec3()",
+      "endline" : 211,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Position",
+      "kind" : "function",
+      "line" : 212,
       "char" : 7,
       "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
       "originalType" : "@property void(vec3 position)",
@@ -2826,23 +2977,23 @@
         "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
        }
       ],
-      "endline" : 175,
+      "endline" : 217,
       "endchar" : 2
      },
      {
       "name" : "world_Scale",
       "kind" : "function",
-      "line" : 177,
+      "line" : 219,
       "char" : 7,
       "deco" : "xFNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
       "originalType" : "const @property vec3()",
-      "endline" : 182,
+      "endline" : 225,
       "endchar" : 2
      },
      {
       "name" : "world_Scale",
       "kind" : "function",
-      "line" : 183,
+      "line" : 226,
       "char" : 7,
       "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
       "originalType" : "@property void(vec3 scale)",
@@ -2852,24 +3003,24 @@
         "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
        }
       ],
-      "endline" : 189,
+      "endline" : 231,
       "endchar" : 2
      },
      {
       "name" : "worldTransformMatrix",
       "kind" : "function",
-      "line" : 191,
+      "line" : 233,
       "char" : 7,
       "deco" : "FNdZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
       "originalType" : "@property mat4()",
-      "endline" : 199,
+      "endline" : 237,
       "endchar" : 2
      }
     ]
    },
    {
     "kind" : "template",
-    "line" : 202,
+    "line" : 242,
     "char" : 1,
     "name" : "Tree",
     "parameters" : [
@@ -2882,34 +3033,40 @@
      {
       "name" : "Tree",
       "kind" : "class",
-      "line" : 202,
+      "line" : 242,
       "char" : 1,
       "members" : [
        {
         "name" : "parent",
         "kind" : "variable",
-        "line" : 204,
+        "line" : 244,
         "char" : 14,
         "type" : "T"
        },
        {
         "name" : "children",
         "kind" : "variable",
-        "line" : 205,
+        "line" : 245,
         "char" : 16,
         "type" : "T[]"
        },
        {
         "name" : "index",
         "kind" : "variable",
-        "line" : 206,
+        "line" : 246,
         "char" : 16,
         "deco" : "i",
         "init" : "-1"
        },
        {
+        "name" : "Signal!(string, T)",
+        "kind" : "mixin",
+        "line" : 248,
+        "char" : 2
+       },
+       {
         "kind" : "template",
-        "line" : 214,
+        "line" : 255,
         "char" : 4,
         "name" : "addChild",
         "parameters" : [
@@ -2923,7 +3080,7 @@
          {
           "name" : "addChild",
           "kind" : "function",
-          "line" : 214,
+          "line" : 255,
           "char" : 4,
           "type" : "S(S child)",
           "parameters" : [
@@ -2932,14 +3089,48 @@
             "type" : "S"
            }
           ],
-          "endline" : 234,
+          "endline" : 276,
           "endchar" : 2
          }
         ]
        },
        {
         "kind" : "template",
-        "line" : 242,
+        "line" : 278,
+        "char" : 4,
+        "name" : "addChildInPlace",
+        "parameters" : [
+         {
+          "name" : "S",
+          "kind" : "type",
+          "type" : "T"
+         }
+        ],
+        "members" : [
+         {
+          "name" : "addChildInPlace",
+          "kind" : "function",
+          "line" : 278,
+          "char" : 4,
+          "type" : "S(S child, int idx)",
+          "parameters" : [
+           {
+            "name" : "child",
+            "type" : "S"
+           },
+           {
+            "name" : "idx",
+            "deco" : "i"
+           }
+          ],
+          "endline" : 302,
+          "endchar" : 2
+         }
+        ]
+       },
+       {
+        "kind" : "template",
+        "line" : 310,
         "char" : 4,
         "name" : "removeChild",
         "parameters" : [
@@ -2953,7 +3144,7 @@
          {
           "name" : "removeChild",
           "kind" : "function",
-          "line" : 242,
+          "line" : 310,
           "char" : 4,
           "type" : "S(S child)",
           "parameters" : [
@@ -2962,7 +3153,7 @@
             "type" : "S"
            }
           ],
-          "endline" : 259,
+          "endline" : 332,
           "endchar" : 2
          }
         ]
@@ -2970,25 +3161,25 @@
        {
         "name" : "getChildren",
         "kind" : "function",
-        "line" : 263,
+        "line" : 336,
         "char" : 6,
         "type" : "T[]()",
-        "endline" : 265,
+        "endline" : 338,
         "endchar" : 2
        },
        {
         "name" : "getParent",
         "kind" : "function",
-        "line" : 270,
+        "line" : 343,
         "char" : 4,
         "type" : "T()",
-        "endline" : 272,
+        "endline" : 345,
         "endchar" : 2
        },
        {
         "name" : "isChild",
         "kind" : "function",
-        "line" : 277,
+        "line" : 350,
         "char" : 7,
         "type" : "bool(T elem)",
         "parameters" : [
@@ -2997,7 +3188,7 @@
           "type" : "T"
          }
         ],
-        "endline" : 281,
+        "endline" : 357,
         "endchar" : 2
        }
       ]
@@ -3018,7 +3209,7 @@
     "char" : 8
    },
    {
-    "name" : "Glib.Scene.GObject",
+    "name" : "Glib.Scene.RMObject",
     "kind" : "import",
     "line" : 4,
     "char" : 8
@@ -3107,7 +3298,7 @@
     "protection" : "private"
    },
    {
-    "name" : "Glib.Scene.GObject",
+    "name" : "Glib.Scene.RMObject",
     "kind" : "import",
     "line" : 7,
     "char" : 8,
@@ -3170,15 +3361,22 @@
     "protection" : "private"
    },
    {
+    "name" : "gtk.GLArea",
+    "kind" : "import",
+    "line" : 18,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
     "name" : "Render",
     "kind" : "struct",
-    "line" : 18,
+    "line" : 20,
     "char" : 1,
     "members" : [
      {
       "name" : "_deferredFrameBuffer",
       "kind" : "variable",
-      "line" : 20,
+      "line" : 22,
       "char" : 7,
       "deco" : "k",
       "offset" : 0
@@ -3186,7 +3384,7 @@
      {
       "name" : "_diffuseRenderTexture",
       "kind" : "variable",
-      "line" : 21,
+      "line" : 23,
       "char" : 10,
       "deco" : "k",
       "offset" : 4
@@ -3194,7 +3392,7 @@
      {
       "name" : "_normalRenderTexture",
       "kind" : "variable",
-      "line" : 22,
+      "line" : 24,
       "char" : 10,
       "deco" : "k",
       "offset" : 8
@@ -3202,24 +3400,33 @@
      {
       "name" : "_depthRenderTexture",
       "kind" : "variable",
-      "line" : 23,
+      "line" : 25,
       "char" : 10,
       "deco" : "k",
       "offset" : 12
      },
      {
+      "name" : "mesh",
+      "kind" : "variable",
+      "line" : 28,
+      "char" : 7,
+      "deco" : "C4Glib5Scene4Mesh4Mesh",
+      "originalType" : "Mesh",
+      "offset" : 16
+     },
+     {
       "name" : "Complete",
       "kind" : "function",
-      "line" : 25,
+      "line" : 30,
       "char" : 7,
       "deco" : "FZv",
-      "endline" : 29,
+      "endline" : 34,
       "endchar" : 2
      },
      {
-      "name" : "initializeFrameBuffer",
+      "name" : "initialize",
       "kind" : "function",
-      "line" : 30,
+      "line" : 36,
       "char" : 7,
       "deco" : "FkkZv",
       "parameters" : [
@@ -3232,13 +3439,32 @@
         "deco" : "k"
        }
       ],
-      "endline" : 59,
+      "endline" : 43,
+      "endchar" : 2
+     },
+     {
+      "name" : "initializeFrameBuffer",
+      "kind" : "function",
+      "line" : 44,
+      "char" : 7,
+      "deco" : "FkkZv",
+      "parameters" : [
+       {
+        "name" : "width",
+        "deco" : "k"
+       },
+       {
+        "name" : "height",
+        "deco" : "k"
+       }
+      ],
+      "endline" : 73,
       "endchar" : 2
      },
      {
       "name" : "resizeDefferedRenderBuffer",
       "kind" : "function",
-      "line" : 61,
+      "line" : 75,
       "char" : 13,
       "storageClass" : [
        "final"
@@ -3254,13 +3480,13 @@
         "deco" : "k"
        }
       ],
-      "endline" : 84,
+      "endline" : 98,
       "endchar" : 5
      },
      {
       "name" : "rScene",
       "kind" : "function",
-      "line" : 87,
+      "line" : 101,
       "char" : 7,
       "deco" : "FC4Glib5Scene5Scene5SceneC4Glib6System6Window6windowZv",
       "parameters" : [
@@ -3273,22 +3499,41 @@
         "deco" : "C4Glib6System6Window6window"
        }
       ],
-      "endline" : 244,
+      "endline" : 255,
+      "endchar" : 2
+     },
+     {
+      "name" : "rScene",
+      "kind" : "function",
+      "line" : 257,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene5Scene5SceneC3gtk6GLArea6GLAreaZv",
+      "parameters" : [
+       {
+        "name" : "scene",
+        "deco" : "C4Glib5Scene5Scene5Scene"
+       },
+       {
+        "name" : "area",
+        "deco" : "C3gtk6GLArea6GLArea"
+       }
+      ],
+      "endline" : 412,
       "endchar" : 2
      },
      {
       "name" : "TraverseDraw",
       "kind" : "function",
-      "line" : 247,
+      "line" : 415,
       "char" : 7,
-      "deco" : "FC4Glib5Scene7GObject7GObjectZv",
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectZv",
       "parameters" : [
        {
         "name" : "g",
-        "deco" : "C4Glib5Scene7GObject7GObject"
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
        }
       ],
-      "endline" : 263,
+      "endline" : 431,
       "endchar" : 2
      }
     ]
@@ -3296,18 +3541,736 @@
    {
     "name" : "IDrawable",
     "kind" : "interface",
-    "line" : 266,
+    "line" : 434,
     "char" : 1,
     "members" : [
      {
       "name" : "Draw",
       "kind" : "function",
-      "line" : 268,
+      "line" : 436,
       "char" : 7,
       "storageClass" : [
        "abstract"
       ],
       "deco" : "FZv"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Glib.Scene.RMObject",
+  "kind" : "module",
+  "file" : "..\\src\\Glib\\Scene\\RMObject.d",
+  "members" : [
+   {
+    "name" : "Glib.Scene.Transform",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Node",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.uuid",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.signals",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Editor.main",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.typecons",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "RMObject",
+    "kind" : "class",
+    "line" : 15,
+    "char" : 1,
+    "base" : "Glib.Scene.Node.Node",
+    "members" : [
+     {
+      "name" : "id",
+      "kind" : "variable",
+      "line" : 17,
+      "char" : 7,
+      "deco" : "S3std4uuid4UUID",
+      "offset" : 152
+     },
+     {
+      "name" : "name",
+      "kind" : "variable",
+      "line" : 19,
+      "char" : 9,
+      "deco" : "Aya",
+      "init" : "\"newObject\"",
+      "offset" : 168
+     },
+     {
+      "name" : "components",
+      "kind" : "variable",
+      "line" : 20,
+      "char" : 15,
+      "deco" : "AC4Glib5Scene8RMObject10IComponent",
+      "offset" : 176
+     },
+     {
+      "name" : "_trans",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 21,
+      "char" : 25,
+      "deco" : "C4Glib5Scene8RMObject14Transform_Test",
+      "originalType" : "Transform_Test",
+      "offset" : 184
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 23,
+      "char" : 2,
+      "deco" : "FZC4Glib5Scene8RMObject8RMObject",
+      "originalType" : "()",
+      "endline" : 35,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 36,
+      "char" : 2,
+      "deco" : "FC4Glib5Scene4Node4NodeZC4Glib5Scene8RMObject8RMObject",
+      "originalType" : "(Node parent)",
+      "parameters" : [
+       {
+        "name" : "parent",
+        "deco" : "C4Glib5Scene4Node4Node"
+       }
+      ],
+      "endline" : 48,
+      "endchar" : 2
+     },
+     {
+      "name" : "getTransform",
+      "kind" : "function",
+      "line" : 50,
+      "char" : 17,
+      "deco" : "FZC4Glib5Scene8RMObject14Transform_Test",
+      "endline" : 53,
+      "endchar" : 2
+     },
+     {
+      "name" : "AttachComponent",
+      "kind" : "function",
+      "line" : 55,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8RMObject10IComponentZv",
+      "parameters" : [
+       {
+        "name" : "comp",
+        "deco" : "C4Glib5Scene8RMObject10IComponent"
+       }
+      ],
+      "endline" : 59,
+      "endchar" : 2
+     },
+     {
+      "name" : "DetachComponent",
+      "kind" : "function",
+      "line" : 61,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8RMObject10IComponentZv",
+      "parameters" : [
+       {
+        "name" : "comp",
+        "deco" : "C4Glib5Scene8RMObject10IComponent"
+       }
+      ],
+      "endline" : 64,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "IComponent",
+    "kind" : "class",
+    "line" : 67,
+    "char" : 10,
+    "base" : "Glib.Scene.RMObject.EditorHelper",
+    "members" : [
+     {
+      "name" : "owner",
+      "kind" : "variable",
+      "line" : 69,
+      "char" : 11,
+      "deco" : "C4Glib5Scene8RMObject8RMObject",
+      "originalType" : "RMObject",
+      "offset" : 32
+     },
+     {
+      "name" : "getEditorField",
+      "kind" : "function",
+      "line" : 71,
+      "char" : 59,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FZAS3std8typecons65__T5TupleTAyaTPvTPvTE4Glib5Scene8RMObject12EditorHelper8dataTypeZ5Tuple",
+      "endline" : 75,
+      "endchar" : 2,
+      "overrides" : [
+       "Glib.Scene.RMObject.EditorHelper.getEditorField"
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "EditorHelper",
+    "kind" : "class",
+    "line" : 82,
+    "char" : 10,
+    "members" : [
+     {
+      "name" : "Signal!(string, string)",
+      "kind" : "mixin",
+      "line" : 84,
+      "char" : 2
+     },
+     {
+      "name" : "Signal!(Vector!(float, 3), string)",
+      "kind" : "mixin",
+      "line" : 85,
+      "char" : 2
+     },
+     {
+      "name" : "dataType",
+      "kind" : "enum",
+      "line" : 86,
+      "char" : 2,
+      "baseDeco" : "i",
+      "members" : [
+       {
+        "name" : "E_string",
+        "kind" : "enum member",
+        "value" : "0",
+        "line" : 88,
+        "char" : 3
+       },
+       {
+        "name" : "E_bool",
+        "kind" : "enum member",
+        "value" : "1",
+        "line" : 89,
+        "char" : 3
+       },
+       {
+        "name" : "E_vec3",
+        "kind" : "enum member",
+        "value" : "2",
+        "line" : 90,
+        "char" : 3
+       }
+      ]
+     },
+     {
+      "name" : "getEditorField",
+      "kind" : "function",
+      "line" : 93,
+      "char" : 50,
+      "deco" : "FZAS3std8typecons65__T5TupleTAyaTPvTPvTE4Glib5Scene8RMObject12EditorHelper8dataTypeZ5Tuple",
+      "endline" : 96,
+      "endchar" : 2
+     },
+     {
+      "name" : "~this",
+      "kind" : "destructor",
+      "file" : "C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\signals.d",
+      "line" : 248,
+      "char" : 5,
+      "deco" : "FZv",
+      "originalType" : "void()"
+     },
+     {
+      "name" : "__xdtor",
+      "kind" : "alias"
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "file" : "..\\src\\Glib\\Scene\\RMObject.d",
+    "line" : 99,
+    "char" : 7,
+    "name" : "EditorFields",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "getEditorField",
+      "kind" : "function",
+      "line" : 101,
+      "char" : 59,
+      "storageClass" : [
+       "override"
+      ],
+      "type" : "Tuple!(string, void*, void*, dataType)[]()",
+      "endline" : 141,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 144,
+    "char" : 7,
+    "name" : "PropertyField",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "name",
+      "kind" : "value",
+      "deco" : "Aya"
+     },
+     {
+      "name" : "editorfield",
+      "kind" : "value",
+      "deco" : "b",
+      "defaultValue" : "false"
+     }
+    ],
+    "members" : []
+   },
+   {
+    "name" : "Transform_Test",
+    "kind" : "class",
+    "line" : 175,
+    "char" : 1,
+    "base" : "Glib.Scene.RMObject.IComponent",
+    "members" : [
+     {
+      "name" : "PropertyField!(string, \"omgLawl\", true)",
+      "kind" : "mixin",
+      "line" : 209,
+      "char" : 2
+     },
+     {
+      "name" : "PropertyField!(string, \"blah\", true)",
+      "kind" : "mixin",
+      "line" : 210,
+      "char" : 2
+     },
+     {
+      "name" : "PropertyField!(Vector!(float, 3), \"testVector\", true)",
+      "kind" : "mixin",
+      "line" : 211,
+      "char" : 2
+     },
+     {
+      "name" : "EditorFields!(Transform_Test)",
+      "kind" : "mixin",
+      "line" : 254,
+      "char" : 2
+     },
+     {
+      "name" : "worldDirty",
+      "kind" : "variable",
+      "line" : 274,
+      "char" : 14,
+      "deco" : "b",
+      "offset" : 64
+     },
+     {
+      "name" : "localScale",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 276,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "init" : "Vector([1.00000F, 1.00000F, 1.00000F])",
+      "offset" : 68
+     },
+     {
+      "name" : "localPosition",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 277,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "vec3",
+      "init" : "Vector([0.000000F, 0.000000F, 0.000000F])",
+      "offset" : 80
+     },
+     {
+      "name" : "localRotation",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 278,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
+      "originalType" : "quat",
+      "init" : "Quaternion([1.00000F, 0.000000F, 0.000000F, 0.000000F])",
+      "offset" : 92
+     },
+     {
+      "name" : "matrix",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 284,
+      "char" : 7,
+      "deco" : "S4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
+      "originalType" : "mat4",
+      "init" : "Matrix([[1.00000F, 0.000000F, 0.000000F, 0.000000F], [0.000000F, 1.00000F, 0.000000F, 0.000000F], [0.000000F, 0.000000F, 1.00000F, 0.000000F], [0.000000F, 0.000000F, 0.000000F, 1.00000F]])",
+      "offset" : 108
+     },
+     {
+      "name" : "thisNode",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 286,
+      "char" : 7,
+      "deco" : "C4Glib5Scene4Node4Node",
+      "originalType" : "Node",
+      "offset" : 172
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "protection" : "private",
+      "line" : 288,
+      "char" : 2,
+      "deco" : "FC4Glib5Scene4Node4NodeZC4Glib5Scene8RMObject14Transform_Test",
+      "originalType" : "(Node owner)",
+      "parameters" : [
+       {
+        "name" : "owner",
+        "deco" : "C4Glib5Scene4Node4Node"
+       }
+      ],
+      "endline" : 292,
+      "endchar" : 2
+     },
+     {
+      "name" : "SetWorldDirty",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 296,
+      "char" : 7,
+      "deco" : "FZv",
+      "endline" : 303,
+      "endchar" : 2
+     },
+     {
+      "name" : "DegToRad",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 304,
+      "char" : 8,
+      "deco" : "FxfZf",
+      "originalType" : "float(const float degree)",
+      "parameters" : [
+       {
+        "name" : "degree",
+        "deco" : "xf"
+       }
+      ],
+      "endline" : 309,
+      "endchar" : 2
+     },
+     {
+      "name" : "RadToDeg",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 310,
+      "char" : 8,
+      "deco" : "xFxfZf",
+      "originalType" : "const float(const float radian)",
+      "parameters" : [
+       {
+        "name" : "radian",
+        "deco" : "xf"
+       }
+      ],
+      "endline" : 315,
+      "endchar" : 2
+     },
+     {
+      "name" : "CalcWorld",
+      "kind" : "function",
+      "line" : 316,
+      "char" : 14,
+      "deco" : "FZv",
+      "endline" : 346,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Rotation",
+      "kind" : "function",
+      "line" : 349,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "@property vec3()",
+      "endline" : 352,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Rotation",
+      "kind" : "function",
+      "line" : 353,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 rotation)",
+      "parameters" : [
+       {
+        "name" : "rotation",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 357,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Rotation_quat",
+      "kind" : "function",
+      "line" : 359,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
+      "originalType" : "@property quat()",
+      "endline" : 362,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Rotation",
+      "kind" : "function",
+      "line" : 364,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg18__T10QuaternionTfZ10QuaternionZv",
+      "originalType" : "@property void(quat rotation)",
+      "parameters" : [
+       {
+        "name" : "rotation",
+        "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion"
+       }
+      ],
+      "endline" : 368,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Position",
+      "kind" : "function",
+      "line" : 370,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "@property vec3()",
+      "endline" : 373,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Position",
+      "kind" : "function",
+      "line" : 374,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 position)",
+      "parameters" : [
+       {
+        "name" : "position",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 378,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Scale",
+      "kind" : "function",
+      "line" : 379,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "@property vec3()",
+      "endline" : 382,
+      "endchar" : 2
+     },
+     {
+      "name" : "local_Scale",
+      "kind" : "function",
+      "line" : 383,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 newScale)",
+      "parameters" : [
+       {
+        "name" : "newScale",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 387,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Rotation",
+      "kind" : "function",
+      "line" : 390,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "@property vec3()",
+      "endline" : 399,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Rotation",
+      "kind" : "function",
+      "line" : 400,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 rotation)",
+      "parameters" : [
+       {
+        "name" : "rotation",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 406,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Rotation_quat",
+      "kind" : "function",
+      "line" : 409,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg18__T10QuaternionTfZ10Quaternion",
+      "originalType" : "@property quat()",
+      "endline" : 415,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Rotation",
+      "kind" : "function",
+      "line" : 416,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg18__T10QuaternionTfZ10QuaternionZv",
+      "originalType" : "@property void(quat rotation)",
+      "parameters" : [
+       {
+        "name" : "rotation",
+        "deco" : "S4gl3n6linalg18__T10QuaternionTfZ10Quaternion"
+       }
+      ],
+      "endline" : 420,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Position",
+      "kind" : "function",
+      "line" : 422,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "@property vec3()",
+      "endline" : 427,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Position",
+      "kind" : "function",
+      "line" : 428,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 position)",
+      "parameters" : [
+       {
+        "name" : "position",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 433,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Scale",
+      "kind" : "function",
+      "line" : 435,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg17__T6VectorTfVii3Z6Vector",
+      "originalType" : "@property vec3()",
+      "endline" : 441,
+      "endchar" : 2
+     },
+     {
+      "name" : "world_Scale",
+      "kind" : "function",
+      "line" : 442,
+      "char" : 7,
+      "deco" : "FNdS4gl3n6linalg17__T6VectorTfVii3Z6VectorZv",
+      "originalType" : "@property void(vec3 scale)",
+      "parameters" : [
+       {
+        "name" : "scale",
+        "deco" : "S4gl3n6linalg17__T6VectorTfVii3Z6Vector"
+       }
+      ],
+      "endline" : 447,
+      "endchar" : 2
+     },
+     {
+      "name" : "worldTransformMatrix",
+      "kind" : "function",
+      "line" : 449,
+      "char" : 7,
+      "deco" : "FNdZS4gl3n6linalg21__T6MatrixTfVii4Vii4Z6Matrix",
+      "originalType" : "@property mat4()",
+      "endline" : 453,
+      "endchar" : 2
      }
     ]
    }
@@ -3333,7 +4296,7 @@
     "protection" : "private"
    },
    {
-    "name" : "Glib.Scene.GObject",
+    "name" : "Glib.Scene.RMObject",
     "kind" : "import",
     "line" : 5,
     "char" : 8,
@@ -3354,15 +4317,36 @@
     "protection" : "private"
    },
    {
+    "name" : "std.uuid",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.array",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
     "name" : "Scene",
     "kind" : "class",
-    "line" : 9,
+    "line" : 13,
     "char" : 1,
     "members" : [
      {
       "name" : "mainCamera",
       "kind" : "variable",
-      "line" : 11,
+      "line" : 15,
       "char" : 9,
       "deco" : "C4Glib5Scene6Camera6Camera",
       "originalType" : "Camera",
@@ -3371,7 +4355,7 @@
      {
       "name" : "cameras",
       "kind" : "variable",
-      "line" : 12,
+      "line" : 16,
       "char" : 11,
       "deco" : "AC4Glib5Scene6Camera6Camera",
       "offset" : 12
@@ -3379,29 +4363,82 @@
      {
       "name" : "root",
       "kind" : "variable",
-      "line" : 14,
-      "char" : 10,
-      "deco" : "C4Glib5Scene7GObject7GObject",
-      "originalType" : "GObject",
+      "line" : 18,
+      "char" : 11,
+      "deco" : "C4Glib5Scene8RMObject8RMObject",
+      "originalType" : "RMObject",
       "offset" : 20
      },
      {
       "name" : "this",
       "kind" : "constructor",
-      "line" : 16,
+      "line" : 20,
       "char" : 2,
       "deco" : "FZC4Glib5Scene5Scene5Scene",
       "originalType" : "()",
-      "endline" : 27,
+      "endline" : 33,
       "endchar" : 2
      },
      {
       "name" : "Update",
       "kind" : "function",
-      "line" : 29,
+      "line" : 35,
       "char" : 7,
       "deco" : "FZv",
-      "endline" : 32,
+      "endline" : 38,
+      "endchar" : 2
+     },
+     {
+      "name" : "prepend",
+      "kind" : "function",
+      "line" : 40,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectC4Glib5Scene8RMObject8RMObjectZv",
+      "parameters" : [
+       {
+        "name" : "newObj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       },
+       {
+        "name" : "destObj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       }
+      ],
+      "endline" : 50,
+      "endchar" : 2
+     },
+     {
+      "name" : "findObjByID",
+      "kind" : "function",
+      "line" : 52,
+      "char" : 11,
+      "deco" : "FS3std4uuid4UUIDZC4Glib5Scene8RMObject8RMObject",
+      "parameters" : [
+       {
+        "name" : "id",
+        "deco" : "S3std4uuid4UUID"
+       }
+      ],
+      "endline" : 55,
+      "endchar" : 2
+     },
+     {
+      "name" : "traverseScene",
+      "kind" : "function",
+      "line" : 57,
+      "char" : 11,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectS3std4uuid4UUIDZC4Glib5Scene8RMObject8RMObject",
+      "parameters" : [
+       {
+        "name" : "g",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       },
+       {
+        "name" : "id",
+        "deco" : "S3std4uuid4UUID"
+       }
+      ],
+      "endline" : 69,
       "endchar" : 2
      }
     ]
@@ -3577,6 +4614,10 @@
       ],
       "endline" : 148,
       "endchar" : 2
+     },
+     {
+      "name" : "__xdtor",
+      "kind" : "alias"
      }
     ]
    },
@@ -3729,65 +4770,1383 @@
     "protection" : "private"
    },
    {
-    "name" : "Input",
-    "kind" : "class",
+    "name" : "std.traits",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
     "line" : 8,
-    "char" : 10,
-    "members" : [
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.uuid",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.typecons",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.Log",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "buttonEvent",
+    "kind" : "alias",
+    "line" : 13,
+    "char" : 1,
+    "deco" : "DFS4Glib6System5Input6ButtonZv"
+   },
+   {
+    "name" : "axisEvent",
+    "kind" : "alias",
+    "line" : 14,
+    "char" : 1,
+    "deco" : "DFS4Glib6System5Input4AxisZv"
+   },
+   {
+    "kind" : "template",
+    "line" : 16,
+    "char" : 7,
+    "name" : "KeyList",
+    "parameters" : [
      {
-      "name" : "mouse",
-      "kind" : "variable",
-      "line" : 10,
-      "char" : 15,
-      "storageClass" : [
-       "static"
-      ],
-      "deco" : "S4Glib6System5Input5Mouse"
+      "name" : "T",
+      "kind" : "type"
      },
      {
-      "name" : "pollInput",
+      "name" : "name",
+      "kind" : "value",
+      "deco" : "Aya"
+     },
+     {
+      "name" : "KeyCode",
+      "kind" : "type"
+     }
+    ],
+    "members" : []
+   },
+   {
+    "kind" : "template",
+    "line" : 22,
+    "char" : 1,
+    "name" : "KeyListFiller",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "KeyCode",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "FillKeyListMixinHelper",
       "kind" : "function",
-      "line" : 12,
-      "char" : 14,
-      "storageClass" : [
-       "static"
-      ],
-      "deco" : "FZv",
-      "endline" : 51,
+      "line" : 24,
+      "char" : 9,
+      "type" : "string()",
+      "endline" : 35,
       "endchar" : 2
      }
     ]
    },
    {
-    "name" : "Mouse",
+    "kind" : "template",
+    "line" : 38,
+    "char" : 1,
+    "name" : "Peripheral",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "InputEnum",
+      "kind" : "type"
+     }
+    ],
+    "constraint" : "__traits(compiles, T(10))",
+    "members" : [
+     {
+      "name" : "Peripheral",
+      "kind" : "struct",
+      "line" : 38,
+      "char" : 1,
+      "members" : [
+       {
+        "name" : "KeyList!(T, \"keys\", InputEnum)",
+        "kind" : "mixin",
+        "line" : 42,
+        "char" : 2
+       },
+       {
+        "name" : "opIndex",
+        "kind" : "function",
+        "line" : 44,
+        "char" : 8,
+        "type" : "ref T(uint keyCode)",
+        "parameters" : [
+         {
+          "name" : "keyCode",
+          "deco" : "k"
+         }
+        ],
+        "endline" : 47,
+        "endchar" : 5
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "Input",
+    "kind" : "class",
+    "line" : 60,
+    "char" : 10,
+    "members" : [
+     {
+      "name" : "keyboard",
+      "kind" : "variable",
+      "line" : 64,
+      "char" : 7,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "S4Glib6System5Input81__T10PeripheralTS4Glib6System5Input6ButtonTE4Glib6System5Input16KeyBoardKeyCodesZ10Peripheral",
+      "init" : "Peripheral([Button(1073741979u, false, false, null), Button(8u, false, false, null), Button(9u, false, false, null), Button(1073741980u, false, false, null), Button(13u, false, false, null), Button(1073741896u, false, false, null), Button(1073741881u, false, false, null), Button(27u, false, false, null), Button(32u, false, false, null), Button(1073741899u, false, false, null), Button(1073741902u, false, false, null), Button(1073741901u, false, false, null), Button(1073741898u, false, false, null), Button(1073741904u, false, false, null), Button(1073741906u, false, false, null), Button(1073741903u, false, false, null), Button(1073741905u, false, false, null), Button(1073741943u, false, false, null), Button(1073741894u, false, false, null), Button(1073741894u, false, false, null), Button(1073741940u, false, false, null), Button(1073741897u, false, false, null), Button(127u, false, false, null), Button(1073741941u, false, false, null), Button(48u, false, false, null), Button(49u, false, false, null), Button(50u, false, false, null), Button(51u, false, false, null), Button(52u, false, false, null), Button(53u, false, false, null), Button(54u, false, false, null), Button(55u, false, false, null), Button(56u, false, false, null), Button(57u, false, false, null), Button(97u, false, false, null), Button(98u, false, false, null), Button(99u, false, false, null), Button(100u, false, false, null), Button(101u, false, false, null), Button(102u, false, false, null), Button(103u, false, false, null), Button(104u, false, false, null), Button(105u, false, false, null), Button(106u, false, false, null), Button(107u, false, false, null), Button(108u, false, false, null), Button(109u, false, false, null), Button(110u, false, false, null), Button(111u, false, false, null), Button(112u, false, false, null), Button(113u, false, false, null), Button(114u, false, false, null), Button(115u, false, false, null), Button(116u, false, false, null), Button(117u, false, false, null), Button(118u, false, false, null), Button(119u, false, false, null), Button(120u, false, false, null), Button(121u, false, false, null), Button(122u, false, false, null), Button(1073742051u, false, false, null), Button(1073742055u, false, false, null), Button(1073741925u, false, false, null), Button(1073742106u, false, false, null), Button(1073741922u, false, false, null), Button(1073741913u, false, false, null), Button(1073741914u, false, false, null), Button(1073741915u, false, false, null), Button(1073741916u, false, false, null), Button(1073741917u, false, false, null), Button(1073741918u, false, false, null), Button(1073741919u, false, false, null), Button(1073741920u, false, false, null), Button(1073741921u, false, false, null), Button(1073741882u, false, false, null), Button(1073741883u, false, false, null), Button(1073741884u, false, false, null), Button(1073741885u, false, false, null), Button(1073741886u, false, false, null), Button(1073741887u, false, false, null), Button(1073741888u, false, false, null), Button(1073741889u, false, false, null), Button(1073741890u, false, false, null), Button(1073741891u, false, false, null), Button(1073741892u, false, false, null), Button(1073741893u, false, false, null), Button(1073741928u, false, false, null), Button(1073741929u, false, false, null), Button(1073741930u, false, false, null), Button(1073741931u, false, false, null), Button(1073741932u, false, false, null), Button(1073741933u, false, false, null), Button(1073741934u, false, false, null), Button(1073741935u, false, false, null), Button(1073741936u, false, false, null), Button(1073741937u, false, false, null), Button(1073741938u, false, false, null), Button(1073741939u, false, false, null), Button(1073741907u, false, false, null), Button(1073741895u, false, false, null), Button(1073742049u, false, false, null), Button(1073742049u, false, false, null), Button(1073742048u, false, false, null), Button(1073742052u, false, false, null), Button(1073742050u, false, false, null), Button(1073742054u, false, false, null)])"
+     },
+     {
+      "name" : "mouseBtns",
+      "kind" : "variable",
+      "line" : 65,
+      "char" : 7,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "S4Glib6System5Input81__T10PeripheralTS4Glib6System5Input6ButtonTE4Glib6System5Input16MouseButtonCodesZ10Peripheral",
+      "init" : "Peripheral([Button(1u, false, false, null), Button(2u, false, false, null), Button(3u, false, false, null), Button(4u, false, false, null), Button(5u, false, false, null)])"
+     },
+     {
+      "name" : "mouseAxis",
+      "kind" : "variable",
+      "line" : 66,
+      "char" : 7,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "S4Glib6System5Input77__T10PeripheralTS4Glib6System5Input4AxisTE4Glib6System5Input14MouseAxisCodesZ10Peripheral",
+      "init" : "Peripheral([Axis(0u, 0.000000F, 0.000000F, null), Axis(1u, 0.000000F, 0.000000F, null), Axis(2u, 0.000000F, 0.000000F, null)])"
+     },
+     {
+      "name" : "pollInput",
+      "kind" : "function",
+      "line" : 68,
+      "char" : 7,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FZv",
+      "endline" : 115,
+      "endchar" : 2
+     },
+     {
+      "name" : "GetKeyDown",
+      "kind" : "function",
+      "line" : 116,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FkZb",
+      "parameters" : [
+       {
+        "name" : "key",
+        "deco" : "k"
+       }
+      ],
+      "endline" : 119,
+      "endchar" : 2
+     },
+     {
+      "name" : "addButtonEvent",
+      "kind" : "function",
+      "line" : 121,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FkDFS4Glib6System5Input6ButtonZvE4Glib6System5Input9EventTypeZv",
+      "originalType" : "void(uint key, buttonEvent event, EventType type)",
+      "parameters" : [
+       {
+        "name" : "key",
+        "deco" : "k"
+       },
+       {
+        "name" : "event",
+        "deco" : "DFS4Glib6System5Input6ButtonZv"
+       },
+       {
+        "name" : "type",
+        "deco" : "E4Glib6System5Input9EventType"
+       }
+      ],
+      "endline" : 125,
+      "endchar" : 2
+     },
+     {
+      "name" : "GetMousePos",
+      "kind" : "function",
+      "line" : 127,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FZS4gl3n6linalg17__T6VectorTfVii2Z6Vector",
+      "originalType" : "vec2()",
+      "endline" : 130,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "Axis",
     "kind" : "struct",
-    "line" : 55,
+    "line" : 133,
     "char" : 1,
     "members" : [
      {
-      "name" : "Position",
+      "name" : "key",
       "kind" : "variable",
-      "line" : 57,
+      "line" : 135,
       "char" : 7,
-      "deco" : "S4gl3n6linalg17__T6VectorTfVii2Z6Vector",
-      "originalType" : "vec2",
+      "deco" : "k",
       "offset" : 0
      },
      {
-      "name" : "leftButton",
+      "name" : "_state",
       "kind" : "variable",
-      "line" : 58,
-      "char" : 7,
-      "deco" : "b",
+      "line" : 136,
+      "char" : 8,
+      "deco" : "f",
+      "init" : "0.000000F",
+      "offset" : 4
+     },
+     {
+      "name" : "_prevState",
+      "kind" : "variable",
+      "line" : 137,
+      "char" : 8,
+      "deco" : "f",
+      "init" : "0.000000F",
       "offset" : 8
      },
      {
-      "name" : "rightButton",
+      "name" : "registeredEvent",
+      "kind" : "alias",
+      "line" : 139,
+      "char" : 2,
+      "deco" : "S3std8typecons55__T5TupleTS3std4uuid4UUIDTDFS4Glib6System5Input4AxisZvZ5Tuple"
+     },
+     {
+      "name" : "axisEvents",
       "kind" : "variable",
-      "line" : 59,
+      "line" : 140,
+      "char" : 20,
+      "deco" : "AS3std8typecons55__T5TupleTS3std4uuid4UUIDTDFS4Glib6System5Input4AxisZvZ5Tuple",
+      "originalType" : "registeredEvent[]",
+      "offset" : 12
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 142,
+      "char" : 2,
+      "deco" : "FNckZS4Glib6System5Input4Axis",
+      "originalType" : "ref (uint inkey)",
+      "parameters" : [
+       {
+        "name" : "inkey",
+        "deco" : "k"
+       }
+      ],
+      "endline" : 145,
+      "endchar" : 2
+     },
+     {
+      "kind" : "template",
+      "line" : 149,
+      "char" : 10,
+      "name" : "opEquals",
+      "parameters" : [],
+      "members" : [
+       {
+        "name" : "opEquals",
+        "kind" : "function",
+        "line" : 149,
+        "char" : 10,
+        "type" : "const bool(auto ref const uint k)",
+        "parameters" : [
+         {
+          "name" : "k",
+          "deco" : "k",
+          "storageClass" : [
+           "auto",
+           "const",
+           "ref"
+          ]
+         }
+        ],
+        "endline" : 155,
+        "endchar" : 2
+       }
+      ]
+     },
+     {
+      "name" : "getState",
+      "kind" : "function",
+      "line" : 157,
+      "char" : 8,
+      "deco" : "FZf",
+      "endline" : 160,
+      "endchar" : 2
+     },
+     {
+      "name" : "setState",
+      "kind" : "function",
+      "line" : 162,
       "char" : 7,
+      "deco" : "FfZv",
+      "parameters" : [
+       {
+        "name" : "newState",
+        "deco" : "f"
+       }
+      ],
+      "endline" : 173,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "Button",
+    "kind" : "struct",
+    "line" : 176,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "State",
+      "kind" : "alias",
+      "line" : 178,
+      "char" : 2,
+      "deco" : "b"
+     },
+     {
+      "name" : "key",
+      "kind" : "variable",
+      "line" : 179,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 0
+     },
+     {
+      "name" : "_state",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 180,
+      "char" : 16,
       "deco" : "b",
-      "offset" : 9
+      "originalType" : "State",
+      "init" : "false",
+      "offset" : 4
+     },
+     {
+      "name" : "_prevState",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 181,
+      "char" : 16,
+      "deco" : "b",
+      "originalType" : "State",
+      "init" : "false",
+      "offset" : 5
+     },
+     {
+      "name" : "registeredEvent",
+      "kind" : "alias",
+      "line" : 183,
+      "char" : 2,
+      "deco" : "S3std8typecons87__T5TupleTS3std4uuid4UUIDTDFS4Glib6System5Input6ButtonZvTE4Glib6System5Input9EventTypeZ5Tuple"
+     },
+     {
+      "name" : "buttonEvents",
+      "kind" : "variable",
+      "line" : 184,
+      "char" : 20,
+      "deco" : "AS3std8typecons87__T5TupleTS3std4uuid4UUIDTDFS4Glib6System5Input6ButtonZvTE4Glib6System5Input9EventTypeZ5Tuple",
+      "originalType" : "registeredEvent[]",
+      "offset" : 8
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 186,
+      "char" : 11,
+      "storageClass" : [
+       "@disable"
+      ],
+      "deco" : "FNcZS4Glib6System5Input6Button",
+      "originalType" : "ref ()"
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 188,
+      "char" : 2,
+      "deco" : "FNckZS4Glib6System5Input6Button",
+      "originalType" : "ref (uint inkey)",
+      "parameters" : [
+       {
+        "name" : "inkey",
+        "deco" : "k"
+       }
+      ],
+      "endline" : 191,
+      "endchar" : 2
+     },
+     {
+      "kind" : "template",
+      "line" : 195,
+      "char" : 10,
+      "name" : "opEquals",
+      "parameters" : [],
+      "members" : [
+       {
+        "name" : "opEquals",
+        "kind" : "function",
+        "line" : 195,
+        "char" : 10,
+        "type" : "const bool(auto ref const uint k)",
+        "parameters" : [
+         {
+          "name" : "k",
+          "deco" : "k",
+          "storageClass" : [
+           "auto",
+           "const",
+           "ref"
+          ]
+         }
+        ],
+        "endline" : 201,
+        "endchar" : 2
+       }
+      ]
+     },
+     {
+      "name" : "getState",
+      "kind" : "function",
+      "line" : 203,
+      "char" : 8,
+      "deco" : "FZb",
+      "originalType" : "State()",
+      "endline" : 206,
+      "endchar" : 2
+     },
+     {
+      "name" : "setState",
+      "kind" : "function",
+      "line" : 208,
+      "char" : 7,
+      "deco" : "FbZv",
+      "originalType" : "void(State newState)",
+      "parameters" : [
+       {
+        "name" : "newState",
+        "deco" : "b"
+       }
+      ],
+      "endline" : 250,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "EventType",
+    "kind" : "enum",
+    "line" : 253,
+    "char" : 1,
+    "baseDeco" : "i",
+    "members" : [
+     {
+      "name" : "OnButtonDown",
+      "kind" : "enum member",
+      "value" : "0",
+      "line" : 255,
+      "char" : 2
+     },
+     {
+      "name" : "ButtonDown",
+      "kind" : "enum member",
+      "value" : "1",
+      "line" : 256,
+      "char" : 2
+     },
+     {
+      "name" : "OnButtonUp",
+      "kind" : "enum member",
+      "value" : "2",
+      "line" : 257,
+      "char" : 2
+     },
+     {
+      "name" : "ButtonUp",
+      "kind" : "enum member",
+      "value" : "3",
+      "line" : 258,
+      "char" : 2
+     }
+    ]
+   },
+   {
+    "name" : "MouseAxisCodes",
+    "kind" : "enum",
+    "line" : 261,
+    "char" : 1,
+    "baseDeco" : "k",
+    "members" : [
+     {
+      "name" : "X",
+      "kind" : "enum member",
+      "value" : "0u",
+      "line" : 263,
+      "char" : 2
+     },
+     {
+      "name" : "Y",
+      "kind" : "enum member",
+      "value" : "1u",
+      "line" : 264,
+      "char" : 2
+     },
+     {
+      "name" : "Scroll",
+      "kind" : "enum member",
+      "value" : "2u",
+      "line" : 265,
+      "char" : 2
+     }
+    ]
+   },
+   {
+    "name" : "MouseButtonCodes",
+    "kind" : "enum",
+    "line" : 267,
+    "char" : 1,
+    "baseDeco" : "k",
+    "members" : [
+     {
+      "name" : "Left",
+      "kind" : "enum member",
+      "value" : "1u",
+      "line" : 269,
+      "char" : 2
+     },
+     {
+      "name" : "Middle",
+      "kind" : "enum member",
+      "value" : "2u",
+      "line" : 270,
+      "char" : 5
+     },
+     {
+      "name" : "Right",
+      "kind" : "enum member",
+      "value" : "3u",
+      "line" : 271,
+      "char" : 5
+     },
+     {
+      "name" : "SecondaryOne",
+      "kind" : "enum member",
+      "value" : "4u",
+      "line" : 272,
+      "char" : 5
+     },
+     {
+      "name" : "SecondaryTwo",
+      "kind" : "enum member",
+      "value" : "5u",
+      "line" : 273,
+      "char" : 5
+     }
+    ]
+   },
+   {
+    "name" : "KeyBoardKeyCodes",
+    "kind" : "enum",
+    "line" : 275,
+    "char" : 1,
+    "baseDeco" : "k",
+    "members" : [
+     {
+      "name" : "Cancel",
+      "kind" : "enum member",
+      "value" : "1073741979u",
+      "line" : 277,
+      "char" : 2
+     },
+     {
+      "name" : "Backspace",
+      "kind" : "enum member",
+      "value" : "8u",
+      "line" : 278,
+      "char" : 2
+     },
+     {
+      "name" : "Tab",
+      "kind" : "enum member",
+      "value" : "9u",
+      "line" : 279,
+      "char" : 2
+     },
+     {
+      "name" : "Clear",
+      "kind" : "enum member",
+      "value" : "1073741980u",
+      "line" : 280,
+      "char" : 2
+     },
+     {
+      "name" : "Return",
+      "kind" : "enum member",
+      "value" : "13u",
+      "line" : 281,
+      "char" : 2
+     },
+     {
+      "name" : "Pause",
+      "kind" : "enum member",
+      "value" : "1073741896u",
+      "line" : 282,
+      "char" : 2
+     },
+     {
+      "name" : "CapsLock",
+      "kind" : "enum member",
+      "value" : "1073741881u",
+      "line" : 283,
+      "char" : 2
+     },
+     {
+      "name" : "Escape",
+      "kind" : "enum member",
+      "value" : "27u",
+      "line" : 284,
+      "char" : 2
+     },
+     {
+      "name" : "Space",
+      "kind" : "enum member",
+      "value" : "32u",
+      "line" : 285,
+      "char" : 2
+     },
+     {
+      "name" : "PageUp",
+      "kind" : "enum member",
+      "value" : "1073741899u",
+      "line" : 286,
+      "char" : 2
+     },
+     {
+      "name" : "PageDown",
+      "kind" : "enum member",
+      "value" : "1073741902u",
+      "line" : 287,
+      "char" : 2
+     },
+     {
+      "name" : "End",
+      "kind" : "enum member",
+      "value" : "1073741901u",
+      "line" : 288,
+      "char" : 2
+     },
+     {
+      "name" : "Home",
+      "kind" : "enum member",
+      "value" : "1073741898u",
+      "line" : 289,
+      "char" : 2
+     },
+     {
+      "name" : "Left",
+      "kind" : "enum member",
+      "value" : "1073741904u",
+      "line" : 290,
+      "char" : 2
+     },
+     {
+      "name" : "Up",
+      "kind" : "enum member",
+      "value" : "1073741906u",
+      "line" : 291,
+      "char" : 2
+     },
+     {
+      "name" : "Right",
+      "kind" : "enum member",
+      "value" : "1073741903u",
+      "line" : 292,
+      "char" : 2
+     },
+     {
+      "name" : "Down",
+      "kind" : "enum member",
+      "value" : "1073741905u",
+      "line" : 293,
+      "char" : 2
+     },
+     {
+      "name" : "Select",
+      "kind" : "enum member",
+      "value" : "1073741943u",
+      "line" : 294,
+      "char" : 2
+     },
+     {
+      "name" : "Print",
+      "kind" : "enum member",
+      "value" : "1073741894u",
+      "line" : 295,
+      "char" : 2
+     },
+     {
+      "name" : "PrintScreen",
+      "kind" : "enum member",
+      "value" : "1073741894u",
+      "line" : 296,
+      "char" : 2
+     },
+     {
+      "name" : "Execute",
+      "kind" : "enum member",
+      "value" : "1073741940u",
+      "line" : 297,
+      "char" : 2
+     },
+     {
+      "name" : "Insert",
+      "kind" : "enum member",
+      "value" : "1073741897u",
+      "line" : 298,
+      "char" : 2
+     },
+     {
+      "name" : "Delete",
+      "kind" : "enum member",
+      "value" : "127u",
+      "line" : 299,
+      "char" : 2
+     },
+     {
+      "name" : "Help",
+      "kind" : "enum member",
+      "value" : "1073741941u",
+      "line" : 300,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard0",
+      "kind" : "enum member",
+      "value" : "48u",
+      "line" : 301,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard1",
+      "kind" : "enum member",
+      "value" : "49u",
+      "line" : 302,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard2",
+      "kind" : "enum member",
+      "value" : "50u",
+      "line" : 303,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard3",
+      "kind" : "enum member",
+      "value" : "51u",
+      "line" : 304,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard4",
+      "kind" : "enum member",
+      "value" : "52u",
+      "line" : 305,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard5",
+      "kind" : "enum member",
+      "value" : "53u",
+      "line" : 306,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard6",
+      "kind" : "enum member",
+      "value" : "54u",
+      "line" : 307,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard7",
+      "kind" : "enum member",
+      "value" : "55u",
+      "line" : 308,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard8",
+      "kind" : "enum member",
+      "value" : "56u",
+      "line" : 309,
+      "char" : 2
+     },
+     {
+      "name" : "Keyboard9",
+      "kind" : "enum member",
+      "value" : "57u",
+      "line" : 310,
+      "char" : 2
+     },
+     {
+      "name" : "A",
+      "kind" : "enum member",
+      "value" : "97u",
+      "line" : 311,
+      "char" : 2
+     },
+     {
+      "name" : "B",
+      "kind" : "enum member",
+      "value" : "98u",
+      "line" : 312,
+      "char" : 2
+     },
+     {
+      "name" : "C",
+      "kind" : "enum member",
+      "value" : "99u",
+      "line" : 313,
+      "char" : 2
+     },
+     {
+      "name" : "D",
+      "kind" : "enum member",
+      "value" : "100u",
+      "line" : 314,
+      "char" : 2
+     },
+     {
+      "name" : "E",
+      "kind" : "enum member",
+      "value" : "101u",
+      "line" : 315,
+      "char" : 2
+     },
+     {
+      "name" : "F",
+      "kind" : "enum member",
+      "value" : "102u",
+      "line" : 316,
+      "char" : 2
+     },
+     {
+      "name" : "G",
+      "kind" : "enum member",
+      "value" : "103u",
+      "line" : 317,
+      "char" : 2
+     },
+     {
+      "name" : "H",
+      "kind" : "enum member",
+      "value" : "104u",
+      "line" : 318,
+      "char" : 2
+     },
+     {
+      "name" : "I",
+      "kind" : "enum member",
+      "value" : "105u",
+      "line" : 319,
+      "char" : 2
+     },
+     {
+      "name" : "J",
+      "kind" : "enum member",
+      "value" : "106u",
+      "line" : 320,
+      "char" : 2
+     },
+     {
+      "name" : "K",
+      "kind" : "enum member",
+      "value" : "107u",
+      "line" : 321,
+      "char" : 2
+     },
+     {
+      "name" : "L",
+      "kind" : "enum member",
+      "value" : "108u",
+      "line" : 322,
+      "char" : 2
+     },
+     {
+      "name" : "M",
+      "kind" : "enum member",
+      "value" : "109u",
+      "line" : 323,
+      "char" : 2
+     },
+     {
+      "name" : "N",
+      "kind" : "enum member",
+      "value" : "110u",
+      "line" : 324,
+      "char" : 2
+     },
+     {
+      "name" : "O",
+      "kind" : "enum member",
+      "value" : "111u",
+      "line" : 325,
+      "char" : 2
+     },
+     {
+      "name" : "P",
+      "kind" : "enum member",
+      "value" : "112u",
+      "line" : 326,
+      "char" : 2
+     },
+     {
+      "name" : "Q",
+      "kind" : "enum member",
+      "value" : "113u",
+      "line" : 327,
+      "char" : 2
+     },
+     {
+      "name" : "R",
+      "kind" : "enum member",
+      "value" : "114u",
+      "line" : 328,
+      "char" : 2
+     },
+     {
+      "name" : "S",
+      "kind" : "enum member",
+      "value" : "115u",
+      "line" : 329,
+      "char" : 2
+     },
+     {
+      "name" : "T",
+      "kind" : "enum member",
+      "value" : "116u",
+      "line" : 330,
+      "char" : 2
+     },
+     {
+      "name" : "U",
+      "kind" : "enum member",
+      "value" : "117u",
+      "line" : 331,
+      "char" : 2
+     },
+     {
+      "name" : "V",
+      "kind" : "enum member",
+      "value" : "118u",
+      "line" : 332,
+      "char" : 2
+     },
+     {
+      "name" : "W",
+      "kind" : "enum member",
+      "value" : "119u",
+      "line" : 333,
+      "char" : 2
+     },
+     {
+      "name" : "X",
+      "kind" : "enum member",
+      "value" : "120u",
+      "line" : 334,
+      "char" : 2
+     },
+     {
+      "name" : "Y",
+      "kind" : "enum member",
+      "value" : "121u",
+      "line" : 335,
+      "char" : 2
+     },
+     {
+      "name" : "Z",
+      "kind" : "enum member",
+      "value" : "122u",
+      "line" : 336,
+      "char" : 2
+     },
+     {
+      "name" : "GuiLeft",
+      "kind" : "enum member",
+      "value" : "1073742051u",
+      "line" : 337,
+      "char" : 2
+     },
+     {
+      "name" : "GuiRight",
+      "kind" : "enum member",
+      "value" : "1073742055u",
+      "line" : 338,
+      "char" : 2
+     },
+     {
+      "name" : "Apps",
+      "kind" : "enum member",
+      "value" : "1073741925u",
+      "line" : 339,
+      "char" : 2
+     },
+     {
+      "name" : "Sleep",
+      "kind" : "enum member",
+      "value" : "1073742106u",
+      "line" : 340,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad0",
+      "kind" : "enum member",
+      "value" : "1073741922u",
+      "line" : 341,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad1",
+      "kind" : "enum member",
+      "value" : "1073741913u",
+      "line" : 342,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad2",
+      "kind" : "enum member",
+      "value" : "1073741914u",
+      "line" : 343,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad3",
+      "kind" : "enum member",
+      "value" : "1073741915u",
+      "line" : 344,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad4",
+      "kind" : "enum member",
+      "value" : "1073741916u",
+      "line" : 345,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad5",
+      "kind" : "enum member",
+      "value" : "1073741917u",
+      "line" : 346,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad6",
+      "kind" : "enum member",
+      "value" : "1073741918u",
+      "line" : 347,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad7",
+      "kind" : "enum member",
+      "value" : "1073741919u",
+      "line" : 348,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad8",
+      "kind" : "enum member",
+      "value" : "1073741920u",
+      "line" : 349,
+      "char" : 2
+     },
+     {
+      "name" : "Numpad9",
+      "kind" : "enum member",
+      "value" : "1073741921u",
+      "line" : 350,
+      "char" : 2
+     },
+     {
+      "name" : "F1",
+      "kind" : "enum member",
+      "value" : "1073741882u",
+      "line" : 351,
+      "char" : 2
+     },
+     {
+      "name" : "F2",
+      "kind" : "enum member",
+      "value" : "1073741883u",
+      "line" : 352,
+      "char" : 2
+     },
+     {
+      "name" : "F3",
+      "kind" : "enum member",
+      "value" : "1073741884u",
+      "line" : 353,
+      "char" : 2
+     },
+     {
+      "name" : "F4",
+      "kind" : "enum member",
+      "value" : "1073741885u",
+      "line" : 354,
+      "char" : 2
+     },
+     {
+      "name" : "F5",
+      "kind" : "enum member",
+      "value" : "1073741886u",
+      "line" : 355,
+      "char" : 2
+     },
+     {
+      "name" : "F6",
+      "kind" : "enum member",
+      "value" : "1073741887u",
+      "line" : 356,
+      "char" : 2
+     },
+     {
+      "name" : "F7",
+      "kind" : "enum member",
+      "value" : "1073741888u",
+      "line" : 357,
+      "char" : 2
+     },
+     {
+      "name" : "F8",
+      "kind" : "enum member",
+      "value" : "1073741889u",
+      "line" : 358,
+      "char" : 2
+     },
+     {
+      "name" : "F9",
+      "kind" : "enum member",
+      "value" : "1073741890u",
+      "line" : 359,
+      "char" : 2
+     },
+     {
+      "name" : "F10",
+      "kind" : "enum member",
+      "value" : "1073741891u",
+      "line" : 360,
+      "char" : 2
+     },
+     {
+      "name" : "F11",
+      "kind" : "enum member",
+      "value" : "1073741892u",
+      "line" : 361,
+      "char" : 2
+     },
+     {
+      "name" : "F12",
+      "kind" : "enum member",
+      "value" : "1073741893u",
+      "line" : 362,
+      "char" : 2
+     },
+     {
+      "name" : "F13",
+      "kind" : "enum member",
+      "value" : "1073741928u",
+      "line" : 363,
+      "char" : 2
+     },
+     {
+      "name" : "F14",
+      "kind" : "enum member",
+      "value" : "1073741929u",
+      "line" : 364,
+      "char" : 2
+     },
+     {
+      "name" : "F15",
+      "kind" : "enum member",
+      "value" : "1073741930u",
+      "line" : 365,
+      "char" : 2
+     },
+     {
+      "name" : "F16",
+      "kind" : "enum member",
+      "value" : "1073741931u",
+      "line" : 366,
+      "char" : 2
+     },
+     {
+      "name" : "F17",
+      "kind" : "enum member",
+      "value" : "1073741932u",
+      "line" : 367,
+      "char" : 2
+     },
+     {
+      "name" : "F18",
+      "kind" : "enum member",
+      "value" : "1073741933u",
+      "line" : 368,
+      "char" : 2
+     },
+     {
+      "name" : "F19",
+      "kind" : "enum member",
+      "value" : "1073741934u",
+      "line" : 369,
+      "char" : 2
+     },
+     {
+      "name" : "F20",
+      "kind" : "enum member",
+      "value" : "1073741935u",
+      "line" : 370,
+      "char" : 2
+     },
+     {
+      "name" : "F21",
+      "kind" : "enum member",
+      "value" : "1073741936u",
+      "line" : 371,
+      "char" : 2
+     },
+     {
+      "name" : "F22",
+      "kind" : "enum member",
+      "value" : "1073741937u",
+      "line" : 372,
+      "char" : 2
+     },
+     {
+      "name" : "F23",
+      "kind" : "enum member",
+      "value" : "1073741938u",
+      "line" : 373,
+      "char" : 2
+     },
+     {
+      "name" : "F24",
+      "kind" : "enum member",
+      "value" : "1073741939u",
+      "line" : 374,
+      "char" : 2
+     },
+     {
+      "name" : "NumLock",
+      "kind" : "enum member",
+      "value" : "1073741907u",
+      "line" : 375,
+      "char" : 2
+     },
+     {
+      "name" : "ScrollLock",
+      "kind" : "enum member",
+      "value" : "1073741895u",
+      "line" : 376,
+      "char" : 2
+     },
+     {
+      "name" : "ShiftLeft",
+      "kind" : "enum member",
+      "value" : "1073742049u",
+      "line" : 377,
+      "char" : 2
+     },
+     {
+      "name" : "ShiftRight",
+      "kind" : "enum member",
+      "value" : "1073742049u",
+      "line" : 378,
+      "char" : 2
+     },
+     {
+      "name" : "ControlLeft",
+      "kind" : "enum member",
+      "value" : "1073742048u",
+      "line" : 379,
+      "char" : 2
+     },
+     {
+      "name" : "ControlRight",
+      "kind" : "enum member",
+      "value" : "1073742052u",
+      "line" : 380,
+      "char" : 2
+     },
+     {
+      "name" : "AltLeft",
+      "kind" : "enum member",
+      "value" : "1073742050u",
+      "line" : 381,
+      "char" : 2
+     },
+     {
+      "name" : "AltRight",
+      "kind" : "enum member",
+      "value" : "1073742054u",
+      "line" : 382,
+      "char" : 2
      }
     ]
    }
@@ -4101,29 +6460,36 @@
     "protection" : "private"
    },
    {
-    "name" : "Glib.System.Window",
+    "name" : "derelict.opengl3.gl3",
     "kind" : "import",
-    "line" : 11,
+    "line" : 10,
     "char" : 8,
     "protection" : "private"
    },
    {
-    "name" : "Glib.Scene.Scene",
+    "name" : "Glib.System.Window",
     "kind" : "import",
     "line" : 12,
     "char" : 8,
     "protection" : "private"
    },
    {
+    "name" : "Glib.Scene.Scene",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
     "name" : "System",
     "kind" : "class",
-    "line" : 20,
+    "line" : 22,
     "char" : 10,
     "members" : [
      {
       "name" : "active",
       "kind" : "variable",
-      "line" : 22,
+      "line" : 24,
       "char" : 14,
       "storageClass" : [
        "static"
@@ -4135,7 +6501,7 @@
       "name" : "initialized",
       "kind" : "variable",
       "protection" : "protected",
-      "line" : 23,
+      "line" : 25,
       "char" : 24,
       "storageClass" : [
        "static"
@@ -4147,7 +6513,7 @@
       "name" : "aborted",
       "kind" : "variable",
       "protection" : "protected",
-      "line" : 24,
+      "line" : 26,
       "char" : 24,
       "storageClass" : [
        "static"
@@ -4158,7 +6524,7 @@
      {
       "name" : "windows",
       "kind" : "variable",
-      "line" : 26,
+      "line" : 28,
       "char" : 18,
       "storageClass" : [
        "static"
@@ -4168,7 +6534,7 @@
      {
       "name" : "currentWindow",
       "kind" : "variable",
-      "line" : 27,
+      "line" : 29,
       "char" : 16,
       "storageClass" : [
        "static"
@@ -4179,7 +6545,7 @@
      {
       "name" : "scenes",
       "kind" : "variable",
-      "line" : 29,
+      "line" : 31,
       "char" : 17,
       "storageClass" : [
        "static"
@@ -4189,7 +6555,7 @@
      {
       "name" : "currentScene",
       "kind" : "variable",
-      "line" : 30,
+      "line" : 32,
       "char" : 15,
       "storageClass" : [
        "static"
@@ -4200,25 +6566,25 @@
      {
       "name" : "init",
       "kind" : "function",
-      "line" : 32,
+      "line" : 34,
       "char" : 14,
       "storageClass" : [
        "static"
       ],
       "deco" : "FZv",
-      "endline" : 64,
+      "endline" : 67,
       "endchar" : 2
      },
      {
       "name" : "deInit",
       "kind" : "function",
-      "line" : 66,
+      "line" : 69,
       "char" : 14,
       "storageClass" : [
        "static"
       ],
       "deco" : "FZv",
-      "endline" : 74,
+      "endline" : 77,
       "endchar" : 2
      }
     ]
@@ -4424,6 +6790,10 @@
       "deco" : "FZv",
       "endline" : 182,
       "endchar" : 2
+     },
+     {
+      "name" : "__xdtor",
+      "kind" : "alias"
      }
     ]
    }
@@ -4433,102 +6803,6 @@
   "kind" : "module",
   "file" : "..\\src\\Glib\\allDerelcit.d",
   "members" : []
- },
- {
-  "kind" : "module",
-  "file" : "main.d",
-  "members" : [
-   {
-    "name" : "std.stdio",
-    "kind" : "import",
-    "line" : 1,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "Glib.System",
-    "kind" : "import",
-    "line" : 2,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "Glib.Scene",
-    "kind" : "import",
-    "line" : 3,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "derelict.opengl3.gl3",
-    "kind" : "import",
-    "line" : 4,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "derelict.sdl2.image",
-    "kind" : "import",
-    "line" : 6,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "derelict.sdl2.sdl",
-    "kind" : "import",
-    "line" : 7,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "imgui",
-    "kind" : "import",
-    "line" : 8,
-    "char" : 8,
-    "protection" : "private"
-   },
-   {
-    "name" : "sW",
-    "kind" : "variable",
-    "line" : 10,
-    "char" : 5,
-    "deco" : "i",
-    "init" : "720"
-   },
-   {
-    "name" : "sH",
-    "kind" : "variable",
-    "line" : 11,
-    "char" : 5,
-    "deco" : "i",
-    "init" : "480"
-   },
-   {
-    "name" : "main",
-    "kind" : "function",
-    "line" : 13,
-    "char" : 5,
-    "deco" : "FAAyaZi",
-    "parameters" : [
-     {
-      "name" : "argv",
-      "deco" : "AAya"
-     }
-    ],
-    "endline" : 59,
-    "endchar" : 1
-   },
-   {
-    "name" : "initTex",
-    "kind" : "function",
-    "line" : 62,
-    "char" : 8,
-    "deco" : "FZk",
-    "originalType" : "GLuint()",
-    "endline" : 85,
-    "endchar" : 1
-   }
-  ]
  },
  {
   "name" : "Glib",

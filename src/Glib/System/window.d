@@ -6,7 +6,7 @@ import gl3n.linalg;
 import std.conv;
 import Glib.System.System;
 
-pragma(lib, "DerelictGL3.lib");
+
 pragma(lib, "DerelictSDL2.lib");
 pragma(lib, "gl3n.lib");
 
@@ -23,7 +23,7 @@ class window
 	{
 		if (!loaded)
 		{
-			DerelictGL3.load();
+			
 		
 			if(SDL_Init(SDL_INIT_VIDEO) < 0)
 			{

@@ -1,0 +1,342 @@
+[
+ {
+  "kind" : "module",
+  "file" : "main.d",
+  "members" : [
+   {
+    "name" : "dlangui",
+    "kind" : "import",
+    "line" : 1,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.sdl",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "APP_ENTRY_POINT!()",
+    "kind" : "mixin",
+    "line" : 16,
+    "char" : 1
+   },
+   {
+    "name" : "renderer",
+    "kind" : "variable",
+    "line" : 17,
+    "char" : 9,
+    "deco" : "S4Glib5Scene6Render6Render"
+   },
+   {
+    "name" : "s",
+    "kind" : "variable",
+    "line" : 18,
+    "char" : 8,
+    "deco" : "C4Glib5Scene5Scene5Scene",
+    "originalType" : "Scene"
+   },
+   {
+    "name" : "UIAppMain",
+    "kind" : "function",
+    "line" : 20,
+    "char" : 16,
+    "deco" : "UAAyaZi",
+    "parameters" : [
+     {
+      "name" : "args",
+      "deco" : "AAya"
+     }
+    ],
+    "endline" : 48,
+    "endchar" : 1
+   },
+   {
+    "name" : "Test",
+    "kind" : "class",
+    "line" : 50,
+    "char" : 1,
+    "base" : "Widget",
+    "members" : [
+     {
+      "name" : "_text",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 52,
+      "char" : 24,
+      "deco" : "S7dlangui4core4i18n8UIString",
+      "offset" : 168
+     },
+     {
+      "name" : "text",
+      "kind" : "function",
+      "line" : 53,
+      "char" : 32,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FNdZAyw",
+      "originalType" : "@property dstring()",
+      "endline" : 53,
+      "endchar" : 55,
+      "overrides" : [
+       "dlangui.widgets.widget.Widget.text"
+      ]
+     },
+     {
+      "name" : "text",
+      "kind" : "function",
+      "line" : 54,
+      "char" : 31,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FNdAywZC7dlangui7widgets6widget6Widget",
+      "originalType" : "@property Widget(dstring s)",
+      "parameters" : [
+       {
+        "name" : "s",
+        "deco" : "Ayw"
+       }
+      ],
+      "endline" : 54,
+      "endchar" : 90,
+      "overrides" : [
+       "dlangui.widgets.widget.Widget.text"
+      ]
+     },
+     {
+      "name" : "text",
+      "kind" : "function",
+      "line" : 55,
+      "char" : 31,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FNdS7dlangui4core4i18n8UIStringZC7dlangui7widgets6widget6Widget",
+      "parameters" : [
+       {
+        "name" : "s",
+        "deco" : "S7dlangui4core4i18n8UIString"
+       }
+      ],
+      "endline" : 55,
+      "endchar" : 91,
+      "overrides" : [
+       "dlangui.widgets.widget.Widget.text"
+      ]
+     },
+     {
+      "name" : "textResource",
+      "kind" : "function",
+      "line" : 56,
+      "char" : 22,
+      "deco" : "FNdAyaZC7dlangui7widgets6widget6Widget",
+      "parameters" : [
+       {
+        "name" : "s",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 56,
+      "endchar" : 88
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 58,
+      "char" : 5,
+      "deco" : "FZC4main4Test",
+      "originalType" : "()",
+      "endline" : 61,
+      "endchar" : 5
+     },
+     {
+      "name" : "init",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 63,
+      "char" : 18,
+      "deco" : "FS7dlangui4core4i18n8UIStringZv",
+      "parameters" : [
+       {
+        "name" : "label",
+        "deco" : "S7dlangui4core4i18n8UIString"
+       }
+      ],
+      "endline" : 69,
+      "endchar" : 5
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 72,
+      "char" : 5,
+      "deco" : "FAyaZC4main4Test",
+      "originalType" : "(string ID)",
+      "parameters" : [
+       {
+        "name" : "ID",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 75,
+      "endchar" : 5
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 76,
+      "char" : 5,
+      "deco" : "FAyaS7dlangui4core4i18n8UIStringZC4main4Test",
+      "originalType" : "(string ID, UIString label)",
+      "parameters" : [
+       {
+        "name" : "ID",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "label",
+        "deco" : "S7dlangui4core4i18n8UIString"
+       }
+      ],
+      "endline" : 79,
+      "endchar" : 5
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 80,
+      "char" : 5,
+      "deco" : "FAyaAywZC4main4Test",
+      "originalType" : "(string ID, dstring label)",
+      "parameters" : [
+       {
+        "name" : "ID",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "label",
+        "deco" : "Ayw"
+       }
+      ],
+      "endline" : 83,
+      "endchar" : 5
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 84,
+      "char" : 5,
+      "deco" : "FAyaAyaZC4main4Test",
+      "originalType" : "(string ID, string labelResourceId)",
+      "parameters" : [
+       {
+        "name" : "ID",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "labelResourceId",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 87,
+      "endchar" : 5
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 89,
+      "char" : 5,
+      "deco" : "FxC7dlangui4core6events6ActionZC4main4Test",
+      "originalType" : "(const Action a)",
+      "parameters" : [
+       {
+        "name" : "a",
+        "deco" : "xC7dlangui4core6events6Action"
+       }
+      ],
+      "endline" : 92,
+      "endchar" : 5
+     },
+     {
+      "name" : "measure",
+      "kind" : "function",
+      "line" : 94,
+      "char" : 19,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FiiZv",
+      "parameters" : [
+       {
+        "name" : "parentWidth",
+        "deco" : "i"
+       },
+       {
+        "name" : "parentHeight",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 98,
+      "endchar" : 5,
+      "overrides" : [
+       "dlangui.widgets.widget.Widget.measure"
+      ]
+     },
+     {
+      "name" : "onDraw",
+      "kind" : "function",
+      "line" : 100,
+      "char" : 16,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC7dlangui8graphics7drawbuf7DrawBufZv",
+      "parameters" : [
+       {
+        "name" : "buf",
+        "deco" : "C7dlangui8graphics7drawbuf7DrawBuf"
+       }
+      ],
+      "endline" : 112,
+      "endchar" : 5,
+      "overrides" : [
+       "dlangui.widgets.widget.Widget.onDraw"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

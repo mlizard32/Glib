@@ -1,0 +1,62 @@
+<html><head><META HTTP-EQUIV="Content-Type" content="text/html">
+</head><body><pre>
+<table width=100% bgcolor=#CFCFE5><tr><td>
+	<font face=arial size=+3>Build Log</font>
+</table>
+<table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Building Debug\Editor.exe
+</font></table>
+<table width=100% bgcolor=#EFEFE5><tr><td><font face=arial size=+1>
+Command Line
+</font></table>
+set PATH=C:\D\dmd2\windows\\bin;C:\Program Files (x86)\Windows Kits\8.0\\\bin;%PATH%
+set DMD_LIB=;&quot;..\Libs&quot;  &quot;..\Glib\Debug&quot;
+
+echo ..\src\Editor\EditorEvents.d &gt;Debug\Editor.build.rsp
+echo ..\src\Editor\GUITest.d &gt;&gt;Debug\Editor.build.rsp
+echo ..\src\Editor\imgui_sdl.d &gt;&gt;Debug\Editor.build.rsp
+echo ..\src\Editor\main.d &gt;&gt;Debug\Editor.build.rsp
+echo ..\src\Editor\RMObjDetails.d &gt;&gt;Debug\Editor.build.rsp
+echo ..\src\Editor\SceneGraph.d &gt;&gt;Debug\Editor.build.rsp
+echo ..\src\Editor\TreeModelDragable.d &gt;&gt;Debug\Editor.build.rsp
+echo C:\Users\qtg843\Documents\Test\Glib\Glib\Debug\Glib.lib &gt;&gt;Debug\Editor.build.rsp
+echo C:\Users\qtg843\Documents\Test\Glib\gl3n\Debug\gl3n.lib &gt;&gt;Debug\Editor.build.rsp
+
+dmd -g -debug -X -Xf&quot;Debug\Editor.json&quot; -I&quot;..\..\dub Derelict\Import&quot; -I&quot;..\src&quot; -deps=&quot;Debug\Editor.dep&quot; -c -of&quot;Debug\Editor.obj&quot; @Debug\Editor.build.rsp
+if errorlevel 1 goto reportError
+
+set LIB=&quot;C:\D\dmd2\windows\bin\..\lib&quot;
+echo. &gt; Debug\Editor.build.lnkarg
+echo &quot;Debug\Editor.obj&quot;,&quot;Debug\Editor.exe_cv&quot;,&quot;Debug\Editor.map&quot;,C:\Users\qtg843\Documents\Test\Glib\Glib\Debug\Glib.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo C:\Users\qtg843\Documents\Test\Glib\gl3n\Debug\gl3n.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo DerelictFT.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo DerelictASSIMP3.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo DerelictImgui.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo Glib.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo imgui.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo + &gt;&gt; Debug\Editor.build.lnkarg
+echo gtkd.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo user32.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo kernel32.lib+ &gt;&gt; Debug\Editor.build.lnkarg
+echo ..\Libs\+ &gt;&gt; Debug\Editor.build.lnkarg
+echo ..\Glib\Debug\/NOMAP/CO/NOI &gt;&gt; Debug\Editor.build.lnkarg
+
+&quot;C:\Program Files (x86)\VisualD\pipedmd.exe&quot; -deps Debug\Editor.lnkdep C:\D\dmd2\windows\bin\link.exe @Debug\Editor.build.lnkarg
+if errorlevel 1 goto reportError
+if not exist &quot;Debug\Editor.exe_cv&quot; (echo &quot;Debug\Editor.exe_cv&quot; not created! &amp;&amp; goto reportError)
+echo Converting debug information...
+&quot;C:\Program Files (x86)\VisualD\cv2pdb\cv2pdb.exe&quot; &quot;Debug\Editor.exe_cv&quot; &quot;Debug\Editor.exe&quot;
+if errorlevel 1 goto reportError
+if not exist &quot;Debug\Editor.exe&quot; (echo &quot;Debug\Editor.exe&quot; not created! &amp;&amp; goto reportError)
+
+goto noError
+
+:reportError
+echo Building Debug\Editor.exe failed!
+
+:noError
+<table width=100% bgcolor=#EFEFE5><tr><td><font face=arial size=+1>
+Output
+</font></table>
+Converting debug information...
+</body></html>

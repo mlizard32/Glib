@@ -1,0 +1,360 @@
+2015-10-22 15:59:17.885 E  Derelict: cannot load freetype shared library: Failed to load symbol FT_Gzip_Uncompress from shared library libfreetype-6.dll
+2015-10-22 15:59:17.895 E  Cannot create FreeTypeFontManager - falling back to win32
+2015-10-22 15:59:17.895 I  Creating Win32FontManager
+2015-10-22 15:59:17.895 I  Win32FontManager.init()
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Arial)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Batang)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,BatangChe)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Gungsuh)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,GungsuhChe)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,Courier New)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,DaunPenh)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,DokChampa)
+2015-10-22 15:59:17.895 D  registerFont(Cursive,Estrangelo Edessa)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Euphemia)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Gautami)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Vani)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Gulim)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,GulimChe)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Dotum)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,DotumChe)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Impact)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Iskoola Pota)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Kalinga)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Kartika)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Khmer UI)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Lao UI)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Latha)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,Lucida Console)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Malgun Gothic)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Mangal)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Meiryo)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Meiryo UI)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Microsoft Himalaya)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Microsoft JhengHei)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Microsoft YaHei)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,MingLiU)
+2015-10-22 15:59:17.895 D  registerFont(Serif,PMingLiU)
+2015-10-22 15:59:17.895 D  registerFont(Serif,MingLiU_HKSCS)
+2015-10-22 15:59:17.895 D  registerFont(Serif,MingLiU-ExtB)
+2015-10-22 15:59:17.895 D  registerFont(Serif,PMingLiU-ExtB)
+2015-10-22 15:59:17.895 D  registerFont(Serif,MingLiU_HKSCS-ExtB)
+2015-10-22 15:59:17.895 D  registerFont(Cursive,Mongolian Baiti)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,MS Gothic)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,MS PGothic)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,MS UI Gothic)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,MS Mincho)
+2015-10-22 15:59:17.895 D  registerFont(Serif,MS PMincho)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,MV Boli)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Microsoft New Tai Lue)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Nyala)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Microsoft PhagsPa)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Plantagenet Cherokee)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Raavi)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Segoe Script)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Segoe UI)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Segoe UI Semibold)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Segoe UI Light)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Segoe UI Symbol)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Shruti)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,SimSun)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,NSimSun)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,SimSun-ExtB)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Sylfaen)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Microsoft Tai Le)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Times New Roman)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Tunga)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Vrinda)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Shonar Bangla)
+2015-10-22 15:59:17.895 D  registerFont(Cursive,Microsoft Yi Baiti)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Tahoma)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Microsoft Sans Serif)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Angsana New)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Aparajita)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Cordia New)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Ebrima)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Gisha)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Kokila)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,MoolBoran)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Utsaah)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Vijaya)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Andalus)
+2015-10-22 15:59:17.895 D  registerFont(Cursive,Arabic Typesetting)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Simplified Arabic)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,Simplified Arabic Fixed)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Sakkal Majalla)
+2015-10-22 15:59:17.895 D  registerFont(Serif,Traditional Arabic)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,FangSong)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,SimHei)
+2015-10-22 15:59:17.895 D  registerFont(MonoSpace,KaiTi)
+2015-10-22 15:59:17.895 D  registerFont(Serif,AngsanaUPC)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,Browallia New)
+2015-10-22 15:59:17.895 D  registerFont(SansSerif,BrowalliaUPC)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,CordiaUPC)
+2015-10-22 15:59:17.905 D  registerFont(Serif,DilleniaUPC)
+2015-10-22 15:59:17.905 D  registerFont(Serif,EucrosiaUPC)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,FreesiaUPC)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,IrisUPC)
+2015-10-22 15:59:17.905 D  registerFont(Serif,JasmineUPC)
+2015-10-22 15:59:17.905 D  registerFont(Serif,KodchiangUPC)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,LilyUPC)
+2015-10-22 15:59:17.905 D  registerFont(MonoSpace,DFKai-SB)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Lucida Sans Unicode)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Arial Black)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Comic Sans MS)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Franklin Gothic Medium)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Gabriola)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Georgia)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Palatino Linotype)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Segoe Print)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Trebuchet MS)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Verdana)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Century Gothic)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Garamond)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Bradley Hand ITC)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Copperplate Gothic Light)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Curlz MT)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Eras Demi ITC)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Eras Medium ITC)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Franklin Gothic Book)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Franklin Gothic Demi)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Imprint MT Shadow)
+2015-10-22 15:59:17.905 D  registerFont(MonoSpace,Lucida Sans Typewriter)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Maiandra GD)
+2015-10-22 15:59:17.905 D  registerFont(Serif,OCR A Extended)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Rockwell)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Script MT Bold)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Tw Cen MT)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Tw Cen MT Condensed)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Tw Cen MT Condensed Extra Bold)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Baskerville Old Face)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Bell MT)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Bodoni MT Poster Compressed)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Californian FB)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Centaur)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Colonna MT)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Footlight MT Light)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Harrington)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Jokerman)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Kristen ITC)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Kunstler Script)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Lucida Calligraphy)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Matura MT Script Capitals)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Old English Text MT)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Playbill)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Snap ITC)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Stencil)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Tempus Sans ITC)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Viner Hand ITC)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Wide Latin)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Century)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Arial Narrow)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Calibri Light)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Haettenschweiler)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Book Antiqua)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Monotype Corsiva)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Agency FB)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Arial Rounded MT Bold)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Blackadder ITC)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Bodoni MT)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Bodoni MT Black)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Bodoni MT Condensed)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Bookman Old Style)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Calisto MT)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Castellar)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Century Schoolbook)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Copperplate Gothic Bold)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Edwardian Script ITC)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Elephant)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Engravers MT)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Eras Bold ITC)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Eras Light ITC)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Felix Titling)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Forte)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Franklin Gothic Demi Cond)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Franklin Gothic Heavy)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Franklin Gothic Medium Cond)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,French Script MT)
+2015-10-22 15:59:17.905 D  registerFont(Fantasy,Gigi)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Gill Sans MT)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Gill Sans MT Condensed)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Gill Sans Ultra Bold)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Gill Sans Ultra Bold Condensed)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Gill Sans MT Ext Condensed Bold)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Gloucester MT Extra Condensed)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Goudy Old Style)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Goudy Stout)
+2015-10-22 15:59:17.905 D  registerFont(SansSerif,Lucida Sans)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Palace Script MT)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Papyrus)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Perpetua)
+2015-10-22 15:59:17.905 D  registerFont(Serif,Perpetua Titling MT)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Pristina)
+2015-10-22 15:59:17.905 D  registerFont(Cursive,Rage Italic)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Rockwell Condensed)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Rockwell Extra Bold)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Algerian)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Bauhaus 93)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Berlin Sans FB)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Berlin Sans FB Demi)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Bernard MT Condensed)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Britannic Bold)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Broadway)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Brush Script MT)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Chiller)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Cooper Black)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Freestyle Script)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Harlow Solid Italic)
+2015-10-22 15:59:17.906 D  registerFont(Serif,High Tower Text)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Juice ITC)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Lucida Bright)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Lucida Fax)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Lucida Handwriting)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Magneto)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Mistral)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Modern No. 20)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Niagara Engraved)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Niagara Solid)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Onyx)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Parchment)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Poor Richard)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Ravie)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Informal Roman)
+2015-10-22 15:59:17.906 D  registerFont(Fantasy,Showcard Gothic)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Vivaldi)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Vladimir Script)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Calibri)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Cambria)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Cambria Math)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Candara)
+2015-10-22 15:59:17.906 D  registerFont(MonoSpace,Consolas)
+2015-10-22 15:59:17.906 D  registerFont(Serif,Constantia)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Corbel)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Arial Unicode MS)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,MS Reference Sans Serif)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Gadugi)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Leelawadee)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Microsoft JhengHei UI)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Microsoft Uighur)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Microsoft YaHei UI)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Nirmala UI)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Segoe UI Semilight)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Nina)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,Segoe Condensed)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Buxton Sketch)
+2015-10-22 15:59:17.906 D  registerFont(Cursive,Segoe Marker)
+2015-10-22 15:59:17.906 D  registerFont(SansSerif,SketchFlow Print)
+2015-10-22 15:59:17.906 I  Found 242 font faces
+2015-10-22 15:59:17.906 D  Creating default theme
+2015-10-22 15:59:18.076 D  Loading string resources from file @embedded@/std_en.ini
+2015-10-22 15:59:18.076 I  Applying loaded theme theme_default
+2015-10-22 15:59:18.076 D  Creating SDL window
+2015-10-22 15:59:18.956 I  Trying to create OpenGL 3.2 context
+2015-10-22 15:59:18.966 E  GLSupport programs are not initialized
+2015-10-22 15:59:18.966 E  GLSupport programs are not initialized
+2015-10-22 15:59:18.966 D  compileShader glsl=1.50 NVIDIA via Cg compiler type:GL_VERTEX_SHADER code:
+#version 150
+
+            in vec4 vertex;
+            in vec4 colAttr;
+            in vec4 texCoord;
+            out vec4 col;
+            out vec4 texc;
+            uniform mat4 matrix;
+            void main(void)
+            {
+                gl_Position = matrix * vertex;
+                col = colAttr;
+                texc = texCoord;
+            }
+        
+2015-10-22 15:59:18.966 D  compileShader glsl=1.50 NVIDIA via Cg compiler type:GL_FRAGMENT_SHADER code:
+#version 150
+
+            uniform sampler2D tex;
+            in vec4 col;
+            in vec4 texc;
+            out vec4 outColor;
+            void main(void)
+            {
+                outColor = texture(tex, texc.st) * col;
+            }
+        
+2015-10-22 15:59:18.966 D  Program compiled successfully
+2015-10-22 15:59:18.966 D  compileShader glsl=1.50 NVIDIA via Cg compiler type:GL_VERTEX_SHADER code:
+#version 150
+
+            in vec4 vertex;
+            in vec4 colAttr;
+            in vec4 texCoord;
+            out vec4 col;
+            out vec4 texc;
+            uniform mat4 matrix;
+            void main(void)
+            {
+                gl_Position = matrix * vertex;
+                col = colAttr;
+                texc = texCoord;
+            }
+        
+2015-10-22 15:59:18.966 D  compileShader glsl=1.50 NVIDIA via Cg compiler type:GL_FRAGMENT_SHADER code:
+#version 150
+
+            uniform sampler2D tex;
+            in vec4 col;
+            in vec4 texc;
+            out vec4 outColor;
+            void main(void)
+            {
+                outColor = texture(tex, texc.st) * col;
+            }
+        
+2015-10-22 15:59:18.976 D  Program compiled successfully
+2015-10-22 15:59:18.976 D  compileShader glsl=1.50 NVIDIA via Cg compiler type:GL_VERTEX_SHADER code:
+#version 150
+
+            in vec4 vertex;
+            in vec4 colAttr;
+            out vec4 col;
+            uniform mat4 matrix;
+            void main(void)
+            {
+                gl_Position = matrix * vertex;
+                col = colAttr;
+            }
+        
+2015-10-22 15:59:18.976 D  compileShader glsl=1.50 NVIDIA via Cg compiler type:GL_FRAGMENT_SHADER code:
+#version 150
+
+            in vec4 col;
+            out vec4 outColor;
+            void main(void)
+            {
+                outColor = col;
+            }
+        
+2015-10-22 15:59:18.976 D  Program compiled successfully
+2015-10-22 15:59:18.976 D  Shaders compiled successfully
+2015-10-22 15:59:19.147 D  SDLWindow.show()
+2015-10-22 15:59:19.228 I  entering message loop
+2015-10-22 15:59:21.041 D  Loading image from file @embedded@/btn_pressed.9.png
+2015-10-22 15:59:21.041 D  Loading image from file @embedded@/btn_default.9.png
+2015-10-22 15:59:21.041 D  Loading image from file @embedded@/btn_normal.9.png
+2015-10-22 15:59:21.041 D  Loading image from file @embedded@/btn_hover.9.png
+2015-10-22 15:59:21.041 D  Loading image from file @embedded@/btn_disabled.9.png
+2015-10-22 15:59:21.041 V  created glyph cache page 1024x1024
+2015-10-22 15:59:21.041 D  Destroying font manager
+2015-10-22 15:59:21.051 V  created image cache page 1024x1024
+2015-10-22 15:59:22.667 D  updateTexture - new texture id=5
+2015-10-22 15:59:22.667 D  updateTexture for image cache page - setting image 1024x1024 tx=5
+2015-10-22 15:59:42.972 D  Destroying SDL window
+2015-10-22 15:59:42.982 D  Destroying window
+2015-10-22 15:59:42.982 I  exiting message loop
+2015-10-22 15:59:42.982 D  Destroying SDL platform
+2015-10-22 15:59:42.982 I  Destroying DrawableCache
+2015-10-22 15:59:42.982 I  Destroying ImageCache
+2015-10-22 15:59:42.982 I  Destroying Win32FontManager
+2015-10-22 15:59:42.982 D  Destroying font manager
+2015-10-22 15:59:42.982 E  Non-zero DrawBuf instance count when exiting: 2
+2015-10-22 15:59:42.982 D  Exiting main
+2015-10-22 15:59:42.982 I  calling Runtime.terminate()

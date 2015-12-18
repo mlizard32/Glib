@@ -1,0 +1,2969 @@
+[
+ {
+  "name" : "Editor.EditorEvents",
+  "kind" : "module",
+  "file" : "..\\src\\Editor\\EditorEvents.d",
+  "members" : [
+   {
+    "name" : "addEvent",
+    "kind" : "function",
+    "line" : 3,
+    "char" : 20,
+    "storageClass" : [
+     "static"
+    ],
+    "deco" : "FAyaZv",
+    "parameters" : [
+     {
+      "name" : "name",
+      "deco" : "Aya"
+     }
+    ],
+    "endline" : 6,
+    "endchar" : 1
+   },
+   {
+    "name" : "addListener",
+    "kind" : "function",
+    "line" : 8,
+    "char" : 20,
+    "storageClass" : [
+     "static"
+    ],
+    "deco" : "FAyaDFZvZv",
+    "parameters" : [
+     {
+      "name" : "eventName",
+      "deco" : "Aya"
+     },
+     {
+      "name" : "event",
+      "deco" : "DFZv"
+     }
+    ],
+    "endline" : 11,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "Editor.GUITest",
+  "kind" : "module",
+  "file" : "..\\src\\Editor\\GUITest.d",
+  "members" : [
+   {
+    "name" : "RenderGUI",
+    "kind" : "function",
+    "line" : 3,
+    "char" : 6,
+    "deco" : "FZv",
+    "endline" : 22,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "imgui_sdl",
+  "kind" : "module",
+  "file" : "..\\src\\Editor\\imgui_sdl.d",
+  "members" : [
+   {
+    "name" : "derelict.imgui.imgui",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.sdl",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.Input",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "g_window",
+    "kind" : "variable",
+    "line" : 9,
+    "char" : 13,
+    "deco" : "PS8derelict4sdl25types10SDL_Window"
+   },
+   {
+    "name" : "g_Time",
+    "kind" : "variable",
+    "line" : 10,
+    "char" : 14,
+    "deco" : "d",
+    "init" : "0.000000"
+   },
+   {
+    "name" : "g_MousePressed",
+    "kind" : "variable",
+    "line" : 11,
+    "char" : 14,
+    "deco" : "G3b"
+   },
+   {
+    "name" : "g_MouseWheel",
+    "kind" : "variable",
+    "line" : 12,
+    "char" : 14,
+    "deco" : "f",
+    "init" : "0.000000F"
+   },
+   {
+    "name" : "g_FontTexture",
+    "kind" : "variable",
+    "line" : 13,
+    "char" : 14,
+    "deco" : "k",
+    "originalType" : "GLuint",
+    "init" : "0u"
+   },
+   {
+    "name" : "g_ShaderHandle",
+    "kind" : "variable",
+    "line" : 14,
+    "char" : 14,
+    "deco" : "i",
+    "init" : "0"
+   },
+   {
+    "name" : "g_VertHandle",
+    "kind" : "variable",
+    "line" : 14,
+    "char" : 34,
+    "deco" : "i",
+    "init" : "0"
+   },
+   {
+    "name" : "g_FragHandle",
+    "kind" : "variable",
+    "line" : 14,
+    "char" : 52,
+    "deco" : "i",
+    "init" : "0"
+   },
+   {
+    "name" : "g_AttribLocationTex",
+    "kind" : "variable",
+    "line" : 15,
+    "char" : 14,
+    "deco" : "i",
+    "init" : "0"
+   },
+   {
+    "name" : "g_AttribLocationProjMtx",
+    "kind" : "variable",
+    "line" : 15,
+    "char" : 39,
+    "deco" : "i",
+    "init" : "0"
+   },
+   {
+    "name" : "g_AttribLocationPosition",
+    "kind" : "variable",
+    "line" : 16,
+    "char" : 14,
+    "deco" : "i",
+    "init" : "0"
+   },
+   {
+    "name" : "g_AttribLocationUV",
+    "kind" : "variable",
+    "line" : 16,
+    "char" : 44,
+    "deco" : "i",
+    "init" : "0"
+   },
+   {
+    "name" : "g_AttribLocationColor",
+    "kind" : "variable",
+    "line" : 16,
+    "char" : 68,
+    "deco" : "i",
+    "init" : "0"
+   },
+   {
+    "name" : "g_VboHandle",
+    "kind" : "variable",
+    "line" : 17,
+    "char" : 14,
+    "deco" : "k"
+   },
+   {
+    "name" : "g_VaoHandle",
+    "kind" : "variable",
+    "line" : 17,
+    "char" : 27,
+    "deco" : "k"
+   },
+   {
+    "name" : "g_ElementsHandle",
+    "kind" : "variable",
+    "line" : 17,
+    "char" : 40,
+    "deco" : "k"
+   },
+   {
+    "name" : "igImplSDLGL3_RenderDrawLists",
+    "kind" : "function",
+    "line" : 19,
+    "char" : 24,
+    "deco" : "UNbPS8derelict5imgui5types10ImDrawDataZv",
+    "parameters" : [
+     {
+      "name" : "data",
+      "deco" : "PS8derelict5imgui5types10ImDrawData"
+     }
+    ],
+    "endline" : 91,
+    "endchar" : 1
+   },
+   {
+    "name" : "igImplSDL2GL3_Init",
+    "kind" : "function",
+    "line" : 93,
+    "char" : 6,
+    "deco" : "FPS8derelict4sdl25types10SDL_WindowbZv",
+    "parameters" : [
+     {
+      "name" : "window",
+      "deco" : "PS8derelict4sdl25types10SDL_Window"
+     },
+     {
+      "name" : "install_callbacks",
+      "deco" : "b"
+     }
+    ],
+    "endline" : 132,
+    "endchar" : 1
+   },
+   {
+    "name" : "igImplSDLGL3_CreateDeviceObjects",
+    "kind" : "function",
+    "line" : 134,
+    "char" : 6,
+    "deco" : "FZv",
+    "endline" : 197,
+    "endchar" : 1
+   },
+   {
+    "name" : "igImplSDLGL3_GetClipboardText",
+    "kind" : "function",
+    "line" : 199,
+    "char" : 32,
+    "deco" : "UNbZPxa",
+    "endline" : 203,
+    "endchar" : 1
+   },
+   {
+    "name" : "igImplSDLGL3_SetClipboardText",
+    "kind" : "function",
+    "line" : 205,
+    "char" : 24,
+    "deco" : "UNbPxaZv",
+    "parameters" : [
+     {
+      "name" : "text",
+      "deco" : "Pxa"
+     }
+    ],
+    "endline" : 209,
+    "endchar" : 1
+   },
+   {
+    "name" : "igImplSDLGL3_CreateFontsTexture",
+    "kind" : "function",
+    "line" : 242,
+    "char" : 6,
+    "deco" : "FZv",
+    "endline" : 258,
+    "endchar" : 1
+   },
+   {
+    "name" : "igImplSDLGL3_Shutdown",
+    "kind" : "function",
+    "line" : 260,
+    "char" : 6,
+    "deco" : "FZv",
+    "endline" : 288,
+    "endchar" : 1
+   },
+   {
+    "name" : "igImplSDLGL3_NewFrame",
+    "kind" : "function",
+    "line" : 290,
+    "char" : 6,
+    "deco" : "FZv",
+    "endline" : 352,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "Editor.main",
+  "kind" : "module",
+  "file" : "..\\src\\Editor\\main.d",
+  "members" : [
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.opengl3.gl3",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.image",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.sdl2.sdl",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.imgui.imgui",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Editor.SceneGraph",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Editor.RMObjDetails",
+    "kind" : "import",
+    "line" : 15,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.MainWindow",
+    "kind" : "import",
+    "line" : 17,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Label",
+    "kind" : "import",
+    "line" : 18,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Main",
+    "kind" : "import",
+    "line" : 19,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.GLArea",
+    "kind" : "import",
+    "line" : 20,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gdk.GLContext",
+    "kind" : "import",
+    "line" : 21,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Widget",
+    "kind" : "import",
+    "line" : 22,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "glib.ErrorG",
+    "kind" : "import",
+    "line" : 23,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.MenuBar",
+    "kind" : "import",
+    "line" : 24,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Menu",
+    "kind" : "import",
+    "line" : 25,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.MenuItem",
+    "kind" : "import",
+    "line" : 26,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.VBox",
+    "kind" : "import",
+    "line" : 27,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.HBox",
+    "kind" : "import",
+    "line" : 28,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Paned",
+    "kind" : "import",
+    "line" : 29,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeView",
+    "kind" : "import",
+    "line" : 30,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeIter",
+    "kind" : "import",
+    "line" : 31,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreePath",
+    "kind" : "import",
+    "line" : 32,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "derelict.opengl3.wgl",
+    "kind" : "import",
+    "line" : 34,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtkc.gdktypes",
+    "kind" : "import",
+    "line" : 36,
+    "char" : 16
+   },
+   {
+    "name" : "gtkc.gtk",
+    "kind" : "import",
+    "line" : 37,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtkc.gtktypes",
+    "kind" : "import",
+    "line" : 38,
+    "char" : 16
+   },
+   {
+    "name" : "renderer",
+    "kind" : "variable",
+    "line" : 40,
+    "char" : 8,
+    "deco" : "S4Glib5Scene6Render6Render"
+   },
+   {
+    "name" : "s",
+    "kind" : "variable",
+    "line" : 41,
+    "char" : 7,
+    "deco" : "C4Glib5Scene5Scene5Scene",
+    "originalType" : "Scene"
+   },
+   {
+    "name" : "sW",
+    "kind" : "variable",
+    "line" : 43,
+    "char" : 5,
+    "deco" : "i",
+    "init" : "720"
+   },
+   {
+    "name" : "sH",
+    "kind" : "variable",
+    "line" : 44,
+    "char" : 5,
+    "deco" : "i",
+    "init" : "480"
+   },
+   {
+    "name" : "MyArea",
+    "kind" : "class",
+    "line" : 46,
+    "char" : 1,
+    "base" : "gtk.GLArea.GLArea",
+    "members" : [
+     {
+      "name" : "render",
+      "kind" : "function",
+      "line" : 47,
+      "char" : 7,
+      "deco" : "FC3gdk9GLContext9GLContextC3gtk6GLArea6GLAreaZb",
+      "parameters" : [
+       {
+        "name" : "c",
+        "deco" : "C3gdk9GLContext9GLContext"
+       },
+       {
+        "name" : "a",
+        "deco" : "C3gtk6GLArea6GLArea"
+       }
+      ],
+      "endline" : 53,
+      "endchar" : 2
+     },
+     {
+      "name" : "init",
+      "kind" : "function",
+      "line" : 55,
+      "char" : 7,
+      "deco" : "FC3gtk6Widget6WidgetZv",
+      "parameters" : [
+       {
+        "name" : "w",
+        "deco" : "C3gtk6Widget6Widget"
+       }
+      ],
+      "endline" : 79,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 46,
+      "char" : 1,
+      "deco" : "FZC6Editor4main6MyArea",
+      "originalType" : "()"
+     }
+    ]
+   },
+   {
+    "name" : "ExampleWindow",
+    "kind" : "class",
+    "line" : 82,
+    "char" : 1,
+    "base" : "gtk.MainWindow.MainWindow",
+    "members" : [
+     {
+      "name" : "sgv",
+      "kind" : "variable",
+      "line" : 84,
+      "char" : 17,
+      "deco" : "C6Editor10SceneGraph14SceneGraphView",
+      "originalType" : "SceneGraphView",
+      "offset" : 888
+     },
+     {
+      "name" : "objDetails",
+      "kind" : "variable",
+      "line" : 85,
+      "char" : 9,
+      "deco" : "C6Editor12RMObjDetails6Detail",
+      "originalType" : "Detail",
+      "offset" : 892
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 86,
+      "char" : 2,
+      "deco" : "FZC6Editor4main13ExampleWindow",
+      "originalType" : "()",
+      "endline" : 124,
+      "endchar" : 2
+     },
+     {
+      "name" : "onMenuActivate",
+      "kind" : "function",
+      "line" : 126,
+      "char" : 7,
+      "deco" : "FC3gtk8MenuItem8MenuItemZv",
+      "parameters" : [
+       {
+        "name" : "menuItem",
+        "deco" : "C3gtk8MenuItem8MenuItem"
+       }
+      ],
+      "endline" : 128,
+      "endchar" : 2
+     },
+     {
+      "name" : "onSceneSelectionChanged",
+      "kind" : "function",
+      "line" : 130,
+      "char" : 7,
+      "deco" : "FC3gtk8TreeView8TreeViewZv",
+      "parameters" : [
+       {
+        "name" : "treeView",
+        "deco" : "C3gtk8TreeView8TreeView"
+       }
+      ],
+      "endline" : 139,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "std.array",
+    "kind" : "import",
+    "line" : 143,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 144,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "win",
+    "kind" : "variable",
+    "line" : 146,
+    "char" : 19,
+    "storageClass" : [
+     "static"
+    ],
+    "deco" : "C3gtk10MainWindow10MainWindow",
+    "originalType" : "MainWindow"
+   },
+   {
+    "name" : "main",
+    "kind" : "function",
+    "line" : 148,
+    "char" : 5,
+    "deco" : "FAAyaZi",
+    "parameters" : [
+     {
+      "name" : "argv",
+      "deco" : "AAya"
+     }
+    ],
+    "endline" : 268,
+    "endchar" : 1
+   },
+   {
+    "name" : "getSceneGraphModel",
+    "kind" : "function",
+    "line" : 270,
+    "char" : 28,
+    "storageClass" : [
+     "static"
+    ],
+    "deco" : "FZC6Editor10SceneGraph19SceneGraphTreeModel",
+    "endline" : 279,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "Editor.RMObjDetails",
+  "kind" : "module",
+  "file" : "..\\src\\Editor\\RMObjDetails.d",
+  "members" : [
+   {
+    "name" : "gtk.Label",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.ScrolledWindow",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Table",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Entry",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.EditableIF",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.VBox",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Expander",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.RMObject",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.traits",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.typecons",
+    "kind" : "import",
+    "line" : 15,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.string",
+    "kind" : "import",
+    "line" : 16,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "core.memory",
+    "kind" : "import",
+    "line" : 17,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gl3n.linalg",
+    "kind" : "import",
+    "line" : 18,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Detail",
+    "kind" : "class",
+    "line" : 20,
+    "char" : 1,
+    "base" : "gtk.ScrolledWindow.ScrolledWindow",
+    "members" : [
+     {
+      "name" : "inputBoxes",
+      "kind" : "variable",
+      "line" : 22,
+      "char" : 16,
+      "deco" : "HAyaC3gtk5Entry5Entry",
+      "offset" : 880
+     },
+     {
+      "name" : "activeEntries",
+      "kind" : "variable",
+      "line" : 24,
+      "char" : 16,
+      "deco" : "AC6Editor12RMObjDetails6Detail11DetailEntry",
+      "offset" : 884
+     },
+     {
+      "name" : "DetailEntry",
+      "kind" : "class",
+      "line" : 26,
+      "char" : 2,
+      "members" : [
+       {
+        "name" : "name",
+        "kind" : "variable",
+        "line" : 28,
+        "char" : 10,
+        "deco" : "Aya",
+        "offset" : 8
+       },
+       {
+        "name" : "entry",
+        "kind" : "variable",
+        "line" : 29,
+        "char" : 9,
+        "deco" : "C3gtk5Entry5Entry",
+        "originalType" : "Entry",
+        "offset" : 16
+       },
+       {
+        "name" : "propertySet",
+        "kind" : "variable",
+        "line" : 30,
+        "char" : 25,
+        "deco" : "DFAyaZv",
+        "offset" : 20
+       },
+       {
+        "name" : "propertyGet",
+        "kind" : "variable",
+        "line" : 31,
+        "char" : 21,
+        "deco" : "DFZAya",
+        "offset" : 28
+       },
+       {
+        "name" : "component",
+        "kind" : "variable",
+        "line" : 33,
+        "char" : 14,
+        "deco" : "C4Glib5Scene8RMObject10IComponent",
+        "originalType" : "IComponent",
+        "offset" : 36
+       },
+       {
+        "name" : "this",
+        "kind" : "constructor",
+        "line" : 35,
+        "char" : 3,
+        "deco" : "FZC6Editor12RMObjDetails6Detail11DetailEntry",
+        "originalType" : "()",
+        "endline" : 38,
+        "endchar" : 3
+       },
+       {
+        "name" : "propCallBack",
+        "kind" : "function",
+        "line" : 40,
+        "char" : 8,
+        "deco" : "FC3gtk10EditableIF10EditableIFZv",
+        "parameters" : [
+         {
+          "name" : "a",
+          "deco" : "C3gtk10EditableIF10EditableIF"
+         }
+        ],
+        "endline" : 43,
+        "endchar" : 3
+       },
+       {
+        "name" : "this",
+        "kind" : "variable",
+        "line" : 26,
+        "char" : 2,
+        "deco" : "C6Editor12RMObjDetails6Detail",
+        "offset" : 40
+       }
+      ]
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 46,
+      "char" : 2,
+      "deco" : "FZC6Editor12RMObjDetails6Detail",
+      "originalType" : "()",
+      "endline" : 51,
+      "endchar" : 2
+     },
+     {
+      "name" : "watcher",
+      "kind" : "function",
+      "line" : 53,
+      "char" : 7,
+      "deco" : "FAyaAyaZv",
+      "parameters" : [
+       {
+        "name" : "value",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "memberName",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 56,
+      "endchar" : 2
+     },
+     {
+      "name" : "Load",
+      "kind" : "function",
+      "line" : 58,
+      "char" : 14,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectZv",
+      "parameters" : [
+       {
+        "name" : "obj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       }
+      ],
+      "endline" : 214,
+      "endchar" : 2
+     },
+     {
+      "name" : "EditableFields!(RMObject)",
+      "kind" : "mixin",
+      "line" : 216,
+      "char" : 2
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 252,
+    "char" : 1,
+    "name" : "EditableFields",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "write",
+      "kind" : "function",
+      "line" : 254,
+      "char" : 7,
+      "type" : "void()",
+      "endline" : 266,
+      "endchar" : 2
+     },
+     {
+      "name" : "fillTable",
+      "kind" : "function",
+      "line" : 268,
+      "char" : 7,
+      "type" : "void(T obj, Table table, int row)",
+      "parameters" : [
+       {
+        "name" : "obj",
+        "type" : "T"
+       },
+       {
+        "name" : "table",
+        "type" : "Table"
+       },
+       {
+        "name" : "row",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 290,
+      "endchar" : 2
+     },
+     {
+      "name" : "CreateDetailTableForObj",
+      "kind" : "function",
+      "line" : 292,
+      "char" : 8,
+      "type" : "Table(T obj)",
+      "parameters" : [
+       {
+        "name" : "obj",
+        "type" : "T"
+       }
+      ],
+      "endline" : 303,
+      "endchar" : 2
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Editor.SceneGraph",
+  "kind" : "module",
+  "file" : "..\\src\\Editor\\SceneGraph.d",
+  "members" : [
+   {
+    "name" : "gtk.ScrolledWindow",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeView",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreePath",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeViewColumn",
+    "kind" : "import",
+    "line" : 6,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeIter",
+    "kind" : "import",
+    "line" : 7,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeStore",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "Editor.TreeModelDragable",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeDragDestIF",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeDragDestT",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeDragSourceIF",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeDragSourceT",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.SelectionData",
+    "kind" : "import",
+    "line" : 15,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeModelIF",
+    "kind" : "import",
+    "line" : 16,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.ListStore",
+    "kind" : "import",
+    "line" : 17,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeSelection",
+    "kind" : "import",
+    "line" : 18,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.CellRendererText",
+    "kind" : "import",
+    "line" : 19,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Image",
+    "kind" : "import",
+    "line" : 20,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeNode",
+    "kind" : "import",
+    "line" : 21,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gdk.Event",
+    "kind" : "import",
+    "line" : 22,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Menu",
+    "kind" : "import",
+    "line" : 23,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.MenuItem",
+    "kind" : "import",
+    "line" : 24,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "glib.Timeout",
+    "kind" : "import",
+    "line" : 26,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "cairo.Context",
+    "kind" : "import",
+    "line" : 27,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "cairo.Surface",
+    "kind" : "import",
+    "line" : 28,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.Widget",
+    "kind" : "import",
+    "line" : 29,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "gobject.ObjectG",
+    "kind" : "import",
+    "line" : 30,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gobject.Value",
+    "kind" : "import",
+    "line" : 31,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "glib.RandG",
+    "kind" : "import",
+    "line" : 32,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 34,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 35,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 36,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.uuid",
+    "kind" : "import",
+    "line" : 37,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.signals",
+    "kind" : "import",
+    "line" : 38,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.RMObject",
+    "kind" : "import",
+    "line" : 40,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.System.System",
+    "kind" : "import",
+    "line" : 41,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Glib.Scene.Node",
+    "kind" : "import",
+    "line" : 42,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "SceneGraphView",
+    "kind" : "class",
+    "line" : 45,
+    "char" : 1,
+    "base" : "gtk.ScrolledWindow.ScrolledWindow",
+    "members" : [
+     {
+      "name" : "testObject",
+      "kind" : "variable",
+      "line" : 47,
+      "char" : 11,
+      "deco" : "C4Glib5Scene8RMObject8RMObject",
+      "originalType" : "RMObject",
+      "offset" : 880
+     },
+     {
+      "name" : "testObjectTwo",
+      "kind" : "variable",
+      "line" : 48,
+      "char" : 11,
+      "deco" : "C4Glib5Scene8RMObject8RMObject",
+      "originalType" : "RMObject",
+      "offset" : 884
+     },
+     {
+      "name" : "m_timeout",
+      "kind" : "variable",
+      "line" : 49,
+      "char" : 10,
+      "deco" : "C4glib7Timeout7Timeout",
+      "originalType" : "Timeout",
+      "offset" : 888
+     },
+     {
+      "name" : "treeView",
+      "kind" : "variable",
+      "line" : 50,
+      "char" : 18,
+      "deco" : "C3gtk8TreeView8TreeView",
+      "originalType" : "TreeView",
+      "offset" : 892
+     },
+     {
+      "name" : "menuPopup",
+      "kind" : "variable",
+      "line" : 51,
+      "char" : 7,
+      "deco" : "C3gtk4Menu4Menu",
+      "originalType" : "Menu",
+      "offset" : 896
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 53,
+      "char" : 2,
+      "deco" : "FZC6Editor10SceneGraph14SceneGraphView",
+      "originalType" : "()",
+      "endline" : 81,
+      "endchar" : 2
+     },
+     {
+      "name" : "curserTest",
+      "kind" : "function",
+      "line" : 83,
+      "char" : 7,
+      "deco" : "FC3gtk8TreeView8TreeViewZv",
+      "parameters" : [
+       {
+        "name" : "treeView",
+        "deco" : "C3gtk8TreeView8TreeView"
+       }
+      ],
+      "endline" : 89,
+      "endchar" : 2
+     },
+     {
+      "name" : "popupItemRemove",
+      "kind" : "function",
+      "line" : 90,
+      "char" : 7,
+      "deco" : "FC3gtk8MenuItem8MenuItemZv",
+      "parameters" : [
+       {
+        "name" : "menuItem",
+        "deco" : "C3gtk8MenuItem8MenuItem"
+       }
+      ],
+      "endline" : 97,
+      "endchar" : 2
+     },
+     {
+      "name" : "buttonPressCallBack",
+      "kind" : "function",
+      "line" : 98,
+      "char" : 7,
+      "deco" : "FC3gdk5Event5EventC3gtk6Widget6WidgetZb",
+      "parameters" : [
+       {
+        "name" : "buttonEvent",
+        "deco" : "C3gdk5Event5Event"
+       },
+       {
+        "name" : "widget",
+        "deco" : "C3gtk6Widget6Widget"
+       }
+      ],
+      "endline" : 110,
+      "endchar" : 2
+     },
+     {
+      "name" : "rowActivatedCallback",
+      "kind" : "function",
+      "line" : 111,
+      "char" : 7,
+      "deco" : "FC3gtk8TreePath8TreePathC3gtk14TreeViewColumn14TreeViewColumnC3gtk8TreeView8TreeViewZv",
+      "parameters" : [
+       {
+        "name" : "path",
+        "deco" : "C3gtk8TreePath8TreePath"
+       },
+       {
+        "name" : "column",
+        "deco" : "C3gtk14TreeViewColumn14TreeViewColumn"
+       },
+       {
+        "name" : "treeView",
+        "deco" : "C3gtk8TreeView8TreeView"
+       }
+      ],
+      "endline" : 115,
+      "endchar" : 2
+     },
+     {
+      "name" : "moveCursorCallBack",
+      "kind" : "function",
+      "line" : 117,
+      "char" : 7,
+      "deco" : "FE4gtkc8gtktypes15GtkMovementStepiC3gtk8TreeView8TreeViewZb",
+      "parameters" : [
+       {
+        "name" : "step",
+        "deco" : "E4gtkc8gtktypes15GtkMovementStep"
+       },
+       {
+        "name" : "direction",
+        "deco" : "i"
+       },
+       {
+        "name" : "treeView",
+        "deco" : "C3gtk8TreeView8TreeView"
+       }
+      ],
+      "endline" : 122,
+      "endchar" : 2
+     },
+     {
+      "name" : "drawCallBack",
+      "kind" : "function",
+      "line" : 124,
+      "char" : 7,
+      "deco" : "FS3std8typecons35__T6scopedTC5cairo7Context7ContextZ6ScopedC3gtk6Widget6WidgetZb",
+      "originalType" : "bool(Scoped!Context cr, Widget widget)",
+      "parameters" : [
+       {
+        "name" : "cr",
+        "deco" : "S3std8typecons35__T6scopedTC5cairo7Context7ContextZ6Scoped"
+       },
+       {
+        "name" : "widget",
+        "deco" : "C3gtk6Widget6Widget"
+       }
+      ],
+      "endline" : 128,
+      "endchar" : 2
+     },
+     {
+      "name" : "onSecondElapsed",
+      "kind" : "function",
+      "line" : 130,
+      "char" : 7,
+      "deco" : "FZb",
+      "endline" : 150,
+      "endchar" : 2
+     },
+     {
+      "name" : "setup",
+      "kind" : "function",
+      "line" : 154,
+      "char" : 11,
+      "deco" : "FZC3gtk8TreeView8TreeView",
+      "endline" : 181,
+      "endchar" : 2
+     }
+    ]
+   },
+   {
+    "name" : "SceneGraphColumn",
+    "kind" : "enum",
+    "line" : 202,
+    "char" : 1,
+    "baseDeco" : "i",
+    "members" : [
+     {
+      "name" : "RMObj",
+      "kind" : "enum member",
+      "value" : "0",
+      "line" : 204,
+      "char" : 2
+     },
+     {
+      "name" : "Name",
+      "kind" : "enum member",
+      "value" : "1",
+      "line" : 205,
+      "char" : 2
+     },
+     {
+      "name" : "Type",
+      "kind" : "enum member",
+      "value" : "2",
+      "line" : 206,
+      "char" : 2
+     },
+     {
+      "name" : "NColumns",
+      "kind" : "enum member",
+      "value" : "3",
+      "line" : 207,
+      "char" : 2
+     }
+    ]
+   },
+   {
+    "name" : "SceneGraphTreeModel",
+    "kind" : "class",
+    "line" : 210,
+    "char" : 1,
+    "base" : "Editor.TreeModelDragable.TreeModelDragable",
+    "members" : [
+     {
+      "name" : "numRows",
+      "kind" : "variable",
+      "line" : 212,
+      "char" : 7,
+      "deco" : "k",
+      "offset" : 88
+     },
+     {
+      "name" : "nColumns",
+      "kind" : "variable",
+      "line" : 213,
+      "char" : 6,
+      "deco" : "i",
+      "offset" : 92
+     },
+     {
+      "name" : "stamp",
+      "kind" : "variable",
+      "line" : 214,
+      "char" : 6,
+      "deco" : "i",
+      "offset" : 96
+     },
+     {
+      "name" : "columnTypes",
+      "kind" : "variable",
+      "line" : 215,
+      "char" : 11,
+      "deco" : "G3E4gtkc12gobjecttypes5GType",
+      "offset" : 100
+     },
+     {
+      "name" : "watch",
+      "kind" : "function",
+      "line" : 218,
+      "char" : 7,
+      "deco" : "FAyaC4Glib5Scene4Node4NodeZv",
+      "parameters" : [
+       {
+        "name" : "msg",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "node",
+        "deco" : "C4Glib5Scene4Node4Node"
+       }
+      ],
+      "endline" : 251,
+      "endchar" : 2
+     },
+     {
+      "name" : "getStruct",
+      "kind" : "function",
+      "protection" : "protected",
+      "line" : 255,
+      "char" : 27,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FZPv",
+      "endline" : 258,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.getStruct"
+      ]
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 260,
+      "char" : 9,
+      "deco" : "FZC6Editor10SceneGraph19SceneGraphTreeModel",
+      "originalType" : "()",
+      "endline" : 268,
+      "endchar" : 2
+     },
+     {
+      "name" : "getFlags",
+      "kind" : "function",
+      "line" : 278,
+      "char" : 29,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FZE4gtkc8gtktypes17GtkTreeModelFlags",
+      "endline" : 281,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).getFlags"
+      ]
+     },
+     {
+      "name" : "getNColumns",
+      "kind" : "function",
+      "line" : 289,
+      "char" : 15,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FZi",
+      "endline" : 292,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).getNColumns"
+      ]
+     },
+     {
+      "name" : "getColumnType",
+      "kind" : "function",
+      "line" : 298,
+      "char" : 17,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FiZE4gtkc12gobjecttypes5GType",
+      "parameters" : [
+       {
+        "name" : "index",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 304,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).getColumnType"
+      ]
+     },
+     {
+      "name" : "getIter",
+      "kind" : "function",
+      "line" : 313,
+      "char" : 15,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterC3gtk8TreePath8TreePathZi",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       },
+       {
+        "name" : "path",
+        "deco" : "C3gtk8TreePath8TreePath"
+       }
+      ],
+      "endline" : 335,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).getIter"
+      ]
+     },
+     {
+      "name" : "getPath",
+      "kind" : "function",
+      "line" : 342,
+      "char" : 20,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterZC3gtk8TreePath8TreePath",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       }
+      ],
+      "endline" : 358,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).getPath"
+      ]
+     },
+     {
+      "name" : "getValue",
+      "kind" : "function",
+      "line" : 366,
+      "char" : 17,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIteriC7gobject5Value5ValueZC7gobject5Value5Value",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       },
+       {
+        "name" : "column",
+        "deco" : "i"
+       },
+       {
+        "name" : "value",
+        "deco" : "C7gobject5Value5Value",
+        "default" : "null"
+       }
+      ],
+      "endline" : 403,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).getValue"
+      ]
+     },
+     {
+      "name" : "iterNext",
+      "kind" : "function",
+      "line" : 410,
+      "char" : 16,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterZb",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       }
+      ],
+      "endline" : 438,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).iterNext"
+      ]
+     },
+     {
+      "name" : "iterPrevious",
+      "kind" : "function",
+      "line" : 444,
+      "char" : 16,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterZb",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       }
+      ],
+      "endline" : 472,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).iterPrevious"
+      ]
+     },
+     {
+      "name" : "iterChildren",
+      "kind" : "function",
+      "line" : 484,
+      "char" : 16,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterC3gtk8TreeIter8TreeIterZb",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       },
+       {
+        "name" : "parent",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       }
+      ],
+      "endline" : 510,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).iterChildren"
+      ]
+     },
+     {
+      "name" : "iterHasChild",
+      "kind" : "function",
+      "line" : 518,
+      "char" : 16,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterZb",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       }
+      ],
+      "endline" : 531,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).iterHasChild"
+      ]
+     },
+     {
+      "name" : "iterNChildren",
+      "kind" : "function",
+      "line" : 543,
+      "char" : 15,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterZi",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       }
+      ],
+      "endline" : 554,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).iterNChildren"
+      ]
+     },
+     {
+      "name" : "iterNthChild",
+      "kind" : "function",
+      "line" : 565,
+      "char" : 16,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterC3gtk8TreeIter8TreeIteriZb",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       },
+       {
+        "name" : "parent",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       },
+       {
+        "name" : "n",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 594,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).iterNthChild"
+      ]
+     },
+     {
+      "name" : "iterParent",
+      "kind" : "function",
+      "line" : 600,
+      "char" : 16,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreeIter8TreeIterC3gtk8TreeIter8TreeIterZb",
+      "parameters" : [
+       {
+        "name" : "iter",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       },
+       {
+        "name" : "child",
+        "deco" : "C3gtk8TreeIter8TreeIter"
+       }
+      ],
+      "endline" : 617,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeModelT!(GtkTreeModel).iterParent"
+      ]
+     },
+     {
+      "name" : "appendObj",
+      "kind" : "function",
+      "line" : 659,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectZv",
+      "parameters" : [
+       {
+        "name" : "obj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       }
+      ],
+      "endline" : 683,
+      "endchar" : 2
+     },
+     {
+      "name" : "removeObj",
+      "kind" : "function",
+      "line" : 685,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectZv",
+      "parameters" : [
+       {
+        "name" : "obj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       }
+      ],
+      "endline" : 691,
+      "endchar" : 2
+     },
+     {
+      "name" : "prepend",
+      "kind" : "function",
+      "line" : 692,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectC4Glib5Scene8RMObject8RMObjectZv",
+      "parameters" : [
+       {
+        "name" : "obj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       },
+       {
+        "name" : "dest",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       }
+      ],
+      "endline" : 714,
+      "endchar" : 2
+     },
+     {
+      "name" : "getObjectFromPath",
+      "kind" : "function",
+      "line" : 716,
+      "char" : 11,
+      "deco" : "FC3gtk8TreePath8TreePathZC4Glib5Scene8RMObject8RMObject",
+      "parameters" : [
+       {
+        "name" : "path",
+        "deco" : "C3gtk8TreePath8TreePath"
+       }
+      ],
+      "endline" : 735,
+      "endchar" : 2
+     },
+     {
+      "name" : "getPathFromObject",
+      "kind" : "function",
+      "line" : 736,
+      "char" : 11,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectZC3gtk8TreePath8TreePath",
+      "parameters" : [
+       {
+        "name" : "obj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       }
+      ],
+      "endline" : 752,
+      "endchar" : 2
+     },
+     {
+      "name" : "TraverseScene",
+      "kind" : "function",
+      "line" : 753,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectC4Glib5Scene8RMObject8RMObjectKAiZv",
+      "parameters" : [
+       {
+        "name" : "g",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       },
+       {
+        "name" : "searchObj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       },
+       {
+        "name" : "indices",
+        "deco" : "Ai",
+        "storageClass" : [
+         "ref"
+        ]
+       }
+      ],
+      "endline" : 772,
+      "endchar" : 2
+     },
+     {
+      "name" : "updatePath",
+      "kind" : "function",
+      "line" : 774,
+      "char" : 7,
+      "deco" : "FC4Glib5Scene8RMObject8RMObjectZv",
+      "parameters" : [
+       {
+        "name" : "obj",
+        "deco" : "C4Glib5Scene8RMObject8RMObject"
+       }
+      ],
+      "endline" : 784,
+      "endchar" : 2
+     },
+     {
+      "name" : "dragDataReceived",
+      "kind" : "function",
+      "line" : 802,
+      "char" : 23,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreePath8TreePathC3gtk13SelectionData13SelectionDataZb",
+      "parameters" : [
+       {
+        "name" : "dest",
+        "deco" : "C3gtk8TreePath8TreePath"
+       },
+       {
+        "name" : "selectionData",
+        "deco" : "C3gtk13SelectionData13SelectionData"
+       }
+      ],
+      "endline" : 863,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeDragDestT!(GtkTreeModel).dragDataReceived"
+      ]
+     },
+     {
+      "name" : "rowDropPossible",
+      "kind" : "function",
+      "line" : 878,
+      "char" : 23,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreePath8TreePathC3gtk13SelectionData13SelectionDataZb",
+      "parameters" : [
+       {
+        "name" : "destPath",
+        "deco" : "C3gtk8TreePath8TreePath"
+       },
+       {
+        "name" : "selectionData",
+        "deco" : "C3gtk13SelectionData13SelectionData"
+       }
+      ],
+      "endline" : 881,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeDragDestT!(GtkTreeModel).rowDropPossible"
+      ]
+     },
+     {
+      "name" : "dragDataDelete",
+      "kind" : "function",
+      "line" : 898,
+      "char" : 23,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreePath8TreePathZb",
+      "parameters" : [
+       {
+        "name" : "path",
+        "deco" : "C3gtk8TreePath8TreePath"
+       }
+      ],
+      "endline" : 904,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeDragSourceT!(GtkTreeModel).dragDataDelete"
+      ]
+     },
+     {
+      "name" : "dragDataGet",
+      "kind" : "function",
+      "line" : 919,
+      "char" : 23,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreePath8TreePathC3gtk13SelectionData13SelectionDataZb",
+      "parameters" : [
+       {
+        "name" : "path",
+        "deco" : "C3gtk8TreePath8TreePath"
+       },
+       {
+        "name" : "selectionData",
+        "deco" : "C3gtk13SelectionData13SelectionData"
+       }
+      ],
+      "endline" : 925,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeDragSourceT!(GtkTreeModel).dragDataGet"
+      ]
+     },
+     {
+      "name" : "rowDraggable",
+      "kind" : "function",
+      "line" : 937,
+      "char" : 23,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FC3gtk8TreePath8TreePathZb",
+      "parameters" : [
+       {
+        "name" : "path",
+        "deco" : "C3gtk8TreePath8TreePath"
+       }
+      ],
+      "endline" : 940,
+      "endchar" : 2,
+      "overrides" : [
+       "Editor.TreeModelDragable.TreeModelDragable.TreeDragSourceT!(GtkTreeModel).rowDraggable"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "Editor.TreeModelDragable",
+  "kind" : "module",
+  "file" : "..\\src\\Editor\\TreeModelDragable.d",
+  "members" : [
+   {
+    "name" : "glib.Str",
+    "kind" : "import",
+    "line" : 26,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gobject.ObjectG",
+    "kind" : "import",
+    "line" : 27,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gobject.Signals",
+    "kind" : "import",
+    "line" : 28,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gobject.Type",
+    "kind" : "import",
+    "line" : 29,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gobject.Value",
+    "kind" : "import",
+    "line" : 30,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeIter",
+    "kind" : "import",
+    "line" : 31,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeModelIF",
+    "kind" : "import",
+    "line" : 32,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeModelT",
+    "kind" : "import",
+    "line" : 33,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeDragDestT",
+    "kind" : "import",
+    "line" : 34,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeDragDestIF",
+    "kind" : "import",
+    "line" : 35,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeDragSourceT",
+    "kind" : "import",
+    "line" : 36,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreeDragSourceIF",
+    "kind" : "import",
+    "line" : 37,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.TreePath",
+    "kind" : "import",
+    "line" : 38,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtkc.Loader",
+    "kind" : "import",
+    "line" : 39,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtkc.gobject",
+    "kind" : "import",
+    "line" : 40,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtkc.gtk",
+    "kind" : "import",
+    "line" : 41,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtkc.gtktypes",
+    "kind" : "import",
+    "line" : 42,
+    "char" : 16
+   },
+   {
+    "name" : "gtkc.paths",
+    "kind" : "import",
+    "line" : 43,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "gtk.SelectionData",
+    "kind" : "import",
+    "line" : 44,
+    "char" : 16,
+    "protection" : "private"
+   },
+   {
+    "name" : "CustomTreeModelClass",
+    "kind" : "struct",
+    "line" : 47,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "parentClass",
+      "kind" : "variable",
+      "line" : 49,
+      "char" : 15,
+      "deco" : "S4gtkc12gobjecttypes12GObjectClass",
+      "offset" : 0
+     }
+    ]
+   },
+   {
+    "name" : "TreeModelDragable",
+    "kind" : "class",
+    "line" : 54,
+    "char" : 8,
+    "base" : "gobject.ObjectG.ObjectG",
+    "interfaces" : [
+     "gtk.TreeModelIF.TreeModelIF",
+     "gtk.TreeDragDestIF.TreeDragDestIF",
+     "gtk.TreeDragSourceIF.TreeDragSourceIF"
+    ],
+    "members" : [
+     {
+      "name" : "parentClass",
+      "kind" : "variable",
+      "line" : 56,
+      "char" : 23,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "PS4gtkc12gobjecttypes12GObjectClass",
+      "init" : "null"
+     },
+     {
+      "name" : "gtkTreeModel",
+      "kind" : "variable",
+      "protection" : "protected",
+      "line" : 59,
+      "char" : 26,
+      "deco" : "PS4gtkc8gtktypes12GtkTreeModel",
+      "offset" : 28
+     },
+     {
+      "name" : "TreeModelT!(GtkTreeModel)",
+      "kind" : "mixin",
+      "line" : 62,
+      "char" : 2
+     },
+     {
+      "name" : "TreeDragDestT!(GtkTreeModel)",
+      "kind" : "mixin",
+      "line" : 65,
+      "char" : 2
+     },
+     {
+      "name" : "TreeDragSourceT!(GtkTreeModel)",
+      "kind" : "mixin",
+      "line" : 68,
+      "char" : 2
+     },
+     {
+      "name" : "getStruct",
+      "kind" : "function",
+      "protection" : "protected",
+      "line" : 71,
+      "char" : 27,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FZPv",
+      "endline" : 74,
+      "endchar" : 2,
+      "overrides" : [
+       "gobject.ObjectG.ObjectG.getStruct",
+       "gtk.TreeModelIF.TreeModelIF.getStruct"
+      ]
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 76,
+      "char" : 9,
+      "deco" : "FZC6Editor17TreeModelDragable17TreeModelDragable",
+      "originalType" : "()",
+      "endline" : 82,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 87,
+      "char" : 9,
+      "deco" : "FPS4gtkc8gtktypes12GtkTreeModelbZC6Editor17TreeModelDragable17TreeModelDragable",
+      "originalType" : "(GtkTreeModel* gtkTreeModel, bool ownedRef = false)",
+      "parameters" : [
+       {
+        "name" : "gtkTreeModel",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "ownedRef",
+        "deco" : "b",
+        "default" : "false"
+       }
+      ],
+      "endline" : 91,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 96,
+      "char" : 9,
+      "deco" : "FPS4gtkc8gtktypes15GtkTreeDragDestbZC6Editor17TreeModelDragable17TreeModelDragable",
+      "originalType" : "(GtkTreeDragDest* gtkTreeModel, bool ownedRef = false)",
+      "parameters" : [
+       {
+        "name" : "gtkTreeModel",
+        "deco" : "PS4gtkc8gtktypes15GtkTreeDragDest"
+       },
+       {
+        "name" : "ownedRef",
+        "deco" : "b",
+        "default" : "false"
+       }
+      ],
+      "endline" : 100,
+      "endchar" : 2
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 105,
+      "char" : 9,
+      "deco" : "FPS4gtkc8gtktypes17GtkTreeDragSourcebZC6Editor17TreeModelDragable17TreeModelDragable",
+      "originalType" : "(GtkTreeDragSource* gtkTreeModel, bool ownedRef = false)",
+      "parameters" : [
+       {
+        "name" : "gtkTreeModel",
+        "deco" : "PS4gtkc8gtktypes17GtkTreeDragSource"
+       },
+       {
+        "name" : "ownedRef",
+        "deco" : "b",
+        "default" : "false"
+       }
+      ],
+      "endline" : 109,
+      "endchar" : 2
+     },
+     {
+      "name" : "customTreeModelgetType",
+      "kind" : "function",
+      "line" : 122,
+      "char" : 16,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UZE4gtkc12gobjecttypes5GType",
+      "endline" : 174,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelClassInit",
+      "kind" : "function",
+      "line" : 182,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPvZv",
+      "parameters" : [
+       {
+        "name" : "klass",
+        "deco" : "Pv"
+       }
+      ],
+      "endline" : 190,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelInit",
+      "kind" : "function",
+      "line" : 199,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes17GtkTreeModelIfaceZv",
+      "parameters" : [
+       {
+        "name" : "iface",
+        "deco" : "PS4gtkc8gtktypes17GtkTreeModelIface"
+       }
+      ],
+      "endline" : 213,
+      "endchar" : 3
+     },
+     {
+      "name" : "customDragDestInit",
+      "kind" : "function",
+      "line" : 215,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes20GtkTreeDragDestIfaceZv",
+      "parameters" : [
+       {
+        "name" : "iface",
+        "deco" : "PS4gtkc8gtktypes20GtkTreeDragDestIface"
+       }
+      ],
+      "endline" : 219,
+      "endchar" : 3
+     },
+     {
+      "name" : "customDragSourceInit",
+      "kind" : "function",
+      "line" : 221,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes22GtkTreeDragSourceIfaceZv",
+      "parameters" : [
+       {
+        "name" : "iface",
+        "deco" : "PS4gtkc8gtktypes22GtkTreeDragSourceIface"
+       }
+      ],
+      "endline" : 226,
+      "endchar" : 3
+     },
+     {
+      "name" : "customDragDataReceived",
+      "kind" : "function",
+      "line" : 235,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes15GtkTreeDragDestPS4gtkc8gtktypes11GtkTreePathPS4gtkc8gtktypes16GtkSelectionDataZi",
+      "parameters" : [
+       {
+        "name" : "dragDest",
+        "deco" : "PS4gtkc8gtktypes15GtkTreeDragDest"
+       },
+       {
+        "name" : "dest",
+        "deco" : "PS4gtkc8gtktypes11GtkTreePath"
+       },
+       {
+        "name" : "selectionData",
+        "deco" : "PS4gtkc8gtktypes16GtkSelectionData"
+       }
+      ],
+      "endline" : 239,
+      "endchar" : 3
+     },
+     {
+      "name" : "customRowDropPossible",
+      "kind" : "function",
+      "line" : 248,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes15GtkTreeDragDestPS4gtkc8gtktypes11GtkTreePathPS4gtkc8gtktypes16GtkSelectionDataZi",
+      "parameters" : [
+       {
+        "name" : "dragDest",
+        "deco" : "PS4gtkc8gtktypes15GtkTreeDragDest"
+       },
+       {
+        "name" : "destPath",
+        "deco" : "PS4gtkc8gtktypes11GtkTreePath"
+       },
+       {
+        "name" : "selectionData",
+        "deco" : "PS4gtkc8gtktypes16GtkSelectionData"
+       }
+      ],
+      "endline" : 252,
+      "endchar" : 3
+     },
+     {
+      "name" : "customRowDraggable",
+      "kind" : "function",
+      "line" : 261,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes17GtkTreeDragSourcePS4gtkc8gtktypes11GtkTreePathZi",
+      "parameters" : [
+       {
+        "name" : "dragSource",
+        "deco" : "PS4gtkc8gtktypes17GtkTreeDragSource"
+       },
+       {
+        "name" : "path",
+        "deco" : "PS4gtkc8gtktypes11GtkTreePath"
+       }
+      ],
+      "endline" : 265,
+      "endchar" : 3
+     },
+     {
+      "name" : "customDragDataGet",
+      "kind" : "function",
+      "line" : 276,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes17GtkTreeDragSourcePS4gtkc8gtktypes11GtkTreePathPS4gtkc8gtktypes16GtkSelectionDataZi",
+      "parameters" : [
+       {
+        "name" : "dragSource",
+        "deco" : "PS4gtkc8gtktypes17GtkTreeDragSource"
+       },
+       {
+        "name" : "path",
+        "deco" : "PS4gtkc8gtktypes11GtkTreePath"
+       },
+       {
+        "name" : "selectionData",
+        "deco" : "PS4gtkc8gtktypes16GtkSelectionData"
+       }
+      ],
+      "endline" : 280,
+      "endchar" : 3
+     },
+     {
+      "name" : "customDragDataDelete",
+      "kind" : "function",
+      "line" : 288,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes17GtkTreeDragSourcePS4gtkc8gtktypes11GtkTreePathZi",
+      "parameters" : [
+       {
+        "name" : "dragSource",
+        "deco" : "PS4gtkc8gtktypes17GtkTreeDragSource"
+       },
+       {
+        "name" : "path",
+        "deco" : "PS4gtkc8gtktypes11GtkTreePath"
+       }
+      ],
+      "endline" : 292,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelFinalize",
+      "kind" : "function",
+      "line" : 298,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc12gobjecttypes7GObjectZv",
+      "parameters" : [
+       {
+        "name" : "object",
+        "deco" : "PS4gtkc12gobjecttypes7GObject"
+       }
+      ],
+      "endline" : 302,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelGetFlags",
+      "kind" : "function",
+      "line" : 304,
+      "char" : 28,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelZE4gtkc8gtktypes17GtkTreeModelFlags",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       }
+      ],
+      "endline" : 309,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelGetNColumns",
+      "kind" : "function",
+      "line" : 311,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelZi",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       }
+      ],
+      "endline" : 316,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelGetColumnType",
+      "kind" : "function",
+      "line" : 318,
+      "char" : 16,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModeliZE4gtkc12gobjecttypes5GType",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "index",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 323,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelGetIter",
+      "kind" : "function",
+      "line" : 325,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIterPS4gtkc8gtktypes11GtkTreePathZi",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       },
+       {
+        "name" : "path",
+        "deco" : "PS4gtkc8gtktypes11GtkTreePath"
+       }
+      ],
+      "endline" : 330,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelGetPath",
+      "kind" : "function",
+      "line" : 332,
+      "char" : 23,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIterZPS4gtkc8gtktypes11GtkTreePath",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       }
+      ],
+      "endline" : 338,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelGetValue",
+      "kind" : "function",
+      "line" : 340,
+      "char" : 15,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIteriPS4gtkc12gobjecttypes6GValueZv",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       },
+       {
+        "name" : "column",
+        "deco" : "i"
+       },
+       {
+        "name" : "value",
+        "deco" : "PS4gtkc12gobjecttypes6GValue"
+       }
+      ],
+      "endline" : 345,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelIterNext",
+      "kind" : "function",
+      "line" : 347,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIterZi",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       }
+      ],
+      "endline" : 352,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelIterChildren",
+      "kind" : "function",
+      "line" : 354,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIterPS4gtkc8gtktypes11GtkTreeIterZi",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       },
+       {
+        "name" : "parent",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       }
+      ],
+      "endline" : 363,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelIterHasChild",
+      "kind" : "function",
+      "line" : 365,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIterZi",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       }
+      ],
+      "endline" : 370,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelIterNChildren",
+      "kind" : "function",
+      "line" : 372,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIterZi",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       }
+      ],
+      "endline" : 377,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelIterNthChild",
+      "kind" : "function",
+      "line" : 379,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIterPS4gtkc8gtktypes11GtkTreeIteriZi",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       },
+       {
+        "name" : "parent",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       },
+       {
+        "name" : "n",
+        "deco" : "i"
+       }
+      ],
+      "endline" : 388,
+      "endchar" : 3
+     },
+     {
+      "name" : "customTreeModelIterParent",
+      "kind" : "function",
+      "line" : 390,
+      "char" : 14,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "UPS4gtkc8gtktypes12GtkTreeModelPS4gtkc8gtktypes11GtkTreeIterPS4gtkc8gtktypes11GtkTreeIterZi",
+      "parameters" : [
+       {
+        "name" : "tree_model",
+        "deco" : "PS4gtkc8gtktypes12GtkTreeModel"
+       },
+       {
+        "name" : "iter",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       },
+       {
+        "name" : "child",
+        "deco" : "PS4gtkc8gtktypes11GtkTreeIter"
+       }
+      ],
+      "endline" : 399,
+      "endchar" : 3
+     }
+    ]
+   }
+  ]
+ }
+]

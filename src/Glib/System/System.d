@@ -7,6 +7,7 @@ import derelict.util.loader;
 import derelict.util.exception;
 import derelict.freeimage.freeimage;
 import derelict.assimp3.assimp;
+import derelict.opengl3.gl3;
 
 import Glib.System.Window;
 import Glib.Scene.Scene;
@@ -16,6 +17,7 @@ pragma(lib, "DerelictFI.lib");
 //pragma(lib, "DerelictALURE.lib");
 pragma(lib, "DerelictUtil.lib");
 pragma(lib, "DerelictASSIMP3.lib");
+pragma(lib, "DerelictGL3.lib");
 
 abstract class System
 {
@@ -38,12 +40,13 @@ abstract class System
 			// load shared libraries (should these be loaded lazily?)
 			// Currently DerelictGL and DerelcitGLU are loaded in Window's constructor.
 			try{
-				DerelictFI.load();
+				DerelictFI.load("..//..//Libs//FreeImage.dll");
+				//DerelictFI.load();
 				FreeImage_Initialise();
-				DerelictSDL2.load();
-				DerelictSDL2Image.load();
-				DerelictASSIMP3.load();
-				
+				DerelictSDL2.load("..//..//Libs//SDL2.dll");
+				DerelictSDL2Image.load("..//..//Libs//SDL2_image.dll");
+				DerelictASSIMP3.load("..//..//Libs//Assimp32.dll");
+				DerelictGL3.load();
 			}
 			catch(DerelictException de)
 			{

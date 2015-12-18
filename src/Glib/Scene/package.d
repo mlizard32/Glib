@@ -1,7 +1,7 @@
 module Glib.Scene;
 public:
 import Glib.Scene.Camera;
-import Glib.Scene.GObject;
+import Glib.Scene.RMObject;
 import Glib.Scene.Mesh;
 import Glib.Scene.Model;
 import Glib.Scene.Node;

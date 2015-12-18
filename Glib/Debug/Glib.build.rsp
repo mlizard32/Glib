@@ -4,7 +4,6 @@
 ..\src\Glib\GUI\UITexture.d 
 ..\src\Glib\GUI\Widget.d 
 ..\src\Glib\Scene\Camera.d 
-..\src\Glib\Scene\GObject.d 
 ..\src\Glib\Scene\Light.d 
 ..\src\Glib\Scene\Material.d 
 ..\src\Glib\Scene\Mesh.d 
@@ -12,6 +11,7 @@
 ..\src\Glib\Scene\Node.d 
 ..\src\Glib\Scene\package.d 
 ..\src\Glib\Scene\Render.d 
+..\src\Glib\Scene\RMObject.d 
 ..\src\Glib\Scene\Scene.d 
 ..\src\Glib\Scene\Shader.d 
 ..\src\Glib\Scene\Transform.d 
@@ -21,6 +21,5 @@
 ..\src\Glib\System\System.d 
 ..\src\Glib\System\window.d 
 ..\src\Glib\allDerelcit.d 
-main.d 
 ..\src\Glib\package.d 
 C:\Users\qtg843\Documents\Test\Glib\gl3n\Debug\gl3n.lib 

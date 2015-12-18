@@ -5,9 +5,13 @@ import gl3n.linalg;
 import Glib.Scene.Scene;
 import Glib.System.System;
 import std.math;
+import std.array;
+import std.stdio;
+import std.signals;
 
 class Node:Tree!(Node)
 {
+	@("editorField")
 	Transform transform;
 	//Scene scene;
 
@@ -74,7 +78,7 @@ private:
 
 
 
-	void SetWorldDirty()
+	public void SetWorldDirty()
 	{
 		this.worldDirty = true;
 		foreach(child; thisNode.children)
@@ -241,6 +245,7 @@ class Tree(T)
 	protected T[] children;
 	protected int index = -1;
 
+	mixin Signal!(string, T);
 	/**
 	* Add a child element.
 	* Automatically detaches it from any other element's children.
@@ -258,7 +263,7 @@ class Tree(T)
 		// If child has an existing parent.
 		if (child.parent)
 		{	assert(child.parent.isChild(cast(S)child));
-			remove(child.parent.children, child.index);
+			child.parent.removeChild(child);// = remove(child.parent.children, child.index);
 		}
 
 		// Add as a child.
@@ -266,6 +271,33 @@ class Tree(T)
 		children ~= cast(T)child;
 		child.index = children.length-1;
 
+		emit("addChild", child);
+		return child;	
+	}
+
+	S addChildInPlace(S : T)(S child, int idx)
+	{	
+		assert(child);
+		assert(child != this);
+
+		if (child.parent is this)
+			return child;
+
+		// If child has an existing parent.
+		if (child.parent)
+		{	assert(child.parent.isChild(cast(S)child));
+			child.parent.removeChild(child);// = remove(child.parent.children, child.index);
+		}
+
+
+		// Add as a child.
+		child.parent = cast(T)this;
+		children.insertInPlace(idx, cast(T)child);
+		for(int i = idx ; i < children.length; i++)
+		{
+			children[i].index = i;
+		}
+		emit("addChildInPlace", child);
 		return child;	
 	}
 
@@ -282,15 +314,20 @@ class Tree(T)
 		assert(child.parent == this);
 
 		if (child.index >= 0)
-		{	
-			remove(children, child.index);
-			if (child.index < children.length) // update index of element that replaced child.
-				children[child.index].index = child.index;
+		{
+			//have to emit before removal so we can get its location in the tree
+			emit("beforeRemoveChild", child);
+			children = children.remove(child.index);
+			for(int i = child.index ; i < children.length; i++)
+			{
+				children[i].index = i;
+			}
 			child.index = -1; // so remove can't be called twice.
-			child.parent = null;			
+			child.parent = null;		
 		}
 		assert (!isChild(child));
 
+		emit("afterRemoveChild", cast(S)this);
 		return child;
 	}
 
@@ -311,7 +348,10 @@ class Tree(T)
 	* Is elem a child of this element?
 	* This function will also return false if elem is null. */ 
 	bool isChild(T elem)
-	{	if (!elem || elem.index < 0 || elem.index >= children.length)
+	{	
+		writeln(elem.index);
+		
+		if (!elem || elem.index < 0 || elem.index >= children.length)
 		return false;
 		return cast(bool)(children[elem.index] == elem);		
 	}

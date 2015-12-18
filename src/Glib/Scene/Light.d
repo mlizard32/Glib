@@ -1,6 +1,6 @@
 module Glib.Scene.Light;
 
-import Glib.Scene.GObject;
+import Glib.Scene.RMObject;
 import gl3n.linalg;
 
 class Light: IComponent
